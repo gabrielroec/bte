@@ -65,15 +65,12 @@
         >
           {%- for media in product.media -%}
             {% liquid
+              assign loading = 'eager'
+              assign animation = 'image-fade-in'
               if context == 'main-product' and forloop.index == 1
+                # LCP image is loaded immediately
                 assign loading = false
                 assign animation = 'none'
-              elsif forloop.index <= 2
-                assign loading = 'eager'
-                assign animation = 'image-fade-in'
-              else
-                assign loading = 'lazy'
-                assign animation = 'image-fade-in'
               endif
             %}
             {%- render 'media',
@@ -168,18 +165,14 @@
                         </span>
                       {%- endif -%}
 
-                      {%- if forloop.index <= 4 -%}
-                        {%- assign thumb_loading = 'eager' -%}
-                      {%- else -%}
-                        {%- assign thumb_loading = 'lazy' -%}
-                      {%- endif -%}
+                      {%- assign loading = 'eager' -%}
                       {%-
                         render 'image-element',
                         img: media.preview_image,
                         alt: media.alt | escape | split: '#' | first,
-                        widths: '80, 120, 160, 240',
+                        widths: '120, 360, 540, 720',
                         sizeVariable: '80px',
-                        loading: thumb_loading,
+                        loading: loading,
                       -%}
                     </div>
                   </a>

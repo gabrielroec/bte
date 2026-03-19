@@ -9,57 +9,37 @@
  */
 {
   "sections": {
-    "banner_hero_compare": {
-      "type": "banner-hero",
+    "slideshow_w476zQ": {
+      "type": "slideshow",
       "blocks": {
-        "banner_hero_trust_1": {
-          "type": "trust_item",
+        "hero_NXhgQM": {
+          "type": "hero",
           "settings": {
-            "icon": "🌿",
-            "text": "Natural"
-          }
-        },
-        "banner_hero_trust_2": {
-          "type": "trust_item",
-          "settings": {
-            "icon": "V",
-            "text": "Vegan"
-          }
-        },
-        "banner_hero_trust_3": {
-          "type": "trust_item",
-          "settings": {
-            "icon": "🐰",
-            "text": "Cruelty-Free"
-          }
-        },
-        "banner_hero_trust_4": {
-          "type": "trust_item",
-          "settings": {
-            "icon": "🏆",
-            "text": "ELLE Winner"
+            "top_subheading": "",
+            "title": "",
+            "title_size": 70,
+            "subheading": "",
+            "link": "shopify://collections/the-art-of-skin",
+            "link_text": "",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "#ffffff",
+            "text_align": "vertical-bottom horizontal-left",
+            "image": "shopify://shop_images/THE_ART_OF_SKIN_Landing_Page_1_.pdf_3.jpg",
+            "image_mobile": "shopify://shop_images/THE_ART_OF_SKIN_Landing_Page_1_.pdf_3.jpg",
+            "overlay_opacity": 0
           }
         }
       },
-      "block_order": ["banner_hero_trust_1", "banner_hero_trust_2", "banner_hero_trust_3", "banner_hero_trust_4"],
+      "block_order": ["hero_NXhgQM"],
+      "name": "t:labels.hero_optional_slides",
       "settings": {
-        "heading": "Results after 1 application.",
-        "text": "<p>Select one of our award-winning routines crafted for your skin.</p>",
-        "content_position": "right",
-        "button_1_label": "Find My Routine",
-        "button_1_link": "shopify://collections/the-art-of-skin",
-        "button_2_label": "Shop All",
-        "button_2_link": "shopify://collections/all",
-        "aspect_desktop_w": 24,
-        "aspect_desktop_h": 9,
-        "aspect_mobile_w": 24,
-        "aspect_mobile_h": 11,
-        "show_trust_bar": true,
-        "show_social_proof": true,
-        "social_star_count": 5,
-        "social_rating": "4.9",
-        "social_reviews": "1,200+ reviews",
-        "social_tagline": "Results after one application"
+        "full_width": true,
+        "desktop_size": 0,
+        "mobile_size": 0,
+        "style": "arrows",
+        "autoplay": false,
+        "autoplay_speed": 7
       }
     },
     "slideshow_split_GNQHXY": {
@@ -265,7 +245,7 @@
       "name": "t:labels.featured_collection",
       "settings": {
         "title": "Art Of Skin",
-        "heading_size": "h2",
+        "heading_size": "h1",
         "heading_position": "left",
         "home_featured_products": "the-art-of-skin",
         "count": 6,
@@ -302,13 +282,13 @@
         "desktop_size": 0,
         "mobile_size": 0,
         "style": "arrows",
-        "autoplay": true,
+        "autoplay": false,
         "autoplay_speed": 7
       }
     }
   },
   "order": [
-    "banner_hero_compare",
+    "slideshow_w476zQ",
     "slideshow_split_GNQHXY",
     "featured-collection",
     "featured_collection_gFneFk",

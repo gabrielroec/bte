@@ -4,6 +4,7 @@
    * @param {string} [classes] - classes to add to the element
    * @param {string} [alt] - alt text for the image (default: image.alt)
    * @param {string} [loading] - image loading state
+   * @param {string} [fetchpriority] - image fetch priority (high|low|auto)
    * @param {boolean} [preload] - preload image
    * @param {string} [sizes] - image sizes (default: '100vw')
    * @param {string} [sizeVariable] - image size variable used in image size calculations
@@ -48,19 +49,18 @@
 {% liquid
   assign classes = classes | escape
   assign alt = alt | escape
+  assign fetchpriority = fetchpriority | default: 'auto'
 
-  if format == blank
-    assign format = 'webp'
-  endif
-
-  assign fetchpri = fetchpriority | default: nil
+  # Image Loading https: //developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/loading#value
+  # Lazyloading or eager
+  # Eager is the default loading behavior of the browser, which is the same as not including the attribute and means the image is loaded as soon as possible
+  # We are setting it explicitly here but there are no performance benefits
 
   if loading == 'eager'
     assign loading = 'eager'
   elsif loading == false
     assign loading = 'eager'
     assign preload = true
-    assign fetchpri = 'high'
   else
     assign loading = 'lazy'
     assign preload = false
@@ -109,7 +109,7 @@
         if img_tag_height == blank
           assign img_tag_height = img_tag_width | divided_by: img.aspect_ratio
         endif
-        assign img = img | image_url: width: img_width, format: format | image_tag: preload: preload, height: img_tag_height, width: img_tag_width, class: classes, loading: loading, alt: alt, sizes: sizes, widths: widths, itemprop: itemprop, role: role, aria-hidden: ariaHidden, style: style, data-animate: animation, fetchpriority: fetchpri
+        assign img = img | image_url: width: img_width, format: format | image_tag: preload: preload, height: img_tag_height, width: img_tag_width, class: classes, loading: loading, alt: alt, sizes: sizes, widths: widths, itemprop: itemprop, role: role, aria-hidden: ariaHidden, style: style, data-animate: animation, fetchpriority: fetchpriority
       endif
 
       if widths == blank
@@ -122,7 +122,7 @@
         if img_tag_height == blank
           assign img_tag_height = img_tag_width | divided_by: img.aspect_ratio
         endif
-        assign img = img | image_url: width: img_width, format: format | image_tag: preload: preload, height: img_tag_height, width: img_tag_width, class: classes, loading: loading, alt: alt, sizes: sizes, itemprop: itemprop, role: role, aria-hidden: ariaHidden, style: style, data-animate: animation, fetchpriority: fetchpri
+        assign img = img | image_url: width: img_width, format: format | image_tag: preload: preload, height: img_tag_height, width: img_tag_width, class: classes, loading: loading, alt: alt, sizes: sizes, itemprop: itemprop, role: role, aria-hidden: ariaHidden, style: style, data-animate: animation, fetchpriority: fetchpriority
       endif
 
       echo img
@@ -153,7 +153,9 @@
       height="{{ img_height }}"
       class="{{ classes }}"
       loading="{{ loading }}"
-      decoding="async"
+      {% if fetchpriority != blank %}
+        fetchpriority="{{ fetchpriority }}"
+      {% endif %}
       alt="{{ alt }}"
       {% if img_widths != blank %}
         srcset="{{ img_widths }}"
@@ -180,7 +182,7 @@
 
     {{
       img
-      | image_url: width: img_width, format: format
+      | image_url: width: img_width
       | image_tag:
         width: img_width,
         height: img_height,
@@ -194,8 +196,8 @@
         sizes: sizes,
         widths: widths,
         preload: preload,
-        fetchpriority: fetchpri,
-        data-animate: animation
+        data-animate: animation,
+        fetchpriority: fetchpriority
     }}
   {% endif %}
 </is-land>

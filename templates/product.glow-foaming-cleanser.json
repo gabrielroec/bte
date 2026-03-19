@@ -487,7 +487,7 @@
         "subtitle": "",
         "title": "Reveal your natural glow",
         "heading_size": "h2",
-        "text": "<p>Unlock the secret to radiant skin with this gentle foaming cleanser, designed to remove dirt, oil, and makeup while leaving your skin refreshed and glowing. Its lightweight formula works to clear away impurities without disrupting your skin’s natural balance. Perfect for daily use, it helps transform dull, tired skin into a luminous complexion you’ll love to show off. </p>",
+        "text": "<p>Unlock the secret to radiant skin with this gentle foaming cleanser, designed to remove dirt, oil, and makeup while leaving your skin refreshed and glowing. Its lightweight formula works to clear away impurities without disrupting your skin’s natural balance. Perfect for daily use, it helps transform dull, tired skin into a luminous complexion you’ll love to show off. </p><h3></h3>",
         "button_label": "",
         "button_link": "",
         "button_style": "primary",
@@ -651,7 +651,7 @@
       ],
       "settings": {
         "title": "You May Also Like",
-        "heading_size": "h2",
+        "heading_size": "h1",
         "heading_position": "left",
         "home_featured_products": "best-sellers",
         "count": 5,

@@ -600,7 +600,7 @@
       ],
       "settings": {
         "title": "You May Also Like",
-        "heading_size": "h2",
+        "heading_size": "h1",
         "heading_position": "left",
         "home_featured_products": "best-sellers",
         "count": 5,

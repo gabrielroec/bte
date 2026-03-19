@@ -1,4 +1,4 @@
-{% # components v3.0.1 | Copyright © 2024 Archetype Themes Limited Partnership  | "Shopify Theme Store (https://www.shopify.com/legal/terms#9-additional-services)" License %}
+{% # components v3.0.1 | Copyright © 2024 Archetype Themes Limited Partnership  | "Shopify Theme Store (https://www.shopify.com/legal/terms#9-additional-services)" License  %}
 {%- comment -%}
   Renders a slideshow image section.
 
@@ -18,14 +18,7 @@
   assign autoplay = autoplay | default: section.settings.autoplay, allow_false: true | default: true, allow_false: true
   assign autoplay_speed = autoplay_speed | default: section.settings.autoplay_speed | default: 7
   assign style = style | default: section.settings.style | default: 'arrows'
-  assign hydration = hydration | default: blank
-  if hydration == blank
-    if section.index == 1
-      assign hydration = 'on:visible'
-    else
-      assign hydration = 'on:idle'
-    endif
-  endif
+  assign hydration = hydration | default: 'on:visible'
 
   assign lazyload_images = true
   if section.index == 1
@@ -52,23 +45,18 @@
               type="button"
               class="visually-hidden slideshow__pause"
               data-id="{{ section.id }}"
-              aria-live="polite">
+              aria-live="polite"
+            >
               <span class="slideshow__pause-stop">
-                {% render 'icon'
-                  , name: 'pause' %}
+                {% render 'icon', name: 'pause' %}
                 <span class="icon__fallback-text visually-hidden">
-                  {% render 't_with_fallback'
-                    , key: 'actions.slideshow_pause'
-                    , fallback: 'Slideshow pause' -%}
+                  {% render 't_with_fallback', key: 'actions.slideshow_pause', fallback: 'Slideshow pause' -%}
                 </span>
               </span>
               <span class="slideshow__pause-play">
-                {% render 'icon'
-                  , name: 'play' %}
+                {% render 'icon', name: 'play' %}
                 <span class="icon__fallback-text visually-hidden">
-                  {% render 't_with_fallback'
-                    , key: 'actions.slideshow_play'
-                    , fallback: 'Slideshow play' -%}
+                  {% render 't_with_fallback', key: 'actions.slideshow_play', fallback: 'Slideshow play' -%}
                 </span>
               </span>
             </button>
@@ -104,27 +92,29 @@
           <div class="hero-natural--{{ section.id }}">
             <div
               id="Slideshow-{{ section.id }}"
-              class="hero hero--{{ section.id }} loading loading--delayed"
+              class="hero hero--{{ section.id }}{% if section.index == 1 %} loaded{% else %} loading{% endif %} loading--delayed"
               data-natural="true"
               data-autoplay="{{ autoplay }}"
               data-speed="{{ autoplay_speed | times: 1000 }}"
               {% if style == 'arrows' %}
-              data-arrows="true"
+                data-arrows="true"
               {% endif %}
               {% if style == 'dots' %}
-              data-dots="true"
+                data-dots="true"
               {% endif %}
               {% if style == 'bars' %}
-              data-dots="true"
-              data-bars="true"
+                data-dots="true"
+                data-bars="true"
               {% endif %}
-              data-slide-count="{{ section.blocks.size }}">
+              data-slide-count="{{ section.blocks.size }}"
+            >
               {%- for block in section.blocks -%}
                 <div
                   {{ block.shopify_attributes }}
-                  class="slideshow__slide slideshow__slide--{{ block.id }}"
+                  class="slideshow__slide slideshow__slide--{{ block.id }}{% if section.index == 1 and forloop.index == 1 %} is-selected{% endif %}"
                   data-index="{{ forloop.index0 }}"
-                  data-id="{{ block.id }}">
+                  data-id="{{ block.id }}"
+                >
                   {%- liquid
                     assign has_mobile_image = false
                     if block.settings.image_mobile != blank
@@ -141,41 +131,46 @@
                       {% comment %} Full width image so don't need to adjust sizes attribute, fallback is 100vw {% endcomment %}
                       {%- liquid
                         if forloop.index == 1
-                          assign loading = lazyload_images
+                          if lazyload_images == false and has_mobile_image
+                            assign loading = 'eager'
+                            assign fetchpriority = blank
+                          else
+                            assign loading = lazyload_images
+                            if lazyload_images == false
+                              assign fetchpriority = 'high'
+                            else
+                              assign fetchpriority = blank
+                            endif
+                          endif
                         else
                           assign loading = true
+                          assign fetchpriority = blank
                         endif
                       -%}
-                      {%- render 'image-element'
-                        , img: block.settings.image
-                        , loading: loading
-                        , classes: image_classes
-                        , widths: '600, 900, 1200, 1600, 2000, 2600'
-                        , sizeVariable: '100vw'
+                      {%- render 'image-element',
+                        img: block.settings.image,
+                        loading: loading,
+                        classes: image_classes,
+                        fetchpriority: fetchpriority
                       -%}
                       {%- if has_mobile_image -%}
                         {% capture image_classes %}
                             hero__image hero__image--{{ block.id }} medium-up--hide
                           {% endcapture %}
-                        {%- render 'image-element'
-                          , img: block.settings.image_mobile
-                          , loading: loading
-                          , classes: image_classes
-                          , widths: '400, 600, 800, 1000, 1200'
-                          , sizeVariable: '100vw'
+                        {%- render 'image-element',
+                          img: block.settings.image_mobile,
+                          loading: loading,
+                          classes: image_classes,
+                          fetchpriority: fetchpriority
                         -%}
                       {%- endif -%}
                     {%- else -%}
-                      {%- render 'placeholder-svg'
-                        , name: 'lifestyle-1' -%}
+                      {%- render 'placeholder-svg', name: 'lifestyle-1' -%}
                     {%- endif -%}
                   </div>
 
                   {%- if block.settings.link != blank -%}
-                    <a
-                      href="{{ block.settings.link }}"
-                      class="hero__slide-link"
-                      aria-hidden="true"></a>
+                    <a href="{{ block.settings.link }}" class="hero__slide-link" aria-hidden="true"></a>
                   {%- endif -%}
                 </div>
               {%- endfor -%}
@@ -191,11 +186,9 @@
     {%- endunless -%}
   </slideshow-section>
 
-  {%- if section.blocks.size > 1 -%}
-    <template data-island>
-      <script type="module">
-        import '@archetype-themes/modules/slideshow'
-      </script>
-    </template>
-  {%- endif -%}
+  <template data-island>
+    <script type="module">
+      import '@archetype-themes/modules/slideshow'
+    </script>
+  </template>
 </is-land>

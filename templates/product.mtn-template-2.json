@@ -557,7 +557,7 @@
         "subtitle": "",
         "title": "Your glow, unlocked.",
         "heading_size": "h2",
-        "text": "<p>Packed with skin-loving ingredients, this mask works to brighten, hydrate, and detoxify. It’s your ultimate tool for achieving that coveted natural glow.</p>",
+        "text": "<p>Packed with skin-loving ingredients, this mask works to brighten, hydrate, and detoxify. It’s your ultimate tool for achieving that coveted natural glow.</p><h3></h3>",
         "button_label": "",
         "button_link": "",
         "button_style": "primary",
@@ -721,7 +721,7 @@
       ],
       "settings": {
         "title": "You May Also Like",
-        "heading_size": "h2",
+        "heading_size": "h1",
         "heading_position": "left",
         "home_featured_products": "best-sellers",
         "count": 5,

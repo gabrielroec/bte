@@ -139,7 +139,7 @@
     {%- liquid
       for item in items
         if item.object_type == 'product'
-          render 'product-grid-item', product: item
+          render 'product-grid-item', product: item, item_index: forloop.index, prioritize_product_image: true
         else
           render 'search-grid-item', item: item
         endif

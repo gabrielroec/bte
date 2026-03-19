@@ -48,6 +48,8 @@
   assign product_grid_style = product_grid_style | default: settings.product_grid_style | default: 'grey-round'
   assign set_image_breathing_room = set_image_breathing_room | default: settings.set_image_breathing_room, allow_false: true | default: true, allow_false: true
   assign type = type | default: blank
+  assign item_index = item_index | default: 999 | plus: 0
+  assign prioritize_product_image = prioritize_product_image | default: false, allow_false: true
 
   assign on_sale = false
   if product.compare_at_price > product.price
@@ -83,6 +85,13 @@
         endif
       endif
     endfor
+  endif
+
+  assign product_image_loading = true
+  assign product_image_fetchpriority = blank
+  if prioritize_product_image and item_index <= 2
+    assign product_image_loading = false
+    assign product_image_fetchpriority = 'high'
   endif
 -%}
 
@@ -227,10 +236,12 @@
                 {%- render 'image-element',
                   img: preview_image,
                   classes: image_classes,
+                  loading: product_image_loading,
+                  fetchpriority: product_image_fetchpriority,
                   sizes: sizes,
                   sizeVariable: sizeVariable,
                   fallback: fallback,
-                  widths: '160, 200, 280, 360, 540, 720'
+                  widths: '160, 200, 280, 360, 540, 720, 900'
                 -%}
               {%- else -%}
                 <div class="product-image--placeholder">
@@ -255,10 +266,12 @@
                 {%- render 'image-element',
                   img: preview_image,
                   classes: 'grid-product__image',
+                  loading: product_image_loading,
+                  fetchpriority: product_image_fetchpriority,
                   sizes: sizes,
                   sizeVariable: sizeVariable,
                   fallback: fallback,
-                  widths: '200, 300, 400, 540, 720'
+                  widths: '360, 540, 720, 900, 1080'
                 -%}
               {%- else -%}
                 <div class="product-image--placeholder">
@@ -283,7 +296,7 @@
                 sizes: sizes,
                 sizeVariable: sizeVariable,
                 fallback: fallback,
-                widths: '200, 300, 400, 540, 720'
+                widths: '360, 540, 720, 1000'
               -%}
             </div>
           {%- endif -%}

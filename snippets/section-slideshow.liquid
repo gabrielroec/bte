@@ -1,4 +1,4 @@
-{% # components v3.0.1 | Copyright © 2024 Archetype Themes Limited Partnership  | "Shopify Theme Store (https://www.shopify.com/legal/terms#9-additional-services)" License %}
+{% # components v3.0.1 | Copyright © 2024 Archetype Themes Limited Partnership  | "Shopify Theme Store (https://www.shopify.com/legal/terms#9-additional-services)" License  %}
 {%- comment -%}
   Renders a slideshow section.
 
@@ -22,14 +22,7 @@
   assign style = style | default: section.settings.style | default: 'arrows'
   assign desktop_size = desktop_size | default: section.settings.desktop_size | default: 0
   assign mobile_size = mobile_size | default: section.settings.mobile_size | default: 0
-  assign hydration = hydration | default: blank
-  if hydration == blank
-    if section.index == 1
-      assign hydration = 'on:visible'
-    else
-      assign hydration = 'on:idle'
-    endif
-  endif
+  assign hydration = hydration | default: 'on:visible'
 
   assign lazyload_images = true
   if section.index == 1
@@ -56,23 +49,18 @@
               type="button"
               class="visually-hidden slideshow__pause"
               data-id="{{ section.id }}"
-              aria-live="polite">
+              aria-live="polite"
+            >
               <span class="slideshow__pause-stop">
-                {% render 'icon'
-                  , name: 'pause' %}
+                {% render 'icon', name: 'pause' %}
                 <span class="icon__fallback-text visually-hidden">
-                  {% render 't_with_fallback'
-                    , key: 'actions.slideshow_pause'
-                    , fallback: 'Slideshow pause' -%}
+                  {% render 't_with_fallback', key: 'actions.slideshow_pause', fallback: 'Slideshow pause' -%}
                 </span>
               </span>
               <span class="slideshow__pause-play">
-                {% render 'icon'
-                  , name: 'play' %}
+                {% render 'icon', name: 'play' %}
                 <span class="icon__fallback-text visually-hidden">
-                  {% render 't_with_fallback'
-                    , key: 'actions.slideshow_play'
-                    , fallback: 'Slideshow play' -%}
+                  {% render 't_with_fallback', key: 'actions.slideshow_play', fallback: 'Slideshow play' -%}
                 </span>
               </span>
             </button>
@@ -113,45 +101,41 @@
               data-autoplay="{{ autoplay }}"
               data-speed="{{ autoplay_speed | times: 1000 }}"
               {% if style == 'arrows' %}
-              data-arrows="true"
+                data-arrows="true"
               {% endif %}
               {% if style == 'dots' %}
-              data-dots="true"
+                data-dots="true"
               {% endif %}
               {% if style == 'bars' %}
-              data-dots="true"
-              data-bars="true"
+                data-dots="true"
+                data-bars="true"
               {% endif %}
-              data-slide-count="{{ section.blocks.size }}">
+              data-slide-count="{{ section.blocks.size }}"
+            >
               {%- for block in section.blocks -%}
                 <div
                   {{ block.shopify_attributes }}
                   class="slideshow__slide slideshow__slide--{{ block.id }}{% if section.index == 1 and forloop.index == 1 %} is-selected{% endif %}"
                   data-index="{{ forloop.index0 }}"
-                  data-id="{{ block.id }}">
+                  data-id="{{ block.id }}"
+                >
                   {%- style -%}
-                    .slideshow__slide--{{ block.id }} .hero__title
-                    , .slideshow__slide--{{ block.id }}
-                    .hero__title p {
+                    .slideshow__slide--{{ block.id }} .hero__title,
+                    .slideshow__slide--{{ block.id }} .hero__title p {
                       font-size: {{ block.settings.title_size | times: 0.43 }}px;
                     }
                     @media only screen and (min-width: 769px) {
-                      .slideshow__slide--{{ block.id }} .hero__title
-                      , .slideshow__slide--{{ block.id }}
-                      .hero__title p {
+                      .slideshow__slide--{{ block.id }} .hero__title,
+                      .slideshow__slide--{{ block.id }} .hero__title p {
                         font-size: {{ block.settings.title_size }}px;
                       }
                     }
 
                     {%- assign button_alpha = block.settings.color_accent | color_extract: 'alpha' -%}
                     {% unless button_alpha == 0.0 %}
-                      .slideshow__slide--{{ block.id }}
-                      .btn {
-                        background: {{ block.settings.color_accent }}
-                         !important;
+                      .slideshow__slide--{{ block.id }} .btn {
+                        background: {{ block.settings.color_accent }} !important;
                         border: none;
-
-                        
 
                         {%- assign accent_brightness = block.settings.color_accent | color_extract: 'lightness' -%}
 
@@ -162,7 +146,7 @@
                     {% endunless %}
 
                     {% if block.settings.overlay_opacity > 0 %}
-                      .slideshow__slide--{{ block.id }}.hero__image-wrapper:after {
+                      .slideshow__slide--{{ block.id }} .hero__image-wrapper:after {
                         content: '';
                         position: absolute;
                         left: 0;
@@ -188,13 +172,26 @@
                     endif
                   -%}
 
-                  <div class="hero__image-wrapper {% unless hero_text %} hero__image-wrapper--no-overlay{% endunless %}">
+                  <div
+                    class="hero__image-wrapper {% unless hero_text %} hero__image-wrapper--no-overlay{% endunless %}"
+                  >
                     {% comment %} Full width images so don't need to adjust sizes attribute, fallback is 100vw {% endcomment %}
                     {%- liquid
                       if forloop.index == 1
-                        assign loading = lazyload_images
+                        if lazyload_images == false and has_mobile_image
+                          assign loading = 'eager'
+                          assign fetchpriority = blank
+                        else
+                          assign loading = lazyload_images
+                          if lazyload_images == false
+                            assign fetchpriority = 'high'
+                          else
+                            assign fetchpriority = blank
+                          endif
+                        endif
                       else
                         assign loading = true
+                        assign fetchpriority = blank
                       endif
                     -%}
                     {%- if block.settings.image != blank -%}
@@ -202,43 +199,41 @@
                           hero__image hero__image--{{ block.id }}
                           {% if has_mobile_image %} small--hide{% endif %}
                         {% endcapture %}
-                      {%- render 'image-element'
-                        , img: block.settings.image
-                        , loading: loading
-                        , classes: image_classes
+                      {%- render 'image-element',
+                        img: block.settings.image,
+                        loading: loading,
+                        classes: image_classes,
+                        fetchpriority: fetchpriority
                       -%}
                       {%- if has_mobile_image -%}
                         {% capture image_classes %}
                             hero__image hero__image--{{ block.id }} medium-up--hide
                           {% endcapture %}
-                        {%- render 'image-element'
-                          , img: block.settings.image_mobile
-                          , loading: loading
-                          , classes: image_classes
+                        {%- render 'image-element',
+                          img: block.settings.image_mobile,
+                          loading: loading,
+                          classes: image_classes,
+                          fetchpriority: fetchpriority
                         -%}
                       {%- endif -%}
                     {%- else -%}
                       {%- if template == 'password' -%}
                         {%- assign password_image = 'password-page-background.jpg' -%}
-                        {%- render 'image-element'
-                          , asset: password_image
-                          , host: 'theme'
-                          , loading: lazyload_images
-                          , type: 'asset'
-                          , classes: 'hero__image'
+                        {%- render 'image-element',
+                          asset: password_image,
+                          host: 'theme',
+                          loading: lazyload_images,
+                          type: 'asset',
+                          classes: 'hero__image'
                         -%}
                       {%- else -%}
-                        {%- render 'placeholder-svg'
-                          , name: 'lifestyle-1' -%}
+                        {%- render 'placeholder-svg', name: 'lifestyle-1' -%}
                       {%- endif -%}
                     {%- endif -%}
                   </div>
 
                   {%- if block.settings.link != blank and block.settings.link_2 == blank -%}
-                    <a
-                      href="{{ block.settings.link }}"
-                      class="hero__slide-link"
-                      aria-hidden="true"></a>
+                    <a href="{{ block.settings.link }}" class="hero__slide-link" aria-hidden="true"></a>
                   {%- endif -%}
 
                   {%- if hero_text -%}
@@ -254,13 +249,15 @@
                               </div>
                             {%- endunless -%}
                             {%- unless block.settings.title == blank -%}
-                              <h2 class="
+                              <h2
+                                class="
                                   h1 hero__title
                                   {% if block.settings.text_highlight %}
                                     text-highlight
                                     text-highlight--{{ block.settings.text_highlight }}
                                   {% endif %}
-                                ">
+                                "
+                              >
                                 <div class="hero__animation-contents">
                                   {{ block.settings.title | newline_to_br }}
                                 </div>
@@ -277,12 +274,18 @@
                               {%- if block.settings.link_text != blank or block.settings.link_text_2 != blank -%}
                                 <div class="hero__link">
                                   {%- if block.settings.link_text != blank -%}
-                                    <a href="{{ block.settings.link }}" class="btn{% if block.settings.color_accent contains 'rgba(0,0,0,0)' %} btn--inverse{% endif %}">
+                                    <a
+                                      href="{{ block.settings.link }}"
+                                      class="btn{% if block.settings.color_accent contains 'rgba(0,0,0,0)' %} btn--inverse{% endif %}"
+                                    >
                                       {{ block.settings.link_text }}
                                     </a>
                                   {%- endif -%}
                                   {%- if block.settings.link_text_2 != blank -%}
-                                    <a href="{{ block.settings.link_2 }}" class="btn{% if block.settings.color_accent contains 'rgba(0,0,0,0)' %} btn--inverse{% endif %}">
+                                    <a
+                                      href="{{ block.settings.link_2 }}"
+                                      class="btn{% if block.settings.color_accent contains 'rgba(0,0,0,0)' %} btn--inverse{% endif %}"
+                                    >
                                       {{ block.settings.link_text_2 }}
                                     </a>
                                   {%- endif -%}
@@ -308,11 +311,9 @@
     {%- endunless -%}
   </slideshow-section>
 
-  {%- if section.blocks.size > 1 -%}
-    <template data-island>
-      <script type="module">
-        import '@archetype-themes/modules/slideshow'
-      </script>
-    </template>
-  {%- endif -%}
+  <template data-island>
+    <script type="module">
+      import '@archetype-themes/modules/slideshow'
+    </script>
+  </template>
 </is-land>

@@ -1,4 +1,4 @@
-{% # components v3.0.1 | Copyright © 2024 Archetype Themes Limited Partnership  | "Shopify Theme Store (https://www.shopify.com/legal/terms#9-additional-services)" License %}
+{% # components v3.0.1 | Copyright © 2024 Archetype Themes Limited Partnership  | "Shopify Theme Store (https://www.shopify.com/legal/terms#9-additional-services)" License  %}
 {%- comment -%}
   Renders the hero video section.
 
@@ -38,14 +38,7 @@
   assign overlay_opacity = overlay_opacity | default: section.settings.overlay_opacity | default: 0
   assign height = height | default: section.settings.height | default: 650
   assign height_mobile = height_mobile | default: section.settings.height_mobile | default: 300
-  assign hydration = hydration | default: blank
-  if hydration == blank
-    if section.index == 1
-      assign hydration = 'on:visible'
-    else
-      assign hydration = 'on:idle'
-    endif
-  endif
+  assign hydration = hydration | default: 'on:visible'
 -%}
 
 <section>
@@ -57,30 +50,23 @@
     .hero--{{ section.id }} {
       height: {{ height_mobile }}px;
     }
-    .hero--{{ section.id }}
-    .hero__title {
+    .hero--{{ section.id }} .hero__title {
       font-size: {{ title_size | times: 0.5 }}px;
     }
     @media only screen and (min-width: 769px) {
       .hero--{{ section.id }} {
         height: {{ height }}px;
       }
-      .hero--{{ section.id }}
-      .hero__title {
+      .hero--{{ section.id }} .hero__title {
         font-size: {{ title_size }}px;
       }
     }
 
     {%- assign button_alpha = color_accent | color_extract: 'alpha' -%}
     {% unless button_alpha == 0.0 %}
-      .hero--{{ section.id }}
-      .btn {
-        background: {{ color_accent }}
-         !important;
-        border-color: {{ color_accent }}
-         !important;
-
-        
+      .hero--{{ section.id }} .btn {
+        background: {{ color_accent }} !important;
+        border-color: {{ color_accent }} !important;
 
         {%- assign accent_brightness = color_accent | color_extract: 'lightness' -%}
 
@@ -91,7 +77,7 @@
     {% endunless %}
 
     {% if overlay_opacity > 0 %}
-      .hero--{{ section.id }}.hero__text-wrap:after {
+      .hero--{{ section.id }} .hero__text-wrap:after {
         content: '';
         position: absolute;
         left: 0;
@@ -110,15 +96,9 @@
       <div class="hero__media hero__media--{{ section.id }}">
         <div class="hero__media-container">
           {%- if video != blank -%}
-            {% render 'video-media'
-              , video: video
-              , autoplay: true
-              , background: true %}
+            {% render 'video-media', video: video, autoplay: true, background: true %}
           {%- else -%}
-            {% render 'video-media'
-              , external_video: video_url
-              , autoplay: true
-              , background: true %}
+            {% render 'video-media', external_video: video_url, autoplay: true, background: true %}
           {%- endif -%}
         </div>
       </div>
@@ -129,13 +109,15 @@
             {% unless title == blank and subheading == blank and link_text == blank %}
               <div class="hero__text-shadow overlay">
                 {%- unless title == blank -%}
-                  <h2 class="
+                  <h2
+                    class="
                       h1 hero__title
                       {% if text_highlight %}
                         text-highlight
                         text-highlight--{{ text_highlight }}
                       {% endif %}
-                    ">
+                    "
+                  >
                     <div data-animate="rise-up">
                       {{ title | newline_to_br }}
                     </div>
@@ -153,7 +135,10 @@
                   {%- if link_text != blank -%}
                     {%- assign link_href = link | default: video_url -%}
                     <div class="hero__link">
-                      <a href="{{ link_href }}" class="btn{% if color_accent and color_accent == 'rgba(0,0,0,0)' %} btn--inverse{% endif %}">
+                      <a
+                        href="{{ link_href }}"
+                        class="btn{% if color_accent and color_accent == 'rgba(0,0,0,0)' %} btn--inverse{% endif %}"
+                      >
                         {{ link_text }}
                       </a>
                     </div>

@@ -35,7 +35,7 @@
     else
       paginate collection.products by paginate_by
         for item in collection.products
-          render 'product-grid-item', product: item
+          render 'product-grid-item', product: item, item_index: forloop.index, prioritize_product_image: true
         endfor
 
         if paginate.pages > 1

@@ -417,7 +417,7 @@
         "subtitle": "",
         "title": "Gentle care for sensitive skin",
         "heading_size": "h2",
-        "text": "<p>Soothe and hydrate even the most sensitive skin with this calming facial mist. Infused with gentle botanicals, it reduces redness, irritation, and dryness while leaving your skin feeling soft and replenished.</p>",
+        "text": "<p>Soothe and hydrate even the most sensitive skin with this calming facial mist. Infused with gentle botanicals, it reduces redness, irritation, and dryness while leaving your skin feeling soft and replenished.</p><h3></h3>",
         "button_label": "",
         "button_link": "",
         "button_style": "primary",
@@ -581,7 +581,7 @@
       ],
       "settings": {
         "title": "You May Also Like",
-        "heading_size": "h2",
+        "heading_size": "h1",
         "heading_position": "left",
         "home_featured_products": "best-sellers",
         "count": 5,

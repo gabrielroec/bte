@@ -36,25 +36,20 @@
           }
         }
       },
-      "block_order": [
-        "hero_iKa7AJ"
-      ],
+      "block_order": ["hero_iKa7AJ"],
       "name": "t:labels.hero_optional_slides",
       "settings": {
         "full_width": true,
         "desktop_size": 0,
         "mobile_size": 0,
         "style": "arrows",
-        "autoplay": true,
+        "autoplay": false,
         "autoplay_speed": 7
       }
     },
     "featured_collection_yADwq8": {
       "type": "featured-collection",
-      "custom_css": [
-        "h2 {font-family: ofelia-text, sans-serif; font-weight: 600;}",
-        ".grid-product__tags {display: none;}"
-      ],
+      "custom_css": ["h2 {font-family: ofelia-text, sans-serif; font-weight: 600;}", ".grid-product__tags {display: none;}"],
       "name": "t:labels.featured_collection",
       "settings": {
         "title": "Featured collection",
@@ -70,9 +65,7 @@
     },
     "text_and_image_CeEnfJ": {
       "type": "text-and-image",
-      "custom_css": [
-        "h2 {font-family: ofelia-text, sans-serif; font-weight: 600; font-size: 35px;}"
-      ],
+      "custom_css": ["h2 {font-family: ofelia-text, sans-serif; font-weight: 600; font-size: 35px;}"],
       "name": "t:labels.image_with_text",
       "settings": {
         "image": "shopify://shop_images/GLOW_Foaming_Cleanser_Lifestyle_2.jpg",
@@ -96,9 +89,7 @@
     },
     "text_and_image_Mzfh4c": {
       "type": "text-and-image",
-      "custom_css": [
-        "h2 {font-family: ofelia-text, sans-serif; font-weight: 600; font-size: 35px;}"
-      ],
+      "custom_css": ["h2 {font-family: ofelia-text, sans-serif; font-weight: 600; font-size: 35px;}"],
       "name": "t:labels.image_with_text",
       "settings": {
         "image": "shopify://shop_images/Back_To_Earth_Clarify.jpg",
@@ -122,9 +113,7 @@
     },
     "text_and_image_hNFTFy": {
       "type": "text-and-image",
-      "custom_css": [
-        "h2 {font-family: ofelia-text, sans-serif; font-weight: 600; font-size: 35px;}"
-      ],
+      "custom_css": ["h2 {font-family: ofelia-text, sans-serif; font-weight: 600; font-size: 35px;}"],
       "name": "t:labels.image_with_text",
       "settings": {
         "image_mask": "none",

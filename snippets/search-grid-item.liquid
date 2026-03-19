@@ -1,4 +1,4 @@
-{% # components v3.0.1 | Copyright © 2024 Archetype Themes Limited Partnership  | "Shopify Theme Store (https://www.shopify.com/legal/terms#9-additional-services)" License %}
+{% # components v3.0.1 | Copyright © 2024 Archetype Themes Limited Partnership  | "Shopify Theme Store (https://www.shopify.com/legal/terms#9-additional-services)" License  %}
 {%- comment -%}
   Renders a grid item for search results.
 
@@ -14,15 +14,14 @@
     <a href="{{ item.url }}" class="grid-item__link">
       {%- if item.object_type == 'article' and item.image -%}
         <div class="grid-product__image-wrap">
-          {%- render 'image-element'
-            , img: item.image
-            , classes: 'grid-product__image'
-            , alt: item.title
-            , widths: '180, 360, 540'
-            , sizes: sizes
-            , sizeVariable: sizeVariable
-            , fallback: fallback
-            , loading: true
+          {%- render 'image-element',
+            img: item.image,
+            classes: 'grid-product__image',
+            alt: item.title,
+            widths: '180, 360, 540',
+            sizes: sizes,
+            sizeVariable: sizeVariable,
+            fallback: fallback
           -%}
         </div>
       {%- endif -%}

@@ -1,22 +1,20 @@
 {% # components v3.0.1 | Copyright © 2024 Archetype Themes Limited Partnership  | "Shopify Theme Store (https://www.shopify.com/legal/terms#9-additional-services)" License  %}
 {% comment %}
-  Deferred modulepreload — only fires after first paint to avoid blocking LCP.
+  Preloads javascript modules from the importmap
 {% endcomment %}
 
 <script type="module">
-  requestIdleCallback(() => {
-    try {
-      const importMap = document.querySelector('script[type="importmap"]')
-      const importMapJson = JSON.parse(importMap.textContent)
-      const importMapModules = Object.values(importMapJson.imports)
-      for (let i = 0; i < importMapModules.length; i++) {
-        const link = document.createElement('link')
-        link.rel = 'modulepreload'
-        link.href = importMapModules[i]
-        document.head.appendChild(link)
-      }
-    } catch (e) {
-      console.error(e)
+  try {
+    const importMap = document.querySelector('script[type="importmap"]')
+    const importMapJson = JSON.parse(importMap.textContent)
+    const importMapModules = Object.values(importMapJson.imports)
+    for (let i = 0; i < importMapModules.length; i++) {
+      const link = document.createElement('link')
+      link.rel = 'modulepreload'
+      link.href = importMapModules[i]
+      document.head.appendChild(link)
     }
-  }, { timeout: 3000 })
+  } catch (e) {
+    console.error(e)
+  }
 </script>
