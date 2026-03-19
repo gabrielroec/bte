@@ -1,0 +1,19 @@
+{% # components v3.0.1 | Copyright © 2024 Archetype Themes Limited Partnership  | "Shopify Theme Store (https://www.shopify.com/legal/terms#9-additional-services)" License  %}
+{% comment %}
+  Renders the header search
+
+  Usage:
+  {% render 'header-search' %}
+{% endcomment %}
+
+<header-search class="site-header__search-container">
+  <div class="page-width">
+    <div class="site-header__search">
+      {%- render 'predictive-search', context: 'header' -%}
+    </div>
+  </div>
+</header-search>
+
+<script type="module">
+  import '@archetype-themes/custom-elements/header-search'
+</script>

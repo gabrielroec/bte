@@ -1,0 +1,128 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {}
+    },
+    "slideshow_JLmgBt": {
+      "type": "slideshow",
+      "blocks": {
+        "hero_qE4QKg": {
+          "type": "hero",
+          "settings": {
+            "top_subheading": "",
+            "title": "",
+            "title_size": 70,
+            "subheading": "",
+            "link": "",
+            "link_text": "",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "#ffffff",
+            "text_align": "vertical-bottom horizontal-left",
+            "image": "shopify://shop_images/Untitled_design_11_1_1296x_93293ab5-c30c-4ac5-9649-4506d7c245d4.webp",
+            "overlay_opacity": 0
+          }
+        }
+      },
+      "block_order": [
+        "hero_qE4QKg"
+      ],
+      "settings": {
+        "full_width": true,
+        "desktop_size": 0,
+        "mobile_size": 0,
+        "style": "arrows",
+        "autoplay": true,
+        "autoplay_speed": 7
+      }
+    },
+    "rich_text_9URyrf": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_Nxpg4M": {
+          "type": "heading",
+          "settings": {
+            "title": "Save 15% When You Become A VIP",
+            "heading_size": "h2"
+          }
+        },
+        "text_PU7TDQ": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": true,
+            "text": "<p>Sign up and be the first to know about sales, new product releases and great content! </p><p>Plus get 15% OFF your first order. </p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_Nxpg4M",
+        "text_PU7TDQ"
+      ],
+      "custom_css": [
+        "h2 {font-family: ofelia-text, sans-serif; font-weight: 600;}"
+      ],
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "color_scheme": "none",
+        "divider": false
+      }
+    },
+    "173820429381d411d0": {
+      "type": "apps",
+      "blocks": {
+        "klaviyo_email_marketing_sms_form_embed_block_tYHJLc": {
+          "type": "shopify://apps/klaviyo-email-marketing-sms/blocks/form-embed-block/2632fe16-c075-4321-a88b-50b567f42507",
+          "settings": {
+            "formId": "XdaXhj"
+          }
+        }
+      },
+      "block_order": [
+        "klaviyo_email_marketing_sms_form_embed_block_tYHJLc"
+      ],
+      "custom_css": [
+        "{margin-bottom: 100px;}"
+      ],
+      "settings": {
+        "full_width": false,
+        "space_around": false
+      }
+    },
+    "hero_video_xMadAE": {
+      "type": "hero-video",
+      "settings": {
+        "full_width": true,
+        "title": "",
+        "title_size": 70,
+        "subheading": "",
+        "link_text": "",
+        "link": "",
+        "color_accent": "#ffffff",
+        "text_align": "vertical-center horizontal-center",
+        "video_url": "https://youtu.be/a73G93yamiQ",
+        "overlay_opacity": 0,
+        "height": 750,
+        "height_mobile": 300
+      }
+    }
+  },
+  "order": [
+    "main",
+    "slideshow_JLmgBt",
+    "rich_text_9URyrf",
+    "173820429381d411d0",
+    "hero_video_xMadAE"
+  ]
+}

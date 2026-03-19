@@ -1,0 +1,67 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "type": "header",
+  "name": "t:labels.header_group",
+  "sections": {
+    "toolbar": {
+      "type": "toolbar",
+      "blocks": {
+        "toolbar-0": {
+          "type": "announcement",
+          "settings": {
+            "richtext": "<p><a href=\"/pages/newsletter-signup\" title=\"Newsletter Signup\">Become A VIP & Save 15%</a></p>",
+            "richtext_mobile": ""
+          }
+        }
+      },
+      "block_order": [
+        "toolbar-0"
+      ],
+      "settings": {
+        "announcement_center": true,
+        "toolbar_social": false,
+        "show_locale_selector": false,
+        "show_currency_selector": false,
+        "show_currency_flags": false
+      }
+    },
+    "header": {
+      "type": "header",
+      "blocks": {
+        "logo_ky3VWV": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/KZC_LOGO_Back_to_Earth_Black_bea57dd1-99f4-4f05-b44a-803708558a0f.png",
+            "desktop_logo_width": 100,
+            "mobile_logo_width": 60
+          }
+        }
+      },
+      "block_order": [
+        "logo_ky3VWV"
+      ],
+      "settings": {
+        "main_menu_link_list": "main-menu-left",
+        "hover_menu": true,
+        "main_menu_alignment": "left",
+        "mega_products": false,
+        "header_sticky": true,
+        "header_footer_menu": true,
+        "sticky_index": false,
+        "sticky_collection": false
+      }
+    }
+  },
+  "order": [
+    "toolbar",
+    "header"
+  ]
+}

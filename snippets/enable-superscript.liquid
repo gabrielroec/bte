@@ -1,0 +1,31 @@
+{% # components v3.0.1 | Copyright © 2024 Archetype Themes Limited Partnership  | "Shopify Theme Store (https://www.shopify.com/legal/terms#9-additional-services)" License  %}
+{%- comment -%}
+  Helper to determine if superscript decimals should be enabled
+
+  Accepts:
+  - superscript_decimals {boolean} - Whether superscript decimals are enabled
+
+  Usage:
+  {% liquid
+    capture superscript
+      render 'enable-superscript'
+    endcapture
+  -%}
+{%- endcomment -%}
+
+{%- liquid
+  assign superscript_decimals = superscript_decimals | default: settings.superscript_decimals, allow_false: true
+  assign enable_superscript = false
+
+  unless shop.money_format contains 'money' or shop.money_format contains '.'
+    if superscript_decimals
+      if shop.money_format contains '{{amount}}' or shop.money_format contains '{{ amount }}'
+        assign enable_superscript = true
+      elsif shop.money_format contains '{{amount_with_comma_separator}}' or shop.money_format contains '{{ amount_with_comma_separator }}'
+        assign enable_superscript = true
+      endif
+    endif
+  endunless
+
+  echo enable_superscript
+-%}

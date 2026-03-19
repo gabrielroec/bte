@@ -1,0 +1,74 @@
+{% # components v3.0.1 | Copyright © 2024 Archetype Themes Limited Partnership  | "Shopify Theme Store (https://www.shopify.com/legal/terms#9-additional-services)" License  %}
+{%- comment -%}
+  Renders a map component.
+
+  Accepts:
+  - access_token {string} - Mapbox API key
+  - map_address {string} - Address for the map
+  - image {image} - Background image object
+  - zoom {number} - Zoom level of the map
+  - hydration {string} - Hydration strategy for the component
+
+  Usage:
+  {% render 'map', access_token: '123456789' %}
+{%- endcomment -%}
+
+{%- liquid
+  assign access_token = access_token | default: section.settings.api_key
+  assign map_address = map_address | default: section.settings.map_address
+  assign image = image | default: section.settings.background_image
+  assign zoom = zoom | default: section.settings.zoom | default: 12
+  assign hydration = hydration | default: 'on:visible'
+
+  assign display_map = false
+
+  if access_token != blank and map_address != blank
+    assign display_map = true
+  endif
+
+  # Only assign image attribute values if image is set
+  if image != blank
+    if section.index == 1
+      assign loading = 'eager'
+      assign fetchpriority = 'high'
+    else
+      assign loading = 'lazy'
+      assign fetchpriority = 'auto'
+    endif
+  endif
+-%}
+
+{% if display_map and image == blank %}
+  <is-land {{ hydration }}>
+    <mapbox-map
+      class="map"
+      address="{{ map_address }}"
+      zoom="{{ zoom }}"
+      access-token="{{ access_token }}"
+    ></mapbox-map>
+
+    <template data-island>
+      <script type="module">
+        import 'components/map'
+      </script>
+    </template>
+  </is-land>
+{% else %}
+  <div class="map">
+    {% if image != blank %}
+      {{-
+        image
+        | image_url: width: image.width
+        | image_tag:
+          widths: '200,300,400,500,600,700,800,900,1000,1200,1400,1600,1800,2000,2200,2400,2600,2800,3000,3200',
+          class: 'map__image',
+          loading: loading,
+          fetchpriority: fetchpriority
+      -}}
+    {% else %}
+      <div class="map__onboarding">
+        {%- render 'placeholder-svg', name: 'lifestyle-1' -%}
+      </div>
+    {% endif %}
+  </div>
+{% endif %}

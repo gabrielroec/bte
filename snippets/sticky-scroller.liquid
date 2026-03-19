@@ -1,0 +1,29 @@
+{% # components v2.10.69 | Copyright © 2024 Archetype Themes Limited Partnership  | "Shopify Theme Store (https://www.shopify.com/legal/terms#9-additional-services)" License  %}
+{%- comment -%}
+  A sticky scroller component that wraps an element. This allows for an
+  element to be scrollable so that if it's taller than the viewport, it will
+  scroll as the page scrolls, while also remaining sticky.
+
+  Accepts:
+  - slot {string} - The slot content to wrap
+  - hydration {string} - The hydration strategy
+
+  Usage:
+  {% render 'sticky-scroller', slot: collection_sidebar %}
+{%- endcomment -%}
+
+{%- liquid
+  assign hydration = hydration | default: 'on:visible'
+-%}
+
+<is-land {{ hydration }}>
+  <sticky-scroller>
+    {{ slot }}
+  </sticky-scroller>
+
+  <template data-island>
+    <script type="module">
+      import 'components/sticky-scroller'
+    </script>
+  </template>
+</is-land>

@@ -1,0 +1,809 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "okendo_star_rating_qHXQA9": {
+          "type": "shopify://apps/okendo/blocks/star-rating/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
+          "settings": {
+            "product": "{{product}}"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+            "vendor_enable": false,
+            "sku_enable": false
+          }
+        },
+        "text_WgiafR": {
+          "type": "text",
+          "settings": {
+            "text": "Helps keep your skin soft, smooth, and glowing from morning to night"
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "separator_zdkt98": {
+          "type": "separator",
+          "settings": {}
+        },
+        "custom_eYcXWC": {
+          "type": "custom",
+          "settings": {
+            "code": "<ul>\n<li>- Leaves your skin feeling hydrated all day long</li>\n<li>- Protects your skin from environmental pollutants</li>\n<li>- Firms the skin while helping to reduce visible signs of aging</li>\n</ul"
+          }
+        },
+        "separator_GqYgcP": {
+          "type": "separator",
+          "settings": {}
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "variant_labels": true,
+            "picker_type": "button",
+            "product_dynamic_variants_enable": true,
+            "color_swatches": false
+          }
+        },
+        "recharge_subscriptions_subscription_widget_YCxYUk": {
+          "type": "shopify://apps/recharge-subscriptions/blocks/subscription-widget/371eed76-0b44-4869-9813-730372ea378e",
+          "settings": {
+            "product": "{{product}}"
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "surface_pickup_enable": true,
+            "show_gift_card_recipient": false
+          }
+        },
+        "custom_QahbLh": {
+          "type": "custom",
+          "settings": {
+            "code": "<p style=\"text-align:center; font-weight:600;\">FREE SHIPPING $75+ | 90-DAY LOVE-IT GUARANTEE</p>"
+          }
+        }
+      },
+      "block_order": [
+        "okendo_star_rating_qHXQA9",
+        "title",
+        "text_WgiafR",
+        "price",
+        "separator_zdkt98",
+        "custom_eYcXWC",
+        "separator_GqYgcP",
+        "variant_picker",
+        "recharge_subscriptions_subscription_widget_YCxYUk",
+        "buy_buttons",
+        "custom_QahbLh"
+      ],
+      "custom_css": [
+        ".product-block .variant__label {display: none;}",
+        "video-media,video {--default-aspect-ratio: 1/1 !important;}"
+      ],
+      "settings": {
+        "image_position": "left",
+        "image_container_size": "large",
+        "product_image_size": "natural",
+        "product_zoom_enable": true,
+        "thumbnail_position": "beside",
+        "thumbnail_height": "flexible",
+        "thumbnail_arrows": false,
+        "mobile_layout": "full",
+        "enable_video_looping": true,
+        "product_video_style": "muted"
+      }
+    },
+    "advanced_accordion_jJyYDX": {
+      "type": "advanced-accordion",
+      "blocks": {
+        "text_block_fxTdmN": {
+          "type": "text_block",
+          "settings": {
+            "image_width": 100,
+            "image_mask": "none",
+            "align_text": "left",
+            "title": "",
+            "text": "{{ product.description }}",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_block_fxTdmN"
+      ],
+      "custom_css": [
+        "{margin-top: 60px;}",
+        "h2 {font-family: ofelia-text, sans-serif; font-weight: 600; font-size: 18px;}"
+      ],
+      "settings": {
+        "title": "About The Product",
+        "per_row": 1,
+        "two_per_row_mobile": false,
+        "opened": false,
+        "disabled": false
+      }
+    },
+    "advanced_accordion_MNDaAU": {
+      "type": "advanced-accordion",
+      "blocks": {
+        "text_block_3MWCkr": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/Aniba_Rosaeodora_Oil_Rosewood_Oil.jpg",
+            "image_width": 25,
+            "image_mask": "none",
+            "align_text": "left",
+            "title": "Aniba Rosaeodora Oil",
+            "text": "<p>Aniba Rosaeodora Oil Commonly referred to as Rosewood oil, it is known to help firm, reduce inflammation of the skin and fight signs of again.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_6An7RD": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/Anthemis_Nobilis_Flower_Oil_Chamomile_Flower_Oil.jpg",
+            "image_width": 25,
+            "image_mask": "none",
+            "align_text": "left",
+            "title": "Anthemis Nobilis Flower Oil",
+            "text": "<p>Commonly known as Chamomile flower oil, it is known for its powerful antioxidant properties that help reduce signs of aging.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_g77UqG": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/2_0199d2b3-73b7-491a-8956-084df13ac4c3.jpg",
+            "image_width": 25,
+            "image_mask": "none",
+            "align_text": "left",
+            "title": "Aqua",
+            "text": "<p>Water, the universal solvent used in skincare to help skin feel hydrated and nourished.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_QCJYeA": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/Boswellia_Carterii_Oil_Frankincense_Oil.jpg",
+            "image_width": 25,
+            "image_mask": "none",
+            "align_text": "left",
+            "title": "Boswellia Carterii Oil",
+            "text": "<p>Commonly referred to as Frankincense oil, it is known for its anti-inflammatory properties to help calm, nourish and treat irritated skin.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_qY7NPt": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/Cetearyl_Olivate_and_Sorbitan_Olivate_Olive_Oil.jpg",
+            "image_width": 25,
+            "image_mask": "none",
+            "align_text": "left",
+            "title": "Cetearyl Olivate and Sorbitan Olivate",
+            "text": "<p>Olivem® 1000: a patented natural, biodegradable and COSMOS certified emulsifier from olive oil.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_ABjWNX": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/Citric_Acid__Citrus_Fruits.jpg",
+            "image_width": 25,
+            "image_mask": "none",
+            "align_text": "left",
+            "title": "Citric Acid",
+            "text": "<p>A natural pH balancer from citrus fruits.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_m9EyDQ": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/Citrus_Aurantium_Dulcis_Peel_Oil_Orange_Peel_Oil.jpg",
+            "image_width": 25,
+            "image_mask": "none",
+            "align_text": "left",
+            "title": "Citrus Aurantium Dulcis Peel Oil",
+            "text": "<p>Commonly referred to as Orange peel oil, it is known to help reduce inflammation of the skin.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_KWHkJC": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/5.jpg",
+            "image_width": 25,
+            "image_mask": "none",
+            "align_text": "left",
+            "title": "Clay",
+            "text": "<p>Proprietary Mineral Microbiome ClayTM, known for its unique rich mineral composition to help promote skin health.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_A8td39": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/Commiphora_Myrrha_Oil__Myrrh_Oil.jpg",
+            "image_width": 25,
+            "image_mask": "none",
+            "align_text": "left",
+            "title": "Commiphora Myrrha Oil",
+            "text": "<p>Commonly referred to as Myrrh oil, it is known for its antibacterial and antioxidant properties to help support skin health, reduce inflammation and combat free radicals.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_gRGCQe": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/Cymbopogon_Martini_Oil__Palmarosa_Oil.jpg",
+            "image_width": 25,
+            "image_mask": "none",
+            "align_text": "left",
+            "title": "Cymbopogon Martini Oil",
+            "text": "<p>Commonly referred to as Palmarosa oil, it is known for its antimicrobial, antioxidant and anti-inflammatory properties to help reduce blemishes, prevent signs of aging and soothe irritated skin.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_ckaAb8": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/Diheptyl_Succinate___Capryloyl_Glycerin___Sebacic_Acid_Copolymer.jpg",
+            "image_width": 20,
+            "image_mask": "none",
+            "align_text": "left",
+            "title": "Diheptyl Succinate / Capryloyl Glycerin / Sebacic Acid Copolymer",
+            "text": "<p>LexFeelTM N5 MB: Patented 100% natural and sustainable emollient</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_ejFeJk": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/Gluconolactone_and_Sodium_Benzoate.jpg",
+            "image_width": 25,
+            "image_mask": "none",
+            "align_text": "left",
+            "title": "Gluconolactone and Sodium Benzoate",
+            "text": "<p>Geogard UltraTM: a patented natural broad-spectrum preservative certified by ECOCERT.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_UhkJyk": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/Helanthus_Annus_Seed_Oil_Sunflower_Seed_Oil.jpg",
+            "image_width": 25,
+            "image_mask": "none",
+            "align_text": "left",
+            "title": "Helanthus Annus Seed Oil",
+            "text": "<p>Commonly known as sunflower seed oil, it is for its antioxidant properties to help protect skin from free radicals and combat premature signs of aging,</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_aehhHh": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/Magnesium_Aluminum_Silicate_Bentonite_Clay.jpg",
+            "image_width": 25,
+            "image_mask": "none",
+            "align_text": "left",
+            "title": "Magnesium Aluminum Silicate",
+            "text": "<p>Commonly referred to as Bentonite clay, it is known to help cleanse impurities from the skin.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_76JqnM": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/Potassium_Sorbate.jpg",
+            "image_width": 25,
+            "image_mask": "none",
+            "align_text": "left",
+            "title": "Potassium Sorbate",
+            "text": "<p>A naturally sourced preservative salt of sorbic acid from berries of the mountain ash.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_i7xa8H": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/Prunus_Amygdalus_Dulcis_Oil_Sweet_Almond_Oil.jpg",
+            "image_width": 25,
+            "image_mask": "none",
+            "align_text": "left",
+            "title": "Prunus Amygdalus Dulcis Oil",
+            "text": "<p>Commonly referred to as Sweet Almond oil, it is known to be rich in Vitamin A, E, Omega-3 Fatty Acids and zinc to help reduce puffiness, improve skin tone, and smooth the skin.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_wman8g": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/16.jpg",
+            "image_width": 25,
+            "image_mask": "none",
+            "align_text": "left",
+            "title": "Prunus Armeniaca Kernel Oil",
+            "text": "<p>Commonly referred as Apricot kernel oil, it is known to help improve skin tone and brighten the skin.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_R8N6e6": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/Simmondsia_Chinensis_Seed_Oil_Jojoba_Oil.jpg",
+            "image_width": 25,
+            "image_mask": "none",
+            "align_text": "left",
+            "title": "Simmondsia Chinensis Seed Oil",
+            "text": "<p>Commonly referred as Jojoba oil, it is known its anti-bacterial, antioxidant and moisturizing properties to help keep skin moisturized, heal, and combat irritations.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_nqi8zy": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/Tocopherol__Vitamin_E.jpg",
+            "image_width": 25,
+            "image_mask": "none",
+            "align_text": "left",
+            "title": "Tocopherol",
+            "text": "<p>Vegetable fats to help provide moisture and hydration to skin.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_cPQqPC": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/Vegetable_Glycerin.jpg",
+            "image_width": 25,
+            "image_mask": "none",
+            "align_text": "left",
+            "title": "Vegetable Glycerin",
+            "text": "<p>Vegetable fats to help provide moisture and hydration to skin.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_block_3MWCkr",
+        "text_block_6An7RD",
+        "text_block_g77UqG",
+        "text_block_QCJYeA",
+        "text_block_qY7NPt",
+        "text_block_ABjWNX",
+        "text_block_m9EyDQ",
+        "text_block_KWHkJC",
+        "text_block_A8td39",
+        "text_block_gRGCQe",
+        "text_block_ckaAb8",
+        "text_block_ejFeJk",
+        "text_block_UhkJyk",
+        "text_block_aehhHh",
+        "text_block_76JqnM",
+        "text_block_i7xa8H",
+        "text_block_wman8g",
+        "text_block_R8N6e6",
+        "text_block_nqi8zy",
+        "text_block_cPQqPC"
+      ],
+      "custom_css": [
+        "h2 {font-family: ofelia-text, sans-serif; font-weight: 600; font-size: 18px;}"
+      ],
+      "settings": {
+        "title": "All 24 Natural Ingredients",
+        "per_row": 4,
+        "two_per_row_mobile": false,
+        "opened": false,
+        "disabled": false
+      }
+    },
+    "advanced_accordion_AYThFw": {
+      "type": "advanced-accordion",
+      "blocks": {
+        "text_block_MdMUUa": {
+          "type": "text_block",
+          "settings": {
+            "image_width": 100,
+            "image_mask": "none",
+            "align_text": "left",
+            "title": "",
+            "text": "<p>1.Apply onto cleansed skin. Gently massage moisturizer all over your face and neck in upward motions. Allow to absorb.<br/><br/>2.For use in both morning and evening to keep skin hydrated and nourished.<br/><br/>WARNINGS: Avoid direct contact with eyes. For topical use only.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_Li43w9": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/Glow_Daily_Moisturizer.webp",
+            "image_width": 55,
+            "image_mask": "none",
+            "align_text": "left",
+            "title": "",
+            "text": "",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_block_MdMUUa",
+        "text_block_Li43w9"
+      ],
+      "custom_css": [
+        "h2 {font-family: ofelia-text, sans-serif; font-weight: 600; font-size: 18px;}"
+      ],
+      "settings": {
+        "title": "How To Apply",
+        "per_row": 2,
+        "two_per_row_mobile": false,
+        "opened": false,
+        "disabled": false
+      }
+    },
+    "advanced_accordion_xWwj3X": {
+      "type": "advanced-accordion",
+      "blocks": {
+        "text_block_raE9Mr": {
+          "type": "text_block",
+          "settings": {
+            "image_width": 100,
+            "image_mask": "none",
+            "align_text": "left",
+            "title": "Suistainable. Minimized environmental impact.",
+            "text": "<p>We make every effort to minimize our environmental footprint. Our recyclable jars are made from glass and we skip the excess by using only primary packaging (the jar) and printing our product information directly onto the jar to reduce packaging and labelling waste. Finally, to reduce wasted space during storage and shipping, we use uniquely shaped jars that stack neatly and limit gaps. This economical use of space reduces our environmental impact (think packing materials used and transportation emissions per shipment) by 25 to 30%.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_gWmNcT": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/Resized_image_package.webp",
+            "image_width": 100,
+            "image_mask": "none",
+            "align_text": "left",
+            "title": "",
+            "text": "",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_block_raE9Mr",
+        "text_block_gWmNcT"
+      ],
+      "custom_css": [
+        "h2 {font-family: ofelia-text, sans-serif; font-weight: 600; font-size: 18px;}"
+      ],
+      "settings": {
+        "title": "Eco-Friendly Packaging",
+        "per_row": 2,
+        "two_per_row_mobile": false,
+        "opened": false,
+        "disabled": false
+      }
+    },
+    "rich_text_3NkeD8": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_xUQgwE": {
+          "type": "heading",
+          "settings": {
+            "title": "Why We Love It",
+            "heading_size": "h2"
+          }
+        },
+        "text_YYJzXb": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": true,
+            "text": "<p>We’re obsessed with how effortlessly it absorbs, leaving your skin feeling silky without any heavy residue—just a perfectly hydrated glow.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_xUQgwE",
+        "text_YYJzXb"
+      ],
+      "custom_css": [
+        "{margin-top: 40px; margin-bottom: 0px;}",
+        "h2 {font-family: ofelia-text, sans-serif; font-weight: 600; font-size: 25px;}"
+      ],
+      "settings": {
+        "align_text": "left",
+        "narrow_column": false,
+        "color_scheme": "1",
+        "divider": false
+      }
+    },
+    "text_and_image_rHLmeH": {
+      "type": "text-and-image",
+      "custom_css": [
+        "h2 {font-family: ofelia-text, sans-serif; font-weight: 600; font-size: 35px;}",
+        "p {padding-bottom: 20px;}"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/GLOW_Daily_Moisturizer_Lifestyle_1.jpg",
+        "image_mask": "none",
+        "image2_mask": "none",
+        "subtitle": "",
+        "title": "Dewy, Hydrated Skin - All Day Long",
+        "heading_size": "h2",
+        "text": "<p>This nourishing cream hydrates without the weight, absorbing quickly to keep your skin glowing and refreshed.  Infused with botanicals and antioxidants, it locks in moisture and enhances your natural glow.</p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "left",
+        "image_width": "50",
+        "layout": "right",
+        "color_scheme": "none",
+        "divider": false,
+        "top_padding": true,
+        "bottom_padding": true
+      }
+    },
+    "text_and_image_tNiqhc": {
+      "type": "text-and-image",
+      "custom_css": [
+        "h2 {font-family: ofelia-text, sans-serif; font-weight: 600; font-size: 35px;}"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/GLOW_Daily_Moisturizer_Lifestyle_2.jpg",
+        "image_mask": "square",
+        "image2_mask": "none",
+        "subtitle": "",
+        "title": "Drink Up, Skin—It’s Glow Time",
+        "heading_size": "h2",
+        "text": "<p>A daily dose of deep hydration that your skin will drink up.  Packed with skin-loving nutrients, it helps restore balance, smooth texture, and enhance your natural radiance—without clogging pores or feeling greasy. </p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "left",
+        "image_width": "50",
+        "layout": "left",
+        "color_scheme": "none",
+        "divider": false,
+        "top_padding": true,
+        "bottom_padding": false
+      }
+    },
+    "sub": {
+      "type": "product-full-width",
+      "disabled": true,
+      "settings": {
+        "max_width": true
+      }
+    },
+    "promo_grid_7UkVC9": {
+      "type": "promo-grid",
+      "blocks": {
+        "image_AGJAd6": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/GLOW_Daily_Moisturizer_UGC_1.jpg",
+            "link": "",
+            "width": "33"
+          }
+        },
+        "image_NBkhNm": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/GLOW_Daily_Moisturizer_UGC_2.jpg",
+            "link": "",
+            "width": "33"
+          }
+        },
+        "image_UktjLX": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/GLOW_Daily_Moisturizer_UGC_3.jpg",
+            "link": "",
+            "width": "33"
+          }
+        }
+      },
+      "block_order": [
+        "image_AGJAd6",
+        "image_NBkhNm",
+        "image_UktjLX"
+      ],
+      "custom_css": [],
+      "settings": {
+        "full_width": true,
+        "gutter_size": 20,
+        "space_above": false,
+        "space_below": true
+      }
+    },
+    "faq_XpMHc9": {
+      "type": "faq",
+      "blocks": {
+        "question_LdCzpH": {
+          "type": "question",
+          "settings": {
+            "title": "What is the GLOW™ Daily Moisturizer, and what does it do?",
+            "text": "<p>The GLOW™ Daily Moisturizer is a lightweight, hydrating cream that helps nourish, protect, and enhance your skin’s natural radiance.<br/></p>"
+          }
+        },
+        "question_V4wNRq": {
+          "type": "question",
+          "settings": {
+            "title": "What are the key benefits of the GLOW™ Daily Moisturizer?",
+            "text": "<p>It deeply hydrates, smooths, and soothes your skin, improves elasticity, and helps maintain a healthy, glowing complexion all day long.<br/></p>"
+          }
+        },
+        "question_EE96i6": {
+          "type": "question",
+          "settings": {
+            "title": "Will the GLOW™ Daily Moisturizer clog my pores?",
+            "text": "<p>Not at all! It’s non-comedogenic and formulated to keep your pores clear while delivering deep hydration.<br/></p>"
+          }
+        },
+        "question_VRhWay": {
+          "type": "question",
+          "settings": {
+            "title": "How does the GLOW™ Daily Moisturizer improve my skin barrier?",
+            "text": "<p>It helps to strengthen your skin’s natural barrier by locking in moisture and protecting against environmental stressors like pollution.<br/></p>"
+          }
+        },
+        "question_LMCqiE": {
+          "type": "question",
+          "settings": {
+            "title": "What is the Mineral Microbiome Clay Complex™, and what does it do?",
+            "text": "<p>This proprietary blend is rich in essential minerals that nourish your skin, helps support its microbiome, and enhance its natural radiance.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "question_LdCzpH",
+        "question_V4wNRq",
+        "question_EE96i6",
+        "question_VRhWay",
+        "question_LMCqiE"
+      ],
+      "custom_css": [
+        "{margin-top: 0px; background: #f7f7f7; padding-bottom: 50px;}"
+      ],
+      "settings": {
+        "title": "{{ product.title }} FAQs",
+        "heading_size": "h2",
+        "heading_position": "left"
+      }
+    },
+    "featured_collection_yCFwUr": {
+      "type": "featured-collection",
+      "custom_css": [
+        "h2 {font-family: ofelia-text, sans-serif; font-weight: 600;}"
+      ],
+      "settings": {
+        "title": "You May Also Like",
+        "heading_size": "h2",
+        "heading_position": "left",
+        "home_featured_products": "best-sellers",
+        "count": 5,
+        "products_per_row": 5,
+        "mobile_scrollable": true,
+        "view_all": true,
+        "divider": false
+      }
+    },
+    "1736732638a24ea9f0": {
+      "type": "apps",
+      "blocks": {
+        "okendo_reviews_widget_BrbN8J": {
+          "type": "shopify://apps/okendo/blocks/reviews-widget/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
+          "settings": {
+            "product": "{{product}}",
+            "widget_type": "reviews_widget"
+          }
+        }
+      },
+      "block_order": [
+        "okendo_reviews_widget_BrbN8J"
+      ],
+      "settings": {
+        "full_width": false,
+        "space_around": true
+      }
+    },
+    "recently-viewed": {
+      "type": "recently-viewed",
+      "disabled": true,
+      "settings": {}
+    },
+    "collection-return": {
+      "type": "collection-return",
+      "disabled": true,
+      "settings": {
+        "color_scheme": "2"
+      }
+    },
+    "more-products-collection": {
+      "type": "more-products-collection",
+      "disabled": true,
+      "settings": {
+        "products_per_row": 3,
+        "max_products": 5
+      }
+    },
+    "more-products-vendor": {
+      "type": "more-products-vendor",
+      "disabled": true,
+      "settings": {
+        "products_per_row": 3,
+        "max_products": 5
+      }
+    },
+    "recommendations": {
+      "type": "product-recommendations",
+      "disabled": true,
+      "settings": {
+        "product_recommendations_heading": "You may also like",
+        "related_count": 6,
+        "products_per_row": 3
+      }
+    }
+  },
+  "order": [
+    "main",
+    "advanced_accordion_jJyYDX",
+    "advanced_accordion_MNDaAU",
+    "advanced_accordion_AYThFw",
+    "advanced_accordion_xWwj3X",
+    "rich_text_3NkeD8",
+    "text_and_image_rHLmeH",
+    "text_and_image_tNiqhc",
+    "sub",
+    "promo_grid_7UkVC9",
+    "faq_XpMHc9",
+    "featured_collection_yCFwUr",
+    "1736732638a24ea9f0",
+    "recently-viewed",
+    "collection-return",
+    "more-products-collection",
+    "more-products-vendor",
+    "recommendations"
+  ]
+}

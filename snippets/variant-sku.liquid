@@ -1,0 +1,25 @@
+{% # components v3.0.1 | Copyright © 2024 Archetype Themes Limited Partnership  | "Shopify Theme Store (https://www.shopify.com/legal/terms#9-additional-services)" License  %}
+{%- comment -%}
+  Renders the SKU of a given variant
+
+  Accepts:
+  - variant {variant} - Variant object
+  - product {product} - Product object
+
+  Usage:
+  {% render 'variant-sku', variant: variant %}
+{%- endcomment -%}
+
+{%- liquid
+  assign product = section.settings.product | default: product
+-%}
+
+<variant-sku data-product-id="{{ product.id }}" data-section-id="{{ section.id }}">
+  {%- if variant.sku != blank -%}
+    SKU: {{ variant.sku }}
+  {%- endif -%}
+</variant-sku>
+
+<script type="module">
+  import 'components/variant-sku'
+</script>

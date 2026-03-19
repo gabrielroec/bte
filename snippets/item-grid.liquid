@@ -1,0 +1,79 @@
+{% # components v3.0.1 | Copyright © 2024 Archetype Themes Limited Partnership  | "Shopify Theme Store (https://www.shopify.com/legal/terms#9-additional-services)" License  %}
+{%- comment -%}
+  Renders an item grid with filters and sorting.
+
+  Accepts:
+  - context {object} - A collection or search object
+  - grid_style {'large'|'medium'|'list'} - The grid style
+  - enable_filters {boolean} - Whether to enable filters
+  - enable_sort {boolean} - Whether to enable sorting
+  - hydration {string} - The hydration strategy
+
+  Usage:
+  {% render 'collection-grid', context: collection %}
+{%- endcomment -%}
+
+{%- liquid
+  assign grid_style = grid_style | default: section.settings.grid_style | default: 'medium'
+  assign enable_filters = enable_filters | default: section.settings.enable_sidebar, allow_false: true | default: true, allow_false: true
+  assign enable_sort = enable_sort | default: section.settings.enable_sort, allow_false: true | default: true, allow_false: true
+  assign hydration = hydration | default: 'on:visible'
+
+  if cart.attributes.product_view != blank
+    assign grid_style = cart.attributes.product_view
+  endif
+-%}
+
+{%- capture grid_content -%}
+  {%- if enable_filters -%}
+    <div data-sticky-sidebar class="grid__item medium-up--one-fifth item-grid__sidebar">
+      <div id="CollectionSidebar">
+        <div class="collection-sidebar small--hide" id="CollectionSidebarFilterWrap">
+          <div class="filter-wrapper">
+            {%- render 'item-grid-filters', context: context -%}
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid__item medium-up--four-fifths">
+      <div class="collection-grid__wrapper">
+        {%- render 'item-grid-controls', context: context, grid_style: grid_style -%}
+        {{- slot -}}
+      </div>
+    </div>
+  {%- else -%}
+    <div class="grid__item">
+      <div class="collection-grid__wrapper">
+        {%- render 'item-grid-controls', context: context, enable_filters: enable_filters, enable_sort: enable_sort -%}
+        {{- slot -}}
+      </div>
+    </div>
+  {%- endif -%}
+{%- endcapture -%}
+
+<is-land {{ hydration }}>
+  <item-grid
+    class="item-grid"
+    data-section-id="{{ section.id }}"
+    data-section-type="collection-template"
+  >
+    <div id="AjaxContent" class="float-grid clearfix">
+      {{- grid_content -}}
+    </div>
+  </item-grid>
+
+  <template data-island>
+    <script type="module">
+      import 'components/item-grid'
+    </script>
+  </template>
+</is-land>
+
+{%- unless enable_sort -%}
+  {%- style -%}
+    .collection-sidebar__group--sort {
+      display: none;
+    }
+  {%- endstyle -%}
+{%- endunless -%}

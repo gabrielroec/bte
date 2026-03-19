@@ -1,0 +1,26 @@
+{% # components v3.0.1 | Copyright © 2024 Archetype Themes Limited Partnership  | "Shopify Theme Store (https://www.shopify.com/legal/terms#9-additional-services)" License  %}
+{%- comment -%}
+  Toggle cart button
+
+  Accepts:
+  - cart_type {string} - The cart type
+  - cart_link {string} - The cart link
+
+  Usage:
+  {% render 'toggle-cart', cart_link: cart_link %}
+{%- endcomment -%}
+
+{%- liquid
+  assign cart_type = cart_type | default: settings.cart_type | default: 'page'
+-%}
+
+{%- if cart_type == 'dropdown' -%}
+  <toggle-cart>
+    {{- cart_link -}}
+  </toggle-cart>
+  <script type="module">
+    import 'components/toggle-cart'
+  </script>
+{%- else -%}
+  {{- cart_link -}}
+{%- endif -%}

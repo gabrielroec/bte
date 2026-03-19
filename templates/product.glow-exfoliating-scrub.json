@@ -1,0 +1,747 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "okendo_star_rating_qHXQA9": {
+          "type": "shopify://apps/okendo/blocks/star-rating/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
+          "settings": {
+            "product": "{{product}}"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+            "vendor_enable": false,
+            "sku_enable": false
+          }
+        },
+        "text_WgiafR": {
+          "type": "text",
+          "settings": {
+            "text": "Helps unclog pores and boost your skin’s natural radiance."
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "separator_zdkt98": {
+          "type": "separator",
+          "settings": {}
+        },
+        "custom_eYcXWC": {
+          "type": "custom",
+          "settings": {
+            "code": "<ul>\n<li>- Gently exfoliates with natural ingredients</li>\n<li>- Brightens dull skin and promotes an even tone</li>\n<li>- Leaves your skin feeling polished, soft, and naturally radiant</li>\n</ul"
+          }
+        },
+        "separator_GqYgcP": {
+          "type": "separator",
+          "settings": {}
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "variant_labels": true,
+            "picker_type": "button",
+            "product_dynamic_variants_enable": true,
+            "color_swatches": false
+          }
+        },
+        "recharge_subscriptions_subscription_widget_YCxYUk": {
+          "type": "shopify://apps/recharge-subscriptions/blocks/subscription-widget/371eed76-0b44-4869-9813-730372ea378e",
+          "settings": {
+            "product": "{{product}}"
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "surface_pickup_enable": true,
+            "show_gift_card_recipient": false
+          }
+        },
+        "custom_QahbLh": {
+          "type": "custom",
+          "settings": {
+            "code": "<p style=\"text-align:center; font-weight:600;\">FREE SHIPPING $75+ | 90-DAY LOVE-IT GUARANTEE</p>"
+          }
+        }
+      },
+      "block_order": [
+        "okendo_star_rating_qHXQA9",
+        "title",
+        "text_WgiafR",
+        "price",
+        "separator_zdkt98",
+        "custom_eYcXWC",
+        "separator_GqYgcP",
+        "variant_picker",
+        "recharge_subscriptions_subscription_widget_YCxYUk",
+        "buy_buttons",
+        "custom_QahbLh"
+      ],
+      "custom_css": [
+        ".product-block .variant__label {display: none;}",
+        "video-media,video {--default-aspect-ratio: 1/1 !important;}"
+      ],
+      "settings": {
+        "image_position": "left",
+        "image_container_size": "large",
+        "product_image_size": "square",
+        "product_zoom_enable": true,
+        "thumbnail_position": "beside",
+        "thumbnail_height": "flexible",
+        "thumbnail_arrows": false,
+        "mobile_layout": "full",
+        "enable_video_looping": true,
+        "product_video_style": "muted"
+      }
+    },
+    "advanced_accordion_jJyYDX": {
+      "type": "advanced-accordion",
+      "blocks": {
+        "text_block_fxTdmN": {
+          "type": "text_block",
+          "settings": {
+            "image_width": 100,
+            "image_mask": "none",
+            "align_text": "left",
+            "title": "",
+            "text": "{{ product.description }}",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_block_fxTdmN"
+      ],
+      "custom_css": [
+        "{margin-top: 60px;}",
+        "h2 {font-family: ofelia-text, sans-serif; font-weight: 600; font-size: 18px;}"
+      ],
+      "settings": {
+        "title": "About The Product",
+        "per_row": 1,
+        "two_per_row_mobile": false,
+        "opened": false,
+        "disabled": false
+      }
+    },
+    "advanced_accordion_MNDaAU": {
+      "type": "advanced-accordion",
+      "blocks": {
+        "text_block_g77UqG": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/2_0199d2b3-73b7-491a-8956-084df13ac4c3.jpg",
+            "image_width": 25,
+            "image_mask": "none",
+            "align_text": "left",
+            "title": "Aqua",
+            "text": "<p>Water, the universal solvent used in skincare to help skin feel hydrated and nourished. </p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_3MWCkr": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/Behentrimonium_Methosulface_and_Cetearyl_Alcohol.jpg",
+            "image_width": 25,
+            "image_mask": "none",
+            "align_text": "left",
+            "title": "Behentrimonium Methosulface and Cetearyl Alcohol",
+            "text": "<p>IncroquatTM Behenyl TMS: a patented plant-based emulsifier from vegetables.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_QCJYeA": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/Caprylic_Capric_Triglyceride_Coconut_Oil.jpg",
+            "image_width": 25,
+            "image_mask": "none",
+            "align_text": "left",
+            "title": "Caprylic/Capric Triglyceride",
+            "text": "<p>A natural emollient and solvent from combining coconut oil with vegetable glycerin.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_qY7NPt": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/Carthamus_Tinctorius_Seed_Oil_Safflower_Seed_Oil.jpg",
+            "image_width": 25,
+            "image_mask": "none",
+            "align_text": "left",
+            "title": "Carthamus Tinctorius Seed Oil",
+            "text": "<p>Commonly referred to as Safflower seed oil, it is known to help moisturize skin leaving it smooth and soft.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_KWHkJC": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/Cetyl_Alcohol.jpg",
+            "image_width": 25,
+            "image_mask": "none",
+            "align_text": "left",
+            "title": "Cetyl Alcohol",
+            "text": "<p>A natural thickener from plants.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_ABjWNX": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/Citrus_Paradisi_Seed_Extract_Grapefruit_Seed_Extract.jpg",
+            "image_width": 25,
+            "image_mask": "none",
+            "align_text": "left",
+            "title": "Citrus Paradisi Seed Extract",
+            "text": "<p>Commonly referred to as Grapefruit seed extract, it is know to help soothe, moisturize and prevent signs of aging.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_m9EyDQ": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/Clay_MMC.jpg",
+            "image_width": 25,
+            "image_mask": "none",
+            "align_text": "left",
+            "title": "Clay",
+            "text": "<p>Proprietary Mineral Microbiome ClayTM, known for its unique rich mineral composition to help promote skin health.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_A8td39": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/Euphorbia_Cerifera_Wax_Candeilla_Wax.jpg",
+            "image_width": 25,
+            "image_mask": "none",
+            "align_text": "left",
+            "title": "Euphorbia Cerifera Wax",
+            "text": "<p>Commonly referred to as Candelilla wax, it is known to help hydrate dry skin.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_gRGCQe": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/Gluconolactone_and_Sodium_Benzoate.jpg",
+            "image_width": 25,
+            "image_mask": "none",
+            "align_text": "left",
+            "title": "Gluconolactone and Sodium Benzoate",
+            "text": "<p>Geogard UltraTM: a patented natural broad-spectrum preservative certified by ECOCERT.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_ckaAb8": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/Orbignya_Oleifera_Seed_Oil__Moringa_Seed_Oil.jpg",
+            "image_width": 20,
+            "image_mask": "none",
+            "align_text": "left",
+            "title": "Orbignya Oleifera Seed Oil",
+            "text": "<p>Commonly referred to as Moringa seed oil, it is known for its antimicrobial and anti-inflammatory properties to calm and nourish the skin.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_wman8g": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/Prunus_Amygdalus_Dulcis_Oil_Sweet_Almond_Oil.jpg",
+            "image_width": 25,
+            "image_mask": "none",
+            "align_text": "left",
+            "title": "Prunus Amygdalus Dulcis Oil",
+            "text": "<p>Commonly referred to as Sweet Almond oil, it is known to be rich in Vitamin A, E, Omega-3 Fatty Acids and zinc to help reduce puffiness, improve skin tone, and smooth the skin.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_ejFeJk": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/Prunus_Armeniaca_Seed_Powder__Apricot_Seed_Powder.jpg",
+            "image_width": 25,
+            "image_mask": "none",
+            "align_text": "left",
+            "title": "Prunus Armeniaca Seed Powder",
+            "text": "<p>Commonly referred to as Apricot Seed powder, it is known for its natural exfoliant properties to help remove dry damaged skin cells for softer and smoother feeling skin.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_UhkJyk": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/Stearyl_Alcohol.jpg",
+            "image_width": 25,
+            "image_mask": "none",
+            "align_text": "left",
+            "title": "Stearyl Alcohol",
+            "text": "<p>A natural thickener from plants.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_aehhHh": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/Vegetable_Glycerin.jpg",
+            "image_width": 25,
+            "image_mask": "none",
+            "align_text": "left",
+            "title": "Vegetable Glycerin",
+            "text": "<p>Vegetable fats to help provide moisture and hydration to skin.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_76JqnM": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/Vitis_Vinifera_Seed_Oil_Grapeseed_Oil.jpg",
+            "image_width": 25,
+            "image_mask": "none",
+            "align_text": "left",
+            "title": "Vitis Vinifera Seed Oil",
+            "text": "<p>Commonly referred to as Grapeseed oil, it is known for its anti-inflammatory, antimicrobial and antioxidant properties to help moisturize, soften and even skin tone.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_block_g77UqG",
+        "text_block_3MWCkr",
+        "text_block_QCJYeA",
+        "text_block_qY7NPt",
+        "text_block_KWHkJC",
+        "text_block_ABjWNX",
+        "text_block_m9EyDQ",
+        "text_block_A8td39",
+        "text_block_gRGCQe",
+        "text_block_ckaAb8",
+        "text_block_wman8g",
+        "text_block_ejFeJk",
+        "text_block_UhkJyk",
+        "text_block_aehhHh",
+        "text_block_76JqnM"
+      ],
+      "custom_css": [
+        "h2 {font-family: ofelia-text, sans-serif; font-weight: 600; font-size: 18px;}"
+      ],
+      "settings": {
+        "title": "All 17 Natural Ingredients",
+        "per_row": 4,
+        "two_per_row_mobile": false,
+        "opened": false,
+        "disabled": false
+      }
+    },
+    "advanced_accordion_AYThFw": {
+      "type": "advanced-accordion",
+      "blocks": {
+        "text_block_MdMUUa": {
+          "type": "text_block",
+          "settings": {
+            "image_width": 100,
+            "image_mask": "none",
+            "align_text": "left",
+            "title": "",
+            "text": "<p>1. Apply onto damp skin.<br/><br/>2. Massage onto your skin in gentle circular motions.<br/><br/>3. Rinse and pat dry. Use three times per week for glowing results.<br/><br/>WARNINGS: Avoid direct contact with eyes. For topical use only.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_Li43w9": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/Glow_Exfoliating_Scrub.webp",
+            "image_width": 55,
+            "image_mask": "none",
+            "align_text": "left",
+            "title": "",
+            "text": "",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_block_MdMUUa",
+        "text_block_Li43w9"
+      ],
+      "custom_css": [
+        "h2 {font-family: ofelia-text, sans-serif; font-weight: 600; font-size: 18px;}"
+      ],
+      "settings": {
+        "title": "How To Apply",
+        "per_row": 2,
+        "two_per_row_mobile": false,
+        "opened": false,
+        "disabled": false
+      }
+    },
+    "advanced_accordion_xWwj3X": {
+      "type": "advanced-accordion",
+      "blocks": {
+        "text_block_raE9Mr": {
+          "type": "text_block",
+          "settings": {
+            "image_width": 100,
+            "image_mask": "none",
+            "align_text": "left",
+            "title": "Suistainable. Minimized environmental impact.",
+            "text": "<p>We make every effort to minimize our environmental footprint. Our recyclable jars are made from glass and we skip the excess by using only primary packaging (the jar) and printing our product information directly onto the jar to reduce packaging and labelling waste. Finally, to reduce wasted space during storage and shipping, we use uniquely shaped jars that stack neatly and limit gaps. This economical use of space reduces our environmental impact (think packing materials used and transportation emissions per shipment) by 25 to 30%.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_gWmNcT": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/Resized_image_package.webp",
+            "image_width": 100,
+            "image_mask": "none",
+            "align_text": "left",
+            "title": "",
+            "text": "",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_block_raE9Mr",
+        "text_block_gWmNcT"
+      ],
+      "custom_css": [
+        "h2 {font-family: ofelia-text, sans-serif; font-weight: 600; font-size: 18px;}"
+      ],
+      "settings": {
+        "title": "Eco-Friendly Packaging",
+        "per_row": 2,
+        "two_per_row_mobile": false,
+        "opened": false,
+        "disabled": false
+      }
+    },
+    "rich_text_3NkeD8": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_xUQgwE": {
+          "type": "heading",
+          "settings": {
+            "title": "Why We Love It",
+            "heading_size": "h2"
+          }
+        },
+        "text_YYJzXb": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": true,
+            "text": "<p>We love that this scrub polishes without the punishment. Say goodbye to rough scrubs! This formula exfoliates like a pro while keeping your skin happy, healthy, and radiant.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_xUQgwE",
+        "text_YYJzXb"
+      ],
+      "custom_css": [
+        "{margin-top: 40px; margin-bottom: 0px;}",
+        "h2 {font-family: ofelia-text, sans-serif; font-weight: 600; font-size: 25px;}"
+      ],
+      "settings": {
+        "align_text": "left",
+        "narrow_column": false,
+        "color_scheme": "1",
+        "divider": false
+      }
+    },
+    "text_and_image_rHLmeH": {
+      "type": "text-and-image",
+      "custom_css": [
+        "h2 {font-family: ofelia-text, sans-serif; font-weight: 600; font-size: 35px;}",
+        "p {padding-bottom: 20px;}"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/GLOW_Exfoliating_Scrub_Lifestyle_1.jpg",
+        "image_mask": "none",
+        "image2_mask": "none",
+        "subtitle": "",
+        "title": "Buff Away Dullness, Reveal Your Glow",
+        "heading_size": "h2",
+        "text": "<p>Say goodbye to dull, tired skin with our GLOW™ Exfoliating Scrub. Formulated with 100% natural exfoliants, it gently buffs away dead skin cells and impurities, leaving your skin feeling soft and smooth. </p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "left",
+        "image_width": "50",
+        "layout": "right",
+        "color_scheme": "none",
+        "divider": false,
+        "top_padding": true,
+        "bottom_padding": true
+      }
+    },
+    "text_and_image_tNiqhc": {
+      "type": "text-and-image",
+      "custom_css": [
+        "h2 {font-family: ofelia-text, sans-serif; font-weight: 600; font-size: 35px;}"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/GLOW_Exfoliating_Scrub_Lifestyle_2.jpg",
+        "image_mask": "square",
+        "image2_mask": "none",
+        "subtitle": "",
+        "title": "Your Glow-Up Starts Here",
+        "heading_size": "h2",
+        "text": "<p>Kickstart your skincare routine with our GLOW™ Exfoliating Scrub, the ultimate prep step for glowing skin. Its unique formula helps remove buildup, unclog pores, and polish your skin for a fresh, radiant look.</p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "left",
+        "image_width": "50",
+        "layout": "left",
+        "color_scheme": "none",
+        "divider": false,
+        "top_padding": true,
+        "bottom_padding": false
+      }
+    },
+    "sub": {
+      "type": "product-full-width",
+      "disabled": true,
+      "settings": {
+        "max_width": true
+      }
+    },
+    "promo_grid_7UkVC9": {
+      "type": "promo-grid",
+      "blocks": {
+        "image_AGJAd6": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/GLOW_Exfoliating_Scrub_UGC_1.jpg",
+            "link": "",
+            "width": "33"
+          }
+        },
+        "image_NBkhNm": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/GLOW_Exfoliating_Scrub_UGC_2.jpg",
+            "link": "",
+            "width": "33"
+          }
+        },
+        "image_UktjLX": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/GLOW_Exfoliating_Scrub_UGC_3.jpg",
+            "link": "",
+            "width": "33"
+          }
+        }
+      },
+      "block_order": [
+        "image_AGJAd6",
+        "image_NBkhNm",
+        "image_UktjLX"
+      ],
+      "custom_css": [],
+      "settings": {
+        "full_width": true,
+        "gutter_size": 20,
+        "space_above": false,
+        "space_below": true
+      }
+    },
+    "faq_XpMHc9": {
+      "type": "faq",
+      "blocks": {
+        "question_LdCzpH": {
+          "type": "question",
+          "settings": {
+            "title": "What is the GLOW™ Exfoliating Scrub, and how does it work?",
+            "text": "<p>The GLOW™ Exfoliating Scrub is a gentle yet powerful exfoliator that removes dead skin cells, unclogs pores, and reveals brighter, smoother skin.<br/></p>"
+          }
+        },
+        "question_V4wNRq": {
+          "type": "question",
+          "settings": {
+            "title": "What makes the GLOW™ Exfoliating Scrub unique?",
+            "text": "<p>It’s 100% natural. Using fine apricot seed powder as a mechanical exfoliant, it exfoliates with nourishing ingredients to leave your skin feeling soft, radiant, and refreshed without harshness.<br/></p>"
+          }
+        },
+        "question_EE96i6": {
+          "type": "question",
+          "settings": {
+            "title": "Is the GLOW™ Exfoliating Scrub safe for sensitive skin?",
+            "text": "<p>Yes! It’s formulated to be gentle while still effective, but if you have very sensitive skin, start by using it once a week and adjust as needed.<br/></p>"
+          }
+        },
+        "question_VRhWay": {
+          "type": "question",
+          "settings": {
+            "title": "Does the GLOW™ Exfoliating Scrub help with blackheads?",
+            "text": "<p>Absolutely! By unclogging pores and removing buildup, it helps minimize the appearance of blackheads and keeps your skin clear.<br/></p>"
+          }
+        },
+        "question_wMBU9q": {
+          "type": "question",
+          "settings": {
+            "title": "Can the GLOW™ Exfoliating Scrub help with uneven skin tone?",
+            "text": "<p>Yes! Regular exfoliation helps fade dark spots and improve skin tone for a more even, glowing complexion.<br/></p>"
+          }
+        },
+        "question_LMCqiE": {
+          "type": "question",
+          "settings": {
+            "title": "What is the Mineral Microbiome Clay Complex™, and what does it do?",
+            "text": "<p>This proprietary blend is rich in essential minerals that nourish your skin, helps support its microbiome, and enhance its natural radiance.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "question_LdCzpH",
+        "question_V4wNRq",
+        "question_EE96i6",
+        "question_VRhWay",
+        "question_wMBU9q",
+        "question_LMCqiE"
+      ],
+      "custom_css": [
+        "{margin-top: 0px; background: #f7f7f7; padding-bottom: 50px;}"
+      ],
+      "settings": {
+        "title": "{{ product.title }} FAQs",
+        "heading_size": "h2",
+        "heading_position": "left"
+      }
+    },
+    "featured_collection_yCFwUr": {
+      "type": "featured-collection",
+      "custom_css": [
+        "h2 {font-family: ofelia-text, sans-serif; font-weight: 600;}"
+      ],
+      "settings": {
+        "title": "You May Also Like",
+        "heading_size": "h2",
+        "heading_position": "left",
+        "home_featured_products": "best-sellers",
+        "count": 5,
+        "products_per_row": 5,
+        "mobile_scrollable": true,
+        "view_all": true,
+        "divider": false
+      }
+    },
+    "1736732638a24ea9f0": {
+      "type": "apps",
+      "blocks": {
+        "okendo_reviews_widget_BrbN8J": {
+          "type": "shopify://apps/okendo/blocks/reviews-widget/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
+          "settings": {
+            "product": "{{product}}",
+            "widget_type": "reviews_widget"
+          }
+        }
+      },
+      "block_order": [
+        "okendo_reviews_widget_BrbN8J"
+      ],
+      "settings": {
+        "full_width": false,
+        "space_around": true
+      }
+    },
+    "recently-viewed": {
+      "type": "recently-viewed",
+      "disabled": true,
+      "settings": {}
+    },
+    "collection-return": {
+      "type": "collection-return",
+      "disabled": true,
+      "settings": {
+        "color_scheme": "2"
+      }
+    },
+    "more-products-collection": {
+      "type": "more-products-collection",
+      "disabled": true,
+      "settings": {
+        "products_per_row": 3,
+        "max_products": 5
+      }
+    },
+    "more-products-vendor": {
+      "type": "more-products-vendor",
+      "disabled": true,
+      "settings": {
+        "products_per_row": 3,
+        "max_products": 5
+      }
+    },
+    "recommendations": {
+      "type": "product-recommendations",
+      "disabled": true,
+      "settings": {
+        "product_recommendations_heading": "You may also like",
+        "related_count": 6,
+        "products_per_row": 3
+      }
+    }
+  },
+  "order": [
+    "main",
+    "advanced_accordion_jJyYDX",
+    "advanced_accordion_MNDaAU",
+    "advanced_accordion_AYThFw",
+    "advanced_accordion_xWwj3X",
+    "rich_text_3NkeD8",
+    "text_and_image_rHLmeH",
+    "text_and_image_tNiqhc",
+    "sub",
+    "promo_grid_7UkVC9",
+    "faq_XpMHc9",
+    "featured_collection_yCFwUr",
+    "1736732638a24ea9f0",
+    "recently-viewed",
+    "collection-return",
+    "more-products-collection",
+    "more-products-vendor",
+    "recommendations"
+  ]
+}

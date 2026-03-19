@@ -1,0 +1,380 @@
+{% # components v3.0.1 | Copyright © 2024 Archetype Themes Limited Partnership  | "Shopify Theme Store (https://www.shopify.com/legal/terms#9-additional-services)" License  %}
+{%- comment -%}
+  Renders the customer order section.
+
+  Accepts:
+  - show_breadcrumbs {boolean} - Whether to show the breadcrumbs
+
+  Usage:
+  {% render 'section-main-order %}
+{%- endcomment -%}
+
+{%- liquid
+  assign show_breadcrumbs = show_breadcrumbs | default: settings.show_breadcrumbs, allow_false: true | default: true, allow_false: true
+-%}
+
+<div class="page-width page-content">
+  {% if show_breadcrumbs %}
+    <nav class="breadcrumb" role="navigation" aria-label="breadcrumbs">
+      <a href="{{ routes.account_url }}">
+        {% render 't_with_fallback', key: 'labels.my_account', fallback: 'My account' -%}
+      </a>
+      <span class="divider" aria-hidden="true">/</span>
+      {% render 't_with_fallback', key: 'labels.order_history', fallback: 'Order history' %}
+    </nav>
+  {% endif %}
+
+  <header class="section-header">
+    <h1 class="section-header__title">
+      {% assign labels_order_name = 'labels.order_name' | t: name: order.name %}
+      {%- capture fallback_labels_order_name -%}
+        Order {{ order.name }}
+      {%- endcapture -%}
+      {% render 't_with_fallback', t: labels_order_name, fallback: fallback_labels_order_name %}
+    </h1>
+  </header>
+
+  <div class="float-grid clearfix">
+    <div class="grid__item medium-up--two-thirds">
+      <p>
+        {%- assign order_date = order.created_at | time_tag: format: 'date_at_time' -%}
+        {% assign info_order_placed_on_html = 'info.order_placed_on_html' | t: date: order_date %}
+        {%- capture fallback_info_order_placed_on_html -%}
+          Placed on {{ order_date }}
+        {%- endcapture -%}
+        {% render 't_with_fallback', t: info_order_placed_on_html, fallback: fallback_info_order_placed_on_html %}
+      </p>
+
+      {% if order.cancelled %}
+        <div class="errors">
+          {%- assign cancelled_at = order.cancelled_at | time_tag: format: 'date_at_time' -%}
+          <p class="h5">
+            {% assign info_order_cancelled_on_html = 'info.order_cancelled_on_html' | t: date: cancelled_at %}
+            {%- capture fallback_info_order_cancelled_on_html -%}
+              Order cancelled on {{ cancelled_at }}
+            {%- endcapture -%}
+            {% render 't_with_fallback',
+              t: info_order_cancelled_on_html,
+              fallback: fallback_info_order_cancelled_on_html
+            %}
+          </p>
+          <p>
+            {% assign info_order_cancelled_reason = 'info.order_cancelled_reason' | t: reason: order.cancel_reason %}
+            {%- capture fallback_info_order_cancelled_reason -%}
+              Reason: {{ order.cancel_reason }}
+            {%- endcapture -%}
+            {% render 't_with_fallback',
+              t: info_order_cancelled_reason,
+              fallback: fallback_info_order_cancelled_reason
+            %}
+          </p>
+        </div>
+      {% endif %}
+
+      <table class="table--responsive table--small-text">
+        <thead>
+          <tr>
+            <th>
+              {% render 't_with_fallback', key: 'labels.product', fallback: 'Product' %}
+            </th>
+            <th>
+              {% render 't_with_fallback', key: 'labels.sku', fallback: 'Sku' %}
+            </th>
+            <th>
+              {% render 't_with_fallback', key: 'labels.price', fallback: 'Price' %}
+            </th>
+            <th class="text-right">
+              {% render 't_with_fallback', key: 'labels.quantity', fallback: 'Quantity' %}
+            </th>
+            <th class="text-right table--small-hide">
+              {% render 't_with_fallback', key: 'labels.total', fallback: 'Total' %}
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for line_item in order.line_items %}
+            <tr id="{{ line_item.key }}" class="table__section">
+              <td
+                data-label="
+                  {% render 't_with_fallback', key: 'labels.product', fallback: 'Product' -%}
+                "
+              >
+                {{ line_item.title | link_to: line_item.product.url }}
+                {%- assign property_size = line_item.properties | size -%}
+                {% unless line_item.selling_plan_allocation == null and property_size == 0 %}
+                  <p>
+                    {% unless line_item.selling_plan_allocation == null %}
+                      {{ line_item.selling_plan_allocation.selling_plan.name }}
+                    {% endunless %}
+                    {% if property_size != 0 %}
+                      {% for property in line_item.properties %}
+                        {% assign property_first_char = property.first | slice: 0 %}
+                        {% if property.last != blank and property_first_char != '_' %}
+                          {{ property.first }}:
+                          {% if property.last contains '/uploads/' %}
+                            <a href="{{ property.last }}">{{ property.last | split: '/' | last }}</a>
+                          {% else %}
+                            {{ property.last }}
+                          {% endif %}
+                        {% endif %}
+                      {% endfor %}
+                    {% endif %}
+                  </p>
+                {% endunless %}
+                {%- if line_item.line_level_discount_allocations != blank -%}
+                  {%- for discount_allocation in line_item.line_level_discount_allocations -%}
+                    <p class="cart__discount">
+                      {{ discount_allocation.discount_application.title }} (-{{ discount_allocation.amount | money }})
+                    </p>
+                  {%- endfor -%}
+                {%- endif -%}
+                {% if line_item.fulfillment %}
+                  <div class="note">
+                    {%- assign created_at = line_item.fulfillment.created_at | time_tag: format: 'date' -%}
+                    {% assign info_fulfilled_date_html = 'info.fulfilled_date_html' | t: date: created_at %}
+                    {%- capture fallback_info_fulfilled_date_html -%}
+                      Fulfilled {{ created_at }}
+                    {%- endcapture -%}
+                    {% render 't_with_fallback',
+                      t: info_fulfilled_date_html,
+                      fallback: fallback_info_fulfilled_date_html
+                    %}
+                    {% if line_item.fulfillment.tracking_number %}
+                      <a href="{{ line_item.fulfillment.tracking_url }}">
+                        {{- line_item.fulfillment.tracking_company }} #{{ line_item.fulfillment.tracking_number -}}
+                      </a>
+                    {% endif %}
+                  </div>
+                {% endif %}
+              </td>
+              <td
+                data-label="
+                  {% render 't_with_fallback', key: 'labels.sku', fallback: 'Sku' -%}
+                "
+              >
+                {{ line_item.sku }}
+              </td>
+              <td
+                data-label="
+                  {% render 't_with_fallback', key: 'labels.price', fallback: 'Price' -%}
+                "
+              >
+                {%- if line_item.original_price != line_item.final_price -%}
+                  <span class="visually-hidden">
+                    {% render 't_with_fallback', key: 'labels.regular_price', fallback: 'Regular price' -%}
+                  </span>
+                  <span class="cart__price cart__price--strikethrough">{{ line_item.original_price | money }}</span>
+                  <span class="visually-hidden">
+                    {% render 't_with_fallback', key: 'labels.sale_price', fallback: 'Sale price' -%}
+                  </span>
+                  <span class="cart__discount">{{ line_item.final_price | money }}</span>
+                {%- else -%}
+                  {{ line_item.original_price | money }}
+                {%- endif -%}
+
+                {%- if line_item.unit_price_measurement -%}
+                  {%- capture unit_price_base_unit -%}
+                  <span class="unit-price-base">
+                    {%- if line_item.unit_price_measurement -%}
+                      {%- if line_item.unit_price_measurement.reference_value != 1 -%}
+                        {{ line_item.unit_price_measurement.reference_value }}
+                      {%- endif -%}
+                      {{ line_item.unit_price_measurement.reference_unit }}
+                    {%- endif -%}
+                  </span>
+                {%- endcapture -%}
+
+                  <div class="product__unit-price">{{ line_item.unit_price | money }}/{{ unit_price_base_unit }}</div>
+                {%- endif -%}
+              </td>
+              <td
+                data-label="
+                  {% render 't_with_fallback', key: 'labels.quantity', fallback: 'Quantity' -%}
+                "
+                class="text-right"
+              >
+                {{ line_item.quantity }}
+              </td>
+              <td class="table--small-hide text-right">
+                {%- if line_item.original_line_price != line_item.final_line_price -%}
+                  <span class="visually-hidden">
+                    {% render 't_with_fallback', key: 'labels.regular_price', fallback: 'Regular price' -%}
+                  </span>
+                  <span class="cart__price cart__price--strikethrough">
+                    {{- line_item.original_line_price | money -}}
+                  </span>
+                  <span class="visually-hidden">
+                    {% render 't_with_fallback', key: 'labels.sale_price', fallback: 'Sale price' -%}
+                  </span>
+                  <span class="cart__discount">{{ line_item.final_line_price | money }}</span>
+                {%- else -%}
+                  {{ line_item.original_line_price | money }}
+                {%- endif -%}
+              </td>
+            </tr>
+          {% endfor %}
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="4" class="table--small-hide">
+              {% render 't_with_fallback', key: 'labels.subtotal', fallback: 'Subtotal' %}
+            </td>
+            <td
+              data-label="
+                {% render 't_with_fallback', key: 'labels.subtotal', fallback: 'Subtotal' -%}
+              "
+              class="text-right"
+            >
+              {{ order.line_items_subtotal_price | money }}
+            </td>
+          </tr>
+
+          {%- if order.cart_level_discount_applications != blank -%}
+            <tr>
+              {%- for discount_application in order.cart_level_discount_applications -%}
+                <th scope="row" colspan="4" class="small--hide">
+                  {% render 't_with_fallback', key: 'labels.discount', fallback: 'Discount' %}
+                  {{ discount_application.title }}
+                </th>
+                <td
+                  class="text-right"
+                  data-label="
+                    {% render 't_with_fallback', key: 'labels.discount', fallback: 'Discount' -%}
+                  "
+                >
+                  <div class="cart__discount">
+                    <span class="medium-up--hide">
+                      {{ discount_application.title }}
+                    </span>
+                    <span class="cart__discount">-{{ discount_application.total_allocated_amount | money }}</span>
+                  </div>
+                </td>
+              {%- endfor -%}
+            </tr>
+          {%- endif -%}
+
+          {% for shipping_method in order.shipping_methods %}
+            <tr>
+              <td colspan="4" class="table--small-hide">
+                {% render 't_with_fallback', key: 'labels.shipping', fallback: 'Shipping' %}
+              </td>
+              <td
+                data-label="
+                  {% render 't_with_fallback', key: 'labels.shipping', fallback: 'Shipping' -%}
+                "
+                class="text-right"
+              >
+                {{ shipping_method.price | money }}
+              </td>
+            </tr>
+          {% endfor %}
+
+          {% for tax_line in order.tax_lines %}
+            <tr>
+              <td colspan="4" class="table--small-hide">
+                {% render 't_with_fallback', key: 'labels.tax', fallback: 'Tax' %}
+                {{ tax_line.rate | times: 100 }}%)
+              </td>
+              <td
+                data-label="
+                  {% render 't_with_fallback', key: 'labels.tax', fallback: 'Tax' -%}
+                "
+                class="text-right"
+              >
+                {{ tax_line.price | money }}
+              </td>
+            </tr>
+          {% endfor %}
+
+          <tr>
+            <td colspan="4" class="table__title table--small-hide">
+              {% render 't_with_fallback', key: 'labels.total', fallback: 'Total' %}
+            </td>
+            <td
+              data-label="
+                {% render 't_with_fallback', key: 'labels.total', fallback: 'Total' -%}
+              "
+              class="table__title text-right"
+            >
+              {{ order.total_price | money }}
+              {{ order.currency }}
+            </td>
+          </tr>
+        </tfoot>
+      </table>
+
+      <hr class="hr--small hr--clear">
+    </div>
+
+    <div class="grid__item medium-up--one-third">
+      <h3>
+        {% render 't_with_fallback', key: 'labels.billing_address', fallback: 'Billing address' %}
+      </h3>
+
+      <p>
+        <strong>
+          {% render 't_with_fallback', key: 'labels.payment_status', fallback: 'Payment status' %}
+        >
+        {{ order.financial_status_label }}
+      </p>
+
+      <p class="h5">{{ order.billing_address.name }}</p>
+      <p>
+        {% if order.billing_address.company != blank %}
+          {{ order.billing_address.company -}}
+          <br>
+        {% endif %}
+        {{ order.billing_address.street -}}
+        <br>
+        {{ order.billing_address.city -}}
+        <br>
+        {% if order.billing_address.province != blank %}
+          {{ order.billing_address.province -}}
+          <br>
+        {% endif %}
+        {{ order.billing_address.zip | upcase -}}
+        <br>
+        {{ order.billing_address.country -}}
+        <br>
+        {{ order.billing_address.phone }}
+      </p>
+
+      <hr class="hr--medium">
+      {%- if order.shipping_address != blank -%}
+        <h3>
+          {% render 't_with_fallback', key: 'labels.shipping_address', fallback: 'Shipping address' %}
+        </h3>
+      {%- endif -%}
+
+      <p>
+        <strong>
+          {% render 't_with_fallback', key: 'labels.fulfillment_status', fallback: 'Fulfillment status' %}
+        </strong>
+        {{ order.fulfillment_status_label }}
+      </p>
+
+      {%- if order.shipping_address != blank -%}
+        <p class="h5">{{ order.shipping_address.name }}</p>
+        <p>
+          {% if order.shipping_address.company != blank %}
+            {{ order.shipping_address.company -}}
+            <br>
+          {% endif %}
+          {{ order.shipping_address.street -}}
+          <br>
+          {{ order.shipping_address.city -}}
+          <br>
+          {% if order.shipping_address.province != blank %}
+            {{ order.shipping_address.province -}}
+            <br>
+          {% endif %}
+          {{ order.shipping_address.zip | upcase -}}
+          <br>
+          {{ order.shipping_address.country -}}
+          <br>
+          {{ order.shipping_address.phone }}
+        </p>
+      {%- endif -%}
+    </div>
+  </div>
+</div>

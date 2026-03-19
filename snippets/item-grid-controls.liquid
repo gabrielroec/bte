@@ -1,0 +1,191 @@
+{% # components v3.0.1 | Copyright © 2024 Archetype Themes Limited Partnership  | "Shopify Theme Store (https://www.shopify.com/legal/terms#9-additional-services)" License  %}
+{%- comment -%}
+  Renders the item grid controls above the items.
+
+  Accepts:
+  - context {object} - The collection or search object
+  - enable_sort {boolean} - Whether to enable sorting
+  - grid_style {'large'|'medium'|'list'} - The grid style
+  - enable_filters {boolean} - Whether to enable filters
+
+  Usage:
+  {% render 'item-grid-controls', context: search %}
+{%- endcomment -%}
+
+{% liquid
+  assign grid_style = grid_style | default: section.settings.grid_style | default: 'medium'
+  assign enable_filters = enable_filters | default: section.settings.enable_sidebar, allow_false: true | default: true, allow_false: true
+  assign enable_sort = enable_sort | default: section.settings.enable_sort, allow_false: true | default: true, allow_false: true
+
+  if context.products
+    assign count = context.products_count
+  endif
+
+  if context.results
+    assign count = context.results_count
+  endif
+
+  assign current_filter_size = 0
+  for filter in context.filters
+    assign current_filter_size = current_filter_size | plus: filter.active_values.size
+  endfor
+%}
+
+<div class="collection-filter">
+  <div class="collection-filter__inner">
+    {%- if enable_filters -%}
+      <div class="collection-filter__item collection-filter__item--drawer">
+        <button
+          type="button"
+          class="collection-filter__btn text-link"
+        >
+          {% render 'icon', name: 'filter' %}
+          <span>
+            {% render 't_with_fallback', key: 'actions.filter', fallback: 'Filter' -%}
+          </span>
+          {%- if current_filter_size > 0 -%}
+            ({{ current_filter_size }})
+          {%- endif -%}
+        </button>
+      </div>
+
+      <div class="collection-filter__item collection-filter__item--count small--hide">
+        {%- if context.products -%}
+          {% assign info_product_count = 'info.product_count' | t: count: count %}
+          {%- capture fallback_info_product_count -%}
+            {{ count }} product{%- if count != 1 -%}s{%- endif -%}
+          {%- endcapture -%}
+          {% render 't_with_fallback', t: info_product_count, fallback: fallback_info_product_count %}
+        {%- endif -%}
+
+        {%- if context.results -%}
+          {% assign info_search_result_count = 'info.search_result_count' | t: count: count %}
+          {%- capture fallback_info_search_result_count -%}
+            {{ count }} product{%- if count != 1 -%}s{%- endif -%}
+          {%- endcapture -%}
+          {% render 't_with_fallback', t: info_search_result_count, fallback: fallback_info_search_result_count %}
+        {%- endif -%}
+      </div>
+    {%- endif -%}
+
+    {%- assign sort_by = context.sort_by | default: context.default_sort_by -%}
+    {%- if enable_sort -%}
+      <div class="collection-filter__item {% if enable_filters %} small--hide{% endif %}">
+        <div class="collection-filter__sort">
+          <label for="SortBy" class="visually-hidden">
+            {% render 't_with_fallback', key: 'actions.sort', fallback: 'Sort' -%}
+          </label>
+          <select name="SortBy" id="SortBy" data-default-sortby="{{ context.default_sort_by }}">
+            <option
+              value="title-ascending"
+              {% if sort_by == context.default_sort_by %}
+                selected="selected"
+              {% endif %}
+            >
+              {% render 't_with_fallback', key: 'actions.sort', fallback: 'Sort' %}
+            </option>
+            {%- for option in context.sort_options -%}
+              <option
+                value="{{ option.value }}"
+                {% if option.value == sort_by %}
+                  selected="selected"
+                {% endif %}
+              >
+                {{ option.name }}
+              </option>
+            {%- endfor -%}
+          </select>
+        </div>
+      </div>
+    {%- endif -%}
+
+    <div class="collection-filter__item collection-filter__item--right">
+      <ul class="no-bullets inline-list inline-list--no-wrap text-right">
+        <li>
+          <button
+            type="button"
+            class="grid-view-btn{% if grid_style == 'large' %} is-active{% endif %}"
+            data-view="large"
+            title="
+              {% render 't_with_fallback', key: 'labels.large', fallback: 'Large' -%}
+            "
+          >
+            {% render 'icon', name: 'view-large' %}
+            <span class="icon__fallback-text visually-hidden">
+              {% render 't_with_fallback', key: 'labels.large', fallback: 'Large' -%}
+            </span>
+          </button>
+        </li>
+        <li>
+          <button
+            type="button"
+            class="grid-view-btn{% if grid_style == 'medium' %} is-active{% endif %}"
+            data-view="medium"
+            title="
+              {% render 't_with_fallback', key: 'labels.small', fallback: 'Small' -%}
+            "
+          >
+            {% render 'icon', name: 'view-small' %}
+            <span class="icon__fallback-text visually-hidden">
+              {% render 't_with_fallback', key: 'labels.small', fallback: 'Small' -%}
+            </span>
+          </button>
+        </li>
+        <li>
+          <button
+            type="button"
+            class="grid-view-btn{% if grid_style == 'list' %} is-active{% endif %}"
+            data-view="list"
+            title="
+              {% render 't_with_fallback', key: 'labels.list', fallback: 'List' -%}
+            "
+          >
+            {% render 'icon', name: 'view-list' %}
+            <span class="icon__fallback-text visually-hidden">
+              {% render 't_with_fallback', key: 'labels.list', fallback: 'List' -%}
+            </span>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="collection-mobile-filters medium-up--hide">
+    {%- render 'collection-mobile-filters' -%}
+  </div>
+</div>
+
+{% comment %}
+  Disable sidebar & filter features
+{% endcomment %}
+{%- style -%}
+  {%- if enable_sort == false -%}
+    .collection-filter__item--drawer {
+      display: none;
+    }
+
+    .collection-filter__sort {
+      display: none;
+    }
+  {%- endif -%}
+  .collection-filter__item--count {
+    text-align: left;
+  }
+  html[dir="rtl"] .collection-filter__item--count {
+    text-align: right;
+  }
+{%- endstyle -%}
+
+{%- style -%}
+  @media screen and (min-width: 769px) {
+    .collection-filter__item--drawer {
+      display: none;
+    }
+    .collection-filter__item--count {
+      text-align: left;
+    }
+    html[dir='rtl'] .collection-filter__item--count {
+      text-align: right;
+    }
+  }
+{%- endstyle -%}

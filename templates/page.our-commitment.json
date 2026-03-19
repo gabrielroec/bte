@@ -1,0 +1,280 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "hero_video_V6F9Ee": {
+      "type": "hero-video",
+      "custom_css": [
+        "h2 {font-family: ofelia-text, sans-serif; font-weight: 600;}"
+      ],
+      "settings": {
+        "full_width": true,
+        "title": "Our Promise",
+        "title_size": 56,
+        "subheading": "",
+        "link_text": "",
+        "link": "",
+        "color_accent": "#ffffff",
+        "text_align": "vertical-bottom horizontal-right",
+        "video": "shopify://files/videos/Video - All Products (720p).mp4",
+        "video_url": "",
+        "overlay_opacity": 0,
+        "height": 500,
+        "height_mobile": 300
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {}
+    },
+    "text_and_image_9Afgyc": {
+      "type": "text-and-image",
+      "custom_css": [
+        "h2 {font-family: ofelia-text, sans-serif; font-weight: 600;}"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Screenshot_2025-01-29_173750.png",
+        "image_mask": "none",
+        "image2_mask": "none",
+        "subtitle": "FROM ACTIVE INGEDIENTS TO PRESERVATIVES",
+        "title": "100% NATURAL INGREDIENTS",
+        "heading_size": "h2",
+        "text": "<p>For beauty products to look, smell and feel pleasurable to use, they require formulas that have been carefully constructed with bases, emulsifiers, thickeners, actives and preservatives. Every ingredient that goes into our thoughtful, efficacious formulas is 100% natural. That’s right: Every. Single. One.</p>",
+        "button_label": "Discover Our Ingredients",
+        "button_link": "shopify://pages/our-ingredients",
+        "button_style": "primary",
+        "align_text": "left",
+        "image_width": "33",
+        "layout": "right",
+        "color_scheme": "none",
+        "divider": false,
+        "top_padding": true,
+        "bottom_padding": true
+      }
+    },
+    "text_and_image_xcLfEY": {
+      "type": "text-and-image",
+      "custom_css": [
+        "h2 {font-family: ofelia-text, sans-serif; font-weight: 600;}"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Screenshot_2025-01-29_174142.png",
+        "image_mask": "none",
+        "image2_mask": "none",
+        "subtitle": "BEST INGREDIENTS FROM NATURE",
+        "title": "VEGAN",
+        "heading_size": "h2",
+        "text": "<p>We stick with ingredients that can be found from plant and mineral sources. Even our glycerin, which is often derived from animal fats, comes from vegetables! Sourcing the highest quality components from around the world is a point of pride and we always ensure that they’re fully vegan. We never choose chemically identical synthetic ingredients; we only use the real thing.</p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "left",
+        "image_width": "33",
+        "layout": "left",
+        "color_scheme": "none",
+        "divider": true,
+        "top_padding": false,
+        "bottom_padding": false
+      }
+    },
+    "text_and_image_rz3eeE": {
+      "type": "text-and-image",
+      "custom_css": [
+        "h2 {font-family: ofelia-text, sans-serif; font-weight: 600;}"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Screenshot_2025-01-29_174146.png",
+        "image_mask": "none",
+        "image2_mask": "none",
+        "subtitle": "NO TESTING ON ANIMALS. NO ANIMAL BY-PRODUCTS.",
+        "title": "CRUELTY FREE",
+        "heading_size": "h2",
+        "text": "<p>Our commitment to being good to the earth applies to the creatures that roam here, too. We don’t test our products on animals and we make sure our ingredients aren’t tested on animals either. You also won’t find animal-derived ingredients in our formulas. Back To Earth Skin never uses beeswax, collagen, honey, lanolin, shark liver oil–based squalene or any other non-vegan components that are standard in the beauty industry.</p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "left",
+        "image_width": "33",
+        "layout": "right",
+        "color_scheme": "none",
+        "divider": true,
+        "top_padding": false,
+        "bottom_padding": false
+      }
+    },
+    "text_and_image_UnQHpk": {
+      "type": "text-and-image",
+      "custom_css": [
+        "h2 {font-family: ofelia-text, sans-serif; font-weight: 600;}"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Screenshot_2025-01-29_174152.png",
+        "image_mask": "none",
+        "image2_mask": "none",
+        "subtitle": "FREE FROM 35+ TOXIC INGREDIENTS",
+        "title": "35 FREE* COMMITMENT",
+        "heading_size": "h2",
+        "text": "<p>We’ve rigorously combed through the research on ingredients used in beauty care and have found more than 35 commonly used materials that we believe have harmful side effects for the skin—from causing irritation to clogging pores. We know you care about what you’re putting into and onto your body. You never have to wonder if the Back To Earth Skin lineup is safe.</p>",
+        "button_label": "FULL LIST OF BANNED INGREDIENTS",
+        "button_link": "shopify://pages/35-free",
+        "button_style": "primary",
+        "align_text": "left",
+        "image_width": "33",
+        "layout": "left",
+        "color_scheme": "none",
+        "divider": true,
+        "top_padding": false,
+        "bottom_padding": false
+      }
+    },
+    "text_and_image_iNfy3J": {
+      "type": "text-and-image",
+      "custom_css": [
+        "h2 {font-family: ofelia-text, sans-serif; font-weight: 600;}"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Screenshot_2025-01-29_174157.png",
+        "image_mask": "none",
+        "image2_mask": "none",
+        "subtitle": "Every step of the way.",
+        "title": "SUSTAINABLE",
+        "heading_size": "h2",
+        "text": "<p>Yes, our ingredients are sustainably sourced to the highest standards. But that’s just one part of the equation. We work hard to minimize our carbon footprint in other ways by using materials like sugarcane and recycled plastic resin for our packaging, reducing waste by printing directly on our containers (instead of on labels) and forgoing cardboard boxes for each product. We even try to use square bottles and jars so we can fit more in one case and cut down on transport emissions.</p>",
+        "button_label": "DISCOVER OUR PACKAGING",
+        "button_link": "shopify://pages/sustainable-packaging",
+        "button_style": "primary",
+        "align_text": "left",
+        "image_width": "33",
+        "layout": "right",
+        "color_scheme": "none",
+        "divider": true,
+        "top_padding": false,
+        "bottom_padding": false
+      }
+    },
+    "rich_text_AqqcYJ": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_fhbhVT": {
+          "type": "heading",
+          "settings": {
+            "title": "BEST SELLERS",
+            "heading_size": "h2"
+          }
+        },
+        "text_Pz68eD": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": true,
+            "text": "<p>100% Natural. Vegan. Cruelty Free. 35-Free. Sustainable</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_fhbhVT",
+        "text_Pz68eD"
+      ],
+      "custom_css": [
+        "h2 {font-family: ofelia-text, sans-serif; font-weight: 600;}"
+      ],
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "color_scheme": "none",
+        "divider": false
+      }
+    },
+    "featured_collection_CLFLbP": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "",
+        "heading_size": "h2",
+        "heading_position": "left",
+        "home_featured_products": "best-sellers",
+        "count": 5,
+        "products_per_row": 5,
+        "mobile_scrollable": true,
+        "view_all": true,
+        "divider": false
+      }
+    },
+    "text_columns_dQjV4V": {
+      "type": "text-columns",
+      "blocks": {
+        "text_block_W7mqCB": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/My_project.webp",
+            "image_mask": "none",
+            "image_width": 330,
+            "title": "",
+            "text": "",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_ArGbh7": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/11._Benefits_Of_Vegan_Formulas_540x_df8d8209-bf54-4d44-8d73-24a31d92e4cd.webp",
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "Benefits Of Vegan Formulas",
+            "text": "",
+            "button_label": "DISCOVER MORE",
+            "button_link": "shopify://blogs/skin-health-1/benefits-of-vegan-formulas"
+          }
+        },
+        "text_block_mtEXpU": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/12._Importance_Of_Cruelty_Free_540x_da9a62fd-8731-4d17-b45c-dba7e85422bd.webp",
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "Importance Of Cruelty Free",
+            "text": "",
+            "button_label": "DISCOVER MORE",
+            "button_link": "shopify://blogs/skin-health-1/importance-of-cruelty-free"
+          }
+        }
+      },
+      "block_order": [
+        "text_block_W7mqCB",
+        "text_block_ArGbh7",
+        "text_block_mtEXpU"
+      ],
+      "custom_css": [
+        "h2 {font-family: ofelia-text, sans-serif; font-weight: 600;}"
+      ],
+      "settings": {
+        "title": "Skin Health",
+        "align_text": "left",
+        "divider": false,
+        "color_scheme": "none"
+      }
+    }
+  },
+  "order": [
+    "hero_video_V6F9Ee",
+    "main",
+    "text_and_image_9Afgyc",
+    "text_and_image_xcLfEY",
+    "text_and_image_rz3eeE",
+    "text_and_image_UnQHpk",
+    "text_and_image_iNfy3J",
+    "rich_text_AqqcYJ",
+    "featured_collection_CLFLbP",
+    "text_columns_dQjV4V"
+  ]
+}

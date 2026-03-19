@@ -1,0 +1,737 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "hero_video_V6F9Ee": {
+      "type": "hero-video",
+      "custom_css": [
+        "h2 {font-family: ofelia-text, sans-serif; font-weight: 600;}"
+      ],
+      "settings": {
+        "full_width": true,
+        "title": "35+ FREE",
+        "title_size": 40,
+        "subheading": "Free from toxic chemicals, artificial fragrances & additives and identical or alternative ingredients.",
+        "link_text": "",
+        "link": "",
+        "color_accent": "#ffffff",
+        "text_align": "vertical-bottom horizontal-right",
+        "video": "shopify://files/videos/Video - 35 Free Header (1080p).mp4",
+        "video_url": "",
+        "overlay_opacity": 0,
+        "height": 500,
+        "height_mobile": 300
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {}
+    },
+    "text_columns_aph3mX": {
+      "type": "text-columns",
+      "blocks": {
+        "text_block_Wx9dg9": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Resized_35_free_1_540x_190eadf4-9147-4ea9-961c-368d0826977c.webp",
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "FREE FROM TOXIC INGREDIENTS",
+            "text": "<p>We’re meticulous about the ingredients we put into our formulas—and the ones we don’t. If there’s a chance a common ingredient could be harmful to your skin or your body, we won’t use it. Period.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_CTmr7e": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Resized_35_free_2_540x_2edcf831-f017-403e-871c-da1885394cc4.webp",
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "FREE FROM ARTIFICAL FRAGRANCES & ADDITIVES",
+            "text": "<p>The “fragrance” on a label often acts as a catchall for any number of synthetic chemicals in a product—and it’s difficult to know if they’re all safe. Instead of artificial fragrance and related additives, Back To Earth Skin uses only good-for-you natural ingredients and essential oils.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_NnpdfR": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Resized_35_free_3_540x_8527ec37-84f9-4d67-b615-59897d3164c9.webp",
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "FREE FROM SYNTHETIC IDENTICAL OR ALTERNATIVES",
+            "text": "<p>You’ll never find synthetic ingredients in our products, even if they’re chemically identical to the natural version. We only source from nature—leaves, seeds, fruits and minerals—using the highest standards. The result? Each Back To Earth Skin product has the best ingredients that our earth can provide.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_block_Wx9dg9",
+        "text_block_CTmr7e",
+        "text_block_NnpdfR"
+      ],
+      "custom_css": [
+        "h2 {font-family: ofelia-text, sans-serif; font-weight: 600;}"
+      ],
+      "settings": {
+        "title": "",
+        "align_text": "left",
+        "divider": false,
+        "color_scheme": "none"
+      }
+    },
+    "text_columns_jA9JQ6": {
+      "type": "text-columns",
+      "blocks": {
+        "text_block_jQh9JD": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": false,
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "1,4 Dioxane",
+            "text": "<p>A solvent byproduct found in cleansing skincare products. It has been linked to cause skin irritations and more serious health side effects.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_qqwzzc": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": false,
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "Artificial/Synthetic Fragrances",
+            "text": "<p>Commonly used to create unique scents in skincare products. It has been linked to cause skin irritations, induce allergies, and skin inflammation.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_EFVWPJ": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": false,
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "Acrylates",
+            "text": "<p>A film-forming agent used to improve the texture and feel of skincare products. It has been linked to cause skin irritations and other more serious health side effects.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_GrctcY": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": false,
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "Aluminum Salts",
+            "text": "<p>Commonly used as an active ingredient to help control sweat and associated odours by blocking pores. It has been linked to cause skin inflammation and other more serious health side effects.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_xGVqxy": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": false,
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "Animal Musk’s / Fats / Oils",
+            "text": "<p>Commonly used as a moisturizing ingredient in skincare products. Back To Earth Skin is 100% vegan and cruelty free.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_Hj89rm": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": false,
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "Benzophenones",
+            "text": "<p>Commonly used to protect against UV rays. It has been linked to skin allergies, photo allergies and some more serious health side effects.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_9h6z8h": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": false,
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "Butylated hydroxyanisole (BHA)",
+            "text": "<p>Commonly used as an exfoliating agent in skincare products. It has been linked to induce allergic reactions and more serious long term health side effects.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_BRMxJy": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": false,
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "Butylated hydroxytoluene (BHT)",
+            "text": "<p>Commonly used as a stabalizer and preservative in skincare products. It has been linked to induce allergic reactions and more serious long term health side effects.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_ij4xdA": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": false,
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "Carbon Black and Black 2",
+            "text": "<p>Commonly used as a collorant in skincare products. It has been linked to cause skin irritation and more serious health side effects.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_bWMacc": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": false,
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "Coal Tar",
+            "text": "<p>Commonly used to treat inflammed skin conditions. It has been linked to cause skin irritations, inflammation, and skin sensitivity.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_ywNbtU": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": false,
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "Ethanolamine",
+            "text": "<p>Commonly used as cleansing agents or surfactants in skincare products. It has been linked to causing irritation and damaging the skin barrier.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_wfwJEa": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": false,
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "Formaldehyde",
+            "text": "<p>Commonly used as a preservative in skincare products. It has been linked to cause allergic reactions, inflammation and more serious health side effects.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_LNbVkr": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": false,
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "Formaldehyde releasers",
+            "text": "<p>Commonly used as a preservative in skincare products. It has been linked to cause reddness, irritation, and scaling of the skin.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_iVcNhe": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": false,
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "Homosalate",
+            "text": "<p>Commonly used to protect against UV rays. It has been linked to skin rashes, allergies, irritations and more serious health side effects.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_Hrk9FD": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": false,
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "Hydroquinone",
+            "text": "<p>Commonly used to lighten pigmentation in skincare. It has been linked to causing redness, burning, discoloration and dryness of skin.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_DN9PAU": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": false,
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "Lead and Lead Acetate",
+            "text": "<p>Commonly used as a color additive. It has been linked to cause irritation and redness of the skin.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_f4BA4g": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": false,
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "Mercury",
+            "text": "<p>Commonly used to ligthen dark spots in skincare products. It has been linked to cause hyperpigmentation, discoloration, rashes and more serious health side effects.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_HLWqRC": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": false,
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "Methoxyethanol",
+            "text": "<p>Commonly used as a solvent or viscosity agent in skincare products. It has been linked to skin irritations and more serious health side effects.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_XgYPqT": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": false,
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "Methyl Cellosolve",
+            "text": "<p>Commonly used as a thickener and emulsifier in skincare products. It has been linked to cause skin irritation and damage.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_FNDXbH": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": false,
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "Methylchloroisothiazolinone",
+            "text": "<p>Commonly used as a preservative in skincare prodcuts. It has been linked to induce skin allergies, redness, and inflammation.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_x83463": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": false,
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "Mineral Oil",
+            "text": "<p>Commonly used to help soften, cleanse and moisturize in skincare products. It has been linked to clogging pores, causing irritations and redness of the skin.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_eGammN": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": false,
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "Nanomaterials",
+            "text": "<p>Commonly used to provide UV ray protection. It has been linked to being easily absorved into the body causing more serious and long term health side effects.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_TxQrGr": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": false,
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "Oxybenzone",
+            "text": "<p>Commonly used to pretect against UV rays. It has been linked to cause rashes, irritations and more serious health side effects.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_iyj73K": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": false,
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "Octinoxate",
+            "text": "<p>Commonly used to protect agains UV rays. It has been linked to skin irritations, inflammations, allergies and more serious health side effects.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_Fq6tjp": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": false,
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "Parabens",
+            "text": "<p>Commonly used as preservatives in skincare products. It has been linked to induce skin irritation, allergic reactions, inflammation and other more serious side effects.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_gALh6i": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": false,
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "Petrolatum",
+            "text": "<p>Commonly used as a barrier to lock moisture in the skin. It has been linked to cause skin irritations, allergies and more serious long term health side effects.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_wAiA3d": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": false,
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "Paraffin",
+            "text": "<p>Commonly used as an emollient in skincare prodcuts. It has been linked to cause rashes and clog pores of the skin.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_XE3TRk": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": false,
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "PFAs and PFCs",
+            "text": "<p>Commonly used to help condition for smoother skin. It has been linked to causing skin sensitivity and more serious health side effects.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_nRY6FY": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": false,
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "Phenoxyethanol",
+            "text": "<p>Commonly used as a preservative in skincare products. It has been linked to causing alergic reactions and skin inflammation.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_jApgyH": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": false,
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "Phthalates",
+            "text": "<p>Commonly used as preservatives in skincare products. It has been linked to induce skin allergic reactions, inflammation and other more serious side effects.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_JMw3BA": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": false,
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "Plastic Microbeads",
+            "text": "<p>Commonly used as an exfoliating agent in skincare products. It has been linked to skin irritations and more importantly lead to damange effects on marine life.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_3UQ3MV": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": false,
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "Polyethylene Glycol (PEGs)",
+            "text": "<p>Commonly used as surfactants, cleansing agents, emulsifiers and humectants in skincare products. It has been linked to causing skin irriation, sensitive reactions and more long term health side effects.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_9dimHb": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": false,
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "Polyacrylamide",
+            "text": "<p>Commonly used to stabalize and bind skincare products. It has been linked to causing skin allergies, irritations, and more serious long term health side effects.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_mAPmjx": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": false,
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "Acrylamide",
+            "text": "<p>Commonly used to stabalize and bind skincare products. It has been linked to causing skin allergies, irritations, and more serious long term health side effects.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_bCKgWK": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": false,
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "Resorcinol",
+            "text": "<p>Commonly used to help remove hard and rough skin in skincare products. It has been linked to cause redness and abrasive effects to the skin.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_K7pVMy": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": false,
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "Retinyl Palmitate",
+            "text": "<p>Commmonly used to help target fine lines and smooth skin. It has been linked to causing skin sensitiivity, irrtations and more serious health side effects.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_UWhb8y": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": false,
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "Silicones",
+            "text": "<p>Commonly used to provide a soft and smooth finish in skincare products. It has been linked to clogging pores, skin irritation, and inflammation.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_j4GmyN": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": false,
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "Siloxanes",
+            "text": "<p>Commonly used to help smooth and soften skin in skincare products. It has been linked to causing irritation, clogged pores and more serious health side effects.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_nyg7qE": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": false,
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "Styrene",
+            "text": "<p>Commonly used as a color additive. It has been linked to cause irritation and redness of the skin.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_tb3VPz": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": false,
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "Sulfates",
+            "text": "<p>Commonly used as a cleansing and foaming agent in skincare products. It has been linked to causing redness, dry and inflammed skin.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_9tfh3t": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": false,
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "Talc",
+            "text": "<p>Commonly used to help absorb moisture in skincare products. It has been linked to clogging pores, causing irrations, rashes and more serious health side effects.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_DXJdjn": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": false,
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "Teflon",
+            "text": "<p>Commonly used as a thickening agent in skincare products. It has been linked to causing inflammation and more long term health side effects.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_zWkg48": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": false,
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "Triclosan and Triclocarban",
+            "text": "<p>Commonly used as a preservative in skincare products. It has been linked to skin irritations and more serious health side effects35 Free</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_block_jQh9JD",
+        "text_block_qqwzzc",
+        "text_block_EFVWPJ",
+        "text_block_GrctcY",
+        "text_block_xGVqxy",
+        "text_block_Hj89rm",
+        "text_block_9h6z8h",
+        "text_block_BRMxJy",
+        "text_block_ij4xdA",
+        "text_block_bWMacc",
+        "text_block_ywNbtU",
+        "text_block_wfwJEa",
+        "text_block_LNbVkr",
+        "text_block_iVcNhe",
+        "text_block_Hrk9FD",
+        "text_block_DN9PAU",
+        "text_block_f4BA4g",
+        "text_block_HLWqRC",
+        "text_block_XgYPqT",
+        "text_block_FNDXbH",
+        "text_block_x83463",
+        "text_block_eGammN",
+        "text_block_TxQrGr",
+        "text_block_iyj73K",
+        "text_block_Fq6tjp",
+        "text_block_gALh6i",
+        "text_block_wAiA3d",
+        "text_block_XE3TRk",
+        "text_block_nRY6FY",
+        "text_block_jApgyH",
+        "text_block_JMw3BA",
+        "text_block_3UQ3MV",
+        "text_block_9dimHb",
+        "text_block_mAPmjx",
+        "text_block_bCKgWK",
+        "text_block_K7pVMy",
+        "text_block_UWhb8y",
+        "text_block_j4GmyN",
+        "text_block_nyg7qE",
+        "text_block_tb3VPz",
+        "text_block_9tfh3t",
+        "text_block_DXJdjn",
+        "text_block_zWkg48"
+      ],
+      "custom_css": [
+        "h2 {font-size: 18px;}"
+      ],
+      "settings": {
+        "title": "35+ FREE LIST OF INGREDIENTS",
+        "align_text": "left",
+        "divider": false,
+        "color_scheme": "none"
+      }
+    },
+    "text_columns_dQjV4V": {
+      "type": "text-columns",
+      "blocks": {
+        "text_block_W7mqCB": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/SH_35_Free_2.webp",
+            "image_mask": "none",
+            "image_width": 330,
+            "title": "",
+            "text": "",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_ArGbh7": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/13._Benefits_Of_Natural_Ingredients_540x_1.webp",
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "Benefits Of Natural Ingredients",
+            "text": "",
+            "button_label": "DISCOVER MORE",
+            "button_link": ""
+          }
+        },
+        "text_block_mtEXpU": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/04.-How-To-Take-Care-Of-Skin-Naturally_540x_31ce8789-305b-4dbe-9f45-c6b9cea7fdfc.webp",
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "How To Take Care Of Skin Naturally",
+            "text": "",
+            "button_label": "DISCOVER MORE",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_block_W7mqCB",
+        "text_block_ArGbh7",
+        "text_block_mtEXpU"
+      ],
+      "custom_css": [
+        "h2 {font-family: ofelia-text, sans-serif; font-weight: 600;}"
+      ],
+      "settings": {
+        "title": "Skin Health",
+        "align_text": "left",
+        "divider": false,
+        "color_scheme": "none"
+      }
+    }
+  },
+  "order": [
+    "hero_video_V6F9Ee",
+    "main",
+    "text_columns_aph3mX",
+    "text_columns_jA9JQ6",
+    "text_columns_dQjV4V"
+  ]
+}

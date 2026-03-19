@@ -1,0 +1,671 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "okendo_star_rating_qHXQA9": {
+          "type": "shopify://apps/okendo/blocks/star-rating/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
+          "settings": {
+            "product": "{{product}}"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+            "vendor_enable": false,
+            "sku_enable": false
+          }
+        },
+        "text_WgiafR": {
+          "type": "text",
+          "settings": {
+            "text": "A refreshing mist that soothes, tones, and adds an instant burst of hydration to your skin."
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "separator_zdkt98": {
+          "type": "separator",
+          "settings": {}
+        },
+        "custom_eYcXWC": {
+          "type": "custom",
+          "settings": {
+            "code": "<ul>\n<li>- Helps balance your skin’s pH for a healthy glow</li>\n<li>- Feels lightweight and soothing</li>\n<li>- Soothes irritation and helps calms redness</li>\n</ul"
+          }
+        },
+        "separator_GqYgcP": {
+          "type": "separator",
+          "settings": {}
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "variant_labels": true,
+            "picker_type": "button",
+            "product_dynamic_variants_enable": true,
+            "color_swatches": false
+          }
+        },
+        "recharge_subscriptions_subscription_widget_YCxYUk": {
+          "type": "shopify://apps/recharge-subscriptions/blocks/subscription-widget/371eed76-0b44-4869-9813-730372ea378e",
+          "settings": {
+            "product": "{{product}}"
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "surface_pickup_enable": true,
+            "show_gift_card_recipient": false
+          }
+        },
+        "custom_QahbLh": {
+          "type": "custom",
+          "settings": {
+            "code": "<p style=\"text-align:center; font-weight:600;\">FREE SHIPPING $75+ | 90-DAY LOVE-IT GUARANTEE</p>"
+          }
+        }
+      },
+      "block_order": [
+        "okendo_star_rating_qHXQA9",
+        "title",
+        "text_WgiafR",
+        "price",
+        "separator_zdkt98",
+        "custom_eYcXWC",
+        "separator_GqYgcP",
+        "variant_picker",
+        "recharge_subscriptions_subscription_widget_YCxYUk",
+        "buy_buttons",
+        "custom_QahbLh"
+      ],
+      "custom_css": [
+        ".product-block .variant__label {display: none;}",
+        "video-media,video {--default-aspect-ratio: 1/1 !important;}"
+      ],
+      "settings": {
+        "image_position": "left",
+        "image_container_size": "large",
+        "product_image_size": "square",
+        "product_zoom_enable": true,
+        "thumbnail_position": "beside",
+        "thumbnail_height": "flexible",
+        "thumbnail_arrows": false,
+        "mobile_layout": "full",
+        "enable_video_looping": true,
+        "product_video_style": "muted"
+      }
+    },
+    "advanced_accordion_jJyYDX": {
+      "type": "advanced-accordion",
+      "blocks": {
+        "text_block_fxTdmN": {
+          "type": "text_block",
+          "settings": {
+            "image_width": 100,
+            "image_mask": "none",
+            "align_text": "left",
+            "title": "",
+            "text": "{{ product.description }}",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_block_fxTdmN"
+      ],
+      "custom_css": [
+        "{margin-top: 60px;}",
+        "h2 {font-family: ofelia-text, sans-serif; font-weight: 600; font-size: 18px;}"
+      ],
+      "settings": {
+        "title": "About The Product",
+        "per_row": 1,
+        "two_per_row_mobile": false,
+        "opened": false,
+        "disabled": false
+      }
+    },
+    "advanced_accordion_MNDaAU": {
+      "type": "advanced-accordion",
+      "blocks": {
+        "text_block_g77UqG": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/2_0199d2b3-73b7-491a-8956-084df13ac4c3.jpg",
+            "image_width": 25,
+            "image_mask": "none",
+            "align_text": "left",
+            "title": "Aqua",
+            "text": "<p>Water, the universal solvent used in skincare to help skin feel hydrated and nourished. </p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_QCJYeA": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/3_ce637572-5428-495e-b8f2-d124f89ef2c4.jpg",
+            "image_width": 25,
+            "image_mask": "none",
+            "align_text": "left",
+            "title": "Camellia Sinensis Leaf Extract",
+            "text": "<p>Commonly referred to as Green Tea extract, it is known for its antioxidant, anti-inflammatory and antimicrobial properties to help fight signs of aging skin.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_KWHkJC": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/5.jpg",
+            "image_width": 25,
+            "image_mask": "none",
+            "align_text": "left",
+            "title": "Clay",
+            "text": "<p>Proprietary Mineral Microbiome ClayTM, known for its unique rich mineral composition to help promote skin health.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_ABjWNX": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/Cupressus_Sempervirens_Leaf_Oil_Cypress_Leaf_Oil.jpg",
+            "image_width": 25,
+            "image_mask": "none",
+            "align_text": "left",
+            "title": "Cupressus Sempervirens Leaf Oil",
+            "text": "<p>Commonly referred to as Cypress leaf oil, it is known for its antibacterial and antimicrobial properties to help restore hydration, reduce excess oil, soothe and calm irritated skin.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_A8td39": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/Cymbopogon_Martini_Oil__Palmarosa_Oil.jpg",
+            "image_width": 25,
+            "image_mask": "none",
+            "align_text": "left",
+            "title": "Cymbopogon Martini Oil",
+            "text": "<p>Commonly referred to as Palmarosa oil, it is known for its antimicrobial, antioxidant and anti-inflammatory properties to help reduce blemishes, prevent signs of aging and soothe irritated skin.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_m9EyDQ": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/7_908dd6ba-e72f-4417-8dc6-46a052e94ece.jpg",
+            "image_width": 25,
+            "image_mask": "none",
+            "align_text": "left",
+            "title": "Gluconolactone and Sodium Benzoate",
+            "text": "<p>Geogard Ultra™: a patented natural broad-spectrum preservative certified by ECOCERT.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_gRGCQe": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/Hamaelis_Virginiana_Leaf_Extract_Witch_Hazel.jpg",
+            "image_width": 25,
+            "image_mask": "none",
+            "align_text": "left",
+            "title": "Hamaelis Virginiana Leaf Extract",
+            "text": "<p>Commonly referred to as Witch Hazel, it is known for its astringent properties to help remove excess oil, reduce inflammation, and soothe the skin.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_ckaAb8": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/Juniperus_Communis_Fruit_Oil_Juniper_Berry_Oil.jpg",
+            "image_width": 20,
+            "image_mask": "none",
+            "align_text": "left",
+            "title": "Juniperus Communis Fruit Oil",
+            "text": "<p>Commonly referred to as Juniper Berry oil, it is known for its anti-inflammatory and antioxidant properties to help calm skin.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_ejFeJk": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/Rosa_Damascena_Flower_Water__Rose_Water.jpg",
+            "image_width": 25,
+            "image_mask": "none",
+            "align_text": "left",
+            "title": "Rosa Damascena Flower Water",
+            "text": "<p>Commonly referred to as Rose water, it is know for its anti-inflammatory properties to help reduce skin redness, reduce irritation, and soothe the skin.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_block_g77UqG",
+        "text_block_QCJYeA",
+        "text_block_KWHkJC",
+        "text_block_ABjWNX",
+        "text_block_A8td39",
+        "text_block_m9EyDQ",
+        "text_block_gRGCQe",
+        "text_block_ckaAb8",
+        "text_block_ejFeJk"
+      ],
+      "custom_css": [
+        "h2 {font-family: ofelia-text, sans-serif; font-weight: 600; font-size: 18px;}"
+      ],
+      "settings": {
+        "title": "All 10 Natural Ingredients",
+        "per_row": 4,
+        "two_per_row_mobile": false,
+        "opened": false,
+        "disabled": false
+      }
+    },
+    "advanced_accordion_AYThFw": {
+      "type": "advanced-accordion",
+      "blocks": {
+        "text_block_MdMUUa": {
+          "type": "text_block",
+          "settings": {
+            "image_width": 100,
+            "image_mask": "none",
+            "align_text": "left",
+            "title": "",
+            "text": "<p>1. Cleanse first with our Glow Foaming Facial Cleanser.<br/><br/>2. After rinsing, pat dry. Hold bottle 6-8 inches from face, close your eyes and spray all over face.<br/><br/>3. Allow the gentle and comforting formula to be absorbed. Do not rinse.<br/><br/>WARNINGS: Avoid direct contact with eyes. For topical use only.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_Li43w9": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/Glow_Facial_Mist.webp",
+            "image_width": 55,
+            "image_mask": "none",
+            "align_text": "left",
+            "title": "",
+            "text": "",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_block_MdMUUa",
+        "text_block_Li43w9"
+      ],
+      "custom_css": [
+        "h2 {font-family: ofelia-text, sans-serif; font-weight: 600; font-size: 18px;}"
+      ],
+      "settings": {
+        "title": "How To Apply",
+        "per_row": 2,
+        "two_per_row_mobile": false,
+        "opened": false,
+        "disabled": false
+      }
+    },
+    "advanced_accordion_xWwj3X": {
+      "type": "advanced-accordion",
+      "blocks": {
+        "text_block_raE9Mr": {
+          "type": "text_block",
+          "settings": {
+            "image_width": 100,
+            "image_mask": "none",
+            "align_text": "left",
+            "title": "Suistainable. Minimized environmental impact.",
+            "text": "<p>We make every effort to minimize our environmental footprint. Our recyclable jars are made from glass and we skip the excess by using only primary packaging (the jar) and printing our product information directly onto the jar to reduce packaging and labelling waste. Finally, to reduce wasted space during storage and shipping, we use uniquely shaped jars that stack neatly and limit gaps. This economical use of space reduces our environmental impact (think packing materials used and transportation emissions per shipment) by 25 to 30%.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_gWmNcT": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/Resized_image_package.webp",
+            "image_width": 100,
+            "image_mask": "none",
+            "align_text": "left",
+            "title": "",
+            "text": "",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_block_raE9Mr",
+        "text_block_gWmNcT"
+      ],
+      "custom_css": [
+        "h2 {font-family: ofelia-text, sans-serif; font-weight: 600; font-size: 18px;}"
+      ],
+      "settings": {
+        "title": "Eco-Friendly Packaging",
+        "per_row": 2,
+        "two_per_row_mobile": false,
+        "opened": false,
+        "disabled": false
+      }
+    },
+    "rich_text_3NkeD8": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_xUQgwE": {
+          "type": "heading",
+          "settings": {
+            "title": "Why We Love It",
+            "heading_size": "h2"
+          }
+        },
+        "text_YYJzXb": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": true,
+            "text": "<p>This mist isn’t just refreshing—it’s a multitasker. It preps your skin for serums and moisturizers, locks in hydration, and even sets your makeup for a flawless finish.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_xUQgwE",
+        "text_YYJzXb"
+      ],
+      "custom_css": [
+        "{margin-top: 40px; margin-bottom: 0px;}",
+        "h2 {font-family: ofelia-text, sans-serif; font-weight: 600; font-size: 25px;}"
+      ],
+      "settings": {
+        "align_text": "left",
+        "narrow_column": false,
+        "color_scheme": "1",
+        "divider": false
+      }
+    },
+    "text_and_image_rHLmeH": {
+      "type": "text-and-image",
+      "custom_css": [
+        "h2 {font-family: ofelia-text, sans-serif; font-weight: 600; font-size: 35px;}",
+        "p {padding-bottom: 20px;}"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/GLOW_Facial_Mist_Lifestyle_1.jpg",
+        "image_mask": "none",
+        "image2_mask": "none",
+        "subtitle": "",
+        "title": "Gentle care for sensitive skin",
+        "heading_size": "h2",
+        "text": "<p>Soothe and hydrate even the most sensitive skin with this calming facial mist. Infused with gentle botanicals, it reduces redness, irritation, and dryness while leaving your skin feeling soft and replenished.</p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "left",
+        "image_width": "50",
+        "layout": "right",
+        "color_scheme": "none",
+        "divider": false,
+        "top_padding": true,
+        "bottom_padding": true
+      }
+    },
+    "text_and_image_tNiqhc": {
+      "type": "text-and-image",
+      "custom_css": [
+        "h2 {font-family: ofelia-text, sans-serif; font-weight: 600; font-size: 35px;}"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/GLOW_Facial_Mist_Lifestyle_2.jpg",
+        "image_mask": "square",
+        "image2_mask": "none",
+        "subtitle": "",
+        "title": "Glow naturally, feel confident",
+        "heading_size": "h2",
+        "text": "<p>Enhance your natural beauty with a facial mist that hydrates, refreshes, and leaves your skin glowing. Its clean, non-toxic formula is packed with skin-loving ingredients that work to brighten and nourish your complexion.</p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "left",
+        "image_width": "50",
+        "layout": "left",
+        "color_scheme": "none",
+        "divider": false,
+        "top_padding": true,
+        "bottom_padding": false
+      }
+    },
+    "sub": {
+      "type": "product-full-width",
+      "disabled": true,
+      "settings": {
+        "max_width": true
+      }
+    },
+    "promo_grid_7UkVC9": {
+      "type": "promo-grid",
+      "blocks": {
+        "image_AGJAd6": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/GLOW_Facial_Mist_UGC_1.jpg",
+            "link": "",
+            "width": "33"
+          }
+        },
+        "image_NBkhNm": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/GLOW_Facial_Mist_UGC_2.jpg",
+            "link": "",
+            "width": "33"
+          }
+        },
+        "image_UktjLX": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/GLOW_Facial_Mist_UGC_3.jpg",
+            "link": "",
+            "width": "33"
+          }
+        }
+      },
+      "block_order": [
+        "image_AGJAd6",
+        "image_NBkhNm",
+        "image_UktjLX"
+      ],
+      "custom_css": [],
+      "settings": {
+        "full_width": true,
+        "gutter_size": 20,
+        "space_above": false,
+        "space_below": true
+      }
+    },
+    "faq_XpMHc9": {
+      "type": "faq",
+      "blocks": {
+        "question_LdCzpH": {
+          "type": "question",
+          "settings": {
+            "title": "What is the GLOW™ Facial Mist, and what does it do?",
+            "text": "<p>The GLOW™ Facial Mist is a hydrating, refreshing facial spray that soothes, tones, and helps to revitalize your skin for a dewy, healthy glow.</p>"
+          }
+        },
+        "question_V4wNRq": {
+          "type": "question",
+          "settings": {
+            "title": "What are the key benefits of the GLOW™ Facial Mist?",
+            "text": "<p>It hydrates, balances your skin’s pH, calms irritation, and gives your complexion a radiant boost—all in one refreshing spritz.</p>"
+          }
+        },
+        "question_EE96i6": {
+          "type": "question",
+          "settings": {
+            "title": "Is the GLOW™ Facial Mist suitable for all skin types?",
+            "text": "<p>Absolutely! Whether your skin is dry, oily, sensitive, or combination, this mist is gentle and effective for everyone.</p>"
+          }
+        },
+        "question_VRhWay": {
+          "type": "question",
+          "settings": {
+            "title": "Can I use the GLOW™ Facial Mist as a toner?",
+            "text": "<p>Yes! Its balancing and hydrating properties make it a perfect toner to prep your skin before applying serums or moisturizers.</p>"
+          }
+        },
+        "question_wMBU9q": {
+          "type": "question",
+          "settings": {
+            "title": "Can I use the GLOW™ Facial Mist if I have acne-prone skin?",
+            "text": "<p>Yes! The natural, non-comedogenic ingredients won’t clog your pores and can help soothe inflammation and irritation.</p>"
+          }
+        },
+        "question_PpqiMW": {
+          "type": "question",
+          "settings": {
+            "title": "Does this facial mist have a scent?",
+            "text": "<p>It has a light, refreshing scent from natural floral waters and essential oils, giving you a spa-like experience with every spritz.</p>"
+          }
+        },
+        "question_LMCqiE": {
+          "type": "question",
+          "settings": {
+            "title": "What is the Mineral Microbiome Clay Complex™, and what does it do?",
+            "text": "<p>This proprietary blend is rich in essential minerals that nourish your skin, helps support its microbiome, and enhance its natural radiance.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "question_LdCzpH",
+        "question_V4wNRq",
+        "question_EE96i6",
+        "question_VRhWay",
+        "question_wMBU9q",
+        "question_PpqiMW",
+        "question_LMCqiE"
+      ],
+      "custom_css": [
+        "{margin-top: 0px; background: #f7f7f7; padding-bottom: 50px;}"
+      ],
+      "settings": {
+        "title": "{{ product.title }} FAQs",
+        "heading_size": "h2",
+        "heading_position": "left"
+      }
+    },
+    "featured_collection_yCFwUr": {
+      "type": "featured-collection",
+      "custom_css": [
+        "h2 {font-family: ofelia-text, sans-serif; font-weight: 600;}"
+      ],
+      "settings": {
+        "title": "You May Also Like",
+        "heading_size": "h2",
+        "heading_position": "left",
+        "home_featured_products": "best-sellers",
+        "count": 5,
+        "products_per_row": 5,
+        "mobile_scrollable": true,
+        "view_all": true,
+        "divider": false
+      }
+    },
+    "1736732638a24ea9f0": {
+      "type": "apps",
+      "blocks": {
+        "okendo_reviews_widget_BrbN8J": {
+          "type": "shopify://apps/okendo/blocks/reviews-widget/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
+          "settings": {
+            "product": "{{product}}",
+            "widget_type": "reviews_widget"
+          }
+        }
+      },
+      "block_order": [
+        "okendo_reviews_widget_BrbN8J"
+      ],
+      "settings": {
+        "full_width": false,
+        "space_around": true
+      }
+    },
+    "recently-viewed": {
+      "type": "recently-viewed",
+      "disabled": true,
+      "settings": {}
+    },
+    "collection-return": {
+      "type": "collection-return",
+      "disabled": true,
+      "settings": {
+        "color_scheme": "2"
+      }
+    },
+    "more-products-collection": {
+      "type": "more-products-collection",
+      "disabled": true,
+      "settings": {
+        "products_per_row": 3,
+        "max_products": 5
+      }
+    },
+    "more-products-vendor": {
+      "type": "more-products-vendor",
+      "disabled": true,
+      "settings": {
+        "products_per_row": 3,
+        "max_products": 5
+      }
+    },
+    "recommendations": {
+      "type": "product-recommendations",
+      "disabled": true,
+      "settings": {
+        "product_recommendations_heading": "You may also like",
+        "related_count": 6,
+        "products_per_row": 3
+      }
+    }
+  },
+  "order": [
+    "main",
+    "advanced_accordion_jJyYDX",
+    "advanced_accordion_MNDaAU",
+    "advanced_accordion_AYThFw",
+    "advanced_accordion_xWwj3X",
+    "rich_text_3NkeD8",
+    "text_and_image_rHLmeH",
+    "text_and_image_tNiqhc",
+    "sub",
+    "promo_grid_7UkVC9",
+    "faq_XpMHc9",
+    "featured_collection_yCFwUr",
+    "1736732638a24ea9f0",
+    "recently-viewed",
+    "collection-return",
+    "more-products-collection",
+    "more-products-vendor",
+    "recommendations"
+  ]
+}

@@ -1,0 +1,52 @@
+{% # components v3.0.1 | Copyright © 2024 Archetype Themes Limited Partnership  | "Shopify Theme Store (https://www.shopify.com/legal/terms#9-additional-services)" License  %}
+{%- comment -%}
+  Renders a collapsible component
+
+  Accepts:
+  - open {boolean} - Whether the collapsible is open
+  - borders {boolean} - Whether to add borders to the collapsible
+  - class_button {string} - The class to apply to the button
+
+  Usage:
+  {% render 'collapsible', slot_button: 'My cool button', slot_collapsible: 'My cool content', id: 'my-cool-collapsible' %}
+{%- endcomment -%}
+
+{%- liquid
+  assign open = open | default: false, allow_false: true
+  assign borders = borders | default: false, allow_false: true
+  assign class_button = class_button | default: blank
+-%}
+<at-collapsible>
+  <button
+    type="button"
+    class="collapsible-trigger collapsible-trigger-btn collapsible--auto-height{% if open %} is-open{% endif %}{% if borders %} collapsible-trigger-btn--borders{% endif %}{% if class_button != blank %} {{ class_button }}{% endif %}"
+    {% if controls %}
+      data-controls="{{ id }}"
+      data-collapsible-id="{{ controls }}"
+    {% else %}
+      aria-controls="{{ id }}"
+    {% endif %}
+  >
+    {{- slot_button -}}
+  </button>
+  <div
+    class="collapsible-content collapsible-content--all{% if open %} is-open{% endif %}"
+    {% if controls %}
+      data-id="{{ id }}"
+      data-collapsible-id="{{ controls }}"
+    {% else %}
+      id="{{ id }}"
+    {% endif %}
+    {% if open %}
+      style="height: auto;"
+    {% endif %}
+  >
+    <div class="collapsible-content__inner rte clearfix">
+      {{- slot_collapsible -}}
+    </div>
+  </div>
+</at-collapsible>
+
+<script type="module">
+  import 'components/collapsible'
+</script>

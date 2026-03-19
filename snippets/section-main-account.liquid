@@ -1,0 +1,115 @@
+{% # components v3.0.1 | Copyright © 2024 Archetype Themes Limited Partnership  | "Shopify Theme Store (https://www.shopify.com/legal/terms#9-additional-services)" License  %}
+{%- comment -%}
+  Renders the main account section (lists account details and orders).
+
+  Usage:
+  {% render 'section-main-account' %}
+{%- endcomment -%}
+
+{%- paginate customer.orders by 20 -%}
+  <div class="page-width page-content">
+    <header class="section-header section-header--with-link">
+      <h1 class="section-header__title">
+        {% render 't_with_fallback', key: 'labels.my_account', fallback: 'My account' %}
+      </h1>
+      <a href="{{ routes.account_logout_url }}" class="section-header__link">
+        {% render 't_with_fallback', key: 'actions.log_out', fallback: 'Log out' -%}
+      </a>
+    </header>
+
+    <div class="float-grid clearfix">
+      <div class="grid__item medium-up--two-thirds">
+        <h2>
+          {% render 't_with_fallback', key: 'labels.order_history', fallback: 'Order history' %}
+        </h2>
+
+        {%- if customer.orders.size != 0 -%}
+          <table class="table--responsive table--small-text">
+            <thead>
+              <tr>
+                <th>
+                  {% render 't_with_fallback', key: 'labels.order', fallback: 'Order' %}
+                </th>
+                <th>
+                  {% render 't_with_fallback', key: 'labels.date', fallback: 'Date' %}
+                </th>
+                <th>
+                  {% render 't_with_fallback', key: 'labels.payment_status', fallback: 'Payment status' %}
+                </th>
+                <th>
+                  {% render 't_with_fallback', key: 'labels.fulfillment_status', fallback: 'Fulfillment status' %}
+                </th>
+                <th>
+                  {% render 't_with_fallback', key: 'labels.total', fallback: 'Total' %}
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              {%- for order in customer.orders -%}
+                <tr class="table__section">
+                  <td
+                    data-label="{% render 't_with_fallback', key: 'labels.order', fallback: 'Order' -%}"
+                  >
+                    {{ order.name | link_to: order.customer_url }}
+                  </td>
+                  <td
+                    data-label="{% render 't_with_fallback', key: 'labels.date', fallback: 'Date' -%}"
+                  >
+                    {{ order.created_at | time_tag: format: 'date' }}
+                  </td>
+                  <td
+                    data-label="{% render 't_with_fallback', key: 'labels.payment_status', fallback: 'Payment status' -%}"
+                  >
+                    {{ order.financial_status_label }}
+                  </td>
+                  <td
+                    data-label="{% render 't_with_fallback', key: 'labels.fulfillment_status', fallback: 'Fulfillment status' -%}"
+                  >
+                    {{ order.fulfillment_status_label }}
+                  </td>
+                  <td
+                    data-label="{% render 't_with_fallback', key: 'labels.total', fallback: 'Total' -%}"
+                  >
+                    {{ order.total_price | money }}
+                  </td>
+                </tr>
+              {%- endfor -%}
+            </tbody>
+          </table>
+
+          <hr class="hr--clear">
+
+        {%- else -%}
+          <p>
+            {% render 't_with_fallback', key: 'info.no_orders', fallback: "You haven't placed any orders yet." %}
+          </p>
+        {%- endif -%}
+      </div>
+
+      <div class="grid__item medium-up--one-third">
+        <h3>
+          {% render 't_with_fallback', key: 'labels.account_details', fallback: 'Account details' %}
+        </h3>
+
+        <p class="h5">{{ customer.name }}</p>
+
+        {{ customer.default_address | format_address }}
+
+        <p>
+          <a href="{{ routes.account_addresses_url }}" class="text-link">
+            {% render 't_with_fallback', key: 'actions.view_addresses', fallback: 'View addresses' %}
+            (
+            {{- customer.addresses_count -}}
+            )
+          </a>
+        </p>
+      </div>
+    </div>
+
+    {%- liquid
+      if paginate.pages > 1
+        render 'pagination', paginate: paginate
+      endif
+    -%}
+  </div>
+{%- endpaginate -%}

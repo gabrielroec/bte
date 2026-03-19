@@ -1,0 +1,122 @@
+{% # components v3.0.1 | Copyright © 2024 Archetype Themes Limited Partnership  | "Shopify Theme Store (https://www.shopify.com/legal/terms#9-additional-services)" License  %}
+{%- comment -%}
+  Renders a contact form
+
+  Accepts:
+  - block {block} - Block object
+
+  Usage:
+  {%- render 'block-contact', block: block -%}
+{%- endcomment -%}
+
+{%- liquid
+  assign product = section.settings.product | default: product
+  assign tab_id = block.id | append: product.id
+-%}
+
+<div class="product-block product-block--tab" {{ block.shopify_attributes }}>
+  {%- form 'contact', id: contact_form_id -%}
+    {%- capture slot_button -%}
+      {{ block.settings.title }}
+      {%- render 'collapsible-icons' -%}
+    {%- endcapture -%}
+    {%- capture slot_collapsible -%}
+    <div class="form-vertical">
+      <input
+        type="hidden"
+        name="contact[product]"
+        value="Product question for: {{ shop.secure_url }}{{ product.url }}"
+      >
+
+      <div class="float-grid grid--small clearfix">
+        <div class="grid__item medium-up--one-half">
+          <label for="ContactFormName-{{ id }}">
+            {% render 't_with_fallback', key: 'labels.name', fallback: 'Name' %}
+          </label>
+          <input
+            type="text"
+            id="ContactFormName-{{ id }}"
+            class="input-full"
+            name="contact[name]"
+            autocapitalize="words"
+            value="{% if form.name %}{{ form.name }}{% elsif customer %}{{ customer.name }}{% endif %}"
+          >
+        </div>
+
+        <div class="grid__item medium-up--one-half">
+          <label for="ContactFormEmail-{{ id }}">
+            {% render 't_with_fallback', key: 'labels.email', fallback: 'Email' %}
+          </label>
+          <input
+            type="email"
+            id="ContactFormEmail-{{ id }}"
+            class="input-full"
+            name="contact[email]"
+            autocorrect="off"
+            autocapitalize="off"
+            value="{% if form.email %}{{ form.email }}{% elsif customer %}{{ customer.email }}{% endif %}"
+          >
+        </div>
+      </div>
+
+      {%- if block.settings.phone -%}
+        <label for="ContactFormPhone-{{ id }}">
+          {% render 't_with_fallback', key: 'labels.phone_number', fallback: 'Phone number' %}
+        </label>
+        <input
+          type="tel"
+          id="ContactFormPhone-{{ id }}"
+          class="input-full"
+          name="contact[phone]"
+          pattern="[0-9\-]*"
+          value="{% if form.phone %}{{ form.phone }}{% elsif customer %}{{ customer.phone }}{% endif %}"
+        >
+      {%- endif -%}
+
+      <label for="ContactFormMessage-{{ id }}">
+        {% render 't_with_fallback', key: 'labels.message', fallback: 'Message' %}
+      </label>
+      <textarea
+        rows="5"
+        id="ContactFormMessage-{{ id }}"
+        class="input-full"
+        name="contact[body]"
+      >{% if form.body %}{{ form.body }}{% endif %}</textarea>
+
+      <label for="tab-contact-submit-{{ id }}" class="visually-hidden">
+        {% render 't_with_fallback', key: 'actions.send', fallback: 'Send' %}
+      </label>
+      <button type="submit" id="tab-contact-submit-{{ id }}" class="btn">
+        {% render 't_with_fallback', key: 'actions.send', fallback: 'Send' %}
+      </button>
+
+      {% comment %}
+        Remove the following three lines of code to remove the note
+        about being protected by Google's reCAPTCHA service.
+        By removing it, the small reCAPTCHA widget will appear in the
+        bottom right corner of the page.
+      {% endcomment %}
+      {{ 'shopify.online_store.spam_detection.disclaimer_html' | t }}
+    </div>
+    {%- endcapture -%}
+    {%- render 'collapsible',
+      id: tab_id,
+      slot_button: slot_button,
+      slot_collapsible: slot_collapsible,
+      borders: true
+    -%}
+
+    {%- if form.posted_successfully? -%}
+      <p class="note note--success">
+        {% render 't_with_fallback',
+          key: 'info.contact_confirmation',
+          fallback: "Thanks for contacting us. We'll get back to you as soon as possible."
+        %}
+      </p>
+    {%- endif -%}
+
+    {%- if form.product -%}
+      {{ form.errors | default_errors }}
+    {%- endif -%}
+  {%- endform -%}
+</div>

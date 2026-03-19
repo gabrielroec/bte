@@ -1,0 +1,130 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "collection-header": {
+      "type": "collection-header",
+      "disabled": true,
+      "settings": {
+        "enable": true,
+        "collection_image_enable": true,
+        "parallax": false,
+        "parallax_direction": "top"
+      }
+    },
+    "hero_video_4MTyRb": {
+      "type": "hero-video",
+      "custom_css": [
+        "h2 {font-family: ofelia-text, sans-serif; font-weight: 600;}"
+      ],
+      "settings": {
+        "full_width": true,
+        "title": "The New Standard of Natural Skincare",
+        "title_size": 40,
+        "subheading": "{{ collection.title }}",
+        "link_text": "",
+        "link": "",
+        "color_accent": "#ffffff",
+        "text_align": "vertical-bottom horizontal-left",
+        "video": "shopify://files/videos/Video - Bestseller Section (1080p).mp4",
+        "video_url": "",
+        "overlay_opacity": 0,
+        "height": 450,
+        "height_mobile": 300
+      }
+    },
+    "main-collection": {
+      "type": "main-collection",
+      "blocks": {
+        "subcollections": {
+          "type": "subcollections",
+          "settings": {}
+        },
+        "product_grid": {
+          "type": "product_grid",
+          "settings": {
+            "grid_style": "medium"
+          }
+        }
+      },
+      "block_order": [
+        "subcollections",
+        "product_grid"
+      ],
+      "custom_css": [
+        "h2 {font-family: ofelia-text, sans-serif; font-weight: 600;}",
+        ".grid-product__tags {display: none;}"
+      ],
+      "settings": {
+        "enable_sidebar": false,
+        "collapse_filters": true,
+        "enable_color_swatches": false,
+        "enable_sort": true
+      }
+    },
+    "recently-viewed": {
+      "type": "recently-viewed",
+      "disabled": true,
+      "settings": {}
+    },
+    "featured_collections_Wi4xJD": {
+      "type": "featured-collections",
+      "blocks": {
+        "collection_VEgdER": {
+          "type": "collection",
+          "settings": {
+            "collection": "the-art-of-skin",
+            "title": ""
+          }
+        },
+        "collection_MM9QzT": {
+          "type": "collection",
+          "settings": {
+            "collection": "cleansers",
+            "title": ""
+          }
+        },
+        "collection_jqUiJB": {
+          "type": "collection",
+          "settings": {
+            "collection": "treat",
+            "title": ""
+          }
+        },
+        "collection_mDhVEQ": {
+          "type": "collection",
+          "settings": {
+            "collection": "moisturizer",
+            "title": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection_VEgdER",
+        "collection_MM9QzT",
+        "collection_jqUiJB",
+        "collection_mDhVEQ"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h2",
+        "heading_position": "left",
+        "divider": false
+      }
+    }
+  },
+  "order": [
+    "collection-header",
+    "hero_video_4MTyRb",
+    "main-collection",
+    "recently-viewed",
+    "featured_collections_Wi4xJD"
+  ]
+}

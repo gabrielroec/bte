@@ -1,0 +1,27 @@
+{% # components v3.0.1 | Copyright © 2024 Archetype Themes Limited Partnership  | "Shopify Theme Store (https://www.shopify.com/legal/terms#9-additional-services)" License  %}
+{%- comment -%}
+  Renders the header navigation
+
+  Accepts:
+  - slot {string} - The slot content
+  - wrapper_class {string} - The header wrapper class
+  - overlay_header {boolean} - Whether the header has an overlay
+
+  Usage:
+  {% render 'header-nav', slot: slot %}
+{%- endcomment -%}
+
+{%- liquid
+  assign overlay_header = overlay_header | default: false, allow_false: true
+-%}
+
+<header-nav
+  id="HeaderWrapper"
+  class="header-wrapper{% if overlay_header and section.index == 2 %} header-wrapper--overlay is-light{% endif %}{% if wrapper_class %} {{ wrapper_class }}{%- endif %}"
+  defer-hydration
+>
+  {{- slot -}}
+</header-nav>
+<script type="module">
+  import 'components/header-nav'
+</script>

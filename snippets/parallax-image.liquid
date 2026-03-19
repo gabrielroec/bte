@@ -1,0 +1,24 @@
+{% # components v3.0.1 | Copyright © 2024 Archetype Themes Limited Partnership  | "Shopify Theme Store (https://www.shopify.com/legal/terms#9-additional-services)" License  %}
+{%- comment -%}
+  Renders a section with a background image and text.
+
+  Accepts:
+  - slot {string} - The image content to parallax
+  - direction {'top'|'left'} - The direction of the parallax effect
+
+  Usage:
+  {% render 'parallax-image', direction: 'left' %}
+{%- endcomment -%}
+
+{%- assign direction = direction | default: 'top' -%}
+
+<parallax-image class="parallax-container">
+    <div class="parallax-image" data-movement="15%" data-parallax-image data-angle="{{ direction }}">
+        {{ slot }}
+    </div>
+</parallax-image>
+
+<script type="module">
+    import 'components/parallax-image'
+</script>
+  

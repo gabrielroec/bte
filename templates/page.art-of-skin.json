@@ -1,0 +1,158 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {}
+    },
+    "slideshow_V6X4UB": {
+      "type": "slideshow",
+      "blocks": {
+        "hero_iKa7AJ": {
+          "type": "hero",
+          "settings": {
+            "top_subheading": "",
+            "title": "",
+            "title_size": 70,
+            "subheading": "",
+            "link": "shopify://collections/the-art-of-skin",
+            "link_text": "",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "#ffffff",
+            "text_align": "vertical-bottom horizontal-left",
+            "image": "shopify://shop_images/THE_ART_OF_SKIN_Landing_Page_1_.pdf_3.jpg",
+            "image_mobile": "shopify://shop_images/Title_1080_x_2100_px_7c123ac9-95ef-4647-b45d-a971ded701a3.jpg",
+            "overlay_opacity": 0
+          }
+        }
+      },
+      "block_order": [
+        "hero_iKa7AJ"
+      ],
+      "name": "t:labels.hero_optional_slides",
+      "settings": {
+        "full_width": true,
+        "desktop_size": 0,
+        "mobile_size": 0,
+        "style": "arrows",
+        "autoplay": true,
+        "autoplay_speed": 7
+      }
+    },
+    "featured_collection_yADwq8": {
+      "type": "featured-collection",
+      "custom_css": [
+        "h2 {font-family: ofelia-text, sans-serif; font-weight: 600;}",
+        ".grid-product__tags {display: none;}"
+      ],
+      "name": "t:labels.featured_collection",
+      "settings": {
+        "title": "Featured collection",
+        "heading_size": "h2",
+        "heading_position": "left",
+        "home_featured_products": "the-art-of-skin",
+        "count": 6,
+        "products_per_row": 3,
+        "mobile_scrollable": true,
+        "view_all": true,
+        "divider": false
+      }
+    },
+    "text_and_image_CeEnfJ": {
+      "type": "text-and-image",
+      "custom_css": [
+        "h2 {font-family: ofelia-text, sans-serif; font-weight: 600; font-size: 35px;}"
+      ],
+      "name": "t:labels.image_with_text",
+      "settings": {
+        "image": "shopify://shop_images/GLOW_Foaming_Cleanser_Lifestyle_2.jpg",
+        "image_mask": "none",
+        "image2_mask": "none",
+        "subtitle": "",
+        "title": "Cleanse",
+        "heading_size": "h2",
+        "text": "<p>In The Art of Skin, we begin with a clean foundation—one that respects your skin’s sensitivity. This step avoids common irritants found in traditional cleansers, like harsh preservatives, emulsifiers, and foaming agents that can disrupt your skin’s barrier. Instead, it’s all about lifting away impurities while leaving your skin calm, balanced, and ready to receive our award winning and specially crafted treatments. </p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "left",
+        "image_width": "50",
+        "layout": "right",
+        "color_scheme": "none",
+        "divider": false,
+        "top_padding": true,
+        "bottom_padding": true
+      }
+    },
+    "text_and_image_Mzfh4c": {
+      "type": "text-and-image",
+      "custom_css": [
+        "h2 {font-family: ofelia-text, sans-serif; font-weight: 600; font-size: 35px;}"
+      ],
+      "name": "t:labels.image_with_text",
+      "settings": {
+        "image": "shopify://shop_images/Back_To_Earth_Clarify.jpg",
+        "image_mask": "none",
+        "image2_mask": "none",
+        "subtitle": "",
+        "title": "Treat",
+        "heading_size": "h2",
+        "text": "<p>Once the skin is cleared of external aggressors — like pollution, bacteria, and other impurities — it’s time to nourish and restore. This phase focuses on delivering anti-inflammatory and mineral-rich ingredients to support healing and balance. To avoid triggering sensitive skin, we never use common irritants like harsh preservatives, emulsifiers, and highly concentrated actives such as vitamin C or retinol.</p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "left",
+        "image_width": "50",
+        "layout": "left",
+        "color_scheme": "none",
+        "divider": false,
+        "top_padding": true,
+        "bottom_padding": true
+      }
+    },
+    "text_and_image_hNFTFy": {
+      "type": "text-and-image",
+      "custom_css": [
+        "h2 {font-family: ofelia-text, sans-serif; font-weight: 600; font-size: 35px;}"
+      ],
+      "name": "t:labels.image_with_text",
+      "settings": {
+        "image_mask": "none",
+        "image2": "shopify://shop_images/GLOW_Daily_Moisturizer_Lifestyle_2.jpg",
+        "image2_mask": "none",
+        "subtitle": "",
+        "title": "Care",
+        "heading_size": "h2",
+        "text": "<p>After the skin is treated with the optimal routine curated for your skin, it’s essential to lock in moisture with a nourishing and calming moisturizer that supports the skin barrier and encourages recovery. This step helps maintain hydration while creating a protective layer that doesn’t sit heavily on the surface or attract external irritants. As always, we never use harsh preservatives, emulsifiers, and strong actives that can disrupt sensitive or compromised skin.</p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "left",
+        "image_width": "50",
+        "layout": "right",
+        "color_scheme": "none",
+        "divider": false,
+        "top_padding": true,
+        "bottom_padding": true
+      }
+    }
+  },
+  "order": [
+    "main",
+    "slideshow_V6X4UB",
+    "featured_collection_yADwq8",
+    "text_and_image_CeEnfJ",
+    "text_and_image_Mzfh4c",
+    "text_and_image_hNFTFy"
+  ]
+}

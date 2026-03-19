@@ -1,0 +1,85 @@
+{% # components v3.0.1 | Copyright © 2024 Archetype Themes Limited Partnership  | "Shopify Theme Store (https://www.shopify.com/legal/terms#9-additional-services)" License  %}
+{% comment %}
+  Renders add to cart component
+
+  Accepts:
+  - product {product} - Product object
+  - class_name {string} - The classes of the component
+
+  Usage:
+  {% render 'add-to-cart', product: product %}
+{% endcomment %}
+
+{%- liquid
+  assign class_name = class_name | default: '' | append: ' at-add-to-cart' | strip
+  assign variant = product.selected_or_first_available_variant
+  assign min = 0
+  assign count = cart | item_count_for_variant: variant.id
+  assign max = null
+
+  if variant.inventory_management
+    assign max = variant.inventory_quantity
+  endif
+
+  assign expanded = 'false'
+  if count > 0
+    assign expanded = 'true'
+  endif
+-%}
+
+<at-add-to-cart
+  class="{{ class_name }}"
+  data-section-id="{{ section.id }}"
+  data-variant-id="{{ variant.id }}"
+  data-count="{{ count }}"
+  data-variants-size="{{ product.variants.size }}"
+  data-available="{{ product.available }}"
+>
+  {% if product.variants.size == 1 %}
+    {%- if product.available -%}
+      <button
+        class="at-add-to-cart__button at-add-to-cart__button--add btn btn--secondary js-add-to-cart"
+        type="button"
+        aria-controls="AddToCart-{{ section.id }}-{{ product.id }}"
+        aria-expanded="{{ expanded }}"
+        {% if count > 0 %}
+          disabled="disabled"
+        {% endif %}
+      >
+        {% render 't_with_fallback', key: 'actions.add_to_cart', fallback: 'Add to cart' %}
+      </button>
+      <div id="AddToCart-{{ section.id }}-{{ product.id }}" class="at-add-to-cart__content">
+        {%- render 'quantity-selector', min: min, max: max, value: count -%}
+      </div>
+      <div class="at-add-to-cart__message btn js-added" tabindex="-1">
+        {%- liquid
+          render 't_with_fallback', key: 'info.added', fallback: 'Added'
+          render 'icon', name: 'checkmark', library: 'tcwi'
+        -%}
+      </div>
+    {%- else -%}
+      <button class="at-add-to-cart__button at-add-to-cart__button--sold-out btn btn--secondary" type="button" disabled>
+        {% render 't_with_fallback', key: 'info.sold_out', fallback: 'Sold out' %}
+      </button>
+    {%- endif -%}
+  {% else %}
+    {%- capture quick_shop_button -%}
+        <button class="at-add-to-cart__button at-add-to-cart__button--options btn btn--secondary" data-handle="{{ product.handle }}">
+          {%- liquid
+            render 't_with_fallback', key: 'actions.show_options', fallback: 'Show options'
+          -%}
+        </button>
+      {%- endcapture -%}
+    {%- liquid
+      capture content
+        render 'tool-tip-trigger', context: 'QuickShop', button: quick_shop_button, wrapper_class: 'quick-shop-modal'
+      endcapture
+    -%}
+
+    {%- render 'quick-shop', content: content -%}
+  {% endif %}
+</at-add-to-cart>
+
+<script type="module">
+  import 'components/add-to-cart'
+</script>

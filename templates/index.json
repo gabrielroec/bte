@@ -1,0 +1,322 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "banner_hero_compare": {
+      "type": "banner-hero",
+      "blocks": {
+        "banner_hero_trust_1": {
+          "type": "trust_item",
+          "settings": {
+            "icon": "🌿",
+            "text": "Natural"
+          }
+        },
+        "banner_hero_trust_2": {
+          "type": "trust_item",
+          "settings": {
+            "icon": "V",
+            "text": "Vegan"
+          }
+        },
+        "banner_hero_trust_3": {
+          "type": "trust_item",
+          "settings": {
+            "icon": "🐰",
+            "text": "Cruelty-Free"
+          }
+        },
+        "banner_hero_trust_4": {
+          "type": "trust_item",
+          "settings": {
+            "icon": "🏆",
+            "text": "ELLE Winner"
+          }
+        }
+      },
+      "block_order": ["banner_hero_trust_1", "banner_hero_trust_2", "banner_hero_trust_3", "banner_hero_trust_4"],
+      "settings": {
+        "heading": "Results after 1 application.",
+        "text": "<p>Select one of our award-winning routines crafted for your skin.</p>",
+        "content_position": "right",
+        "button_1_label": "Find My Routine",
+        "button_1_link": "shopify://collections/the-art-of-skin",
+        "button_2_label": "Shop All",
+        "button_2_link": "shopify://collections/all",
+        "aspect_desktop_w": 24,
+        "aspect_desktop_h": 9,
+        "aspect_mobile_w": 24,
+        "aspect_mobile_h": 11,
+        "show_trust_bar": true,
+        "show_social_proof": true,
+        "social_star_count": 5,
+        "social_rating": "4.9",
+        "social_reviews": "1,200+ reviews",
+        "social_tagline": "Results after one application"
+      }
+    },
+    "slideshow_split_GNQHXY": {
+      "type": "slideshow-split",
+      "blocks": {
+        "slide_PjL4Wk": {
+          "type": "slide",
+          "settings": {
+            "top_subheading": "GLOW™ EYE CREAM",
+            "title": "Brighten Tired Eyes",
+            "title_size": 60,
+            "subheading": "Reduce puffiness, smooth fine lines, and diminish dark circles",
+            "link": "shopify://products/glow-eye-cream",
+            "link_text": "Awaken Your Eyes",
+            "link_2": "",
+            "link_text_2": "",
+            "text_position": "left",
+            "image": "shopify://shop_images/Back_To_Earth_Eye_Cream_Hero_Image_34df2538-ad97-4b3f-9d72-2e60b36ef5c2.jpg",
+            "indent_image": false,
+            "color_scheme": "none"
+          }
+        },
+        "slide_3DWGVW": {
+          "type": "slide",
+          "settings": {
+            "top_subheading": "GLOW™ FACIAL MASK",
+            "title": "Detox & Glow Naturally",
+            "title_size": 60,
+            "subheading": "Draw out impurities and excess oil",
+            "link": "shopify://products/glow-facial-mask",
+            "link_text": "Treat Your Skin",
+            "link_2": "",
+            "link_text_2": "",
+            "text_position": "left",
+            "image": "shopify://shop_images/Back_To_Earth_Clay_Mask_Hero_Image_d9bd5681-8ff6-4ea2-938f-52a49c06c17e.jpg",
+            "indent_image": false,
+            "color_scheme": "none"
+          }
+        },
+        "slide_RphYCX": {
+          "type": "slide",
+          "settings": {
+            "top_subheading": "GLOW™ EXFOLIATING SCRUB",
+            "title": "Polish Away Dullness",
+            "title_size": 57,
+            "subheading": "Removes dead skin cells, unclogs pores, and smooths rough texture",
+            "link": "shopify://products/glow-exfoliating-scrub",
+            "link_text": "Polish & Refresh",
+            "link_2": "",
+            "link_text_2": "",
+            "text_position": "right",
+            "image": "shopify://shop_images/Back_To_Earth_Hero_Image_3.jpg",
+            "indent_image": false,
+            "color_scheme": "none"
+          }
+        }
+      },
+      "block_order": ["slide_PjL4Wk", "slide_3DWGVW", "slide_RphYCX"],
+      "disabled": true,
+      "custom_css": ["h2 {font-family: ofelia-text, sans-serif; font-weight: 600;}"],
+      "settings": {
+        "full_width": true,
+        "height": 750,
+        "height_mobile": 550,
+        "style": "arrows",
+        "autoplay": false,
+        "autoplay_speed": 7
+      }
+    },
+    "featured-collection": {
+      "type": "featured-collection",
+      "custom_css": ["h2 {font-family: ofelia-text, sans-serif; font-weight: 600;}", ".grid-product__tags {display: none;}"],
+      "settings": {
+        "title": "100% Natural Skincare Routines. Toxins-Free. Vegan. Cruelty Free. Sustainable",
+        "heading_size": "h2",
+        "heading_position": "left",
+        "home_featured_products": "the-art-of-skin",
+        "count": 5,
+        "products_per_row": 5,
+        "mobile_scrollable": true,
+        "view_all": true,
+        "divider": false
+      }
+    },
+    "featured_collection_gFneFk": {
+      "type": "featured-collection",
+      "custom_css": [".grid-product__tags {display: none;}"],
+      "settings": {
+        "title": "",
+        "heading_size": "h2",
+        "heading_position": "left",
+        "home_featured_products": "frontpage",
+        "count": 5,
+        "products_per_row": 5,
+        "mobile_scrollable": true,
+        "view_all": false,
+        "divider": false
+      }
+    },
+    "hero_video_tqUY4Y": {
+      "type": "hero-video",
+      "custom_css": ["h2 {font-family: ofelia-text, sans-serif; font-weight: 600;}"],
+      "settings": {
+        "full_width": true,
+        "title": "",
+        "title_size": 45,
+        "subheading": "",
+        "link_text": "",
+        "link": "shopify://collections/shop-all-products",
+        "color_accent": "#ffffff",
+        "text_align": "vertical-bottom horizontal-left",
+        "video_url": "https://youtu.be/a73G93yamiQ",
+        "overlay_opacity": 0,
+        "height": 750,
+        "height_mobile": 250
+      }
+    },
+    "slideshow_split_zjeJYb": {
+      "type": "slideshow-split",
+      "blocks": {
+        "slide_QqdDgT": {
+          "type": "slide",
+          "settings": {
+            "top_subheading": "",
+            "title": "<h2>100% Natural Skincare Routines. \nResults after one application. </h2>",
+            "title_size": 40,
+            "subheading": "Only 100% natural and vegan ingredients that deliver results. Powered by our proprietary Mineral Microbiome Clay® to help restore skin health with 40+ minerals. Toxins-Free. Cruelty-Free. Sustainably packaged.",
+            "link": "shopify://collections/all",
+            "link_text": "Shop Now",
+            "link_2": "",
+            "link_text_2": "",
+            "text_position": "right",
+            "image": "shopify://shop_images/AgingSkin-RoutineProductShotv2.jpg",
+            "indent_image": false,
+            "color_scheme": "none"
+          }
+        }
+      },
+      "block_order": ["slide_QqdDgT"],
+      "settings": {
+        "full_width": true,
+        "height": 650,
+        "height_mobile": 450,
+        "style": "arrows",
+        "autoplay": true,
+        "autoplay_speed": 7
+      }
+    },
+    "slideshow-split": {
+      "type": "slideshow-split",
+      "blocks": {
+        "slide-1": {
+          "type": "slide",
+          "settings": {
+            "top_subheading": "Mineral Microbiome Clay™",
+            "title": "Skin, meet MMC™.",
+            "title_size": 47,
+            "subheading": "Straight from the earth, MMC™ is our signature blend of nutrient-rich clays loaded with over 40 essential minerals. Magnesium, calcium, and zinc work together to detox, hydrate, and support your skin’s natural balance—giving you a glow that’s pure and powerful.",
+            "link": "shopify://pages/mineralmicrobiomeclay",
+            "link_text": "Discover MMC™ Magic ✨",
+            "link_2": "",
+            "link_text_2": "",
+            "text_position": "left",
+            "image": "shopify://shop_images/Untitled_design_77.jpg",
+            "indent_image": true,
+            "color_scheme": "none"
+          }
+        }
+      },
+      "block_order": ["slide-1"],
+      "custom_css": ["h2 {font-family: ofelia-text, sans-serif; font-weight: 600;}"],
+      "settings": {
+        "full_width": true,
+        "height": 750,
+        "height_mobile": 650,
+        "style": "arrows",
+        "autoplay": true,
+        "autoplay_speed": 7
+      }
+    },
+    "hero_video_zh3KQM": {
+      "type": "hero-video",
+      "custom_css": ["h2 {font-family: ofelia-text, sans-serif; font-weight: 600;}"],
+      "settings": {
+        "full_width": true,
+        "title": "100% Natural <br>0% Guilt",
+        "title_size": 60,
+        "subheading": "",
+        "link_text": "Our Promise",
+        "link": "shopify://pages/our-commitment",
+        "color_accent": "#ffffff",
+        "text_align": "vertical-bottom horizontal-left",
+        "video": "shopify://files/videos/Video - Our Commitment.mp4",
+        "video_url": "",
+        "overlay_opacity": 0,
+        "height": 500,
+        "height_mobile": 300
+      }
+    },
+    "featured_collection_d9Vfbk": {
+      "type": "featured-collection",
+      "custom_css": [".grid-product__tags {display: none;}"],
+      "name": "t:labels.featured_collection",
+      "settings": {
+        "title": "Art Of Skin",
+        "heading_size": "h2",
+        "heading_position": "left",
+        "home_featured_products": "the-art-of-skin",
+        "count": 6,
+        "products_per_row": 3,
+        "mobile_scrollable": true,
+        "view_all": true,
+        "divider": false
+      }
+    },
+    "slideshow_7JY6Bf": {
+      "type": "slideshow",
+      "blocks": {
+        "hero_PY8V6g": {
+          "type": "hero",
+          "settings": {
+            "top_subheading": "",
+            "title": "",
+            "title_size": 70,
+            "subheading": "",
+            "link": "",
+            "link_text": "",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "#ffffff",
+            "text_align": "vertical-bottom horizontal-left",
+            "image": "shopify://shop_images/Back_To_Earth_Hero_Image_8.jpg",
+            "overlay_opacity": 0
+          }
+        }
+      },
+      "block_order": ["hero_PY8V6g"],
+      "settings": {
+        "full_width": true,
+        "desktop_size": 0,
+        "mobile_size": 0,
+        "style": "arrows",
+        "autoplay": true,
+        "autoplay_speed": 7
+      }
+    }
+  },
+  "order": [
+    "banner_hero_compare",
+    "slideshow_split_GNQHXY",
+    "featured-collection",
+    "featured_collection_gFneFk",
+    "hero_video_tqUY4Y",
+    "slideshow_split_zjeJYb",
+    "slideshow-split",
+    "hero_video_zh3KQM",
+    "featured_collection_d9Vfbk",
+    "slideshow_7JY6Bf"
+  ]
+}

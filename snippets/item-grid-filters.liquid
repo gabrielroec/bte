@@ -1,0 +1,119 @@
+{% # components v3.0.1 | Copyright © 2024 Archetype Themes Limited Partnership  | "Shopify Theme Store (https://www.shopify.com/legal/terms#9-additional-services)" License  %}
+{%- comment -%}
+  Renders the item grid filters.
+
+  Accepts:
+  - context {object} - The collection or search object
+  - collapse_filters {boolean} - Whether to collapse filters
+  - enable_sort {boolean} - Whether to enable sorting
+
+  Usage:
+  {% render 'item-grid-filters', context: search %}
+{%- endcomment -%}
+
+{%- liquid
+  assign collapse_filters = collapse_filters | default: section.settings.collapse_filters, allow_false: true | default: true, allow_false: true
+  assign enable_sort = enable_sort | default: section.settings.enable_sort, allow_false: true | default: true, allow_false: true
+
+  assign current_filter_size = 0
+  for filter in context.filters
+    assign current_filter_size = current_filter_size | plus: filter.active_values.size
+  endfor
+%}
+
+{%- if current_filter_size > 0 -%}
+  <ul class="no-bullets tag-list tag-list--active-tags">
+    {%- for filter in context.filters -%}
+      {%- for filter_value in filter.active_values -%}
+        <li class="tag tag--remove">
+          <a class="btn btn--small js-no-transition" href="{{ filter_value.url_to_remove }}">
+            {{ filter_value.label | escape }}
+          </a>
+          {% render 'icon', name: 'close' %}
+        </li>
+      {%- endfor -%}
+    {%- endfor -%}
+  </ul>
+{%- endif -%}
+
+{%- if enable_sort -%}
+  {%- liquid
+    assign sort_title = 'actions.sort' | t
+    assign sort_by = context.sort_by | default: context.default_sort_by
+    assign sort_id = 'CollectionSidebarSort'
+    assign id = location | append: '-' | append: sort_id
+  -%}
+
+  <div class="collection-sidebar__group collection-sidebar__group--sort medium-up--hide">
+    {%- capture slot_collapsible -%}
+      <ul class="no-bullets tag-list">
+        {%- for option in context.sort_options -%}
+          <li class="tag{% if option.value == sort_by %} tag--active{% endif %}">
+            <button type="button" data-value="{{ option.value }}" class="filter-sort">{{ option.name }}</button>
+          </li>
+        {%- endfor -%}
+      </ul>
+    {%- endcapture -%}
+    {%- capture slot_button -%}
+      <span class="collapsible-trigger__layout collapsible-trigger__layout--inline">
+        <span>{{ sort_title | escape }}</span>
+        {%- render 'collapsible-icons' -%}
+      </span>
+    {%- endcapture -%}
+    {%- render 'collapsible',
+      id: id,
+      slot_collapsible: slot_collapsible,
+      slot_button: slot_button,
+      controls: id,
+      class_button: 'tag-list__header'
+    -%}
+  </div>
+{%- endif -%}
+
+<form class="filter-form">
+  {%- for filter in context.filters -%}
+    {%- capture filter_id -%}filter-{{ filter.label | handleize }}{%- endcapture -%}
+    {%- assign filter_index = forloop.index -%}
+    {%- assign collapsed_state = false -%}
+    {%- unless collapse_filters -%}
+      {%- assign collapsed_state = true -%}
+    {%- endunless -%}
+
+    {%- assign id = location | append: '-' | append: filter_index -%}
+    <div class="collection-sidebar__group--{{ filter_index }}">
+      <div class="collection-sidebar__group">
+        {%- capture slot_collapsible -%}
+          {%- case filter.type -%}
+            {%- when 'list', 'boolean' -%}
+              {%- case filter.presentation -%}
+                {%- when 'swatch' -%}
+                  {%- render 'swatch-filter', filter: filter -%}
+                {%- when 'text' -%}
+                  {%- render 'text-filter', filter: filter -%}
+                {%- when 'image' -%}
+                  {%- render 'image-filter', filter: filter -%}
+                {%- else -%}
+                  {%- render 'fallback-filter', filter: filter -%}
+              {%- endcase -%}
+            {%- when 'price_range' -%}
+              {%- render 'price-range', filter: filter %}
+          {%- endcase -%}
+        {%- endcapture -%}
+        {%- capture slot_button -%}
+          <span class="collapsible-trigger__layout collapsible-trigger__layout--inline">
+            <span>{{ filter.label | escape }}</span>
+            {%- render 'collapsible-icons' -%}
+          </span>
+        {%- endcapture -%}
+        {%- render 'collapsible',
+          id: id,
+          slot_button: slot_button,
+          slot_collapsible: slot_collapsible,
+          controls: filter_id,
+          class_button: 'tag-list__header',
+          open: collapsed_state
+        -%}
+      </div>
+    </div>
+  {%- endfor -%}
+</form>

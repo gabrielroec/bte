@@ -1,0 +1,127 @@
+{% # components v3.0.1 | Copyright © 2024 Archetype Themes Limited Partnership  | "Shopify Theme Store (https://www.shopify.com/legal/terms#9-additional-services)" License  %}
+{%- comment -%}
+  Renders the gift card section.
+
+  Usage:
+  {% render 'section-main-gift-card' %}
+{%- endcomment -%}
+
+{%- assign formatted_initial_value = gift_card.initial_value | money_without_trailing_zeros: gift_card.currency -%}
+
+<div class="giftcard__border{% if gift_card.expired or gift_card.enabled != true %} disabled{% endif %}">
+  <div class="giftcard__content clearfix">
+    <div class="giftcard__header clearfix">
+      <h2 class="h4 giftcard__title">
+        {% render 't_with_fallback', key: 'info.gift_card_description', fallback: "Here's your gift card!" %}
+      </h2>
+      {% unless gift_card.enabled %}
+        <span class="giftcard__tag">
+          {% render 't_with_fallback', key: 'info.disabled', fallback: 'Disabled' -%}
+        </span>
+      {% endunless %}
+      {%- assign gift_card_expiry_date = gift_card.expires_on | date: '%d/%m/%y' -%}
+      {% if gift_card.expired and gift_card.enabled %}
+        <span class="giftcard__tag">
+          {%- assign info_gift_card_expired_on = 'info.gift_card_expired_on' | t: expiry: gift_card_expiry_date %}
+          {%- capture fallback_info_gift_card_expired_on -%}
+            Expired on {{ gift_card_expiry_date }}
+          {%- endcapture -%}
+          {% render 't_with_fallback', t: info_gift_card_expired_on, fallback: fallback_info_gift_card_expired_on -%}
+        </span>
+      {% endif %}
+      {% if gift_card.expired != true and gift_card.expires_on and gift_card.enabled %}
+        <span class="giftcard__tag giftcard__tag--active">
+          {% assign info_gift_card_expires_on = 'info.gift_card_expires_on' | t: expiry: gift_card_expiry_date %}
+          {%- capture fallback_info_gift_card_expires_on -%}
+            Expires on {{ gift_card_expiry_date }}
+          {%- endcapture -%}
+          {% render 't_with_fallback', t: info_gift_card_expires_on, fallback: fallback_info_gift_card_expires_on %}
+        </span>
+      {% endif %}
+    </div>
+
+    <div class="giftcard__wrap">
+      {%- render 'image-element',
+        asset: 'gift-card/card.jpg',
+        type: 'asset',
+        alt: 'Gift card illustration',
+        sizeVariable: '588px'
+      -%}
+
+      {%- assign initial_value_size = formatted_initial_value | size -%}
+      <div class="h1 giftcard__amount{% if initial_value_size > 6 %} giftcard__amount--medium{% endif %}">
+        {% if gift_card.balance != gift_card.initial_value %}
+          <span class="tooltip">
+            <span class="tooltip__label">
+              {{- gift_card.balance | money }}
+              <small>left</small></span
+            >
+          </span>
+        {% endif %}
+        <strong>{{ formatted_initial_value }}</strong>
+      </div>
+
+      {%- assign code_size = gift_card.code | format_code | size -%}
+      <div
+        class="giftcard__code{% if code_size <= 25 %} giftcard__code--large{% elsif code_size > 25 and code_size <= 30 %} giftcard__code--medium{% else %} giftcard__code--small{% endif %}"
+        onclick="selectText('GiftCardDigits');"
+      >
+        <div class="giftcard__code__inner">
+          <strong class="giftcard__code__text" id="GiftCardDigits">{{ gift_card.code | format_code }}</strong>
+        </div>
+      </div>
+    </div>
+
+    <p class="giftcard__instructions">
+      {% assign info_gift_card_redeem = 'info.gift_card_redeem' | t %}
+      {% render 't_with_fallback',
+        t: info_gift_card_redeem,
+        fallback: 'Use this code at checkout to redeem your gift card'
+      %}
+    </p>
+
+    <div id="QrCode"></div>
+    <script>
+      new QRCode(document.getElementById('QrCode'), {
+        text: '{{ gift_card.qr_identifier }}',
+        width: 120,
+        height: 120
+      })
+    </script>
+
+    <div class="giftcard__actions">
+      <a href="{{ shop.url }}" class="btn" target="_blank">
+        {% render 't_with_fallback', key: 'actions.start_shopping', fallback: 'Start shopping' -%}
+      </a>
+      <a href="#" class="action-link" onclick="window.print();">
+        <i class="action-link__print"></i>
+        {% render 't_with_fallback', key: 'actions.print', fallback: 'Print' %}
+      </a>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+  /*============================================================================
+    Auto-select gift card code on click, based on ID passed to the function
+      - Use a different method depending on IE or others
+  ==============================================================================*/
+  function selectText(element) {
+    var doc = document,
+      text = doc.getElementById(element)
+
+    if (doc.body.createTextRange) {
+      // ms
+      var range = doc.body.createTextRange()
+      range.moveToElementText(text)
+      range.select()
+    } else if (window.getSelection) {
+      // moz, opera, webkit
+      var selection = window.getSelection(),
+        range = doc.createRange()
+      range.selectNodeContents(text)
+      selection.removeAllRanges()
+      selection.addRange(range)
+    }
+  }
+</script>

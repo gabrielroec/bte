@@ -1,0 +1,40 @@
+{% # components v3.0.1 | Copyright © 2024 Archetype Themes Limited Partnership  | "Shopify Theme Store (https://www.shopify.com/legal/terms#9-additional-services)" License  %}
+{%- comment -%}
+  Renders the featured video section.
+
+  Accepts:
+  - title {string} - The title of the section
+  - video {video} - The video object (native)
+  - video_url {string} - The URL of the external video (YouTube/Vimeo)
+  - divider {boolean} - Whether to add a divider above the section
+
+  Usage:
+  {% render 'section-featured-video' %}
+{%- endcomment -%}
+
+{%- liquid
+  assign title = title | default: section.settings.title
+  assign video = video | default: section.settings.video
+  assign video_url = video_url | default: section.settings.video_url
+  assign divider = divider | default: section.settings.divider, allow_false: true | default: false, allow_false: true
+-%}
+
+{%- if divider -%}<div class="section--divider">{%- endif -%}
+
+<div class="page-width">
+  {%- if title != blank -%}
+    <div class="section-header">
+      <h2>{{ title | escape }}</h2>
+    </div>
+  {%- endif -%}
+
+  <div class="video-wrapper">
+    {%- if video != blank -%}
+      {% render 'video-media', video: video %}
+    {%- else -%}
+      {% render 'video-media', external_video: video_url %}
+    {%- endif -%}
+  </div>
+</div>
+
+{%- if divider -%}</div>{%- endif -%}

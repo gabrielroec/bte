@@ -1,0 +1,26 @@
+{% # components v3.0.1 | Copyright © 2024 Archetype Themes Limited Partnership  | "Shopify Theme Store (https://www.shopify.com/legal/terms#9-additional-services)" License  %}
+{% comment %}
+  Renders a header drawer
+
+  Accepts:
+  - class {string} - Additional classes to apply to the header drawer
+  - open {string} - Event name to open the drawer
+  - close {string} - Event name to close the drawer
+
+  Usage:
+  {% render 'header-drawer', slot: slot, open: 'minicart:open', 'minicart:close' %}
+{% endcomment %}
+
+{%- liquid
+  assign class = class | default: blank
+-%}
+
+<header-drawer class="site-header__drawer {{ class }}" open="{{ open }}" close="{{ close }}" defer-hydration>
+  <div class="site-header__drawer-animate">
+    {{- slot -}}
+  </div>
+</header-drawer>
+
+<script type="module">
+  import 'components/header-drawer'
+</script>

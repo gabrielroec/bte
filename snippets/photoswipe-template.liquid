@@ -1,0 +1,41 @@
+{% # components v3.0.1 | Copyright © 2024 Archetype Themes Limited Partnership  | "Shopify Theme Store (https://www.shopify.com/legal/terms#9-additional-services)" License  %}
+{%- comment -%}
+  Renders the template used by PhotoSwipe.
+
+  Usage:
+  {% render 'photoswipe-template' %}
+{%- endcomment -%}
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="pswp__bg"></div>
+  <div class="pswp__scroll-wrap">
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+
+    <div class="pswp__ui pswp__ui--hidden">
+      <button
+        class="btn btn--secondary btn--circle pswp__button pswp__button--arrow--left"
+        title="{%- render 't_with_fallback', key: 'actions.previous', fallback: 'Previous' -%}"
+      >
+        {% render 'icon', name: 'chevron-left' %}
+      </button>
+
+      <button
+        class="btn btn--secondary btn--circle btn--large pswp__button pswp__button--close"
+        title="{%- render 't_with_fallback', key: 'actions.close_esc', fallback: 'Close (esc)' -%}"
+      >
+        {% render 'icon', name: 'close' %}
+      </button>
+
+      <button
+        class="btn btn--secondary btn--circle pswp__button pswp__button--arrow--right"
+        title="{%- render 't_with_fallback', key: 'actions.next', fallback: 'Next' -%}"
+      >
+        {% render 'icon', name: 'chevron-right' %}
+      </button>
+    </div>
+  </div>
+</div>

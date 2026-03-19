@@ -1,0 +1,30 @@
+{% # components v3.0.1 | Copyright © 2024 Archetype Themes Limited Partnership  | "Shopify Theme Store (https://www.shopify.com/legal/terms#9-additional-services)" License  %}
+{%- comment -%}
+  A content over media component, typically text over an image or video.
+
+  Accepts:
+  - slot_media {string} - The content of the media slot
+  - slot_content {string} - The content of the content slot
+
+  Usage:
+  {% render 'content-over-media', slot_content: 'Some content' %}
+{%- endcomment -%}
+
+{%- liquid
+  assign media_size = media_size | default: section.settings.media_size | default: 'small'
+  assign mobile_content_position = mobile_content_position | default: section.settings.mobile_content_position | default: 'center'
+  assign desktop_content_position = desktop_content_position | default: section.settings.desktop_content_position | default: 'end-start'
+  assign overlay = overlay | default: section.settings.overlay, allow_false: true | default: true, allow_false: true
+-%}
+
+<div class="content-over-media" overlay="{{ overlay }}" data-height="{{ media_size }}">
+  {{ slot_media }}
+
+  <div
+    class="content-over-media__content"
+    data-mobile-content-position="{{ mobile_content_position }}"
+    data-desktop-content-position="{{ desktop_content_position }}"
+  >
+    {{ slot_content }}
+  </div>
+</div>

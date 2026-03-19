@@ -1,0 +1,741 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "okendo_star_rating_qHXQA9": {
+          "type": "shopify://apps/okendo/blocks/star-rating/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
+          "settings": {
+            "product": "{{product}}"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+            "vendor_enable": false,
+            "sku_enable": false
+          }
+        },
+        "text_WgiafR": {
+          "type": "text",
+          "settings": {
+            "text": "Experience the perfect balance of deep cleansing and hydration with this lightweight, refreshing foam."
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "separator_zdkt98": {
+          "type": "separator",
+          "settings": {}
+        },
+        "custom_eYcXWC": {
+          "type": "custom",
+          "settings": {
+            "code": "<ul>\n<li>- Gently removes dirt, oil, and makeup for a clear complexion</li>\n<li>- Leaves your skin feeling refreshed and hydrated after every wash</li>\n<li>- Helps balance and restore your skin’s natural beauty</li>\n</ul"
+          }
+        },
+        "separator_GqYgcP": {
+          "type": "separator",
+          "settings": {}
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "variant_labels": true,
+            "picker_type": "button",
+            "product_dynamic_variants_enable": true,
+            "color_swatches": false
+          }
+        },
+        "recharge_subscriptions_subscription_widget_YCxYUk": {
+          "type": "shopify://apps/recharge-subscriptions/blocks/subscription-widget/371eed76-0b44-4869-9813-730372ea378e",
+          "settings": {
+            "product": "{{product}}"
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "surface_pickup_enable": true,
+            "show_gift_card_recipient": false
+          }
+        },
+        "custom_QahbLh": {
+          "type": "custom",
+          "settings": {
+            "code": "<p style=\"text-align:center; font-weight:600;\">FREE SHIPPING $75+ | 90-DAY LOVE-IT GUARANTEE</p>"
+          }
+        }
+      },
+      "block_order": [
+        "okendo_star_rating_qHXQA9",
+        "title",
+        "text_WgiafR",
+        "price",
+        "separator_zdkt98",
+        "custom_eYcXWC",
+        "separator_GqYgcP",
+        "variant_picker",
+        "recharge_subscriptions_subscription_widget_YCxYUk",
+        "buy_buttons",
+        "custom_QahbLh"
+      ],
+      "custom_css": [
+        ".product-block .variant__label {display: none;}",
+        "video-media,video {--default-aspect-ratio: 1/1 !important;}"
+      ],
+      "settings": {
+        "image_position": "left",
+        "image_container_size": "large",
+        "product_image_size": "square",
+        "product_zoom_enable": true,
+        "thumbnail_position": "beside",
+        "thumbnail_height": "flexible",
+        "thumbnail_arrows": false,
+        "mobile_layout": "full",
+        "enable_video_looping": true,
+        "product_video_style": "muted"
+      }
+    },
+    "advanced_accordion_jJyYDX": {
+      "type": "advanced-accordion",
+      "blocks": {
+        "text_block_fxTdmN": {
+          "type": "text_block",
+          "settings": {
+            "image_width": 100,
+            "image_mask": "none",
+            "align_text": "left",
+            "title": "",
+            "text": "{{ product.description }}",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_block_fxTdmN"
+      ],
+      "custom_css": [
+        "{margin-top: 60px;}",
+        "h2 {font-family: ofelia-text, sans-serif; font-weight: 600; font-size: 18px;}"
+      ],
+      "settings": {
+        "title": "About The Product",
+        "per_row": 1,
+        "two_per_row_mobile": false,
+        "opened": false,
+        "disabled": false
+      }
+    },
+    "advanced_accordion_MNDaAU": {
+      "type": "advanced-accordion",
+      "blocks": {
+        "text_block_g77UqG": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/Aqua.jpg",
+            "image_width": 25,
+            "image_mask": "none",
+            "align_text": "left",
+            "title": "Aqua",
+            "text": "<p>Water, the universal solvent used in skincare to help skin feel hydrated and nourished. </p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_KNxRTa": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/Caprylyl_Capryl_Glucoside.jpg",
+            "image_width": 25,
+            "image_mask": "none",
+            "align_text": "left",
+            "title": "Caprylyl/Capryl Glucoside",
+            "text": "<p>A natural surfactant from vegetables.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_DKmWq4": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/Citric_Acid__Citrus_Fruits.jpg",
+            "image_width": 25,
+            "image_mask": "none",
+            "align_text": "left",
+            "title": "Citric Acid",
+            "text": "<p>A natural pH balancer from citrus fruits.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_CPqcn7": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/Citrus_Limon_Peel_Oil_Lemon_Peel_Oil.jpg",
+            "image_width": 25,
+            "image_mask": "none",
+            "align_text": "left",
+            "title": "Citrus Limon Peel Oil",
+            "text": "<p>Commonly referred to as Lemon Peel Oil, it is known for its astringent and antimicrobial properties to help reduce skin inflammation.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_KWHkJC": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/5.jpg",
+            "image_width": 25,
+            "image_mask": "none",
+            "align_text": "left",
+            "title": "Clay",
+            "text": "<p>Proprietary Mineral Microbiome ClayTM, known for its unique rich mineral composition to help promote skin health.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_fbK7RE": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/Decyl_Glucoside_Coconut.jpg",
+            "image_width": 25,
+            "image_mask": "none",
+            "align_text": "left",
+            "title": "Decyl Glucoside",
+            "text": "<p>A natural glucose based surfactant from coconut.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_m9EyDQ": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/7_908dd6ba-e72f-4417-8dc6-46a052e94ece.jpg",
+            "image_width": 25,
+            "image_mask": "none",
+            "align_text": "left",
+            "title": "Gluconolactone and Sodium Benzoate",
+            "text": "<p>Geogard UltraTM: a patented natural broad-spectrum preservative certified by ECOCERT.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_3pxYwU": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/Hydroxyethlcellulose.jpg",
+            "image_width": 25,
+            "image_mask": "none",
+            "align_text": "left",
+            "title": "Hydroxyethlcellulose",
+            "text": "<p>A natural thickening agent from plant cellulose.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_tKqtbF": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/Juniperus_Communis_Fruit_Oil_Juniper_Berry_Oil.jpg",
+            "image_width": 25,
+            "image_mask": "none",
+            "align_text": "left",
+            "title": "Juniperus Communis Fruit Oil",
+            "text": "<p>Commonly referred to as Juniper Berry oil, it is known for its anti-inflammatory and antioxidant properties to help calm skin.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_UKfgyw": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/Melaleuca_Alternifolia_Leaf_Oil_Tea_Tree_Oil.jpg",
+            "image_width": 25,
+            "image_mask": "none",
+            "align_text": "left",
+            "title": "Melaleuca Alternifolia Leaf Oil",
+            "text": "<p>Commonly referred to as Tea Tree Oil, it is known for its antibacterial properties to help soothe irritated skin.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_ejFeJk": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/11.jpg",
+            "image_width": 25,
+            "image_mask": "none",
+            "align_text": "left",
+            "title": "Mentha Piperita Oil",
+            "text": "<p>Commonly referred to as Peppermint oil, it is known for its use to help soothe and calm the skin.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_R8N6e6": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/Salvia_Sclarea_Oil_Clary_Sage_Oil.jpg",
+            "image_width": 25,
+            "image_mask": "none",
+            "align_text": "left",
+            "title": "Salvia Sclarea Oil",
+            "text": "<p>Commonly referred to as Clary Sage oil, it is known for its antibacterial properties to help soothe and calm the skin.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_nqi8zy": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/Simmondsia_Chinensis_Seed_Oil_Jojoba_Oil.jpg",
+            "image_width": 25,
+            "image_mask": "none",
+            "align_text": "left",
+            "title": "Simmondsia Chinensis Seed Oil",
+            "text": "<p>Commonly referred as Jojoba oil, it is known its anti-bacterial, antioxidant and moisturizing properties to help keep skin moisturized, heal, and combat irritations.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_cPQqPC": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/Vegetable_Glycerin.jpg",
+            "image_width": 25,
+            "image_mask": "none",
+            "align_text": "left",
+            "title": "Vegetable Glycerin",
+            "text": "<p>Vegetable fats to help provide moisture and hydration to skin.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_block_g77UqG",
+        "text_block_KNxRTa",
+        "text_block_DKmWq4",
+        "text_block_CPqcn7",
+        "text_block_KWHkJC",
+        "text_block_fbK7RE",
+        "text_block_m9EyDQ",
+        "text_block_3pxYwU",
+        "text_block_tKqtbF",
+        "text_block_UKfgyw",
+        "text_block_ejFeJk",
+        "text_block_R8N6e6",
+        "text_block_nqi8zy",
+        "text_block_cPQqPC"
+      ],
+      "custom_css": [
+        "h2 {font-family: ofelia-text, sans-serif; font-weight: 600; font-size: 18px;}"
+      ],
+      "settings": {
+        "title": "All 16 Natural Ingredients",
+        "per_row": 4,
+        "two_per_row_mobile": false,
+        "opened": false,
+        "disabled": false
+      }
+    },
+    "advanced_accordion_AYThFw": {
+      "type": "advanced-accordion",
+      "blocks": {
+        "text_block_MdMUUa": {
+          "type": "text_block",
+          "settings": {
+            "image_width": 100,
+            "image_mask": "none",
+            "align_text": "left",
+            "title": "",
+            "text": "<p>1. Apply daily on damp skin with lukewarm water.<br/><br/>2. Massage onto skin in a gentle circular motion.<br/><br/>3. Rinse well and pat dry.<br/><br/>WARNINGS: Avoid direct contact with eyes. For topical use only.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_Li43w9": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/Glow_Foaming_Facial_Cleanser.webp",
+            "image_width": 55,
+            "image_mask": "none",
+            "align_text": "left",
+            "title": "",
+            "text": "",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_block_MdMUUa",
+        "text_block_Li43w9"
+      ],
+      "custom_css": [
+        "h2 {font-family: ofelia-text, sans-serif; font-weight: 600; font-size: 18px;}"
+      ],
+      "settings": {
+        "title": "How To Apply",
+        "per_row": 2,
+        "two_per_row_mobile": false,
+        "opened": false,
+        "disabled": false
+      }
+    },
+    "advanced_accordion_xWwj3X": {
+      "type": "advanced-accordion",
+      "blocks": {
+        "text_block_raE9Mr": {
+          "type": "text_block",
+          "settings": {
+            "image_width": 100,
+            "image_mask": "none",
+            "align_text": "left",
+            "title": "Suistainable. Minimized environmental impact.",
+            "text": "<p>We make every effort to minimize our environmental footprint. Our recyclable jars are made from glass and we skip the excess by using only primary packaging (the jar) and printing our product information directly onto the jar to reduce packaging and labelling waste. Finally, to reduce wasted space during storage and shipping, we use uniquely shaped jars that stack neatly and limit gaps. This economical use of space reduces our environmental impact (think packing materials used and transportation emissions per shipment) by 25 to 30%.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_gWmNcT": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/Resized_image_package.webp",
+            "image_width": 100,
+            "image_mask": "none",
+            "align_text": "left",
+            "title": "",
+            "text": "",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_block_raE9Mr",
+        "text_block_gWmNcT"
+      ],
+      "custom_css": [
+        "h2 {font-family: ofelia-text, sans-serif; font-weight: 600; font-size: 18px;}"
+      ],
+      "settings": {
+        "title": "Eco-Friendly Packaging",
+        "per_row": 2,
+        "two_per_row_mobile": false,
+        "opened": false,
+        "disabled": false
+      }
+    },
+    "rich_text_3NkeD8": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_xUQgwE": {
+          "type": "heading",
+          "settings": {
+            "title": "Why We Love It",
+            "heading_size": "h2"
+          }
+        },
+        "text_YYJzXb": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": true,
+            "text": "<p>We wanted a cleanser that’s 100% natural but still delivers incredible results. Crafted with plant-based ingredients, it’s the perfect blend of gentle care and effective cleansing.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_xUQgwE",
+        "text_YYJzXb"
+      ],
+      "custom_css": [
+        "{margin-top: 40px; margin-bottom: 0px;}",
+        "h2 {font-family: ofelia-text, sans-serif; font-weight: 600; font-size: 25px;}"
+      ],
+      "settings": {
+        "align_text": "left",
+        "narrow_column": false,
+        "color_scheme": "1",
+        "divider": false
+      }
+    },
+    "text_and_image_rHLmeH": {
+      "type": "text-and-image",
+      "custom_css": [
+        "h2 {font-family: ofelia-text, sans-serif; font-weight: 600; font-size: 35px;}",
+        "p {padding-bottom: 20px;}"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/GLOW_Foaming_Cleanser_Lifestyle_1.jpg",
+        "image_mask": "none",
+        "image2_mask": "none",
+        "subtitle": "",
+        "title": "Reveal your natural glow",
+        "heading_size": "h2",
+        "text": "<p>Unlock the secret to radiant skin with this gentle foaming cleanser, designed to remove dirt, oil, and makeup while leaving your skin refreshed and glowing. Its lightweight formula works to clear away impurities without disrupting your skin’s natural balance. Perfect for daily use, it helps transform dull, tired skin into a luminous complexion you’ll love to show off. </p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "left",
+        "image_width": "50",
+        "layout": "right",
+        "color_scheme": "none",
+        "divider": false,
+        "top_padding": true,
+        "bottom_padding": true
+      }
+    },
+    "text_and_image_tNiqhc": {
+      "type": "text-and-image",
+      "custom_css": [
+        "h2 {font-family: ofelia-text, sans-serif; font-weight: 600; font-size: 35px;}"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/GLOW_Foaming_Cleanser_Lifestyle_2.jpg",
+        "image_mask": "square",
+        "image2_mask": "none",
+        "subtitle": "",
+        "title": "Say goodbye to harsh cleansers",
+        "heading_size": "h2",
+        "text": "<p>Ditch the harsh cleansers that leave your skin feeling tight and dry. This 100% natural foaming cleanser creates a rich, luxurious lather that effectively lifts away impurities while preserving your skin’s natural moisture. </p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "left",
+        "image_width": "50",
+        "layout": "left",
+        "color_scheme": "none",
+        "divider": false,
+        "top_padding": true,
+        "bottom_padding": false
+      }
+    },
+    "sub": {
+      "type": "product-full-width",
+      "disabled": true,
+      "settings": {
+        "max_width": true
+      }
+    },
+    "promo_grid_7UkVC9": {
+      "type": "promo-grid",
+      "blocks": {
+        "image_AGJAd6": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/GLOW_Foaming_Cleanser_UGC_1.jpg",
+            "link": "",
+            "width": "33"
+          }
+        },
+        "image_NBkhNm": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/GLOW_Foaming_Cleanser_UGC_2.jpg",
+            "link": "",
+            "width": "33"
+          }
+        },
+        "image_UktjLX": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/GLOW_Foaming_Cleanser_UGC_3.jpg",
+            "link": "",
+            "width": "33"
+          }
+        }
+      },
+      "block_order": [
+        "image_AGJAd6",
+        "image_NBkhNm",
+        "image_UktjLX"
+      ],
+      "custom_css": [],
+      "settings": {
+        "full_width": true,
+        "gutter_size": 20,
+        "space_above": false,
+        "space_below": true
+      }
+    },
+    "faq_XpMHc9": {
+      "type": "faq",
+      "blocks": {
+        "question_LdCzpH": {
+          "type": "question",
+          "settings": {
+            "title": "What skin benefits can I expect from the GLOW™ Foaming Cleanser?",
+            "text": "<p>GLOW™ Foaming Cleanser deeply cleanses while hydrating and nourishing your skin. It removes dirt, oil, and impurities, helping your skin become soft, balanced, and radiant.</p>"
+          }
+        },
+        "question_V4wNRq": {
+          "type": "question",
+          "settings": {
+            "title": "How does GLOW™ Foaming Cleanser support healthy skin?",
+            "text": "<p>This cleanser uses natural ingredients to gently cleanse and restore your skin’s natural moisture barrier, promoting a healthy, glowing complexion.</p>"
+          }
+        },
+        "question_EE96i6": {
+          "type": "question",
+          "settings": {
+            "title": "Is the GLOW™ Foaming Cleanser suitable for acne-prone skin?",
+            "text": "<p>Yes! Its gentle formula helps cleanse clogged pores and reduces excess oil without stripping the skin, supporting clearer, healthier-looking skin.</p>"
+          }
+        },
+        "question_VRhWay": {
+          "type": "question",
+          "settings": {
+            "title": "Can the GLOW™ Foaming Cleanser help with hydration?",
+            "text": "<p>Absolutely. Unlike harsh cleansers, it includes hydrating ingredients like aloe vera to lock in moisture and keep your skin feeling soft. Pair it with our GLOW™ Daily Moisturizer for a deep hydration.</p>"
+          }
+        },
+        "question_wMBU9q": {
+          "type": "question",
+          "settings": {
+            "title": "What ingredients in the cleanser make it effective?",
+            "text": "<p>It’s powered by natural botanicals like aloe vera, essential oils, and gentle plant-based cleansers that remove impurities while nourishing your skin.</p>"
+          }
+        },
+        "question_PpqiMW": {
+          "type": "question",
+          "settings": {
+            "title": "Can this cleanser help with redness or irritation?",
+            "text": "<p>Yes! The gentle, natural ingredients help soothe inflammation and redness, making it ideal for sensitive skin.</p>"
+          }
+        },
+        "question_LMCqiE": {
+          "type": "question",
+          "settings": {
+            "title": "What is the Mineral Microbiome Clay Complex™, and what does it do?",
+            "text": "<p>This proprietary blend is rich in essential minerals that nourish your skin, helps support its microbiome, and enhance its natural radiance.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "question_LdCzpH",
+        "question_V4wNRq",
+        "question_EE96i6",
+        "question_VRhWay",
+        "question_wMBU9q",
+        "question_PpqiMW",
+        "question_LMCqiE"
+      ],
+      "custom_css": [
+        "{margin-top: 0px; background: #f7f7f7; padding-bottom: 50px;}"
+      ],
+      "settings": {
+        "title": "{{ product.title }} FAQs",
+        "heading_size": "h2",
+        "heading_position": "left"
+      }
+    },
+    "featured_collection_yCFwUr": {
+      "type": "featured-collection",
+      "custom_css": [
+        "h2 {font-family: ofelia-text, sans-serif; font-weight: 600;}"
+      ],
+      "settings": {
+        "title": "You May Also Like",
+        "heading_size": "h2",
+        "heading_position": "left",
+        "home_featured_products": "best-sellers",
+        "count": 5,
+        "products_per_row": 5,
+        "mobile_scrollable": true,
+        "view_all": true,
+        "divider": false
+      }
+    },
+    "1736732638a24ea9f0": {
+      "type": "apps",
+      "blocks": {
+        "okendo_reviews_widget_BrbN8J": {
+          "type": "shopify://apps/okendo/blocks/reviews-widget/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
+          "settings": {
+            "product": "{{product}}",
+            "widget_type": "reviews_widget"
+          }
+        }
+      },
+      "block_order": [
+        "okendo_reviews_widget_BrbN8J"
+      ],
+      "settings": {
+        "full_width": false,
+        "space_around": true
+      }
+    },
+    "recently-viewed": {
+      "type": "recently-viewed",
+      "disabled": true,
+      "settings": {}
+    },
+    "collection-return": {
+      "type": "collection-return",
+      "disabled": true,
+      "settings": {
+        "color_scheme": "2"
+      }
+    },
+    "more-products-collection": {
+      "type": "more-products-collection",
+      "disabled": true,
+      "settings": {
+        "products_per_row": 3,
+        "max_products": 5
+      }
+    },
+    "more-products-vendor": {
+      "type": "more-products-vendor",
+      "disabled": true,
+      "settings": {
+        "products_per_row": 3,
+        "max_products": 5
+      }
+    },
+    "recommendations": {
+      "type": "product-recommendations",
+      "disabled": true,
+      "settings": {
+        "product_recommendations_heading": "You may also like",
+        "related_count": 6,
+        "products_per_row": 3
+      }
+    }
+  },
+  "order": [
+    "main",
+    "advanced_accordion_jJyYDX",
+    "advanced_accordion_MNDaAU",
+    "advanced_accordion_AYThFw",
+    "advanced_accordion_xWwj3X",
+    "rich_text_3NkeD8",
+    "text_and_image_rHLmeH",
+    "text_and_image_tNiqhc",
+    "sub",
+    "promo_grid_7UkVC9",
+    "faq_XpMHc9",
+    "featured_collection_yCFwUr",
+    "1736732638a24ea9f0",
+    "recently-viewed",
+    "collection-return",
+    "more-products-collection",
+    "more-products-vendor",
+    "recommendations"
+  ]
+}

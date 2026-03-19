@@ -1,0 +1,51 @@
+{% # components v3.0.1 | Copyright © 2024 Archetype Themes Limited Partnership  | "Shopify Theme Store (https://www.shopify.com/legal/terms#9-additional-services)" License  %}
+{%- comment -%}
+  Renders a full width product section.
+
+  Accepts:
+  - product {product} - The product object
+  - max_width {boolean} - Whether to make the section full width
+
+  Usage:
+  {% render 'section-product-full-width' %}
+{%- endcomment -%}
+
+{%- liquid
+  assign product = product | default: section.settings.product
+  assign max_width = max_width | default: section.settings.max_width, allow_false: true | default: true, allow_false: true
+-%}
+
+{%- if section.blocks.size > 0 -%}
+  <div class="page-width{% if max_width %} page-width--narrow{% endif %}">
+    {%- for block in section.blocks -%}
+      {%- case block.type -%}
+        {%- when '@app' -%}
+          {% render block %}
+        {%- when 'separator' -%}
+          <div class="product-block"><hr></div>
+        {%- when 'text' -%}
+          <div {{ block.shopify_attributes }} class="product-block">
+            {{ block.settings.text }}
+          </div>
+        {%- when 'tab' -%}
+          {%- render 'block-tab', block: block -%}
+        {%- when 'contact' -%}
+          {%- render 'block-contact', block: block -%}
+        {%- when 'description' -%}
+          {%- render 'block-description', block: block -%}
+        {%- when 'share' -%}
+          <div class="product-block" {{ block.shopify_attributes }}>
+            {%- render 'social-sharing',
+              share_title: product.title,
+              share_permalink: product.url,
+              share_image: product
+            -%}
+          </div>
+        {%- when 'custom' -%}
+          <div class="product-block" {{ block.shopify_attributes }}>
+            {{ block.settings.code }}
+          </div>
+      {%- endcase -%}
+    {%- endfor -%}
+  </div>
+{%- endif -%}

@@ -1,0 +1,27 @@
+{% # components v3.0.1 | Copyright © 2024 Archetype Themes Limited Partnership  | "Shopify Theme Store (https://www.shopify.com/legal/terms#9-additional-services)" License  %}
+{%- comment -%}
+  Renders a quantity selector for a given product
+
+  Accepts:
+  - block {block} - Block object
+  - product {product} - Product object
+
+  Usage:
+    {% render 'block-quantity-selector', block: block %}
+{%- endcomment -%}
+
+{%- liquid
+  assign product = section.settings.product | default: product
+  assign form_id = 'product-form-' | append: section.id
+-%}
+
+<block-quantity-selector class="product-block" {{ block.shopify_attributes }}>
+  <div class="product__quantity">
+    {%- assign quantity_selector_id = 'Quantity-' | append: section.id | append: '-' | append: product.id -%}
+
+    <label for="{{ quantity_selector_id }}">
+      {% render 't_with_fallback', key: 'labels.quantity', fallback: 'Quantity' %}
+    </label>
+    {%- render 'quantity-selector', id: quantity_selector_id, form_id: form_id -%}
+  </div>
+</block-quantity-selector>

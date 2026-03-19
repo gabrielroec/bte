@@ -1,0 +1,109 @@
+{% # components v3.0.1 | Copyright © 2024 Archetype Themes Limited Partnership  | "Shopify Theme Store (https://www.shopify.com/legal/terms#9-additional-services)" License  %}
+{%- comment -%}
+  Renders the main collection section.
+
+  Accepts:
+  - collection {object} - A collection object
+  - paginate_by {number} - The number of products to show per page
+
+  Usage:
+  {% render 'section-main-collection' %}
+{%- endcomment -%}
+
+{%- liquid
+  assign paginate_by = paginate_by | default: section.settings.paginate_by | default: 40
+
+  assign current_filter_size = 0
+  for filter in collection.filters
+    assign current_filter_size = current_filter_size | plus: filter.active_values.size
+  endfor
+-%}
+
+{% capture no_products %}
+  <div class="index-section">
+    {% render 't_with_fallback', key: 'info.collection_no_products', fallback: 'Sorry, there are no products in this collection.' %}
+  </div>
+{% endcapture %}
+
+{%- liquid
+  # Get product card content
+  capture product_items
+    if slot_product_items != blank
+      echo slot_product_items
+    elsif collection.products.size == 0
+      echo no_products
+    else
+      paginate collection.products by paginate_by
+        for item in collection.products
+          render 'product-grid-item', product: item
+        endfor
+
+        if paginate.pages > 1
+          render 'pagination', paginate: paginate
+        endif
+      endpaginate
+    endif
+  endcapture
+-%}
+
+{%- assign grid_style = 'medium' -%}
+{%- capture collection_content -%}
+  {%- if slot_additional_content != blank -%}
+      {{ slot_additional_content }}
+  {%- else -%}
+    {%- for block in section.blocks -%}
+      {%- case block.type -%}
+        {%- when 'collection_description' -%}
+          <div {{ block.shopify_attributes }}>
+            {%- if collection.description != blank and current_filter_size == 0 -%}
+              {%- render 'rte', slot: collection.description, class: 'rte--collection-desc enlarge-text' -%}
+            {%- endif -%}
+          </div>
+        {%- when 'subcollections' -%}
+          {%- paginate collection.products by paginate_by -%}
+            {%- if paginate.current_page == 1 and current_filter_size == 0 -%}
+              <div {{ block.shopify_attributes }}>
+                {%- render 'subcollections', menu: linklists['main-menu'] -%}
+              </div>
+            {%- endif -%}
+          {%- endpaginate -%}
+        {%- when 'product_grid' -%}
+          {%- assign grid_style = block.settings.grid_style -%}
+          <div class="new-grid product-grid collection-grid" data-view="{{ grid_style }}" data-scroll-to>
+            {{ product_items }}
+          </div>
+      {%- endcase -%}
+    {%- endfor -%}
+  {%- endif -%}
+{%- endcapture -%}
+
+<section-main-content>
+  <div class="page-width">
+    {%- render 'item-grid',
+      context: collection,
+      grid_style: grid_style,
+      slot: collection_content,
+      paginate_by: paginate_by
+    -%}
+  </div>
+</section-main-content>
+
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "CollectionPage",
+    {% if collection.description != blank %}
+      "description": {{ collection.description | strip_html | json }},
+    {% endif %}
+    {% if page_image %}
+      {% assign image_size = page_image.width %}
+      "image": {
+        "@type": "ImageObject",
+        "height": {{ page_image.height | json }},
+        "url": {{ page_image | image_url: width: image_size | prepend: "https:" | json }},
+        "width": {{ page_image.width | json }}
+      },
+    {% endif %}
+    "name": {{ collection.title | json }}
+  }
+</script>

@@ -1,0 +1,19 @@
+{% # components v2.10.69 | Copyright © 2024 Archetype Themes Limited Partnership  | "Shopify Theme Store (https://www.shopify.com/legal/terms#9-additional-services)" License  %}
+<div id="VideoModal" class="modal">
+  <div class="modal__inner">
+    <div class="modal__centered page-width text-center">
+      <div class="modal__centered-content">
+        <div class="video-wrapper video-wrapper--modal">
+          <div id="VideoHolder"></div>
+        </div>
+      </div>
+    </div>
+
+    <button type="button" class="btn btn--circle btn--icon modal__close js-modal-close">
+      {% render 'icon', name: 'close' %}
+      <span class="icon__fallback-text visually-hidden">
+        {% render 't_with_fallback', key: 'actions.close_esc', fallback: 'Close (esc)' %}
+      </span>
+    </button>
+  </div>
+</div>

@@ -1,0 +1,714 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "okendo_star_rating_qHXQA9": {
+          "type": "shopify://apps/okendo/blocks/star-rating/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
+          "settings": {
+            "product": "{{product}}"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+            "vendor_enable": false,
+            "sku_enable": false
+          }
+        },
+        "text_WgiafR": {
+          "type": "text",
+          "settings": {
+            "text": "This 6-step bundle targets dullness, uneven tone, and rough texture using plant-based exfoliants and nutrient-rich hydration. Powered by our proprietary Mineral Microbiome Clay®, rich in 40+ mineral essential to skin health, this routine helps restore clarity and brightness without irritation—just real results for skin that looks more awake, even, and refreshed. You’ll be glowing in no time."
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "separator_zdkt98": {
+          "type": "separator",
+          "settings": {}
+        },
+        "custom_eYcXWC": {
+          "type": "custom",
+          "settings": {
+            "code": "<b>The 6 Step Routine</b>\n<ul>\n<li>- GLOW™ Foaming Facial Cleanser</li>\n<li>- GLOW™ Exfoliating Scrub</li>\n<li>- GLOW™ Facial Mask</li>\n<li>- GLOW™ Facial Serum</li>\n<li>- GLOW™ Eye Cream</li>\n<li>- GLOW™ Daily Moisturizer</li>\n</ul"
+          }
+        },
+        "separator_GqYgcP": {
+          "type": "separator",
+          "settings": {}
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "variant_labels": true,
+            "picker_type": "button",
+            "product_dynamic_variants_enable": true,
+            "color_swatches": false
+          }
+        },
+        "recharge_subscriptions_subscription_widget_YCxYUk": {
+          "type": "shopify://apps/recharge-subscriptions/blocks/subscription-widget/371eed76-0b44-4869-9813-730372ea378e",
+          "settings": {
+            "product": "{{product}}"
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "surface_pickup_enable": true,
+            "show_gift_card_recipient": false
+          }
+        },
+        "trynow_try_before_you_buy_trynow_cta_button_wBE8d3": {
+          "type": "shopify://apps/trynow-try-before-you-buy/blocks/trynow-cta-button/4c8ee11a-0e2d-4d12-800e-b312601aebc7",
+          "settings": {
+            "button_title": "Try It Free For 14 Days",
+            "cta_button_custom_css": "",
+            "button_classes": "",
+            "button_margin": "0px 0px 5px 0px",
+            "description": "Try routine at home for 14 days",
+            "description_font_size": 12,
+            "view_collection_text": "View TryNow collection",
+            "collection": "",
+            "add_to_cart_container_selector": "",
+            "gated_toggle_font_size": 12,
+            "gated_toggle_size": 0.7,
+            "logo_color": "black",
+            "logo_vertical_alignment": 1,
+            "logo_horizontal_alignment": 0,
+            "logo_width": 46,
+            "autoposition": false
+          }
+        }
+      },
+      "block_order": [
+        "okendo_star_rating_qHXQA9",
+        "title",
+        "text_WgiafR",
+        "price",
+        "separator_zdkt98",
+        "custom_eYcXWC",
+        "separator_GqYgcP",
+        "variant_picker",
+        "recharge_subscriptions_subscription_widget_YCxYUk",
+        "buy_buttons",
+        "trynow_try_before_you_buy_trynow_cta_button_wBE8d3"
+      ],
+      "custom_css": [
+        ".product-block .variant__label {display: none;}",
+        "video-media,video {--default-aspect-ratio: 1/1 !important;}"
+      ],
+      "settings": {
+        "image_position": "left",
+        "image_container_size": "large",
+        "product_image_size": "natural",
+        "product_zoom_enable": true,
+        "thumbnail_position": "beside",
+        "thumbnail_height": "flexible",
+        "thumbnail_arrows": false,
+        "mobile_layout": "full",
+        "enable_video_looping": true,
+        "product_video_style": "muted"
+      }
+    },
+    "advanced_accordion_QAhBjN": {
+      "type": "advanced-accordion",
+      "blocks": {
+        "text_block_6EJ3qz": {
+          "type": "text_block",
+          "settings": {
+            "image_width": 100,
+            "image_mask": "none",
+            "align_text": "left",
+            "title": "GLOW™ Foaming Cleanser",
+            "text": "<p><strong>16 Natural Ingredients: </strong>​Aqua, Decyl Glucoside (natural surfactant from coconut), Caprylyl / Capryl Glucoside (natural vegetable surfactant from coconut oil), Vegetable Glycerin, Gluconolactone and Sodium Benzoate (GeogardUltraTM a patented natural preservative), Simmondsia Chinensis (Jojoba) Seed Oil, Mentha Piperita (Peppermint) Oil, Rosmarinus Officinalis (Rosemary) Leaf Oil, Melaleuca Alternifolia (Tea Tree) Leaf Oil, Juniperus Communis Fruit Oil, Citrus Limon (Lemon) Peel Oil, Salvia Sclarea (Clary) Oil, Clay (Mineral Microbiome ClayTM), Hydroxyethylcellulose (natural plant cellulose), Citric Acid​<br/><br/></p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_yw6xLK": {
+          "type": "text_block",
+          "settings": {
+            "image_width": 100,
+            "image_mask": "none",
+            "align_text": "left",
+            "title": "GLOW™ Exfoliating Scrub",
+            "text": "<p><strong>17 Natural Ingredients: </strong>​Aqua, Prunus Armeniaca (Apricot) Seed Powder, BehentrimoniumMethosulfacte and Cetearyl Alcohol (IncroquatTMBehenyl TMS a patented natural emulsifier from plants), CetylAlochol and Stearyl Alcohol (natural thickeners from coconut), Clay (Mineral Microbiome ClayTM), Euphorbia Cerifera (Cadelilla) Wax, Orbignya Oleifera (Moringa) Seed Oil, Vegetable Glycerin and Citrus Paradisi (Grapefruit) Seed Extract, Gluconolactone and Sodium Benzoate (GeogardUltraTM a patented natural preservative), Vitis Vinifera (Grape) Seed Oil, Caprylic/Capric Triglyceride (natural emollient from coconut), Carthamus Tinctorius (Safflower) Seed Oil, Prunus Amygdalus Dulcis (Sweet Almond) Oil​<br/><br/></p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_qGytqw": {
+          "type": "text_block",
+          "settings": {
+            "image_width": 100,
+            "image_mask": "none",
+            "align_text": "left",
+            "title": "GLOW™ Facial Mask",
+            "text": "<p><strong>20 Natural Ingredients: </strong>​Aqua, Kaolin White Clay, Magnesium Aluminum Silicate (Bentonite Clay), Vegetable Glycerin, Clay (Mineral Microbiome ClayTM), Aloe BarbadensisLeaf Juice, Gluconolactone and Sodium Benzoate (GeogardUltraTM a patented natural preservative), Prunus Armeniaca (Apricot) Kernel Oil, Persea Gratissima (Avocado) Oil, Citrus Nobilis (Mandarin Orange), Potassium Sorbate (natural pH balancer from fruits), Lavandula Angustifolia (Lavender) Oil, Pelargonium Graveolins (Geranium) Flower Oil, Camellia Sinensis (Green Tea) Leaf Extract, Cucumis Sativus (Cucumber) Fruit Extract, Helichrysum Halicuna (Helichrysum) Oil, Mentha Piperita (Peppermint) Oil, OcimumBasilicum (Basil) Oil, Rosmarinus Officinalis (Resemary) Leaf Oil​<br/><br/></p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_HcRkVU": {
+          "type": "text_block",
+          "settings": {
+            "image_width": 100,
+            "image_mask": "none",
+            "align_text": "left",
+            "title": "GLOW™ Facial Serum",
+            "text": "<p><strong>9 Natural Ingredients: </strong>​Prunus Amygdalus Dulcis (Sweet Almond) Oil, Persea Gratissima (Avocado) Oil, Oenothera Biennis(Evening Primrose) Oil, Adansonia Digitat (Baobab) Oil, Rosa Canina (Rosehip) Fruit Oil, Tocopherol (Natural Vitamin E), Boswellia Carterii (Frankincense) Oil, Citrus Aurantium Amara (Bitter Orange) Oil, Clay (Mineral Microbiome ClayTM)​</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_EJhTei": {
+          "type": "text_block",
+          "settings": {
+            "image_width": 100,
+            "image_mask": "none",
+            "align_text": "left",
+            "title": "GLOW™ Daily Moisturizer",
+            "text": "<p><strong>24 Natural Ingredients: </strong>​Aqua, Vegetable Glycerin, Helianthus Annuus (Sunflower) Seed Oil, Prunus Amygdalus Dulcis (Sweet Almond) Oil, Diheptyl Succinate / Capryloyl Glycerin / Sebacic Acid Copolymer (LexFeelTM N5 MB a patented 100% natural and sustainable emollient), CetearylOilivate / SorbitanOlivate (Olivem® 1000 a patented natural emulsifier from olive oil), Simmondsia Chinensis (Jojoba) Seed Oil, Gluconolactone and Sodium Benzoate (GeogardUltraTM a patented natural preservative), Prunus Armeniaca (Apricot) Kernel Oil, Tocopherol (Natural Vitamin E), Anthemis Nobilis (Chamomile) Flower Oil, Citrus Aurantium Dulcis (Orange) Peel Oil, Boswellia Carterii (Frankincense) Oil, Commiphora Myrrha (Myrrh) Oil, Cymbopogon Martini Oil, AnibaRosaeodora(Rosewood) Oil, Clay (Mineral Microbiome ClayTM), Citric Acid, Magnesium Aluminum Silicate, Potassium Sorbate (natural pH balancer from fruits)​<br/><br/></p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_94NGRt": {
+          "type": "text_block",
+          "settings": {
+            "image_width": 100,
+            "image_mask": "none",
+            "align_text": "left",
+            "title": "GLOW™ Eye Cream",
+            "text": "<p><strong>28 Natural Ingredients: </strong>​Aqua, Prunus Amygdalus Dulcis (Sweet Almond) Oil, Camellia Oleifera Seed Oil, Vegetable Glycerin, CetearylOlivate and SorbitanOlivate (Olivem® 1000 a patented natural emulsifier from olive oil), Vitamin B3 Niacinamide, Cetearyl Alcohol (Plant based thickener from coconut), Chamomilla Recutita (Chamomile) Extract, Calendula Officinalis Flower Extract, Oenothera Biennis(Evening Primrose) Oil, Triticum Vulgare (Wheat) Germ Oil, Myristyl Myristate (Plant based emollient from vegetables), DL Bio Enzyme-Substrate, Centaurea Cyanus Flower Extract, Tocopherol (Natural Vitamin E), Rosa Canina Fruit Oil, Caffeine / Coffea Arabica (Coffee) Seed Extract / Lecithin (EcoslimTM a patented green coffee extract and vegetable caffeine), Hyaluronic Acid, Carotenoids / Helianthus Annuus (Sunflower) Seed Oil / Tocopherol AscorbylPalmitate (Carrot Tissue), Magnesium Aluminum Silicate, Clay (Mineral Microbiome ClayTM), Lactoperoxidase and Glucose Oxidase (aromatic oil from plants)​<br/><br/></p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_block_6EJ3qz",
+        "text_block_yw6xLK",
+        "text_block_qGytqw",
+        "text_block_HcRkVU",
+        "text_block_EJhTei",
+        "text_block_94NGRt"
+      ],
+      "custom_css": [
+        "div {padding-top: 30px;}"
+      ],
+      "name": "Advanced accordion",
+      "settings": {
+        "title": "100% Natural Ingredients",
+        "per_row": 2,
+        "two_per_row_mobile": false,
+        "opened": false,
+        "disabled": false
+      }
+    },
+    "rich_text_3NkeD8": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_xUQgwE": {
+          "type": "heading",
+          "settings": {
+            "title": "Why We Love It",
+            "heading_size": "h2"
+          }
+        },
+        "text_YYJzXb": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": true,
+            "text": "<p>There’s something magic about how this routine brings flat, tired skin back to life. From texture to tone, it helps even everything out while restoring that natural lit-from-within look. We built it to brighten gently, and we’re in awe of how powerfully it performs.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_xUQgwE",
+        "text_YYJzXb"
+      ],
+      "custom_css": [
+        "{margin-top: 40px; margin-bottom: 0px;}",
+        "h2 {font-family: ofelia-text, sans-serif; font-weight: 600; font-size: 25px;}"
+      ],
+      "settings": {
+        "align_text": "left",
+        "narrow_column": false,
+        "color_scheme": "1",
+        "divider": false
+      }
+    },
+    "rich_text_mcHJmg": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_gBKeFT": {
+          "type": "heading",
+          "settings": {
+            "title": "Dull/Uneven Skin Routine: 6 Step",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "heading_gBKeFT"
+      ],
+      "custom_css": [
+        "div {padding-bottom: 0px; margin-bottom: 0px;}"
+      ],
+      "name": "t:labels.rich_text",
+      "settings": {
+        "align_text": "left",
+        "narrow_column": false,
+        "color_scheme": "none",
+        "divider": false
+      }
+    },
+    "text_columns_98PtGy": {
+      "type": "text-columns",
+      "blocks": {
+        "text_block_fQyFJD": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/GLOWFoamingCleanser.jpg",
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "Cleanse: GLOW® Foaming Facial Cleanser",
+            "text": "<p>Jojoba Seed Oil a natural anti-inflammatory ingredient to help reduce redness caused by dryness and calms skin.</p><p>Curated oil blend to balance skin with anti-bacterial and anti-inflammation properties.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_n7HEgP": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/GLOWExfoliatingScrub.jpg",
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "Treatment 1: GLOW® Exfoliating Scrub",
+            "text": "<p>Use of apricot seed powder, which is ultra fine and acts as a physical exfoliant to gently remove damaged, dry and dead skin cells (not to be confused with ground-up apricot seed, which is more coarse and causes abrasions to the skin). No use of chemical exfoliants to avoid irritation.</p><p>Rich natural blend of ingredients to nourish and replenish skin while exfoliating without leaving the skin feeling stripped.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_b8Gd9q": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/GLOWFacialMaskELLEFinalist_2643fd3f-2522-45a6-a7c8-29142bcfa335.jpg",
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "Treatment 2: GLOW® Facial Mask",
+            "text": "<p>Mineral Microbiome Clay®, Kaolin, and Bentonite Clay to absorb excess oil, sebum, and impurities while restoring skin with 40+ minerals known to help promote recovery and restoration of skin.</p><p>Clears the skin of daily buildup, pollutants, and aggressors.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_7Vxpth": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/GLOWFacialSerumELLEFinalist.jpg",
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "Treatment 3: GLOW® Facial Serum",
+            "text": "<p>Powerful blend of oils in a non-sticky serum to hydrate and nourish skin.</p><p>Evening primrose oil to moisturize, soothe and help increase skin elasticity.</p><p>Curated oil blend to help promote hydration, help even and protect skin.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_xNwc34": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/GLOWEyeCreamELLEWinner.jpg",
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "Treatment 4: GLOW® Eye Cream",
+            "text": "<p>Camellia oil to help stimulate collagen production and help fight fine lines.</p><p>Green coffee to help reduce puffiness and dark circles.</p><p>Curated oil blend to care for delicate skin around eyes with anti-inflammatory and anti-microbial properties.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_nVVqAA": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/GLOWDailyMoisturizer.jpg",
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "Care: GLOW® Daily Moisturizer",
+            "text": "<p>Loaded with anti-inflammatory oils to promote care and restoration of skin.</p><p>Jojoba oil: anti-inflammatory properties to help reduce redness and calm the skin.</p><p>Apricot oil: to help improve skin tone and promote radiance.</p><p>LexFeel™ patented natural emollient to replace synthetic silicone for fast absorption and texture without the irritation.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_block_fQyFJD",
+        "text_block_n7HEgP",
+        "text_block_b8Gd9q",
+        "text_block_7Vxpth",
+        "text_block_xNwc34",
+        "text_block_nVVqAA"
+      ],
+      "custom_css": [
+        "div {padding-top: 0px; margin-top: 0px;}",
+        "h2 {font-family: ofelia-text, sans-serif; font-weight: 600; font-size: 20px;}",
+        "p {padding-bottom: 0px;}"
+      ],
+      "name": "t:labels.text_columns_with",
+      "settings": {
+        "title": "",
+        "align_text": "left",
+        "divider": false,
+        "color_scheme": "none"
+      }
+    },
+    "slideshow_jQhH8q": {
+      "type": "slideshow",
+      "blocks": {
+        "hero_c6qjWm": {
+          "type": "hero",
+          "settings": {
+            "top_subheading": "Get The Glowing Skin You Want",
+            "title": "<p>The Art Of Skin</p>",
+            "title_size": 70,
+            "subheading": "A bit of art, a bunch of science.",
+            "link": "",
+            "link_text": "",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "#ffffff",
+            "text_align": "vertical-center horizontal-center",
+            "image": "shopify://shop_images/Image_-_Skin_Health_Section_1.png",
+            "overlay_opacity": 14
+          }
+        }
+      },
+      "block_order": [
+        "hero_c6qjWm"
+      ],
+      "custom_css": [
+        "h2 {font-family: ofelia-text, sans-serif; font-weight: 600; font-size: 25px;}",
+        "h1 {font-family: ofelia-text, sans-serif; font-weight: 600; font-size: 35px;}"
+      ],
+      "name": "t:labels.hero_optional_slides",
+      "settings": {
+        "full_width": true,
+        "desktop_size": 0,
+        "mobile_size": 30,
+        "style": "arrows",
+        "autoplay": true,
+        "autoplay_speed": 7
+      }
+    },
+    "text_and_image_rHLmeH": {
+      "type": "text-and-image",
+      "custom_css": [
+        "h2 {font-family: ofelia-text, sans-serif; font-weight: 600; font-size: 35px;}",
+        "p {padding-bottom: 20px;}"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/GLOW_Foaming_Cleanser_Lifestyle_2.jpg",
+        "image_mask": "none",
+        "image2_mask": "none",
+        "subtitle": "",
+        "title": "Cleanse",
+        "heading_size": "h2",
+        "text": "<p><br/>In <em>The Art of Skin</em>, we begin with a clean foundation—one that respects your skin’s sensitivity. This step avoids common irritants often found in traditional cleansers, like harsh preservatives, emulsifiers, and foaming agents that can disrupt your skin’s barrier. Instead, it’s all about lifting away impurities while leaving your skin calm, balanced, and ready to receive nourishment.</p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "left",
+        "image_width": "50",
+        "layout": "right",
+        "color_scheme": "none",
+        "divider": false,
+        "top_padding": true,
+        "bottom_padding": true
+      }
+    },
+    "text_and_image_tNiqhc": {
+      "type": "text-and-image",
+      "custom_css": [
+        "h2 {font-family: ofelia-text, sans-serif; font-weight: 600; font-size: 35px;}"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Back_To_Earth_Clarify.jpg",
+        "image_mask": "square",
+        "image2_mask": "none",
+        "subtitle": "",
+        "title": "Treat",
+        "heading_size": "h2",
+        "text": "<p>Once the skin is cleared of external stressors—like pollution, bacteria, and other impurities—it’s time to nourish and restore. This phase focuses on delivering anti-inflammatory and mineral-rich ingredients to support healing and balance. To avoid triggering sensitive skin, we leave out common irritants like harsh preservatives, emulsifiers, and highly concentrated actives such as vitamin C or retinol.</p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "left",
+        "image_width": "50",
+        "layout": "left",
+        "color_scheme": "none",
+        "divider": false,
+        "top_padding": true,
+        "bottom_padding": false
+      }
+    },
+    "text_and_image_eyG97U": {
+      "type": "text-and-image",
+      "custom_css": [
+        "h2 {font-family: ofelia-text, sans-serif; font-weight: 600; font-size: 35px;}",
+        "p {padding-bottom: 20px;}"
+      ],
+      "name": "t:labels.image_with_text",
+      "settings": {
+        "image": "shopify://shop_images/Back_To_Earth_Moisturize.jpg",
+        "image_mask": "none",
+        "image2_mask": "none",
+        "subtitle": "",
+        "title": "Care",
+        "heading_size": "h2",
+        "text": "<p>After treating the skin, it’s essential to lock in moisture with a nourishing, calming moisturizer that supports the skin barrier and encourages recovery. This step helps maintain hydration while creating a protective layer that doesn’t sit heavily on the surface or attract external irritants. As always, we avoid harsh preservatives, emulsifiers, and strong actives that can disrupt sensitive or compromised skin.</p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "left",
+        "image_width": "50",
+        "layout": "right",
+        "color_scheme": "none",
+        "divider": false,
+        "top_padding": true,
+        "bottom_padding": true
+      }
+    },
+    "sub": {
+      "type": "product-full-width",
+      "disabled": true,
+      "settings": {
+        "max_width": true
+      }
+    },
+    "promo_grid_7UkVC9": {
+      "type": "promo-grid",
+      "blocks": {
+        "image_AGJAd6": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/GLOW_Foaming_Cleanser_UGC_1.jpg",
+            "link": "",
+            "width": "33"
+          }
+        },
+        "image_NBkhNm": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Untitled_design_75.jpg",
+            "link": "",
+            "width": "33"
+          }
+        },
+        "image_UktjLX": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/GLOW_Daily_Moisturizer_UGC_3.jpg",
+            "link": "",
+            "width": "33"
+          }
+        }
+      },
+      "block_order": [
+        "image_AGJAd6",
+        "image_NBkhNm",
+        "image_UktjLX"
+      ],
+      "custom_css": [],
+      "settings": {
+        "full_width": true,
+        "gutter_size": 20,
+        "space_above": false,
+        "space_below": true
+      }
+    },
+    "faq_XpMHc9": {
+      "type": "faq",
+      "blocks": {
+        "question_LdCzpH": {
+          "type": "question",
+          "settings": {
+            "title": "Who is the Dull/Uneven Skin Routine for?",
+            "text": "<p>This routine is made for anyone struggling with a lack of radiance, uneven skin tone, or rough texture. It’s especially helpful for tired-looking skin that feels flat, patchy, or in need of a glow-up.</p>"
+          }
+        },
+        "question_V4wNRq": {
+          "type": "question",
+          "settings": {
+            "title": "Will this routine help fade dark spots or discoloration?",
+            "text": "<p>Yes! While this isn’t a hyperpigmentation treatment, it contains natural brightening and resurfacing ingredients that can help gradually fade dark spots and even out tone.</p>"
+          }
+        },
+        "question_EE96i6": {
+          "type": "question",
+          "settings": {
+            "title": "Will this routine make my skin oily or shiny?",
+            "text": "<p>No—the routine is designed to bring <em>balanced radiance</em>, not excess oil. It hydrates and brightens without clogging pores or leaving a greasy finish.</p>"
+          }
+        },
+        "question_VRhWay": {
+          "type": "question",
+          "settings": {
+            "title": "Can I use the products individually, or do I need the full routine?",
+            "text": "<p>While each product can be used on its own, the full routine is designed to work synergistically—cleansing gently, calming inflammation, restoring hydration, and supporting the skin barrier at every step.</p>"
+          }
+        },
+        "question_pYhpKb": {
+          "type": "question",
+          "settings": {
+            "title": "How does the \"Try it. Love it. Keep it.\" program work?",
+            "text": "<p>We’re not just another skincare brand—and this isn’t just another product. Instead of handing you one more serum to guess your way through, we created <em>The Art of Skin</em>: complete routines designed to calm, repair, and restore balance to irritated skin. </p><p>Every formula is scientifically crafted using nature’s most powerful ingredients—and in testing, they’ve outperformed even the most high-end, clinical brands. </p><p>No harsh actives, no unnecessary fillers—just real, effective skincare that works in harmony with your skin. And because we know you’ll feel the difference, we’re letting you try the routine that’s right for you, completely risk-free.</p><p>Here's how it works:</p><p>1.<strong> Try it.</strong> Order the <em>Irritated Skin Routine</em> today and we’ll send it straight to your door—no upfront cost. You’ll have 14 days from placing the order to test it out, morning and night, and see how your skin responds.</p><p>2.<strong> Love it. </strong>Feel the difference. We formulated this routine with soothing, barrier-friendly ingredients for sensitive, dry, inflamed, and reactive skin. If your skin says yes—you’ll know.</p><p>3. <strong>Keep it. </strong>At the end of your trial, keep what you love - or return anything that didn’t work for you. You’ll only be charged for the items you decide to keep—no pressure, no hassle.</p>"
+          }
+        },
+        "question_qWJwCW": {
+          "type": "question",
+          "settings": {
+            "title": "Are your products natural?",
+            "text": "<p>Every Back To Earth product is 100% natural. No nasties. Ever.</p>"
+          }
+        },
+        "question_LMCqiE": {
+          "type": "question",
+          "settings": {
+            "title": "What is the Mineral Microbiome Clay Complex™, and what does it do?",
+            "text": "<p>This proprietary blend is rich in essential minerals that nourish your skin, helps support its microbiome, and enhance its natural radiance.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "question_LdCzpH",
+        "question_V4wNRq",
+        "question_EE96i6",
+        "question_VRhWay",
+        "question_pYhpKb",
+        "question_qWJwCW",
+        "question_LMCqiE"
+      ],
+      "custom_css": [
+        "{margin-top: 0px; background: #f7f7f7; padding-bottom: 50px;}"
+      ],
+      "settings": {
+        "title": "{{ product.title }} FAQs",
+        "heading_size": "h2",
+        "heading_position": "left"
+      }
+    },
+    "featured_collection_yCFwUr": {
+      "type": "featured-collection",
+      "custom_css": [
+        "h2 {font-family: ofelia-text, sans-serif; font-weight: 600;}"
+      ],
+      "settings": {
+        "title": "You May Also Like",
+        "heading_size": "h2",
+        "heading_position": "left",
+        "home_featured_products": "best-sellers",
+        "count": 5,
+        "products_per_row": 5,
+        "mobile_scrollable": true,
+        "view_all": true,
+        "divider": false
+      }
+    },
+    "1736732638a24ea9f0": {
+      "type": "apps",
+      "blocks": {
+        "okendo_reviews_widget_BrbN8J": {
+          "type": "shopify://apps/okendo/blocks/reviews-widget/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
+          "settings": {
+            "product": "{{product}}",
+            "widget_type": "reviews_widget"
+          }
+        }
+      },
+      "block_order": [
+        "okendo_reviews_widget_BrbN8J"
+      ],
+      "settings": {
+        "full_width": false,
+        "space_around": true
+      }
+    },
+    "recently-viewed": {
+      "type": "recently-viewed",
+      "disabled": true,
+      "settings": {}
+    },
+    "collection-return": {
+      "type": "collection-return",
+      "disabled": true,
+      "settings": {
+        "color_scheme": "2"
+      }
+    },
+    "more-products-collection": {
+      "type": "more-products-collection",
+      "disabled": true,
+      "settings": {
+        "products_per_row": 3,
+        "max_products": 5
+      }
+    },
+    "more-products-vendor": {
+      "type": "more-products-vendor",
+      "disabled": true,
+      "settings": {
+        "products_per_row": 3,
+        "max_products": 5
+      }
+    },
+    "recommendations": {
+      "type": "product-recommendations",
+      "disabled": true,
+      "settings": {
+        "product_recommendations_heading": "You may also like",
+        "related_count": 6,
+        "products_per_row": 3
+      }
+    }
+  },
+  "order": [
+    "main",
+    "advanced_accordion_QAhBjN",
+    "rich_text_3NkeD8",
+    "rich_text_mcHJmg",
+    "text_columns_98PtGy",
+    "slideshow_jQhH8q",
+    "text_and_image_rHLmeH",
+    "text_and_image_tNiqhc",
+    "text_and_image_eyG97U",
+    "sub",
+    "promo_grid_7UkVC9",
+    "faq_XpMHc9",
+    "featured_collection_yCFwUr",
+    "1736732638a24ea9f0",
+    "recently-viewed",
+    "collection-return",
+    "more-products-collection",
+    "more-products-vendor",
+    "recommendations"
+  ]
+}

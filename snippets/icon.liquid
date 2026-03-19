@@ -1,0 +1,38 @@
+{% # components v3.0.1 | Copyright © 2024 Archetype Themes Limited Partnership  | "Shopify Theme Store (https://www.shopify.com/legal/terms#9-additional-services)" License  %}
+{% comment %}
+  Icon component
+
+  Accepts:
+  - name {string} - Name of the icon
+  - libary {string} - Select a non-default library of icons to load from (optional)
+
+  Usage:
+  {% render 'icon', name: 'alert' %}
+{% endcomment %}
+
+{% liquid
+  assign name = name | default: 'alert'
+  assign library = library | default: settings.icon_library | default: 'default'
+
+  # check to see if theme icon override has been set
+  capture theme_icon
+    assign full_name = 'theme.' | append: name | append: '.svg'
+    echo full_name | inline_asset_content
+  endcapture
+  assign theme_icon = theme_icon | strip
+
+  # If icon does not exist, theme_icon will contain an error message. 
+  # Check to see if contents are svg.
+  if theme_icon contains "<svg>"
+    echo theme_icon
+  else
+    # check to see if built-in libary icon exists
+    if library == 'tcwi'
+      assign full_name = 'tcwi.' | append: name | append: '.svg'
+      echo full_name | inline_asset_content
+    else
+      assign full_name = name | append: '.svg'
+      echo full_name | inline_asset_content
+    endif
+  endif
+%}

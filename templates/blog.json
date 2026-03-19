@@ -1,0 +1,76 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "blog-template",
+      "settings": {}
+    },
+    "sidebar": {
+      "type": "blog-sidebar",
+      "blocks": {
+        "tags": {
+          "type": "tags",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "tags"
+      ],
+      "settings": {}
+    },
+    "featured-collections": {
+      "type": "featured-collections",
+      "blocks": {
+        "collection1": {
+          "type": "collection",
+          "settings": {}
+        },
+        "collection2": {
+          "type": "collection",
+          "settings": {}
+        },
+        "collection3": {
+          "type": "collection",
+          "settings": {}
+        },
+        "collection4": {
+          "type": "collection",
+          "settings": {}
+        },
+        "collection5": {
+          "type": "collection",
+          "settings": {}
+        },
+        "collection6": {
+          "type": "collection",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "collection1",
+        "collection2",
+        "collection3",
+        "collection4",
+        "collection5",
+        "collection6"
+      ],
+      "settings": {
+        "title": "You may also like"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "sidebar",
+    "featured-collections"
+  ],
+  "wrapper": "div.page-width.page-content.blog-layout"
+}

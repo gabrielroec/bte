@@ -1,0 +1,47 @@
+{% # components v3.0.1 | Copyright © 2024 Archetype Themes Limited Partnership  | "Shopify Theme Store (https://www.shopify.com/legal/terms#9-additional-services)" License  %}
+{%- comment -%}
+  Renders a link to a social media profile.
+
+  Accepts:
+  - platform {string} - Platform of the social media platform
+  - link {string} - Link to the social media profile
+  - link_title {string} - Link title
+  - label {string} - Label for the social icon
+  - classes {string} - Additional CSS classes to add to the social icon link
+
+  Usage:
+  {% render 'social-icon-link', platform: 'Facebook', link: 'https://facebook.com/shop' %}
+{%- endcomment -%}
+
+{%- capture actions_shop_on_social -%}
+  {% assign actions_shop_on_social = 'actions.shop_on_social' | t: name: shop.name, platform: platform %}
+  {%- capture fallback_actions_shop_on_social -%}
+    {{ shop.name }} on {{ platform }}
+  {%- endcapture -%}
+  {% render 't_with_fallback', t: actions_shop_on_social, fallback: fallback_actions_shop_on_social %}
+{%- endcapture -%}
+
+{%- liquid
+  assign link_title = link_title | default: actions_shop_on_social
+-%}
+
+<li>
+  <a
+    target="_blank"
+    rel="noopener"
+    href="{{ link }}"
+    title="{{ link_title }}"
+    {% if classes != blank %}
+      class="{{ classes }}"
+    {% endif %}
+  >
+    {%- assign icon_name = platform | downcase -%}
+    {%- render 'icon', name: icon_name -%}
+
+    {%- if label != blank -%}
+      <span class="social-sharing__title" aria-hidden="true">{{ label }}</span>
+    {%- endif -%}
+
+    <span class="icon__fallback-text visually-hidden">{{ platform }}</span>
+  </a>
+</li>

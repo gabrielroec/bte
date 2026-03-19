@@ -1,0 +1,1173 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "slideshow_N9Up8P": {
+      "type": "slideshow",
+      "blocks": {
+        "hero_aYReNe": {
+          "type": "hero",
+          "settings": {
+            "top_subheading": "",
+            "title": "<p>100% Natural Ingredients   </p>",
+            "title_size": 40,
+            "subheading": "",
+            "link": "",
+            "link_text": "",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "#ffffff",
+            "text_align": "vertical-bottom horizontal-left",
+            "image": "shopify://shop_images/Image_-_Skin_Health_Section_1.webp",
+            "overlay_opacity": 14
+          }
+        }
+      },
+      "block_order": [
+        "hero_aYReNe"
+      ],
+      "custom_css": [
+        "h2 {font-family: ofelia-text, sans-serif; font-weight: 600;}"
+      ],
+      "settings": {
+        "full_width": true,
+        "desktop_size": 0,
+        "mobile_size": 0,
+        "style": "arrows",
+        "autoplay": true,
+        "autoplay_speed": 7
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {}
+    },
+    "text_columns_idMaPj": {
+      "type": "text-columns",
+      "blocks": {
+        "text_block_TiG6HU": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/mmc_resized_540x_5ada4fec-56ba-435d-b5c1-14c3a0b651ad.webp",
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "100% NATURAL",
+            "text": "<p>We source only the best quality ingredients from nature—never anything artificial or unnaturally altered. The result is Back To Earth Skin products that are pleasurable to use and do exactly what you want them to—from removing makeup to gently caring for the skin—without irritation.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_hX7WUq": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Vegan_Image_540x_2f6a0297-9d33-441a-8980-e99d1d3c5c12.webp",
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "VEGAN",
+            "text": "<p>Not only are our ingredients 100% natural, but they’re also sourced only from the most effective plants and minerals the planet has to offer. We never use animal ingredients or animal by-products in our products. Not ever.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_9HDNXe": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Cruelty_Free_540x_0c1ea771-76ed-4c6e-b513-81c0e112b609.webp",
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "CRUELTY FREE",
+            "text": "<p>We love animals and we never want to create skin-care products at their expense. That’s why we make sure our products are never tested on animals and neither are the ingredients we source.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_block_TiG6HU",
+        "text_block_hX7WUq",
+        "text_block_9HDNXe"
+      ],
+      "custom_css": [
+        "h2 {font-family: ofelia-text, sans-serif; font-weight: 600;}"
+      ],
+      "settings": {
+        "title": "",
+        "align_text": "center",
+        "divider": false,
+        "color_scheme": "none"
+      }
+    },
+    "text_columns_LaNpUx": {
+      "type": "text-columns",
+      "blocks": {
+        "text_block_zGpGKG": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/AdansoniaDigitata_Oil_Baobab_Oil.jpg",
+            "image_mask": "none",
+            "image_width": 60,
+            "title": "AdansoniaDigitata Oil",
+            "text": "<p>Commonly referred to as Baobab oil, it is known to be rich in omega-3 fatty acids that help to improve moisture, texture, elasticity, and reduce inflammation of the skin.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_HkCe7x": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Aloe_Barbadensis_Leaf_Juice_Aloe_Leaf_Juice.jpg",
+            "image_mask": "none",
+            "image_width": 60,
+            "title": "Aloe Barbadensis Leaf Juice",
+            "text": "<p>Commonly referred to as Aloe Leaf juice, it is known for its anti-inflammatory and moisturizing properties to help calm and hydrate the skin.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_NmTtVa": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Aniba_Rosaeodora_Oil_Rosewood_Oil.jpg",
+            "image_mask": "none",
+            "image_width": 60,
+            "title": "Aniba Rosaeodora Oil",
+            "text": "<p>Commonly referred to as Rosewood oil, it is known to help firm, reduce inflammation of the skin and fight signs of again.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_nGY47R": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Anthemis_Nobilis_Flower_Oil_Chamomile_Flower_Oil.jpg",
+            "image_mask": "none",
+            "image_width": 60,
+            "title": "Anthemis Nobilis Flower Oil",
+            "text": "<p>Commonly known as Chamomile flower oil, it is known for its powerful antioxidant properties that help reduce signs of aging.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_9yQAER": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Aqua.jpg",
+            "image_mask": "none",
+            "image_width": 60,
+            "title": "Aqua",
+            "text": "<p>Universal solvent used in skincare to help skin feel hydrated and nourished.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_3Dg3F3": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Behentrimonium_Methosulface_and_Cetearyl_Alcohol.jpg",
+            "image_mask": "none",
+            "image_width": 60,
+            "title": "Behentrimonium Methosulface and Cetearyl Alcohol",
+            "text": "<p>IncroquatTM Behenyl TMS: a patented plant-based emulsifier from vegetables.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_HMcUQX": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Boswellia_Carterii_Oil_Frankincense_Oil.jpg",
+            "image_mask": "none",
+            "image_width": 60,
+            "title": "Boswellia Carterii Oil",
+            "text": "<p>Commonly referred to as Frankincense oil, it is known for its anti-inflammatory properties to help calm, nourish and treat irritated skin.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_AiYPB4": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Caffeine_Coffea_Arabica_Coffe_Seed_Extract_Lecithin_Green_Coffee_Extract.jpg",
+            "image_mask": "none",
+            "image_width": 60,
+            "title": "Caffeine/Coffea Arabica (Coffe) Seed Extract/Lecithin",
+            "text": "<p>EcoslimTM: patented green coffee extract and vegetable caffeine known to help reduce dark circles.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_49grXM": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Calendula_Officinalis_Flower_Extract_Calendula_Flower_Extract.jpg",
+            "image_mask": "none",
+            "image_width": 60,
+            "title": "Calendula Officinalis Flower Extract",
+            "text": "<p>Commonly known as Calendula flower extract, it is known for its antifungal, anti-inflammatory and antibacterial properties to calm, soothe and recovery of the skin.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_3bigmA": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Camellia_Oleifera_Seed_Oil__Camellia_Seed_Oil.jpg",
+            "image_mask": "none",
+            "image_width": 60,
+            "title": "Camellia Oleifera Seed Oil",
+            "text": "<p>Commonly referred to as Camellia seed oil, it is known to help replenish skin and fight signs of aging.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_nRPahV": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Caprylhydroxamic_Acid___Glyceryl_Caprylate.jpg",
+            "image_mask": "none",
+            "image_width": 60,
+            "title": "Caprylhydroxamic Acid / Glyceryl Caprylate",
+            "text": "<p>SpectrastatTM G2 Natural MB: a patented plant-based and natural preservative.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_NwBg7P": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Caprylic_Capric_Triglyceride_Coconut_Oil.jpg",
+            "image_mask": "none",
+            "image_width": 60,
+            "title": "Caprylic/Capric Triglyceride",
+            "text": "<p>A natural emollient and solvent from combining coconut oil with vegetable glycerin.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_H77mJ7": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Caprylyl_Capryl_Glucoside.jpg",
+            "image_mask": "none",
+            "image_width": 60,
+            "title": "Caprylyl/Capryl Glucoside",
+            "text": "<p>A natural surfactant from vegetables.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_y4kEJ9": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Carotenoids___Helianthus_Annuus_Sunflower_Seed_Oil___Tocopherol___Ascorbyl_Palmitate_Carrot_Tissue_Oil.jpg",
+            "image_mask": "none",
+            "image_width": 60,
+            "title": "Carotenoids / Helianthus Annuus (Sunflower) Seed Oil / Tocopherol / Ascorbyl Palmitate",
+            "text": "<p>Commonly referred to as Carrot Tissue oil, it is known to be rich in vitamins to help provide radiant complexion.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_CCR8QA": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Carthamus_Tinctorius_Seed_Oil_Safflower_Seed_Oil.jpg",
+            "image_mask": "none",
+            "image_width": 60,
+            "title": "Carthamus Tinctorius Seed Oil",
+            "text": "<p>Commonly referred to as Safflower seed oil, it is known to help moisturize skin leaving it smooth and soft.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_yjmaxd": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Centaurea_Cyanus_Flower_Extract_Cornflower_Extract.jpg",
+            "image_mask": "none",
+            "image_width": 60,
+            "title": "Centaurea Cyanus Flower Extract",
+            "text": "<p>Commonly referred to as Cornflower extract, it is known to help tone and brighten skin complexion.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_cUg9g6": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Cetearyl_Olivate_and_Sorbitan_Olivate_Olive_Oil.jpg",
+            "image_mask": "none",
+            "image_width": 60,
+            "title": "Cetearyl Olivate and Sorbitan Olivate",
+            "text": "<p>Olivem® 1000: a patented natural, biodegradable and COSMOS certified emulsifier from olive oil.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_f7XzY3": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Cetyl_Alcohol.jpg",
+            "image_mask": "none",
+            "image_width": 60,
+            "title": "Cetyl Alcohol",
+            "text": "<p>A natural thickener from plants.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_WtefRR": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Chamomilla_Recutita_Extract_Matricaria_Extract.jpg",
+            "image_mask": "none",
+            "image_width": 60,
+            "title": "Chamomilla Recutita Extract",
+            "text": "<p>Commonly known as Matricaria extract, it is known to help promote skin recovery and protect the skin.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_9ykRP8": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Citric_Acid__Citrus_Fruits.jpg",
+            "image_mask": "none",
+            "image_width": 60,
+            "title": "Citric Acid",
+            "text": "<p>A natural pH balancer from citrus fruits.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_6dhywN": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Citrus_Aurantium_Amara_Oil_Bitter_Orange_Oil.jpg",
+            "image_mask": "none",
+            "image_width": 60,
+            "title": "Citrus Aurantium Amara Oil",
+            "text": "<p>Commonly referred to as Bitter Orange oil, it is known for its antibacterial and anti-inflammatory properties to help soothe and treat irritated skin.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_fE9HYp": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Citrus_Aurantium_Dulcis_Peel_Oil_Orange_Peel_Oil.jpg",
+            "image_mask": "none",
+            "image_width": 60,
+            "title": "Citrus Aurantium Dulcis Peel Oil",
+            "text": "<p>Commonly referred to as Orange peel oil, it is known to help reduce inflammation of the skin.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_nLaLmx": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Citrus_Limon_Peel_Oil_Lemon_Peel_Oil.jpg",
+            "image_mask": "none",
+            "image_width": 60,
+            "title": "Citrus Limon Peel Oil",
+            "text": "<p>Commonly referred to as Lemon Peel Oil, it is known for its astringent and antimicrobial properties to help reduce skin inflammation.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_jErbVw": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Citrus_Nobilis_Mandarin.jpg",
+            "image_mask": "none",
+            "image_width": 60,
+            "title": "Citrus Nobilis",
+            "text": "<p>Commonly referred to as Mandarin, it is known for its antioxidant properties to help brighten and smooth the skin.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_WzB79L": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Citrus_Paradisi_Seed_Extract_Grapefruit_Seed_Extract.jpg",
+            "image_mask": "none",
+            "image_width": 60,
+            "title": "Citrus Paradisi Seed Extract",
+            "text": "<p>Commonly referred to as Grapefruit seed extract, it is know to help soothe, moisturize and prevent signs of aging.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_ByFHzn": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Clay_MMC.jpg",
+            "image_mask": "none",
+            "image_width": 60,
+            "title": "Clay",
+            "text": "<p>Proprietary Mineral Microbiome ClayTM, known for its unique rich mineral composition to help promote skin health.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_ie6Pmk": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Coco-Caprylate_Coconut.jpg",
+            "image_mask": "none",
+            "image_width": 60,
+            "title": "Coco-Caprylate",
+            "text": "<p>A natural emollient derived from coconut.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_pJMd48": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Commiphora_Myrrha_Oil__Myrrh_Oil.jpg",
+            "image_mask": "none",
+            "image_width": 60,
+            "title": "Commiphora Myrrha Oil",
+            "text": "<p>Commonly referred to as Myrrh oil, it is known for its antibacterial and antioxidant properties to help support skin health, reduce inflammation and combat free radicals.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_GqibT7": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Cucumis_Sativus_Fruit_Extract__Cucumber_Extract.jpg",
+            "image_mask": "none",
+            "image_width": 60,
+            "title": "Cucumis Sativus Fruit Extract",
+            "text": "<p>Commonly referred to as Cucumber extract, it is known to help calm, hydrate, and soothe the skin.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_wHAABd": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Cupressus_Sempervirens_Leaf_Oil_Cypress_Leaf_Oil.jpg",
+            "image_mask": "none",
+            "image_width": 60,
+            "title": "Cupressus Sempervirens Leaf Oil",
+            "text": "<p>Commonly referred to as Cypress leaf oil, it is known for its antibacterial and antimicrobial properties to help restore hydration, reduce excess oil, soothe and calm irritated skin.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_zD9Rip": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Cymbopogon_Martini_Oil__Palmarosa_Oil.jpg",
+            "image_mask": "none",
+            "image_width": 60,
+            "title": "Cymbopogon Martini Oil",
+            "text": "<p>Commonly referred to as Palmarosa oil, it is known for its antimicrobial, antioxidant and anti-inflammatory properties to help reduce blemishes, prevent signs of aging and soothe irritated skin.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_9C9qXc": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Decyl_Glucoside_Coconut.jpg",
+            "image_mask": "none",
+            "image_width": 60,
+            "title": "Decyl Glucoside",
+            "text": "<p>A natural glucose based surfactant from coconut.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_a3HVbB": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Diheptyl_Succinate___Capryloyl_Glycerin___Sebacic_Acid_Copolymer.jpg",
+            "image_mask": "none",
+            "image_width": 60,
+            "title": "Diheptyl Succinate / Capryloyl Glycerin / Sebacic Acid Copolymer",
+            "text": "<p>LexFeelTM N5 MB: Patented 100% natural and sustainable emollient.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_LUaLNQ": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/DL_Bio_Enzyme-Substrate.jpg",
+            "image_mask": "none",
+            "image_width": 60,
+            "title": "DL Bio Enzyme-Substrate",
+            "text": "<p>A plant-based humectant to help bind moisture to skin.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_8Tne4E": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Euphorbia_Cerifera_Wax_Candeilla_Wax.jpg",
+            "image_mask": "none",
+            "image_width": 60,
+            "title": "Euphorbia Cerifera Wax",
+            "text": "<p>Commonly referred to as Candelilla wax, it is known to help hydrate dry skin.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_AkiUfE": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Gluconolactone_and_Sodium_Benzoate.jpg",
+            "image_mask": "none",
+            "image_width": 60,
+            "title": "Gluconolactone and Sodium Benzoate",
+            "text": "<p>Geogard UltraTM: a patented natural broad-spectrum preservative certified by ECOCERT.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_dRddpC": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Hamaelis_Virginiana_Leaf_Extract_Witch_Hazel.jpg",
+            "image_mask": "none",
+            "image_width": 60,
+            "title": "Hamaelis Virginiana Leaf Extract",
+            "text": "<p>Commonly referred to as Witch Hazel, it is known for its astringent properties to help remove excess oil, reduce inflammation, and soothe the skin.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_3fggdy": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Helanthus_Annus_Seed_Oil_Sunflower_Seed_Oil.jpg",
+            "image_mask": "none",
+            "image_width": 60,
+            "title": "Helanthus Annus Seed Oil",
+            "text": "<p>Commonly known as sunflower seed oil, it is for its antioxidant properties to help protect skin from free radicals and combat premature signs of aging,</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_XCRVDC": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Helichrysum_Halicuna.jpg",
+            "image_mask": "none",
+            "image_width": 60,
+            "title": "Helichrysum Halicuna",
+            "text": "<p>Helichrysum is known for its anti-inflammatory and antibacterial properties to help heal the skin.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_9FamYK": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Hyaluronic_Acid.jpg",
+            "image_mask": "none",
+            "image_width": 60,
+            "title": "Hyaluronic Acid",
+            "text": "<p>Known to help increase moisture and help reduce fine lines.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_cezgFM": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Hydrastis_Canadensis_Extract__Goldenseal.jpg",
+            "image_mask": "none",
+            "image_width": 60,
+            "title": "Hydrastis Canadensis Extract",
+            "text": "<p>Commonly referred to as Goldenseal, it is known for its anti-inflammatory and antibacterial properties to help soothe and promote healthy skin.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_iDaw9q": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Hydroxyethlcellulose.jpg",
+            "image_mask": "none",
+            "image_width": 60,
+            "title": "Hydroxyethlcellulose",
+            "text": "<p>A natural thickening agent from plant cellulose.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_xmzCrz": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Juniperus_Communis_Fruit_Oil_Juniper_Berry_Oil.jpg",
+            "image_mask": "none",
+            "image_width": 60,
+            "title": "Juniperus Communis Fruit Oil",
+            "text": "<p>Commonly referred to as Juniper Berry oil, it is known for its anti-inflammatory and antioxidant properties to help calm skin.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_QPUxjT": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Lactoperoxidase___Glucose_Oxidase.jpg",
+            "image_mask": "none",
+            "image_width": 60,
+            "title": "Lactoperoxidase / Glucose Oxidase",
+            "text": "<p>Aromatic oil from plants.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_hqU7Vi": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Lavandula_Angustifolia_Oil_Lavender_Oil.jpg",
+            "image_mask": "none",
+            "image_width": 60,
+            "title": "Lavandula Angustifolia Oil",
+            "text": "<p>Commonly referred to as Lavender oil, it is known to help even skin tone and reduce signs of aging.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_n4N3PG": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Magnesium_Aluminum_Silicate_Bentonite_Clay.jpg",
+            "image_mask": "none",
+            "image_width": 60,
+            "title": "Magnesium Aluminum Silicate",
+            "text": "<p>Commonly referred to as Bentonite clay, it is known to help cleanse impurities from the skin.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_CRBVHz": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Melaleuca_Alternifolia_Leaf_Oil_Tea_Tree_Oil.jpg",
+            "image_mask": "none",
+            "image_width": 60,
+            "title": "Melaleuca Alternifolia Leaf Oil",
+            "text": "<p>Commonly referred to as Tea Tree Oil, it is known for its antibacterial properties to help sooth irritated skin.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_HFeNyQ": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Mentha_Piperita_Oil_Peppermint_Oil.jpg",
+            "image_mask": "none",
+            "image_width": 60,
+            "title": "Mentha Piperita Oil",
+            "text": "<p>Commonly referred to as Peppermint oil, it is known for its use to help soothe and calm the skin.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_block_zGpGKG",
+        "text_block_HkCe7x",
+        "text_block_NmTtVa",
+        "text_block_nGY47R",
+        "text_block_9yQAER",
+        "text_block_3Dg3F3",
+        "text_block_HMcUQX",
+        "text_block_AiYPB4",
+        "text_block_49grXM",
+        "text_block_3bigmA",
+        "text_block_nRPahV",
+        "text_block_NwBg7P",
+        "text_block_H77mJ7",
+        "text_block_y4kEJ9",
+        "text_block_CCR8QA",
+        "text_block_yjmaxd",
+        "text_block_cUg9g6",
+        "text_block_f7XzY3",
+        "text_block_WtefRR",
+        "text_block_9ykRP8",
+        "text_block_6dhywN",
+        "text_block_fE9HYp",
+        "text_block_nLaLmx",
+        "text_block_jErbVw",
+        "text_block_WzB79L",
+        "text_block_ByFHzn",
+        "text_block_ie6Pmk",
+        "text_block_pJMd48",
+        "text_block_GqibT7",
+        "text_block_wHAABd",
+        "text_block_zD9Rip",
+        "text_block_9C9qXc",
+        "text_block_a3HVbB",
+        "text_block_LUaLNQ",
+        "text_block_8Tne4E",
+        "text_block_AkiUfE",
+        "text_block_dRddpC",
+        "text_block_3fggdy",
+        "text_block_XCRVDC",
+        "text_block_9FamYK",
+        "text_block_cezgFM",
+        "text_block_iDaw9q",
+        "text_block_xmzCrz",
+        "text_block_QPUxjT",
+        "text_block_hqU7Vi",
+        "text_block_n4N3PG",
+        "text_block_CRBVHz",
+        "text_block_HFeNyQ"
+      ],
+      "custom_css": [
+        "h2 {font-size: 20px;}"
+      ],
+      "settings": {
+        "title": "Ingredients 100% Natural. Vegan. Cruelty Free.",
+        "align_text": "left",
+        "divider": false,
+        "color_scheme": "none"
+      }
+    },
+    "text_columns_APEyFC": {
+      "type": "text-columns",
+      "blocks": {
+        "text_block_n9UVQp": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Myristyl_Myristate__Coconut_Oil.jpg",
+            "image_mask": "none",
+            "image_width": 60,
+            "title": "Myristyl Myristate",
+            "text": "<p>A plant-based emollient from coconut oil.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_3V3WQG": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Ocimum_Basilicum_Oil_Basil_Oil.jpg",
+            "image_mask": "none",
+            "image_width": 60,
+            "title": "Ocimum Basilicum Oil",
+            "text": "<p>Commonly referred to as Basil oil, it is known to help moisturize the skin and reduce signs of aging.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_eb77fe": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Oenothera_Biennis_Oil_Evening_Primrose_Oil.jpg",
+            "image_mask": "none",
+            "image_width": 60,
+            "title": "Oenothera Biennis Oil",
+            "text": "<p>Commonly referred to as Evening Primrose oil, it is known to help reduce skin inflammation and improve overall skin health by improving moisture, elasticity and firmness.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_zXTTmg": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Orbignya_Oleifera_Seed_Oil__Moringa_Seed_Oil.jpg",
+            "image_mask": "none",
+            "image_width": 60,
+            "title": "Orbignya Oleifera Seed Oil",
+            "text": "<p>Commonly referred to as Moringa seed oil, it is known for its antimicrobial and anti-inflammatory properties to calm and nourish the skin.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_DG6FWB": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Pelargonium_Graveolins_Flower_Oil__Geranium_Oil.jpg",
+            "image_mask": "none",
+            "image_width": 60,
+            "title": "Pelargonium Graveolins Flower Oil",
+            "text": "<p>Commonly referred to as Geranium oil, it is known for its anti-inflammatory properties to help sooth the skin.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_4DpLwY": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Persea_Gratissima_Oil__Avocado_Oil.jpg",
+            "image_mask": "none",
+            "image_width": 60,
+            "title": "Persea Gratissima Oil",
+            "text": "<p>Commonly referred to as Avocado oil, it is known to help calm, replenish, hydrate and he protect the skin.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_tXE9QH": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Potassium_Sorbate.jpg",
+            "image_mask": "none",
+            "image_width": 60,
+            "title": "Potassium Sorbate",
+            "text": "<p>A naturally sourced preservative salt of sorbic acid from berries of the mountain ash.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_8kWCyU": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Prunus_Amygdalus_Dulcis_Oil_Sweet_Almond_Oil.jpg",
+            "image_mask": "none",
+            "image_width": 60,
+            "title": "Prunus Amygdalus Dulcis Oil",
+            "text": "<p>Commonly referred to as Sweet Almond oil, it is known to be rich in Vitamin A, E, Omega-3 Fatty Acids and zinc to help reduce puffiness, improve skin tone, and smooth the skin.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_kaJgep": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Prunus_Armeniaca_Kernel_Oil_Apricot_Kernel_Oil.jpg",
+            "image_mask": "none",
+            "image_width": 60,
+            "title": "Prunus Armeniaca Kernel Oil",
+            "text": "<p>Commonly referred as Apricot kernel oil, it is known to help improve skin tone and brighten the skin.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_mcQjEn": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Prunus_Armeniaca_Seed_Powder__Apricot_Seed_Powder.jpg",
+            "image_mask": "none",
+            "image_width": 60,
+            "title": "Prunus Armeniaca Seed Powder",
+            "text": "<p>Commonly referred to as Apricot Seed powder, it is known for its natural exfoliant properties to help remove dry damaged skin cells for softer and smoother feeling skin.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_eRJwBt": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Rosa_Canina_Fruit_Oil_Rosehip_Oil.jpg",
+            "image_mask": "none",
+            "image_width": 60,
+            "title": "Rosa Canina Fruit Oil",
+            "text": "<p>Commonly referred to as Rosehip oil, it is known to help support collagen production, reduction of wrinkles and prevent dry skin.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_GTddyx": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Rosa_Damascena_Flower_Water__Rose_Water.jpg",
+            "image_mask": "none",
+            "image_width": 60,
+            "title": "Rosa Damascena Flower Water",
+            "text": "<p>Commonly referred to as Rose water, it is know for its anti-inflammatory properties to help reduce skin redness, reduce irritation, and soothe the skin.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_ABJgVU": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Rosmarinus_Officinalis_Leaf_Oil__Rosemary_Oil.jpg",
+            "image_mask": "none",
+            "image_width": 60,
+            "title": "Rosmarinus Officinalis Leaf Oil",
+            "text": "<p>Commonly referred to as Rosemary oil, it is known to help calm inflammation and protect the skin.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_P8D8L9": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Salvia_Sclarea_Oil_Clary_Sage_Oil.jpg",
+            "image_mask": "none",
+            "image_width": 60,
+            "title": "Salvia Sclarea Oil",
+            "text": "<p>Commonly referred to as Clary Sage oil, it is known for its antibacterial properties to help soothe and calm the skin.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_yGzfRm": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Simmondsia_Chinensis_Seed_Oil_Jojoba_Oil.jpg",
+            "image_mask": "none",
+            "image_width": 60,
+            "title": "Simmondsia Chinensis Seed Oil",
+            "text": "<p>Commonly referred as Jojoba oil, it is known its anti-bacterial, antioxidant and moisturizing properties to help keep skin moisturized, heal, and combat irritations.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_CrVQLx": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Stearyl_Alcohol.jpg",
+            "image_mask": "none",
+            "image_width": 60,
+            "title": "Stearyl Alcohol",
+            "text": "<p>A natural thickener from plants.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_RYBLHU": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Tocopherol__Vitamin_E.jpg",
+            "image_mask": "none",
+            "image_width": 60,
+            "title": "Tocopherol",
+            "text": "<p>Commonly known as Vitamin E. Natural vitamin E from vegetables is known for its antioxidant properties to help nourish and protect the skin.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_4HhgBp": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Triticum_Vulgare_Germ_Oil_Wheat_Germ_Oil.jpg",
+            "image_mask": "none",
+            "image_width": 60,
+            "title": "Triticum Vulgare Germ Oil",
+            "text": "<p>Commonly referred to as Wheat Germ oil, it is known to help protect and add moisture to the skin.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_mtpcdQ": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Vegetable_Glycerin.jpg",
+            "image_mask": "none",
+            "image_width": 60,
+            "title": "Vegetable Glycerin",
+            "text": "<p>Vegetable fats to help provide moisture and hydration to skin.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_GAFzaG": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Vitamin_B3_Niacinamide.jpg",
+            "image_mask": "none",
+            "image_width": 60,
+            "title": "Vitamin B3 Niacinamide",
+            "text": "<p>Commonly referred to as Niacinamide, it is known to help build cells in the skin and protect from external stressors.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_zmVk7X": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Vitis_Vinifera_Seed_Oil_Grapeseed_Oil.jpg",
+            "image_mask": "none",
+            "image_width": 60,
+            "title": "Vitis Vinifera Seed Oil",
+            "text": "<p>Commonly referred to as Grapeseed oil, it is known for its anti-inflammatory, antimicrobial and antioxidant properties to help moisturize, soften and even skin tone.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_TJHGdn": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/White_Kaolin_Clay.jpg",
+            "image_mask": "none",
+            "image_width": 60,
+            "title": "White Kaolin Clay",
+            "text": "<p>A unique type of clay composition known to help absorb sebum and prevent pores from clogging.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_block_n9UVQp",
+        "text_block_3V3WQG",
+        "text_block_eb77fe",
+        "text_block_zXTTmg",
+        "text_block_DG6FWB",
+        "text_block_4DpLwY",
+        "text_block_tXE9QH",
+        "text_block_8kWCyU",
+        "text_block_kaJgep",
+        "text_block_mcQjEn",
+        "text_block_eRJwBt",
+        "text_block_GTddyx",
+        "text_block_ABJgVU",
+        "text_block_P8D8L9",
+        "text_block_yGzfRm",
+        "text_block_CrVQLx",
+        "text_block_RYBLHU",
+        "text_block_4HhgBp",
+        "text_block_mtpcdQ",
+        "text_block_GAFzaG",
+        "text_block_zmVk7X",
+        "text_block_TJHGdn"
+      ],
+      "custom_css": [
+        "h2 {font-size: 20px;}"
+      ],
+      "settings": {
+        "title": "",
+        "align_text": "left",
+        "divider": false,
+        "color_scheme": "none"
+      }
+    },
+    "hero_video_mUnM8f": {
+      "type": "hero-video",
+      "custom_css": [
+        "h2 {font-family: ofelia-text, sans-serif; font-weight: 600;}"
+      ],
+      "settings": {
+        "full_width": true,
+        "title": "100% NATURAL. VEGAN. CRUELTY FREE. 35-FREE*. SUSTAINABLE",
+        "title_size": 40,
+        "subheading": "",
+        "link_text": "Our Commitment",
+        "link": "",
+        "color_accent": "#ffffff",
+        "text_align": "vertical-bottom horizontal-left",
+        "video": "shopify://files/videos/Video - Our Commitment.mp4",
+        "video_url": "",
+        "overlay_opacity": 22,
+        "height": 650,
+        "height_mobile": 300
+      }
+    },
+    "blog_posts_BMtcbc": {
+      "type": "blog-posts",
+      "custom_css": [
+        "h2 {font-family: ofelia-text, sans-serif; font-weight: 600;}"
+      ],
+      "settings": {
+        "title": "From the Back To Earth Team",
+        "heading_size": "h2",
+        "heading_position": "left",
+        "blog": "skin-health-1",
+        "blog_show_tags": true,
+        "blog_show_date": true,
+        "blog_show_comments": false,
+        "blog_show_author": false,
+        "blog_show_excerpt": false,
+        "blog_image_size": "wide",
+        "divider": true
+      }
+    }
+  },
+  "order": [
+    "slideshow_N9Up8P",
+    "main",
+    "text_columns_idMaPj",
+    "text_columns_LaNpUx",
+    "text_columns_APEyFC",
+    "hero_video_mUnM8f",
+    "blog_posts_BMtcbc"
+  ]
+}

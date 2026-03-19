@@ -1,0 +1,28 @@
+{% # components v3.0.1 | Copyright © 2024 Archetype Themes Limited Partnership  | "Shopify Theme Store (https://www.shopify.com/legal/terms#9-additional-services)" License  %}
+{%- comment -%}
+  Renders a tab block
+
+  Accepts:
+  - block {block} - Block object
+  - product {product} - Product object
+{%- endcomment -%}
+
+{%- liquid
+  assign product = section.settings.product | default: product
+  assign tab_id = block.id | append: product.id
+  capture tab_content
+    echo block.settings.content
+    echo block.settings.page.content
+  endcapture
+  assign title = block.settings.title
+  capture tab_title
+    echo title
+    render 'collapsible-icons'
+  endcapture
+-%}
+
+{%- if title != blank and tab_content != blank -%}
+  <div class="product-block product-block--tab" {{ block.shopify_attributes }}>
+    {%- render 'collapsible', id: tab_id, slot_button: tab_title, slot_collapsible: tab_content, borders: true -%}
+  </div>
+{%- endif -%}

@@ -1,0 +1,38 @@
+{% # components v3.0.1 | Copyright © 2024 Archetype Themes Limited Partnership  | "Shopify Theme Store (https://www.shopify.com/legal/terms#9-additional-services)" License  %}
+{%- comment -%}
+  Renders the product description
+
+  Accepts:
+  - block {block} - Block object
+  - product {product} - Product object
+  - is_tab {boolean} - Whether to render as a tab
+
+  Usage:
+  {% render 'product-description' %}
+{%- endcomment -%}
+
+{%- liquid
+  assign product = section.settings.product | default: product
+  assign id = block.id | append: product.id
+  assign is_tab = is_tab | default: block.settings.is_tab, allow_false: true | default: true, allow_false: true
+  assign description = 'info.placeholder_product_description' | t
+
+  if product
+    assign description = product.description
+  endif
+
+  capture slot_button
+    assign labels_description = 'labels.description' | t
+    capture fallback_labels_description
+      echo 'Description'
+    endcapture
+    render 't_with_fallback', t: labels_description, fallback: fallback_labels_description
+    render 'collapsible-icons'
+  endcapture
+-%}
+
+{%- if is_tab -%}
+  {%- render 'collapsible', id: id, slot_button: slot_button, slot_collapsible: description, borders: true -%}
+{%- else -%}
+  {%- render 'rte', slot: description -%}
+{%- endif -%}

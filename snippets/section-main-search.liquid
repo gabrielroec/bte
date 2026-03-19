@@ -1,0 +1,82 @@
+{% # components v3.0.1 | Copyright © 2024 Archetype Themes Limited Partnership  | "Shopify Theme Store (https://www.shopify.com/legal/terms#9-additional-services)" License  %}
+{%- comment -%}
+  Renders a search section with an input form and search results.
+
+  Accepts:
+  - paginate_by {number} - Number of products to show per page
+  - hydration {string} - Hydration strategy for the component
+
+  Usage:
+  {% render 'section-main-search' %}
+{%- endcomment -%}
+
+{%- liquid
+  assign paginate_by = paginate_by | default: section.settings.paginate_by | default: 40
+
+  # Get search cards content
+  capture search_cards
+    if slot_search_cards != blank
+      echo slot_search_cards
+    else
+      paginate search.results by paginate_by
+        for item in search.results
+          if item.object_type == 'product'
+            render 'product-grid-item', product: item
+          else
+            render 'search-grid-item', item: item
+          endif
+        endfor
+
+        if paginate.pages > 1
+          render 'pagination', paginate: paginate
+        endif
+      endpaginate
+    endif
+  endcapture
+-%}
+
+{%- capture search_content -%}
+  <div class="new-grid product-grid collection-grid" data-view="{{ section.settings.grid_style }}" data-scroll-to>
+    {{ search_cards }}
+  </div>
+{%- endcapture -%}
+
+<section-main-search class="page-width page-content">
+  {%- render 'breadcrumbs' -%}
+
+  <header class="section-header">
+    <h1 class="section-header__title">
+      {% render 't_with_fallback', key: 'labels.search', fallback: 'Search' %}
+    </h1>
+    <p class="medium-up--hide" data-collection-count>
+      {% assign info_search_result_count = 'info.search_result_count' | t: count: search.results_count %}
+      {%- capture fallback_info_search_result_count -%}
+        {{ search.results_count }} result{%- if ssearch.results_count != 1 -%}s{%- endif -%}
+      {%- endcapture -%}
+      {% render 't_with_fallback', t: info_search_result_count, fallback: fallback_info_search_result_count %}
+    </p>
+  </header>
+
+  {%- render 'predictive-search', context: 'search-page' -%}
+
+  {%- if search.performed -%}
+    {%- if search.results_count == 0 -%}
+      <div class="section-header">
+        <p>
+          {% assign info_search_no_results_html = 'info.search_no_results_html'
+            | t: terms: search.terms
+            | replace: '*', ''
+          %}
+          {%- capture fallback_info_search_no_results_html -%}
+            Search for "{{ search.terms | replace: '*', '' }}"
+          {%- endcapture -%}
+          {% render 't_with_fallback', t: info_search_no_results_html, fallback: fallback_info_search_no_results_html %}
+        </p>
+      </div>
+    {%- else -%}
+      <div class="main-search__content">
+        {%- render 'item-grid', context: search, slot: search_content, paginate_by: paginate_by -%}
+      </div>
+    {%- endif -%}
+  {%- endif -%}
+</section-main-search>

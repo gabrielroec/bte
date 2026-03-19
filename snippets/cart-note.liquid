@@ -1,0 +1,29 @@
+{% # components v3.0.1 | Copyright © 2024 Archetype Themes Limited Partnership  | "Shopify Theme Store (https://www.shopify.com/legal/terms#9-additional-services)" License  %}
+{%- comment -%}
+  Renders the cart note.
+
+  Usage:
+  {% render 'cart-note' %}
+{%- endcomment -%}
+
+<cart-note>
+  <label for="CartNote" class="add-note">
+    {% render 't_with_fallback', key: 'actions.add_order_note', fallback: 'Add order note' %}
+    <span class="note-icon note-icon--open" aria-hidden="true">
+      {% render 'icon', name: 'pencil' %}
+    </span>
+
+    <span class="note-icon note-icon--close">
+      {% render 'icon', name: 'close' %}
+      <span class="icon__fallback-text visually-hidden">
+        {% render 't_with_fallback', key: 'actions.close', fallback: 'Close' -%}
+      </span>
+    </span>
+  </label>
+
+  <textarea name="note" class="input-full cart__note hide" id="CartNote">{{ cart.note }}</textarea>
+</cart-note>
+
+<script type="module">
+  import 'components/cart-note'
+</script>

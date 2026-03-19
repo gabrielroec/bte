@@ -1,0 +1,80 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "type": "footer",
+  "name": "t:labels.footer_group",
+  "sections": {
+    "footer-promotions": {
+      "type": "footer-promotions",
+      "disabled": true,
+      "settings": {
+        "hide_homepage": false
+      }
+    },
+    "footer": {
+      "type": "footer",
+      "blocks": {
+        "image_rVWpXF": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/KZC_LOGO_Back_to_Earth_Black_bea57dd1-99f4-4f05-b44a-803708558a0f.png",
+            "image_mask": "none",
+            "link": ""
+          }
+        },
+        "footer-0": {
+          "type": "menu",
+          "settings": {
+            "title": "Shop",
+            "menu": "footer-menu-shop",
+            "enable_account_link": false
+          }
+        },
+        "menu_paXx96": {
+          "type": "menu",
+          "settings": {
+            "title": "Help",
+            "menu": "footer-menu-help",
+            "enable_account_link": false
+          }
+        },
+        "menu_HW4zzt": {
+          "type": "menu",
+          "settings": {
+            "title": "About Us",
+            "menu": "footer-menu-about-us",
+            "enable_account_link": false
+          }
+        },
+        "footer-1": {
+          "type": "contact",
+          "settings": {
+            "phone": "",
+            "contact": "",
+            "chat": "",
+            "enable_social": true
+          }
+        }
+      },
+      "block_order": ["image_rVWpXF", "footer-0", "menu_paXx96", "menu_HW4zzt", "footer-1"],
+      "custom_css": ["{border-top: 0px;}"],
+      "settings": {
+        "show_newsletter": true,
+        "newsletter_richtext": "<p>Save 15% When You Become A VIP</p>",
+        "footer_main_menu": false,
+        "show_copyright": true,
+        "copyright_text": "",
+        "policies_menu": ""
+      }
+    }
+  },
+  "order": ["footer-promotions", "footer"]
+}

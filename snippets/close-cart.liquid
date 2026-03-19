@@ -1,0 +1,24 @@
+{% # components v3.0.1 | Copyright © 2024 Archetype Themes Limited Partnership  | "Shopify Theme Store (https://www.shopify.com/legal/terms#9-additional-services)" License  %}
+{%- comment -%}
+  Renders the close cart button
+
+  Accepts:
+  - close_cart_button {string} - The close button
+  - cart_type {string} - The cart type
+
+  Usage:
+  {% render 'close-cart', close_cart_button: close_cart_button %}
+{%- endcomment -%}
+
+{%- liquid
+  assign cart_type = cart_type | default: settings.cart_type | default: 'page'
+-%}
+
+{%- if cart_type == 'dropdown' -%}
+  <close-cart>
+    {{- close_cart_button -}}
+  </close-cart>
+  <script type="module">
+    import 'components/close-cart'
+  </script>
+{%- endif -%}

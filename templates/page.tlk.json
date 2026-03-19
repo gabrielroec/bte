@@ -1,0 +1,424 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {}
+    },
+    "slideshow_V6X4UB": {
+      "type": "slideshow",
+      "blocks": {
+        "hero_iKa7AJ": {
+          "type": "hero",
+          "settings": {
+            "top_subheading": "",
+            "title": "",
+            "title_size": 70,
+            "subheading": "",
+            "link": "shopify://pages/try-it-love-it-keep-it",
+            "link_text": "",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "#ffffff",
+            "text_align": "vertical-bottom horizontal-left",
+            "image": "shopify://shop_images/Title_4.jpg",
+            "image_mobile": "shopify://shop_images/Title_1080_x_2100_px.jpg",
+            "overlay_opacity": 0
+          }
+        }
+      },
+      "block_order": [
+        "hero_iKa7AJ"
+      ],
+      "name": "t:labels.hero_optional_slides",
+      "settings": {
+        "full_width": true,
+        "desktop_size": 0,
+        "mobile_size": 0,
+        "style": "arrows",
+        "autoplay": true,
+        "autoplay_speed": 7
+      }
+    },
+    "text_columns_JxhbeB": {
+      "type": "text-columns",
+      "blocks": {
+        "text_block_YU8i9K": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Try_It.png",
+            "image_mask": "none",
+            "image_width": 310,
+            "title": "Try It.",
+            "text": "<p>Start by selecting the routine that best describes your skin type.</p><p>We'll send you the award-winning full-size routine. Shipping's on us. No upfront costs, no strings attached.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_3VDmBB": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Love_It.png",
+            "image_mask": "none",
+            "image_width": 310,
+            "title": "Love It.",
+            "text": "<p>You'll have 14 days to experience our routine with results in the 1st application. </p><p>100% Natural. Always Effective.<br/>Your skin will feel calmer, more hydrated, nourished and genuinely loved.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_PHbFEk": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Keep_It.png",
+            "image_mask": "none",
+            "image_width": 310,
+            "title": "Keep It. (or send it back)",
+            "text": "<p>At the end of your trial, <br/>keep what worked for you <br/>and send back anything that didn’t. </p><p>Return shipping is on us and <br/>you’ll only be charged for what you decide to keep.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_block_YU8i9K",
+        "text_block_3VDmBB",
+        "text_block_PHbFEk"
+      ],
+      "custom_css": [
+        "h2 {font-family: ofelia-text, sans-serif; font-weight: 600; font-size: 25px;}",
+        "h1 {font-family: ofelia-text, sans-serif; font-weight: 600; font-size: 35px;}"
+      ],
+      "name": "t:labels.text_columns_with",
+      "settings": {
+        "title": "How it works.",
+        "align_text": "center",
+        "divider": false,
+        "color_scheme": "none"
+      }
+    },
+    "text_columns_7CzWCc": {
+      "type": "text-columns",
+      "blocks": {
+        "text_block_3diWQQ": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/OilySkin-BeautyShot.jpg",
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "",
+            "text": "<p><strong>Who's it for?</strong> Shows up from excess sebum production (skin’s natural oil) causing shiny or greasy areas like the T-zone. Often associated with pimples, acne, blackheads and enlarged pores. </p>",
+            "button_label": "",
+            "button_link": "shopify://products/oily-skin-routine"
+          }
+        },
+        "text_block_YtcD7n": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/SensitiveSkin-BeautyShot.jpg",
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "",
+            "text": "<p><strong>Who's it for? </strong>Commonly shows up as skin reactivity resulting in itchiness, dryness, redness and/or discoloration. </p>",
+            "button_label": "",
+            "button_link": "shopify://products/sensitive-skin-routine"
+          }
+        },
+        "text_block_djtWct": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/IrritatedSkin-BeautyShot.jpg",
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "",
+            "text": "<p><strong>Who's it for? </strong>Commonly shows in forms of inflammation, redness, itchy, dry, flakey or cracking skin. Associated with skin conditions including eczema and rosacea. </p>",
+            "button_label": "",
+            "button_link": "shopify://products/irritated-skin-routine"
+          }
+        },
+        "text_block_wnkzXp": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/AgingSkin-BeautyShot.jpg",
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "",
+            "text": "<p><strong>Who's it for? </strong>Commonly shows up as skin reactivity resulting in itchiness, dryness, redness and/or discoloration. </p>",
+            "button_label": "",
+            "button_link": "shopify://products/aging-skin-routine"
+          }
+        },
+        "text_block_AmWjAP": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/DrySkin-BeautyShot.jpg",
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "",
+            "text": "<p><strong>Who's it for? </strong>Shows up as rough, itchy, flaky and/or scaly skin. A common condition that can affect anyone and is often associated with xerosis or xeroderma. </p>",
+            "button_label": "",
+            "button_link": "shopify://products/dry-skin-routine"
+          }
+        },
+        "text_block_ddEWXa": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Dull-UnevenSkin-BeautyShot.jpg",
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "",
+            "text": "<p><strong>Who's it for? </strong>Shows up as skin that lacks radiance, shine and uneven texture. A common condition that can affect anyone. </p>",
+            "button_label": "",
+            "button_link": "shopify://products/dull-uneven-skin-routine"
+          }
+        }
+      },
+      "block_order": [
+        "text_block_3diWQQ",
+        "text_block_YtcD7n",
+        "text_block_djtWct",
+        "text_block_wnkzXp",
+        "text_block_AmWjAP",
+        "text_block_ddEWXa"
+      ],
+      "custom_css": [
+        "div {padding-bottom: 0px; margin-bottom: 20px;}",
+        "h2 {font-family: ofelia-text, sans-serif; font-weight: 600; font-size: 25px;}",
+        "h1 {font-family: ofelia-text, sans-serif; font-weight: 600; font-size: 35px;}"
+      ],
+      "name": "t:labels.text_columns_with",
+      "settings": {
+        "title": "Choose The Curated Routine For Your Skin Type",
+        "align_text": "left",
+        "divider": false,
+        "color_scheme": "none"
+      }
+    },
+    "slideshow_empT3L": {
+      "type": "slideshow",
+      "blocks": {
+        "hero_zFd9Ge": {
+          "type": "hero",
+          "settings": {
+            "top_subheading": "",
+            "title": "",
+            "title_size": 70,
+            "subheading": "",
+            "link": "",
+            "link_text": "",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "#ffffff",
+            "text_align": "vertical-center horizontal-center",
+            "image": "shopify://shop_images/Title_2.png",
+            "image_mobile": "shopify://shop_images/Award_Winning_Routines_Free_to_Try..png",
+            "overlay_opacity": 0
+          }
+        }
+      },
+      "block_order": [
+        "hero_zFd9Ge"
+      ],
+      "custom_css": [
+        "h2 {font-family: ofelia-text, sans-serif; font-weight: 600; font-size: 25px;}",
+        "h1 {font-family: ofelia-text, sans-serif; font-weight: 600; font-size: 35px;}"
+      ],
+      "name": "t:labels.hero_optional_slides",
+      "settings": {
+        "full_width": true,
+        "desktop_size": 0,
+        "mobile_size": 0,
+        "style": "arrows",
+        "autoplay": true,
+        "autoplay_speed": 7
+      }
+    },
+    "text_and_image_CeEnfJ": {
+      "type": "text-and-image",
+      "custom_css": [
+        "h2 {font-family: ofelia-text, sans-serif; font-weight: 600; font-size: 35px;}"
+      ],
+      "name": "t:labels.image_with_text",
+      "settings": {
+        "image": "shopify://shop_images/GLOW_Foaming_Cleanser_Lifestyle_2.jpg",
+        "image_mask": "none",
+        "image2_mask": "none",
+        "subtitle": "",
+        "title": "Cleanse",
+        "heading_size": "h2",
+        "text": "<p>In The Art of Skin, we begin with a clean foundation—one that respects your skin’s sensitivity. This step avoids common irritants found in traditional cleansers, like harsh preservatives, emulsifiers, and foaming agents that can disrupt your skin’s barrier. Instead, it’s all about lifting away impurities while leaving your skin calm, balanced, and ready to receive our award winning and specially crafted treatments. </p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "left",
+        "image_width": "50",
+        "layout": "right",
+        "color_scheme": "none",
+        "divider": false,
+        "top_padding": true,
+        "bottom_padding": true
+      }
+    },
+    "text_and_image_Mzfh4c": {
+      "type": "text-and-image",
+      "custom_css": [
+        "h2 {font-family: ofelia-text, sans-serif; font-weight: 600; font-size: 35px;}"
+      ],
+      "name": "t:labels.image_with_text",
+      "settings": {
+        "image": "shopify://shop_images/Back_To_Earth_Clarify.jpg",
+        "image_mask": "none",
+        "image2_mask": "none",
+        "subtitle": "",
+        "title": "Treat",
+        "heading_size": "h2",
+        "text": "<p>Once the skin is cleared of external aggressors — like pollution, bacteria, and other impurities — it’s time to nourish and restore. This phase focuses on delivering anti-inflammatory and mineral-rich ingredients to support healing and balance. To avoid triggering sensitive skin, we never use common irritants like harsh preservatives, emulsifiers, and highly concentrated actives such as vitamin C or retinol.</p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "left",
+        "image_width": "50",
+        "layout": "left",
+        "color_scheme": "none",
+        "divider": false,
+        "top_padding": true,
+        "bottom_padding": true
+      }
+    },
+    "text_and_image_hNFTFy": {
+      "type": "text-and-image",
+      "custom_css": [
+        "h2 {font-family: ofelia-text, sans-serif; font-weight: 600; font-size: 35px;}"
+      ],
+      "name": "t:labels.image_with_text",
+      "settings": {
+        "image_mask": "none",
+        "image2": "shopify://shop_images/GLOW_Daily_Moisturizer_Lifestyle_2.jpg",
+        "image2_mask": "none",
+        "subtitle": "",
+        "title": "Care",
+        "heading_size": "h2",
+        "text": "<p>After the skin is treated with the optimal routine curated for your skin, it’s essential to lock in moisture with a nourishing and calming moisturizer that supports the skin barrier and encourages recovery. This step helps maintain hydration while creating a protective layer that doesn’t sit heavily on the surface or attract external irritants. As always, we never use harsh preservatives, emulsifiers, and strong actives that can disrupt sensitive or compromised skin.</p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "left",
+        "image_width": "50",
+        "layout": "right",
+        "color_scheme": "none",
+        "divider": false,
+        "top_padding": true,
+        "bottom_padding": true
+      }
+    },
+    "faq_3pxWPM": {
+      "type": "faq",
+      "blocks": {
+        "question_iEhB9N": {
+          "type": "question",
+          "settings": {
+            "title": "How does the Try it. Love it. Keep it. program work?",
+            "text": "<p>You choose the skincare routine that fits your skin type, we send it to you for free, and you get 14 days to try it. At the end of your trial, you keep what you love and return anything that didn’t work for you. You’ll only be charged for what you decide to keep.</p>"
+          }
+        },
+        "question_8bMbiJ": {
+          "type": "question",
+          "settings": {
+            "title": "Is there any upfront payment?",
+            "text": "<p>Nope—nothing upfront. One thing to note is that we do put a hold charge on the card you use. This charge is to verify that the card you use is legitimate. This hold is not a charge. We only charge you after the 14-day trial, and only for the items you choose to keep.</p>"
+          }
+        },
+        "question_EDhMgb": {
+          "type": "question",
+          "settings": {
+            "title": "What if I decide not to keep anything?",
+            "text": "<p>No problem at all. Just send the products back and you won’t be charged. </p>"
+          }
+        },
+        "question_hxgrmb": {
+          "type": "question",
+          "settings": {
+            "title": "When does the 14-day trial start?",
+            "text": "<p>Your trial starts the day your order is delivered. You’ll have two full weeks to experience the products before making a decision.</p>"
+          }
+        },
+        "question_ERpCVX": {
+          "type": "question",
+          "settings": {
+            "title": "Is shipping free?",
+            "text": "<p>Yes—both ways. We cover all shipping costs, including returns.</p>"
+          }
+        },
+        "question_wQmzTB": {
+          "type": "question",
+          "settings": {
+            "title": "Are the products full-size or samples?",
+            "text": "<p>They’re all full-size! We believe in giving your skin a true experience, not a one-time sample.</p>"
+          }
+        },
+        "question_pmRtkD": {
+          "type": "question",
+          "settings": {
+            "title": "What if I forget to return the products I don’t want?",
+            "text": "<p>We’ll send you a reminder before your trial ends. If we don’t hear from you and the products aren’t returned, we’ll assume you’re keeping the full routine and charge your card accordingly.</p>"
+          }
+        },
+        "question_AqVk8A": {
+          "type": "question",
+          "settings": {
+            "title": "Why are you offering this?",
+            "text": "<p>Because we know how hard it is to find skincare that truly works—especially for sensitive skin. We believe in our routines so much, we’re putting our formulas to the test in the best way possible: on your skin, in real life, risk-free.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "question_iEhB9N",
+        "question_8bMbiJ",
+        "question_EDhMgb",
+        "question_hxgrmb",
+        "question_ERpCVX",
+        "question_wQmzTB",
+        "question_pmRtkD",
+        "question_AqVk8A"
+      ],
+      "custom_css": [
+        "h2 {font-family: ofelia-text, sans-serif; font-weight: 600; font-size: 30px;}"
+      ],
+      "name": "t:labels.faq",
+      "settings": {
+        "title": "Try it. Love it. Keep it. FAQs",
+        "heading_size": "h2",
+        "heading_position": "center"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "slideshow_V6X4UB",
+    "text_columns_JxhbeB",
+    "text_columns_7CzWCc",
+    "slideshow_empT3L",
+    "text_and_image_CeEnfJ",
+    "text_and_image_Mzfh4c",
+    "text_and_image_hNFTFy",
+    "faq_3pxWPM"
+  ]
+}

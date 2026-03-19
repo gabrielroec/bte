@@ -1,0 +1,211 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "slideshow_N9Up8P": {
+      "type": "slideshow",
+      "blocks": {
+        "hero_aYReNe": {
+          "type": "hero",
+          "settings": {
+            "top_subheading": "OUR STORY",
+            "title": "<p>NATURAL, TRANSPARENT & SUSTAINABLE</p>",
+            "title_size": 40,
+            "subheading": "",
+            "link": "",
+            "link_text": "",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "#ffffff",
+            "text_align": "vertical-bottom horizontal-right",
+            "image": "shopify://shop_images/Rectangle_31_1.webp",
+            "overlay_opacity": 0
+          }
+        }
+      },
+      "block_order": [
+        "hero_aYReNe"
+      ],
+      "custom_css": [
+        "h2 {font-family: ofelia-text, sans-serif; font-weight: 600;}"
+      ],
+      "settings": {
+        "full_width": true,
+        "desktop_size": 0,
+        "mobile_size": 0,
+        "style": "arrows",
+        "autoplay": true,
+        "autoplay_speed": 7
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {}
+    },
+    "rich_text_EbDkPy": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_T8aYQw": {
+          "type": "heading",
+          "settings": {
+            "title": "ABOUT THE FOUNDER",
+            "heading_size": "h2"
+          }
+        },
+        "text_PLK83X": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": true,
+            "text": "<p>Back To Earth Skin founder, Kiley Routley created the brand with the ethos of brining clean, 100% natural skincare that performs without compromise. Her passion and expertise with natural ingredients brings the best of nature to our skin.</p><p>Kiley is dedicated to the betterment of all living things through alchemy research and development. Using indigenous plants from the Okanagan Valley, an proprietary clay, and essential oils, she has developed a line of 100% natural skincare products. As a mother of three, Kiley is an entrepreneur who started in her kitchen formulating and indulging in natural ingredients.</p><p>Her passion for naturality and skincare ignited the creation of Back To Earth Skin. Completing a number of Certified Herbalist and Aromatherapy educational programs, she is highly educated in this space and has spent years on her product development.</p><p>She has created and produced renewable environmentally based products that display her responsibility to the environment and to her family. This balance of home and business lifestyle has always been at the heart of the company’s philosophy.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_T8aYQw",
+        "text_PLK83X"
+      ],
+      "custom_css": [
+        "h2 {font-family: ofelia-text, sans-serif; font-weight: 600;}"
+      ],
+      "settings": {
+        "align_text": "left",
+        "narrow_column": true,
+        "color_scheme": "1",
+        "divider": false
+      }
+    },
+    "text_and_image_9Afgyc": {
+      "type": "text-and-image",
+      "custom_css": [
+        "h2 {font-family: ofelia-text, sans-serif; font-weight: 600;}"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Screenshot_2025-01-29_172550.png",
+        "image_mask": "none",
+        "image2_mask": "none",
+        "subtitle": "NATURAL INGREDIENTS",
+        "title": "100% NATURAL. VEGAN. 35-FREE*.",
+        "heading_size": "h2",
+        "text": "<p>You care about what you put on your skin and so do we. That’s why every single Back To Earth Skin ingredient comes from a natural source – a plant or mineral, never an animal – and is only ever altered by a natural process (think: fermentation). You can trust that every formula is safe for your body and will never contain 35+ potentially harmful ingredients commonly found in beauty care.</p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "left",
+        "image_width": "33",
+        "layout": "right",
+        "color_scheme": "none",
+        "divider": false,
+        "top_padding": true,
+        "bottom_padding": true
+      }
+    },
+    "text_and_image_xcLfEY": {
+      "type": "text-and-image",
+      "custom_css": [
+        "h2 {font-family: ofelia-text, sans-serif; font-weight: 600;}"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Screenshot_2025-01-29_172600.png",
+        "image_mask": "none",
+        "image2_mask": "none",
+        "subtitle": "TRANSPARENT",
+        "title": "ALL INGREDIENTS USED",
+        "heading_size": "h2",
+        "text": "<p>Each puzzle piece of the formula matters and has an impact on your skin. That’s why we list every single ingredient on our product pages – from the actives to the preservatives – not to mention where it comes from and what it does. Back To Earth Skin is constantly innovating, developing and looking to the future to bring you only the best ingredients and formulations on the planet.</p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "left",
+        "image_width": "33",
+        "layout": "left",
+        "color_scheme": "none",
+        "divider": true,
+        "top_padding": true,
+        "bottom_padding": true
+      }
+    },
+    "text_and_image_rz3eeE": {
+      "type": "text-and-image",
+      "custom_css": [
+        "h2 {font-family: ofelia-text, sans-serif; font-weight: 600;}"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Screenshot_2025-01-29_172610.png",
+        "image_mask": "none",
+        "image2_mask": "none",
+        "subtitle": "SUSTAINABLE",
+        "title": "INGREDIENTS & PACKAGING. CRUELTY FREE.",
+        "heading_size": "h2",
+        "text": "<p>You can feel good about using Back To Earth Skin because we make every choice with sustainability in mind. That means that our ingredients are natural and of the highest quality, our packaging reduces waste and uses the latest sustainable technology and we reduce our environmental footprint in any way we can. And did we mention we’re 100% cruelty free? There’s only one Earth and we aim to take care of it.</p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "left",
+        "image_width": "33",
+        "layout": "right",
+        "color_scheme": "none",
+        "divider": true,
+        "top_padding": true,
+        "bottom_padding": true
+      }
+    },
+    "hero_video_mUnM8f": {
+      "type": "hero-video",
+      "custom_css": [
+        "h2 {font-family: ofelia-text, sans-serif; font-weight: 600;}"
+      ],
+      "settings": {
+        "full_width": true,
+        "title": "100% NATURAL. VEGAN. CRUELTY FREE. 35-FREE*. SUSTAINABLE",
+        "title_size": 40,
+        "subheading": "",
+        "link_text": "Our Commitment",
+        "link": "",
+        "color_accent": "#ffffff",
+        "text_align": "vertical-bottom horizontal-left",
+        "video": "shopify://files/videos/Video - Our Commitment.mp4",
+        "video_url": "",
+        "overlay_opacity": 22,
+        "height": 650,
+        "height_mobile": 300
+      }
+    },
+    "blog_posts_BMtcbc": {
+      "type": "blog-posts",
+      "custom_css": [
+        "h2 {font-family: ofelia-text, sans-serif; font-weight: 600;}"
+      ],
+      "settings": {
+        "title": "From the Back To Earth Team",
+        "heading_size": "h2",
+        "heading_position": "left",
+        "blog": "skin-health-1",
+        "blog_show_tags": true,
+        "blog_show_date": true,
+        "blog_show_comments": false,
+        "blog_show_author": false,
+        "blog_show_excerpt": false,
+        "blog_image_size": "wide",
+        "divider": true
+      }
+    }
+  },
+  "order": [
+    "slideshow_N9Up8P",
+    "main",
+    "rich_text_EbDkPy",
+    "text_and_image_9Afgyc",
+    "text_and_image_xcLfEY",
+    "text_and_image_rz3eeE",
+    "hero_video_mUnM8f",
+    "blog_posts_BMtcbc"
+  ]
+}

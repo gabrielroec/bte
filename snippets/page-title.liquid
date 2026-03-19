@@ -1,0 +1,40 @@
+{% # components v3.0.1 | Copyright © 2024 Archetype Themes Limited Partnership  | "Shopify Theme Store (https://www.shopify.com/legal/terms#9-additional-services)" License  %}
+{%- comment -%}
+  Renders the title tag for the current page.
+
+  Usage:
+  {% render 'page-title' %}
+{%- endcomment -%}
+
+{%- liquid
+  capture title
+    echo page_title
+
+    if current_tags
+      assign meta_tags = current_tags | join: ', ' | append: ' &ndash; '
+      assign labels_tagged_with = 'labels.tagged_with' | t: tags: meta_tags
+      capture fallback_labels_tagged_with
+        echo 'Tagged with: "' | append: meta_tags | append: '"'
+      endcapture
+      render 't_with_fallback', t: labels_tagged_with, fallback: fallback_labels_tagged_with
+    endif
+
+    if current_page != 1
+      assign labels_page_title = 'labels.page_title' | t: page: current_page | prepend: ' &ndash; '
+      capture fallback_labels_page_title
+        echo 'Page ' | append: current_page | prepend: ' &ndash; '
+      endcapture
+      render 't_with_fallback', t: labels_page_title, fallback: fallback_labels_page_title
+    endif
+
+    if template == 'password'
+      echo shop.name
+    else
+      unless page_title contains shop.name
+        echo shop.name | prepend: ' &ndash; '
+      endunless
+    endif
+  endcapture
+-%}
+
+<title>{{ title }}</title>

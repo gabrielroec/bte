@@ -1,0 +1,197 @@
+{% # components v3.0.1 | Copyright © 2024 Archetype Themes Limited Partnership  | "Shopify Theme Store (https://www.shopify.com/legal/terms#9-additional-services)" License  %}
+{% comment %}
+  Renders a product's media, including images and videos.
+
+  Accepts:
+  - media {media} - The media object
+  - product {product} - The product object
+  - product_zoom_enable {boolean} - Whether the product zoom is enabled
+  - product_zoom_size {string} - Size of the zoomed image
+  - video_looping {boolean} - Whether the video should loop
+  - video_style {string} - Style of the video
+  - mobile_layout {string} - Layout for mobile
+  - image_size {string} - Size of the image
+  - animation {string} - Animation for the image
+
+  Usage:
+  {% render 'media' %}
+{% endcomment %}
+
+{%- liquid
+  assign product = section.settings.product | default: product
+  assign product_zoom_enable = product_zoom_enable | default: section.settings.product_zoom_enable, allow_false: true
+  assign product_zoom_size = product_zoom_size | default: '1800x1800'
+  assign video_looping = video_looping | default: section.settings.enable_video_looping, allow_false: true
+  assign video_style = video_style | default: section.settings.product_video_style | default: 'muted'
+  assign mobile_layout = mobile_layout | default: section.settings.mobile_layout | default: 'partial'
+  assign image_size = image_size | default: section.settings.product_image_size | default: 'square'
+  assign animation = animation | default: 'image-fade-in'
+
+  assign autoplay = true
+  if video_style == 'unmuted'
+    assign autoplay = false
+  endif
+
+  assign is_featured = false
+  if featured_media == media
+    assign is_featured = true
+  endif
+
+  assign has_video = false
+  assign video_type = ''
+  assign video_modal = false
+
+  assign image_set = false
+  assign image_set_group = ''
+  if media.alt contains '#'
+    assign image_set_full = media.alt | split: '#' | last
+    if image_set_full contains '_'
+      assign image_set = true
+      assign image_set_group = image_set_full | split: '_' | first
+    endif
+  endif
+
+  case media.media_type
+    when 'external_video'
+      assign has_video = true
+      assign video_type = media.host
+      assign video_id = media.external_id
+    when 'video'
+      assign has_video = true
+      assign video_type = 'mp4'
+  endcase
+
+  if has_video and video_style == 'unmuted'
+    assign video_modal = true
+  endif
+
+  assign media_aspect_ratio = media.aspect_ratio
+  assign media_width = media.width
+  assign media_height = media.height
+
+  if media.media_type != 'image'
+    assign media_width = media.preview_image.width
+    assign media_height = media.preview_image.height
+  endif
+
+  assign set_image_size = false
+  if image_size != 'natural'
+    assign set_image_size = true
+  endif
+-%}
+
+<div
+  class="product-main-slide {% if is_featured %}starting-slide{% else %}secondary-slide{% endif %}"
+  data-index="{{ loopIndex0 }}"
+  data-media-id="{{ media.id }}"
+  {% if image_set %}
+    data-set-name="{{ image_set_group }}"
+    data-group="{{ image_set_full }}"
+  {% endif %}
+>
+  <div
+    data-product-image-main
+    class="product-image-main"
+    {% if set_image_size %}
+      data-size="{{ image_size }}"
+    {% endif %}
+  >
+    {%- if media.media_type == 'model' -%}
+      <div class="product__model-wrapper">
+        {%- render 'model-media',
+          product: product,
+          media: media,
+          hydration: 'on:interaction="select"',
+          autoplay: autoplay
+        -%}
+
+        {%- capture image_classes -%}
+          hide {% if product_zoom_enable %}photoswipe__image{% endif %}
+        {%- endcapture -%}
+        {%-
+          render 'image-element',
+          img: media.preview_image,
+          type: 'photoswipe',
+          classes: image_classes,
+          alt: media.alt | escape | split: '#' | first,
+          widths: '900',
+          product_zoom_size: product_zoom_size,
+          loopIndex: loopIndex,
+          media: media,
+          media_width: media_width,
+          media_height: media_height,
+          sizes: sizes,
+          loading: loading,
+          sizeVariable: sizeVariable,
+          fallback: fallback,
+          animation: animation,
+        -%}
+      </div>
+      <button class="hide btn btn--circle btn--static product-single__close-media">
+        {% render 'icon', name: 'close' %}
+      </button>
+    {%- else -%}
+      {%- liquid
+        if has_video and video_style == 'unmuted'
+          assign media_aspect_ratio = media.preview_image.aspect_ratio
+        endif
+      -%}
+      <div
+        class="image-wrap{% if has_video %} hide{% endif %}"
+        style="height: 0; padding-bottom: {{ 100 | divided_by: media_aspect_ratio }}%;"
+      >
+        {%- capture image_classes -%}
+          {% if product_zoom_enable %}photoswipe__image{% endif %}
+        {%- endcapture -%}
+
+        {%- liquid
+          if mobile_layout == 'partial'
+            assign fallback = '75vw'
+          endif
+        -%}
+        {%-
+          render 'image-element',
+          img: media.preview_image,
+          type: 'photoswipe',
+          classes: image_classes,
+          alt: media.alt | escape | split: '#' | first,
+          widths: '360, 540, 720, 900',
+          product_zoom_size: product_zoom_size,
+          loopIndex: loopIndex,
+          media: media,
+          media_width: media_width,
+          media_height: media_height,
+          sizes: sizes,
+          loading: loading,
+          sizeVariable: sizeVariable,
+          fallback: fallback,
+          animation: animation,
+        -%}
+
+        {%- if product_zoom_enable and media.media_type == 'image' -%}
+          <button
+            type="button"
+            class="btn btn--secondary btn--circle js-photoswipe__zoom product__photo-zoom"
+            aria-label="Zoom"
+          >
+            {% render 'icon', name: 'search' %}
+          </button>
+        {%- endif -%}
+      </div>
+
+      {%- if has_video -%}
+        <div class="product__video-wrapper">
+          {%- if media.media_type == 'video' -%}
+            {%- render 'video-media', video: media, hydration: 'on:interaction="select"', autoplay: autoplay -%}
+          {%- elsif media.media_type == 'external_video' -%}
+            {%- render 'video-media',
+              external_video: media,
+              hydration: 'on:interaction="select"',
+              autoplay: autoplay
+            -%}
+          {%- endif -%}
+        </div>
+      {%- endif -%}
+    {%- endif -%}
+  </div>
+</div>

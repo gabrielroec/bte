@@ -1,0 +1,137 @@
+{% # components v3.0.1 | Copyright © 2024 Archetype Themes Limited Partnership  | "Shopify Theme Store (https://www.shopify.com/legal/terms#9-additional-services)" License  %}
+{%- comment -%}
+  Renders the header cart drawer component.
+
+  Accepts:
+  - cart_notes_enable {boolean} - Enable cart notes
+  - cart_terms_conditions_enable {boolean} - Enable terms and conditions
+  - cart_terms_conditions_page {page} - Terms and conditions page
+  - cart_additional_buttons {boolean} - Additional checkout buttons
+
+  Usage:
+  {% render 'header-cart-drawer', cart_type: 'dropdown' %}
+{%- endcomment -%}
+
+{%- liquid
+  assign cart_notes_enable = cart_notes_enable | default: settings.cart_notes_enable, allow_false: true | default: true, allow_false: true
+  assign cart_terms_conditions_enable = cart_terms_conditions_enable | default: settings.cart_terms_conditions_enable, allow_false: true | default: true, allow_false: true
+  assign cart_terms_conditions_page = cart_terms_conditions_page | default: settings.cart_terms_conditions_page
+  assign cart_additional_buttons = cart_additional_buttons | default: settings.cart_additional_buttons, allow_false: true | default: true, allow_false: true
+  assign money_format = shop.money_format
+  capture superscript
+    render 'enable-superscript'
+  endcapture
+-%}
+
+<header-cart-drawer class="cart-drawer" defer-hydration>
+  <form
+    action="{{ routes.cart_url }}"
+    method="post"
+    novalidate
+    data-location="header"
+    class="cart__drawer-form"
+    data-money-format="{{ money_format }}"
+    data-super-script="{{ superscript | strip }}"
+  >
+    <div class="cart__scrollable">
+      <div data-products></div>
+      {%- render 'cart-recommendations', context: 'drawer' -%}
+
+      {% if cart_notes_enable %}
+        <div class="cart__item-row">
+          {%- render 'cart-note' -%}
+        </div>
+      {% endif %}
+    </div>
+
+    <div class="cart__footer">
+      <div class="cart__item-sub cart__item-row cart__item--subtotal">
+        <div>
+          {% render 't_with_fallback', key: 'labels.subtotal', fallback: 'Subtotal' %}
+        </div>
+        <div data-subtotal>{{ cart.total_price | money }}</div>
+      </div>
+
+      <div data-discounts></div>
+
+      {% if cart_terms_conditions_enable %}
+        <div class="cart__item-row cart__terms">
+          <input type="checkbox" id="CartTermsHeader" class="cart__terms-checkbox">
+          <label for="CartTermsHeader" class="text-label">
+            <small>
+              {% if cart_terms_conditions_page != blank %}
+                {% assign actions_terms_i_agree_html = 'actions.terms_i_agree_html'
+                  | t: url: cart_terms_conditions_page.url
+                %}
+                {%- capture fallback_actions_terms_i_agree_html -%}
+                I agree with the <a href='{{ cart_terms_conditions_page.url }}' target='_blank'>terms and conditions</a>
+              {%- endcapture -%}
+                {% render 't_with_fallback',
+                  t: actions_terms_i_agree_html,
+                  fallback: fallback_actions_terms_i_agree_html
+                %}
+              {% else %}
+                {% assign actions_terms_i_agree = 'actions.terms_i_agree' | t %}
+                {% render 't_with_fallback',
+                  t: actions_terms_i_agree,
+                  fallback: 'I agree with the terms and conditions'
+                %}
+              {% endif %}
+            </small>
+          </label>
+        </div>
+      {% endif %}
+
+      <div class="cart__item-row cart__checkout-wrapper payment-buttons">
+        <button
+          type="submit"
+          name="checkout"
+          data-terms-required="{{ cart_terms_conditions_enable }}"
+          class="btn cart__checkout"
+        >
+          {% render 't_with_fallback', key: 'actions.checkout', fallback: 'Check out' %}
+        </button>
+
+        {% if cart_type == 'dropdown' and additional_checkout_buttons and cart_additional_buttons %}
+          <div class="additional-checkout-buttons">{{ content_for_additional_checkout_buttons }}</div>
+        {% endif %}
+      </div>
+
+      <div class="cart__item-row--footer text-center">
+        <small>
+          {%- if cart.taxes_included -%}
+            {% assign info_shipping_at_checkout_taxes_included = 'info.shipping_at_checkout_taxes_included' | t %}
+            {% render 't_with_fallback',
+              t: info_shipping_at_checkout_taxes_included,
+              fallback: 'Taxes included. Shipping and discount codes calculated at checkout.'
+            %}
+          {%- else -%}
+            {% assign info_shipping_at_checkout = 'info.shipping_at_checkout' | t %}
+            {% render 't_with_fallback',
+              t: info_shipping_at_checkout,
+              fallback: 'Shipping, taxes, and discount codes calculated at checkout.'
+            %}
+          {%- endif -%}
+        </small>
+      </div>
+    </div>
+    <script type="application/json" data-locales>
+      {
+        "cartTermsConfirmation":
+          {% render 't_with_fallback', key: 'info.you_must_agree', fallback: 'You must agree with the terms and conditions of sales to check out', as_json: true -%}
+        ,
+        "cartSavings":
+          {%- assign info_save_amount = 'info.save_amount' | t: saved_amount: "[savings]" -%}
+          {%- render 't_with_fallback', t: info_save_amount, fallback: 'Save [savings]', as_json: true, as_json: true -%}
+      }
+    </script>
+  </form>
+
+  <div class="site-header__cart-empty">
+    {% render 't_with_fallback', key: 'info.cart_empty', fallback: 'Your cart is currently empty.' %}
+  </div>
+</header-cart-drawer>
+
+<script type="module">
+  import 'components/header-cart-drawer'
+</script>

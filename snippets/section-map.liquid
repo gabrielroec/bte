@@ -1,0 +1,107 @@
+{% # components v3.0.1 | Copyright © 2024 Archetype Themes Limited Partnership  | "Shopify Theme Store (https://www.shopify.com/legal/terms#9-additional-services)" License  %}
+{%- comment -%}
+  Renders a map section.
+
+  Accepts:
+  - overlay_content {boolean} - Whether to overlay content on the map
+  - layout_on_desktop {string} - Layout of the map on desktop
+  - map_title {string} - Title of the map
+  - heading_size {'h0'|'h1'|'h2'|'h3'} - Size of the heading
+  - heading_position {'left'|'center'|'right'} - Position of the heading
+  - address {string} - Address text of the map
+  - map_address {string} - Address for the map
+  - api_key {string} - Mapbox API key
+  - show_button {boolean} - Whether to show the button
+  - bg_image {image} - Background image object
+  - color_scheme {string} - Color scheme of the map
+
+  Usage:
+  {% render 'section-map' %}
+{%- endcomment -%}
+
+{%- liquid
+  assign overlay_content = overlay_content | default: section.settings.overlay_content, allow_false: true | default: true, allow_false: true
+  assign layout_on_desktop = layout_on_desktop | default: section.settings.layout_on_desktop | default: 'left'
+  assign map_title = map_title | default: section.settings.map_title
+  assign heading_size = heading_size | default: section.settings.heading_size | default: 'h2'
+  assign heading_position = heading_position | default: section.settings.heading_position | default: 'left'
+  assign address = address | default: section.settings.address
+  assign map_address = map_address | default: section.settings.map_address
+  assign api_key = api_key | default: section.settings.api_key
+  assign show_button = show_button | default: section.settings.show_button, allow_false: true | default: true, allow_false: true
+  assign bg_image = bg_image | default: section.settings.background_image
+  assign color_scheme = color_scheme | default: section.settings.color_scheme | default: 'none'
+-%}
+
+{%- capture slot_content -%}
+  {%- if map_title != blank or address != blank -%}
+    <div class="map-section__content text-{{ heading_position }}{% if color_scheme != 'none' %} color-scheme-{{ color_scheme }}{% endif %}" layout="{{ layout_on_desktop }}">
+      {%- if map_title != blank -%}
+        <h3 class="text-spacing {{ heading_size }}">
+          {{ map_title | escape }}
+        </h3>
+      {%- endif -%}
+
+      {%- if address != blank -%}
+        <div class="rte-setting text-spacing">
+          {{ address }}
+        </div>
+
+        {%- if show_button -%}
+          <a
+            href="https://maps.google.com?daddr={{ map_address | escape }}"
+            class="btn btn--small"
+            target="_blank"
+            rel="noopener"
+            aria-label="{{ map_title }}"
+          >
+            {% render 't_with_fallback', key: 'actions.get_directions', fallback: 'Get directions' %}
+          </a>
+        {%- endif -%}
+      {%- endif -%}
+    </div>
+  {%- endif -%}
+{%- endcapture -%}
+
+{%- capture slot_map -%}
+  {%- if map_address != blank -%}
+    <a
+      href="https://www.google.com/maps/place/{{ map_address | escape }}"
+      target="_blank"
+      rel="noopener"
+      aria-label="{{ map_address | escape }}"
+    >
+      {%- render 'map' -%}
+    </a>
+  {%- else -%}
+    {%- render 'map' -%}
+  {%- endif -%}
+{%- endcapture -%}
+
+{%- if overlay_content -%}
+  {%- liquid
+    assign desktop_content_position = 'center-start'
+
+    if layout_on_desktop == 'right'
+      assign desktop_content_position = 'center-end'
+    endif
+  -%}
+
+  <div class="map-section">
+    {% render 'content-over-media',
+      slot_content: slot_content,
+      slot_media: slot_map,
+      mobile_content_position: 'top-center',
+      desktop_content_position: desktop_content_position,
+      overlay: false
+    %}
+  </div>
+{%- else -%}
+  <div class="map-section map-section--no-overlay">
+    {{ slot_content }}
+
+    <div class="map-section__map">
+      {{ slot_map }}
+    </div>
+  </div>
+{%- endif -%}

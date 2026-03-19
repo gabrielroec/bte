@@ -1,0 +1,22 @@
+{% # components v3.0.1 | Copyright © 2024 Archetype Themes Limited Partnership  | "Shopify Theme Store (https://www.shopify.com/legal/terms#9-additional-services)" License  %}
+{%- comment -%}
+  Renders the rich text editor content.
+
+  Accepts:
+  - class {string} - The class to apply to the component
+
+  Usage:
+  {% render 'rte', slot: article.content %}
+{%- endcomment -%}
+
+{%- liquid
+  assign class = class | default: blank
+-%}
+
+<at-rte class="at-rte rte clearfix{% if class != blank %} {{ class }}{% endif %}">
+  {{ slot }}
+</at-rte>
+
+<script type="module">
+  import 'components/rte'
+</script>

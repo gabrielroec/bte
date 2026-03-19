@@ -1,0 +1,87 @@
+{% # components v3.0.1 | Copyright © 2024 Archetype Themes Limited Partnership  | "Shopify Theme Store (https://www.shopify.com/legal/terms#9-additional-services)" License  %}
+{%- comment -%}
+  Renders the customer register section.
+
+  Usage:
+  {% render 'section-main-register %}
+{%- endcomment -%}
+
+<div class="page-width page-width--tiny page-content">
+  <header class="section-header">
+    <h1 class="section-header__title">
+      {% render 't_with_fallback', key: 'actions.create_account', fallback: 'Create Account' %}
+    </h1>
+  </header>
+
+  <div class="form-vertical">
+    {%- form 'create_customer' -%}
+      {{ form.errors | default_errors }}
+
+      <label for="FirstName">
+        {% render 't_with_fallback', key: 'labels.first_name', fallback: 'First name' -%}
+      </label>
+      <input
+        type="text"
+        name="customer[first_name]"
+        id="FirstName"
+        class="input-full"
+        {% if form.first_name %}
+          value="{{ form.first_name }}"
+        {% endif %}
+        autocapitalize="words"
+        autofocus
+      >
+
+      <label for="LastName">
+        {% render 't_with_fallback', key: 'labels.last_name', fallback: 'Last name' -%}
+      </label>
+      <input
+        type="text"
+        name="customer[last_name]"
+        id="LastName"
+        class="input-full"
+        {% if form.last_name %}
+          value="{{ form.last_name }}"
+        {% endif %}
+        autocapitalize="words"
+      >
+
+      <label for="Email">
+        {% render 't_with_fallback', key: 'labels.email', fallback: 'Email' -%}
+      </label>
+      <input
+        type="email"
+        name="customer[email]"
+        id="Email"
+        class="input-full{% if form.errors contains 'email' %} error{% endif %}"
+        {% if form.email %}
+          value="{{ form.email }}"
+        {% endif %}
+        autocorrect="off"
+        autocapitalize="off"
+      >
+
+      <label for="CreatePassword">
+        {% render 't_with_fallback', key: 'labels.password', fallback: 'Password' -%}
+      </label>
+      <input
+        type="password"
+        name="customer[password]"
+        id="CreatePassword"
+        class="input-full{% if form.errors contains 'password' %} error{% endif %}"
+      >
+
+      <p>
+        <label for="register-submit" class="visually-hidden">
+          {% render 't_with_fallback', key: 'actions.create', fallback: 'Create' -%}
+        </label>
+        <input
+          type="submit"
+          id="register-submit"
+          value="            {% render 't_with_fallback', key: 'actions.create', fallback: 'Create' %}"
+          class="btn btn--full"
+        >
+      </p>
+    {%- endform -%}
+  </div>
+</div>

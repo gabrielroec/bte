@@ -1,0 +1,181 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "hero_video_MhrVWU": {
+      "type": "hero-video",
+      "custom_css": [
+        "h2 {font-family: ofelia-text, sans-serif; font-weight: 600;}"
+      ],
+      "settings": {
+        "full_width": true,
+        "title": "RESPONSIBLE MATERIALS.\nREDUCTION OF WASTE.\nMINIMIZE ENVIRONMENTAL IMPACT.",
+        "title_size": 40,
+        "subheading": "SUSTAINABLE PACKAGING",
+        "link_text": "",
+        "link": "",
+        "color_accent": "#ffffff",
+        "text_align": "vertical-bottom horizontal-left",
+        "video": "shopify://files/videos/Video - Sustainable Header (1080p).mp4",
+        "video_url": "",
+        "overlay_opacity": 0,
+        "height": 650,
+        "height_mobile": 300
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {}
+    },
+    "text_and_image_9Afgyc": {
+      "type": "text-and-image",
+      "custom_css": [
+        "h2 {font-family: ofelia-text, sans-serif; font-weight: 600;}"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Untitled_design_17_360x_bcb339a1-8c9b-4b59-9438-5142c67d5369.webp",
+        "image_mask": "none",
+        "image2_mask": "none",
+        "subtitle": "BIODEGRADABLE. POSTCONSUMER RESIN (PCR). SUGARCANE.",
+        "title": "RESPONSIBLE MATERIALS",
+        "heading_size": "h2",
+        "text": "<p>Our bottles, tubes and jars need to effectively protect our formulas, but we also make every effort to ensure they’re made with eco-friendly materials. We use glass, sugarcane plastics and a mix of biodegradable material with post-consumer resin (PCR) that breaks down 40 times faster than standard plastic. All of our packaging is fully recyclable or biodegradable, too.</p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "left",
+        "image_width": "33",
+        "layout": "right",
+        "color_scheme": "none",
+        "divider": false,
+        "top_padding": true,
+        "bottom_padding": true
+      }
+    },
+    "text_and_image_xcLfEY": {
+      "type": "text-and-image",
+      "custom_css": [
+        "h2 {font-family: ofelia-text, sans-serif; font-weight: 600;}"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Untitled_design_18_360x_cb237e7f-10fe-40a7-b4ec-b504bc1711a7.webp",
+        "image_mask": "none",
+        "image2_mask": "none",
+        "subtitle": "NO BOXES. NO LABELS.",
+        "title": "REDUCTION OF WASTE",
+        "heading_size": "h2",
+        "text": "<p>You’ve likely unwrapped a beauty product at least once in your life and thought “what a waste” as you tossed its cardboard box in the bin. At Back To Earth Skin, we skip the excess by using only primary packaging (the bottle, jar or tube) and printing our product information directly onto the bottle to reduce labelling waste.</p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "left",
+        "image_width": "33",
+        "layout": "left",
+        "color_scheme": "none",
+        "divider": true,
+        "top_padding": true,
+        "bottom_padding": true
+      }
+    },
+    "text_and_image_rz3eeE": {
+      "type": "text-and-image",
+      "custom_css": [
+        "h2 {font-family: ofelia-text, sans-serif; font-weight: 600;}"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Untitled_design_19_360x_2b44c638-8991-4f2c-8e2a-7d1365cb9216.webp",
+        "image_mask": "none",
+        "image2_mask": "none",
+        "subtitle": "PACKING. STORAGE. TRANSPORATION.",
+        "title": "MINIMIZE ENVIRONMENTAL IMPACT",
+        "heading_size": "h2",
+        "text": "<p>We’re conscious of every step of a product’s journey—including the packaging we use when we deliver it to your door. To reduce wasted space during storage and shipping, we use uniquely shaped bottles, jars and tubes that stack neatly and limit gaps. This economical use of space reduces our environmental impact (think packing materials used and transportation emissions per shipment) by 25 to 30%.</p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "left",
+        "image_width": "33",
+        "layout": "right",
+        "color_scheme": "none",
+        "divider": true,
+        "top_padding": true,
+        "bottom_padding": true
+      }
+    },
+    "featured_collection_rxcCQt": {
+      "type": "featured-collection",
+      "custom_css": [
+        "h2 {font-family: ofelia-text, sans-serif; font-weight: 600;}"
+      ],
+      "settings": {
+        "title": "Best Sellers",
+        "heading_size": "h2",
+        "heading_position": "left",
+        "home_featured_products": "best-sellers",
+        "count": 5,
+        "products_per_row": 5,
+        "mobile_scrollable": true,
+        "view_all": true,
+        "divider": false
+      }
+    },
+    "hero_video_mUnM8f": {
+      "type": "hero-video",
+      "custom_css": [
+        "h2 {font-family: ofelia-text, sans-serif; font-weight: 600;}"
+      ],
+      "settings": {
+        "full_width": true,
+        "title": "100% NATURAL. VEGAN. CRUELTY FREE. 35-FREE*. SUSTAINABLE",
+        "title_size": 40,
+        "subheading": "",
+        "link_text": "Our Commitment",
+        "link": "",
+        "color_accent": "#ffffff",
+        "text_align": "vertical-bottom horizontal-left",
+        "video": "shopify://files/videos/Video - Our Commitment.mp4",
+        "video_url": "",
+        "overlay_opacity": 22,
+        "height": 650,
+        "height_mobile": 300
+      }
+    },
+    "blog_posts_BMtcbc": {
+      "type": "blog-posts",
+      "custom_css": [
+        "h2 {font-family: ofelia-text, sans-serif; font-weight: 600;}"
+      ],
+      "settings": {
+        "title": "From the Back To Earth Team",
+        "heading_size": "h2",
+        "heading_position": "left",
+        "blog": "skin-health-1",
+        "blog_show_tags": true,
+        "blog_show_date": true,
+        "blog_show_comments": false,
+        "blog_show_author": false,
+        "blog_show_excerpt": false,
+        "blog_image_size": "wide",
+        "divider": true
+      }
+    }
+  },
+  "order": [
+    "hero_video_MhrVWU",
+    "main",
+    "text_and_image_9Afgyc",
+    "text_and_image_xcLfEY",
+    "text_and_image_rz3eeE",
+    "featured_collection_rxcCQt",
+    "hero_video_mUnM8f",
+    "blog_posts_BMtcbc"
+  ]
+}
