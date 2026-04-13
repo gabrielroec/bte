@@ -42,7 +42,7 @@
         "custom_eYcXWC": {
           "type": "custom",
           "settings": {
-            "code": "<ul>\n<li>- Hydrates and nourishes the delicate eye area</li>\n<li>- Helps minimize dark circles for a brighter look</li>\n<li>- Feels lightweight and absorbs quickly without residue</li>\n</ul"
+            "code": "<ul class=\"product-custom-list\">\n<li>Hydrates and nourishes the delicate eye area</li>\n<li>Helps minimize dark circles for a brighter look</li>\n<li>Feels lightweight and absorbs quickly without residue</li>\n</ul>"
           }
         },
         "separator_GqYgcP": {
@@ -69,7 +69,11 @@
           "settings": {
             "show_dynamic_checkout": false,
             "surface_pickup_enable": true,
-            "show_gift_card_recipient": false
+            "show_gift_card_recipient": false,
+            "show_qty_total_row": true,
+            "label_qty": "Qty",
+            "label_total_prefix": "Total:",
+            "color_accent_qty": "#99bccc"
           }
         },
         "trynow_try_before_you_buy_trynow_cta_button_fxpB8x": {
@@ -81,15 +85,12 @@
             "button_margin": "0px 0px 5px 0px",
             "description": "Try up to [cart_limit_suggested_cart_size] items at home for [trial_period] days",
             "description_font_size": 12,
+            "description_color": "#000000",
             "view_collection_text": "View TryNow collection",
             "collection": "",
             "add_to_cart_container_selector": "",
             "gated_toggle_font_size": 12,
             "gated_toggle_size": 0.7,
-            "logo_color": "black",
-            "logo_vertical_alignment": 1,
-            "logo_horizontal_alignment": 0,
-            "logo_width": 46,
             "autoposition": false
           }
         },
@@ -114,10 +115,7 @@
         "trynow_try_before_you_buy_trynow_cta_button_fxpB8x",
         "custom_QahbLh"
       ],
-      "custom_css": [
-        ".product-block .variant__label {display: none;}",
-        "video-media,video {--default-aspect-ratio: 1/1 !important;}"
-      ],
+      "custom_css": [".product-block .variant__label {display: none;}", "video-media,video {--default-aspect-ratio: 1/1 !important;}"],
       "settings": {
         "image_position": "left",
         "image_container_size": "large",
@@ -126,7 +124,8 @@
         "thumbnail_position": "beside",
         "thumbnail_height": "flexible",
         "thumbnail_arrows": false,
-        "mobile_layout": "full",
+        "show_second_image_as_cover": false,
+        "mobile_layout": "partial",
         "enable_video_looping": true,
         "product_video_style": "muted"
       }
@@ -147,13 +146,8 @@
           }
         }
       },
-      "block_order": [
-        "text_block_fxTdmN"
-      ],
-      "custom_css": [
-        "{margin-top: 60px;}",
-        "h2 {font-family: ofelia-text, sans-serif; font-weight: 600; font-size: 18px;}"
-      ],
+      "block_order": ["text_block_fxTdmN"],
+      "custom_css": ["{margin-top: 60px;}", "h2 {font-family: ofelia-text, sans-serif; font-weight: 600; font-size: 18px;}"],
       "settings": {
         "title": "About The Product",
         "per_row": 1,
@@ -476,9 +470,7 @@
         "text_block_EDGDPY",
         "text_block_kDJFpT"
       ],
-      "custom_css": [
-        "h2 {font-family: ofelia-text, sans-serif; font-weight: 600; font-size: 18px;}"
-      ],
+      "custom_css": ["h2 {font-family: ofelia-text, sans-serif; font-weight: 600; font-size: 18px;}"],
       "settings": {
         "title": "All 28 Natural Ingredients",
         "per_row": 4,
@@ -516,13 +508,8 @@
           }
         }
       },
-      "block_order": [
-        "text_block_MdMUUa",
-        "text_block_Li43w9"
-      ],
-      "custom_css": [
-        "h2 {font-family: ofelia-text, sans-serif; font-weight: 600; font-size: 18px;}"
-      ],
+      "block_order": ["text_block_MdMUUa", "text_block_Li43w9"],
+      "custom_css": ["h2 {font-family: ofelia-text, sans-serif; font-weight: 600; font-size: 18px;}"],
       "settings": {
         "title": "How To Apply",
         "per_row": 2,
@@ -560,13 +547,8 @@
           }
         }
       },
-      "block_order": [
-        "text_block_raE9Mr",
-        "text_block_gWmNcT"
-      ],
-      "custom_css": [
-        "h2 {font-family: ofelia-text, sans-serif; font-weight: 600; font-size: 18px;}"
-      ],
+      "block_order": ["text_block_raE9Mr", "text_block_gWmNcT"],
+      "custom_css": ["h2 {font-family: ofelia-text, sans-serif; font-weight: 600; font-size: 18px;}"],
       "settings": {
         "title": "Eco-Friendly Packaging",
         "per_row": 2,
@@ -593,10 +575,7 @@
           }
         }
       },
-      "block_order": [
-        "heading_xUQgwE",
-        "text_YYJzXb"
-      ],
+      "block_order": ["heading_xUQgwE", "text_YYJzXb"],
       "custom_css": [
         "{margin-top: 40px; margin-bottom: 0px;}",
         "h2 {font-family: ofelia-text, sans-serif; font-weight: 600; font-size: 25px;}"
@@ -610,10 +589,7 @@
     },
     "text_and_image_rHLmeH": {
       "type": "text-and-image",
-      "custom_css": [
-        "h2 {font-family: ofelia-text, sans-serif; font-weight: 600; font-size: 35px;}",
-        "p {padding-bottom: 20px;}"
-      ],
+      "custom_css": ["h2 {font-family: ofelia-text, sans-serif; font-weight: 600; font-size: 35px;}", "p {padding-bottom: 20px;}"],
       "settings": {
         "image": "shopify://shop_images/GLOW_Eye_Cream_Lifestyle_1.jpg",
         "image_mask": "none",
@@ -636,9 +612,7 @@
     },
     "text_and_image_tNiqhc": {
       "type": "text-and-image",
-      "custom_css": [
-        "h2 {font-family: ofelia-text, sans-serif; font-weight: 600; font-size: 35px;}"
-      ],
+      "custom_css": ["h2 {font-family: ofelia-text, sans-serif; font-weight: 600; font-size: 35px;}"],
       "settings": {
         "image": "shopify://shop_images/GLOW_Eye_Cream_Lifestyle_2.jpg",
         "image_mask": "square",
@@ -694,11 +668,7 @@
           }
         }
       },
-      "block_order": [
-        "image_AGJAd6",
-        "image_NBkhNm",
-        "image_UktjLX"
-      ],
+      "block_order": ["image_AGJAd6", "image_NBkhNm", "image_UktjLX"],
       "custom_css": [],
       "settings": {
         "full_width": true,
@@ -769,9 +739,7 @@
         "question_PpqiMW",
         "question_LMCqiE"
       ],
-      "custom_css": [
-        "{margin-top: 0px; background: #f7f7f7; padding-bottom: 50px;}"
-      ],
+      "custom_css": ["{margin-top: 0px; background: #f7f7f7; padding-bottom: 50px;}"],
       "settings": {
         "title": "{{ product.title }} FAQs",
         "heading_size": "h2",
@@ -780,17 +748,17 @@
     },
     "featured_collection_yCFwUr": {
       "type": "featured-collection",
-      "custom_css": [
-        "h2 {font-family: ofelia-text, sans-serif; font-weight: 600;}"
-      ],
+      "custom_css": ["h2 {font-family: ofelia-text, sans-serif; font-weight: 600;}"],
       "settings": {
         "title": "You May Also Like",
-        "heading_size": "h2",
+        "heading_size": "h1",
         "heading_position": "left",
-        "home_featured_products": "best-sellers",
+        "home_featured_products": "the-art-of-skin",
         "count": 5,
         "products_per_row": 5,
         "mobile_scrollable": true,
+        "show_second_image_as_cover": true,
+        "show_discount_badges": true,
         "view_all": true,
         "divider": false
       }
@@ -806,9 +774,7 @@
           }
         }
       },
-      "block_order": [
-        "okendo_reviews_widget_BrbN8J"
-      ],
+      "block_order": ["okendo_reviews_widget_BrbN8J"],
       "settings": {
         "full_width": false,
         "space_around": true

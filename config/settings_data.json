@@ -73,7 +73,7 @@
     "collection_grid_image_fill": false,
     "collection_grid_image": "collection",
     "collection_grid_image_margin": 4,
-    "cart_type": "page",
+    "cart_type": "dropdown",
     "cart_additional_buttons": false,
     "cart_collection": "",
     "cart_notes_enable": false,
@@ -989,19 +989,67 @@
         "disabled": false,
         "settings": {}
       },
-      "16798170927650018749": {
-        "type": "shopify://apps/recharge-subscriptions/blocks/storefront-experiences/371eed76-0b44-4869-9813-730372ea378e",
-        "disabled": false,
-        "settings": {}
-      },
       "6987625696575125306": {
         "type": "shopify://apps/weglot-translate-your-store/blocks/weglot/3097482a-fafe-42ff-bc33-ea19e35c4a20",
         "disabled": true,
         "settings": {}
       },
+      "17428600031447253342": {
+        "type": "shopify://apps/attentive/blocks/attn-tag/8df62c72-8fe4-407e-a5b3-72132be30a0d",
+        "disabled": false,
+        "settings": {}
+      },
+      "16398131499962928326": {
+        "type": "shopify://apps/revenuehunt-recommender-quiz/blocks/v2-chat-button/672f3d48-fd3b-4227-8778-c6e58c4f8a98",
+        "disabled": true,
+        "settings": {
+          "chat_color": "#1878b9",
+          "chat_icon_color": "#ffffff",
+          "chat_position": "bottom-right",
+          "chat_hide": false,
+          "chat_dot": true,
+          "chat_greeting": "",
+          "chat_z_index": 98,
+          "quiz_width": "100",
+          "quiz_height": "100",
+          "quiz_z_index": 100,
+          "popup_close_color": "#777777",
+          "quiz_id": ""
+        }
+      },
+      "5537102726230261467": {
+        "type": "shopify://apps/revenuehunt-recommender-quiz/blocks/v2-link-quiz/672f3d48-fd3b-4227-8778-c6e58c4f8a98",
+        "disabled": false,
+        "settings": {
+          "quiz_width": "50",
+          "quiz_height": "70",
+          "quiz_z_index": 100,
+          "popup_close_color": "#777777",
+          "show_list": true,
+          "quiz_id": "uI6wXc"
+        }
+      },
       "855628211100114053": {
         "type": "shopify://apps/klaviyo-email-marketing-sms/blocks/klaviyo-onsite-embed/2632fe16-c075-4321-a88b-50b567f42507",
-        "disabled": true,
+        "disabled": false,
+        "settings": {}
+      },
+      "17848331911275895266": {
+        "type": "shopify://apps/revenuehunt-recommender-quiz/blocks/v2-automatic-popup/672f3d48-fd3b-4227-8778-c6e58c4f8a98",
+        "disabled": false,
+        "settings": {
+          "popup_timeout": 20,
+          "quiz_width": "100",
+          "quiz_height": "100",
+          "quiz_z_index": 100,
+          "popup_close_color": "#777777",
+          "quiz_exit_intent": true,
+          "quiz_id": "uI6wXc"
+        }
+      },
+      "16798170927650018749": {
+        "type": "shopify://apps/recharge-subscriptions/blocks/storefront-experiences/371eed76-0b44-4869-9813-730372ea378e",
+        "disabled": false,
         "settings": {}
       }
     }

@@ -39,6 +39,7 @@
       "block_order": [
         "hero_iKa7AJ"
       ],
+      "disabled": true,
       "name": "t:labels.hero_optional_slides",
       "settings": {
         "full_width": true,
@@ -47,6 +48,65 @@
         "style": "arrows",
         "autoplay": true,
         "autoplay_speed": 7
+      }
+    },
+    "banner_hero_9RRHQX": {
+      "type": "banner-hero",
+      "blocks": {
+        "trust_item_8tAwwt": {
+          "type": "trust_item",
+          "settings": {
+            "icon": "🌿",
+            "text": "Natural"
+          }
+        },
+        "trust_item_MFUbtb": {
+          "type": "trust_item",
+          "settings": {
+            "icon": "V",
+            "text": "Vegan"
+          }
+        },
+        "trust_item_mPCNxW": {
+          "type": "trust_item",
+          "settings": {
+            "icon": "🐰",
+            "text": "Cruelty-Free"
+          }
+        },
+        "trust_item_aWpnTe": {
+          "type": "trust_item",
+          "settings": {
+            "icon": "🏆",
+            "text": "ELLE Winner"
+          }
+        }
+      },
+      "block_order": [
+        "trust_item_8tAwwt",
+        "trust_item_MFUbtb",
+        "trust_item_mPCNxW",
+        "trust_item_aWpnTe"
+      ],
+      "settings": {
+        "background_desktop": "shopify://shop_images/banner-test.webp",
+        "background_mobile": "shopify://shop_images/Screenshot_2026-03-25_092218.webp",
+        "show_trust_bar": false,
+        "lockup_image_alt": "The Art of Skin — natural skincare routines and products",
+        "heading": "Results after 1 application.",
+        "text": "<p>Select one of our award-winning routines crafted for your skin.</p>",
+        "show_social_proof": false,
+        "social_star_count": 5,
+        "social_rating": "4.9",
+        "social_reviews": "1,200+ reviews",
+        "social_tagline": "Results after one application",
+        "content_position": "right",
+        "button_1_label": "Find My Routine",
+        "button_1_link": "shopify://collections/the-art-of-skin",
+        "button_2_label": "Shop All",
+        "button_2_link": "shopify://collections/all",
+        "heading_color": "",
+        "text_color": ""
       }
     },
     "featured_collection_yADwq8": {
@@ -64,6 +124,8 @@
         "count": 6,
         "products_per_row": 3,
         "mobile_scrollable": true,
+        "show_second_image_as_cover": true,
+        "show_discount_badges": true,
         "view_all": true,
         "divider": false
       }
@@ -150,6 +212,7 @@
   "order": [
     "main",
     "slideshow_V6X4UB",
+    "banner_hero_9RRHQX",
     "featured_collection_yADwq8",
     "text_and_image_CeEnfJ",
     "text_and_image_Mzfh4c",

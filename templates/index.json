@@ -41,26 +41,104 @@
           }
         }
       },
-      "block_order": ["banner_hero_trust_1", "banner_hero_trust_2", "banner_hero_trust_3", "banner_hero_trust_4"],
+      "block_order": [
+        "banner_hero_trust_1",
+        "banner_hero_trust_2",
+        "banner_hero_trust_3",
+        "banner_hero_trust_4"
+      ],
       "settings": {
+        "background_desktop": "shopify://shop_images/banner-test.webp",
+        "background_mobile": "shopify://shop_images/Screenshot_2026-03-25_092218.webp",
+        "show_trust_bar": false,
+        "lockup_image_alt": "The Art of Skin — natural skincare routines and products",
         "heading": "Results after 1 application.",
         "text": "<p>Select one of our award-winning routines crafted for your skin.</p>",
+        "show_social_proof": false,
+        "social_star_count": 5,
+        "social_rating": "4.9",
+        "social_reviews": "1,200+ reviews",
+        "social_tagline": "Results after one application",
         "content_position": "right",
         "button_1_label": "Find My Routine",
         "button_1_link": "shopify://collections/the-art-of-skin",
         "button_2_label": "Shop All",
         "button_2_link": "shopify://collections/all",
-        "aspect_desktop_w": 24,
-        "aspect_desktop_h": 9,
-        "aspect_mobile_w": 24,
-        "aspect_mobile_h": 11,
-        "show_trust_bar": true,
-        "show_social_proof": true,
-        "social_star_count": 5,
-        "social_rating": "4.9",
-        "social_reviews": "1,200+ reviews",
-        "social_tagline": "Results after one application"
+        "heading_color": "",
+        "text_color": ""
       }
+    },
+    "icon_marquee_home": {
+      "type": "icon-marquee",
+      "blocks": {
+        "icon_item_1": {
+          "type": "item",
+          "settings": {
+            "text": "Toxin-Free",
+            "icon_asset": "toxin-free.svg"
+          }
+        },
+        "icon_item_2": {
+          "type": "item",
+          "settings": {
+            "text": "Vegan",
+            "icon_asset": "vegan-icon.svg"
+          }
+        },
+        "icon_item_3": {
+          "type": "item",
+          "settings": {
+            "text": "Cruelty Free",
+            "icon_asset": "cruelty-free.svg"
+          }
+        },
+        "icon_item_4": {
+          "type": "item",
+          "settings": {
+            "text": "Sustainable",
+            "icon_asset": "Sustainable-icon.svg"
+          }
+        },
+        "icon_item_5": {
+          "type": "item",
+          "settings": {
+            "text": "100% Natural",
+            "icon_asset": "100natural.svg"
+          }
+        },
+        "icon_item_6": {
+          "type": "item",
+          "settings": {
+            "text": "Toxin-Free",
+            "icon_asset": "toxin-free.svg"
+          }
+        },
+        "icon_item_7": {
+          "type": "item",
+          "settings": {
+            "text": "Vegan",
+            "icon_asset": "vegan-icon.svg"
+          }
+        },
+        "icon_item_8": {
+          "type": "item",
+          "settings": {
+            "text": "Cruelty Free",
+            "icon_asset": "cruelty-free.svg"
+          }
+        }
+      },
+      "block_order": [
+        "icon_item_1",
+        "icon_item_2",
+        "icon_item_3",
+        "icon_item_4",
+        "icon_item_5",
+        "icon_item_6",
+        "icon_item_7",
+        "icon_item_8"
+      ],
+      "settings": {}
     },
     "slideshow_split_GNQHXY": {
       "type": "slideshow-split",
@@ -117,9 +195,15 @@
           }
         }
       },
-      "block_order": ["slide_PjL4Wk", "slide_3DWGVW", "slide_RphYCX"],
+      "block_order": [
+        "slide_PjL4Wk",
+        "slide_3DWGVW",
+        "slide_RphYCX"
+      ],
       "disabled": true,
-      "custom_css": ["h2 {font-family: ofelia-text, sans-serif; font-weight: 600;}"],
+      "custom_css": [
+        "h2 {font-family: ofelia-text, sans-serif; font-weight: 600;}"
+      ],
       "settings": {
         "full_width": true,
         "height": 750,
@@ -131,22 +215,29 @@
     },
     "featured-collection": {
       "type": "featured-collection",
-      "custom_css": ["h2 {font-family: ofelia-text, sans-serif; font-weight: 600;}", ".grid-product__tags {display: none;}"],
+      "custom_css": [
+        "h2 {font-family: ofelia-text, sans-serif; font-weight: 600;}",
+        ".grid-product__tags {display: none;}"
+      ],
       "settings": {
-        "title": "100% Natural Skincare Routines. Toxins-Free. Vegan. Cruelty Free. Sustainable",
+        "title": "Find Your Perfect Routine",
         "heading_size": "h2",
         "heading_position": "left",
         "home_featured_products": "the-art-of-skin",
-        "count": 5,
-        "products_per_row": 5,
-        "mobile_scrollable": true,
+        "count": 6,
+        "products_per_row": 3,
+        "mobile_scrollable": false,
+        "show_second_image_as_cover": true,
+        "show_discount_badges": true,
         "view_all": true,
         "divider": false
       }
     },
     "featured_collection_gFneFk": {
       "type": "featured-collection",
-      "custom_css": [".grid-product__tags {display: none;}"],
+      "custom_css": [
+        ".grid-product__tags {display: none;}"
+      ],
       "settings": {
         "title": "",
         "heading_size": "h2",
@@ -154,14 +245,18 @@
         "home_featured_products": "frontpage",
         "count": 5,
         "products_per_row": 5,
-        "mobile_scrollable": true,
+        "mobile_scrollable": false,
+        "show_second_image_as_cover": true,
+        "show_discount_badges": true,
         "view_all": false,
         "divider": false
       }
     },
     "hero_video_tqUY4Y": {
       "type": "hero-video",
-      "custom_css": ["h2 {font-family: ofelia-text, sans-serif; font-weight: 600;}"],
+      "custom_css": [
+        "h2 {font-family: ofelia-text, sans-serif; font-weight: 600;}"
+      ],
       "settings": {
         "full_width": true,
         "title": "",
@@ -198,7 +293,9 @@
           }
         }
       },
-      "block_order": ["slide_QqdDgT"],
+      "block_order": [
+        "slide_QqdDgT"
+      ],
       "settings": {
         "full_width": true,
         "height": 650,
@@ -229,8 +326,12 @@
           }
         }
       },
-      "block_order": ["slide-1"],
-      "custom_css": ["h2 {font-family: ofelia-text, sans-serif; font-weight: 600;}"],
+      "block_order": [
+        "slide-1"
+      ],
+      "custom_css": [
+        "h2 {font-family: ofelia-text, sans-serif; font-weight: 600;}"
+      ],
       "settings": {
         "full_width": true,
         "height": 750,
@@ -242,7 +343,9 @@
     },
     "hero_video_zh3KQM": {
       "type": "hero-video",
-      "custom_css": ["h2 {font-family: ofelia-text, sans-serif; font-weight: 600;}"],
+      "custom_css": [
+        "h2 {font-family: ofelia-text, sans-serif; font-weight: 600;}"
+      ],
       "settings": {
         "full_width": true,
         "title": "100% Natural <br>0% Guilt",
@@ -261,7 +364,9 @@
     },
     "featured_collection_d9Vfbk": {
       "type": "featured-collection",
-      "custom_css": [".grid-product__tags {display: none;}"],
+      "custom_css": [
+        ".grid-product__tags {display: none;}"
+      ],
       "name": "t:labels.featured_collection",
       "settings": {
         "title": "Art Of Skin",
@@ -270,7 +375,9 @@
         "home_featured_products": "the-art-of-skin",
         "count": 6,
         "products_per_row": 3,
-        "mobile_scrollable": true,
+        "mobile_scrollable": false,
+        "show_second_image_as_cover": true,
+        "show_discount_badges": true,
         "view_all": true,
         "divider": false
       }
@@ -296,7 +403,9 @@
           }
         }
       },
-      "block_order": ["hero_PY8V6g"],
+      "block_order": [
+        "hero_PY8V6g"
+      ],
       "settings": {
         "full_width": true,
         "desktop_size": 0,
@@ -305,10 +414,35 @@
         "autoplay": true,
         "autoplay_speed": 7
       }
+    },
+    "1774894187afecc73b": {
+      "type": "apps",
+      "blocks": {
+        "revenuehunt_recommender_quiz_v2_automatic_popup_block_NcEThV": {
+          "type": "shopify://apps/revenuehunt-recommender-quiz/blocks/v2-automatic-popup-block/672f3d48-fd3b-4227-8778-c6e58c4f8a98",
+          "settings": {
+            "popup_timeout": 20,
+            "quiz_width": "100",
+            "quiz_height": "100",
+            "quiz_z_index": 100,
+            "popup_close_color": "#777777",
+            "quiz_exit_intent": false,
+            "quiz_id": "uI6wXc"
+          }
+        }
+      },
+      "block_order": [
+        "revenuehunt_recommender_quiz_v2_automatic_popup_block_NcEThV"
+      ],
+      "settings": {
+        "full_width": false,
+        "space_around": true
+      }
     }
   },
   "order": [
     "banner_hero_compare",
+    "icon_marquee_home",
     "slideshow_split_GNQHXY",
     "featured-collection",
     "featured_collection_gFneFk",
@@ -317,6 +451,7 @@
     "slideshow-split",
     "hero_video_zh3KQM",
     "featured_collection_d9Vfbk",
-    "slideshow_7JY6Bf"
+    "slideshow_7JY6Bf",
+    "1774894187afecc73b"
   ]
 }

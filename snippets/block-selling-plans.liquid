@@ -1,0 +1,260 @@
+{{ 'selling-plans-widget.css' | asset_url | stylesheet_tag }}
+{%- liquid
+  assign product = section.settings.product | default: product
+  assign mode_name = 'purchase_mode_' | append: section.id
+  assign pill_name = 'selling_plan_pill_' | append: section.id
+  assign form_id = 'product-form-' | append: section.id
+  assign has_sp_alloc = false
+  for v in product.variants
+    if v.selling_plan_allocations.size > 0
+      assign has_sp_alloc = true
+      break
+    endif
+  endfor
+-%}
+{%- if product == blank or product.selling_plan_groups.size == 0 or has_sp_alloc == false -%}
+{%- else -%}
+  {%- assign current_variant = product.selected_or_first_available_variant -%}
+  {%- assign first_allocation = current_variant.selling_plan_allocations.first -%}
+  <block-selling-plans
+    class="selling-plans-widget product-block"
+    data-section-id="{{ section.id }}"
+    data-product-id="{{ product.id }}"
+    {% if block.settings.color_primary != blank or block.settings.color_mint != blank or block.settings.color_beige != blank %}
+      data-style-vars
+    {% endif %}
+    style="{% if block.settings.color_primary != blank %}--sp-primary: {{ block.settings.color_primary }};{% endif %}{% if block.settings.color_mint != blank %}--sp-mint: {{ block.settings.color_mint }};{% endif %}{% if block.settings.color_beige != blank %}--sp-beige: {{ block.settings.color_beige }};{% endif %}"
+    {{ block.shopify_attributes }}
+  >
+    <div class="selling-plans-widget__inner" data-selling-plans-root>
+      <div
+        class="selling-plans-widget__panel selling-plans-widget__panel--subscribe selling-plans-widget__panel--active"
+        data-panel-subscribe
+      >
+        <div class="selling-plans-widget__row">
+          <label class="selling-plans-widget__mode-label" for="sp-mode-sub-{{ section.id }}">
+            <input
+              type="radio"
+              class="selling-plans-widget__mode-input"
+              name="{{ mode_name }}"
+              id="sp-mode-sub-{{ section.id }}"
+              value="subscribe"
+              checked
+              autocomplete="off"
+            >
+            <span class="selling-plans-widget__radio-ui" aria-hidden="true"></span>
+            <div class="selling-plans-widget__row-main">
+              <div class="selling-plans-widget__row-left">
+                <div>
+                  <div class="selling-plans-widget__title-row">
+                    <span class="selling-plans-widget__heading">{{ block.settings.heading_subscribe | escape }}</span>
+                    {%- if block.settings.badge_enable -%}
+                      <span class="selling-plans-widget__badge">
+                        {{- block.settings.badge_text | escape -}}
+                      </span>
+                    {%- endif -%}
+                  </div>
+                
+                </div>
+              </div>
+              <div class="selling-plans-widget__prices selling-plans-widget__prices--subscribe" data-subscribe-prices>
+                {%- liquid
+                  assign cmp_show = false
+                  if first_allocation.compare_at_price and first_allocation.compare_at_price > first_allocation.price
+                    assign cmp_show = true
+                  endif
+                -%}
+                 <span class="selling-plans-widget__price-current" data-subscribe-price>
+                  {{- first_allocation.price | money -}}
+                </span>
+                <span
+                  class="selling-plans-widget__price-compare{% unless cmp_show %} selling-plans-widget__price-compare--hidden{% endunless %}"
+                  data-subscribe-compare
+                >
+                  {%- if cmp_show -%}
+                    {{- first_allocation.compare_at_price | money -}}
+                  {%- endif -%}
+                </span>
+               
+              </div>
+            </div>
+            
+          </label>
+          
+        </div>
+  <p class="selling-plans-widget__perks"><span class="selling-plans-widget__perks-icon" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" focusable="false">
+                        <mask id="sp-perks-mask-{{ section.id }}" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="16" height="16">
+                          <rect width="16" height="16" fill="#D9D9D9"/>
+                        </mask>
+                        <g mask="url(#sp-perks-mask-{{ section.id }})">
+                          <path d="M7.06665 11.0667L11.7666 6.36671L10.8333 5.43337L7.06665 9.20004L5.16665 7.30004L4.23331 8.23337L7.06665 11.0667ZM7.99998 14.6667C7.07776 14.6667 6.21109 14.4917 5.39998 14.1417C4.58887 13.7917 3.88331 13.3167 3.28331 12.7167C2.68331 12.1167 2.20831 11.4112 1.85831 10.6C1.50831 9.78893 1.33331 8.92226 1.33331 8.00004C1.33331 7.07782 1.50831 6.21115 1.85831 5.40004C2.20831 4.58893 2.68331 3.88337 3.28331 3.28337C3.88331 2.68337 4.58887 2.20837 5.39998 1.85837C6.21109 1.50837 7.07776 1.33337 7.99998 1.33337C8.9222 1.33337 9.78887 1.50837 10.6 1.85837C11.4111 2.20837 12.1166 2.68337 12.7166 3.28337C13.3166 3.88337 13.7916 4.58893 14.1416 5.40004C14.4916 6.21115 14.6666 7.07782 14.6666 8.00004C14.6666 8.92226 14.4916 9.78893 14.1416 10.6C13.7916 11.4112 13.3166 12.1167 12.7166 12.7167C12.1166 13.3167 11.4111 13.7917 10.6 14.1417C9.78887 14.4917 8.9222 14.6667 7.99998 14.6667ZM7.99998 13.3334C9.48887 13.3334 10.75 12.8167 11.7833 11.7834C12.8166 10.75 13.3333 9.48893 13.3333 8.00004C13.3333 6.51115 12.8166 5.25004 11.7833 4.21671C10.75 3.18337 9.48887 2.66671 7.99998 2.66671C6.51109 2.66671 5.24998 3.18337 4.21665 4.21671C3.18331 5.25004 2.66665 6.51115 2.66665 8.00004C2.66665 9.48893 3.18331 10.75 4.21665 11.7834C5.24998 12.8167 6.51109 13.3334 7.99998 13.3334Z" fill="#286D8A"/>
+                        </g>
+                      </svg></span><span class="selling-plans-widget__perks-text">Deliveries on your schedule: pause, modify or cancel any time</span></p>
+        <div class="selling-plans-widget__frequency-block" data-frequency-block>
+          <span class="selling-plans-widget__deliver-label">{{ block.settings.label_deliver_every | escape }}</span>
+          <div class="selling-plans-widget__pills" data-pills-root>
+            {%- for allocation in current_variant.selling_plan_allocations -%}
+              {%- assign plan = allocation.selling_plan -%}
+              {%- liquid
+                assign plan_short = plan.name
+                assign ov_used = false
+                for opt in plan.options
+                  assign ov = opt.value | downcase
+                  if ov contains 'week' or ov contains 'day' or ov contains 'month'
+                    assign plan_short = opt.value | replace: '-', ' '
+                    assign ov_used = true
+                    break
+                  endif
+                endfor
+                unless ov_used
+                  for opt in plan.options
+                    assign opt_n = opt.name | downcase
+                    if opt_n contains 'frequency' or opt_n contains 'delivery' or opt_n contains 'interval' or opt_n contains 'unit'
+                      assign plan_short = opt.value | replace: '-', ' '
+                      break
+                    endif
+                  endfor
+                endunless
+                if plan_short == plan.name and plan.name contains 'every '
+                  assign plan_short = plan.name | split: 'every ' | last | strip
+                endif
+              -%}
+              {%- liquid
+                assign pill_cmp_show = false
+                if allocation.compare_at_price and allocation.compare_at_price > allocation.price
+                  assign pill_cmp_show = true
+                endif
+              -%}
+              <label
+                class="selling-plans-widget__pill"
+                data-sp-price="{{ allocation.price | money | strip_html | escape }}"
+                {% if pill_cmp_show %}
+                  data-sp-compare="{{ allocation.compare_at_price | money | strip_html | escape }}"
+                {% endif %}
+              >
+                <input
+                  type="radio"
+                  class="selling-plans-widget__pill-input"
+                  name="{{ pill_name }}"
+                  value="{{ plan.id }}"
+                  {% if forloop.first %}
+                    checked
+                  {% endif %}
+                  autocomplete="off"
+                >
+                <span class="selling-plans-widget__pill-text">{{ plan_short | escape }}</span>
+              </label>
+            {%- endfor -%}
+          </div>
+        </div>
+      </div>
+
+      <div class="selling-plans-widget__panel selling-plans-widget__panel--onetime" data-panel-onetime>
+        <div class="selling-plans-widget__row">
+          <label class="selling-plans-widget__mode-label" for="sp-mode-once-{{ section.id }}">
+            <input
+              type="radio"
+              class="selling-plans-widget__mode-input"
+              name="{{ mode_name }}"
+              id="sp-mode-once-{{ section.id }}"
+              value="onetime"
+              autocomplete="off"
+            >
+            <span class="selling-plans-widget__radio-ui" aria-hidden="true"></span>
+            <div class="selling-plans-widget__row-main">
+              <div class="selling-plans-widget__row-left">
+                <span class="selling-plans-widget__heading">{{ block.settings.label_onetime | escape }}</span>
+              </div>
+              <div class="selling-plans-widget__prices selling-plans-widget__onetime-prices">
+                <span class="selling-plans-widget__price-current" data-onetime-price>
+                  {{- current_variant.price | money -}}
+                </span>
+              </div>
+            </div>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <input
+      type="hidden"
+      name="selling_plan"
+      form="{{ form_id }}"
+      value="{{ first_allocation.selling_plan.id }}"
+      class="selling-plans-widget__selling-plan-input"
+    >
+
+    <script type="application/json" data-selling-plans-config>
+      {
+        "modeName": {{ mode_name | json }},
+        "pillName": {{ pill_name | json }},
+        "labels": {
+          "headingSubscribe": {{ block.settings.heading_subscribe | json }},
+          "badgeText": {{ block.settings.badge_text | json }},
+          "showBadge": {{ block.settings.badge_enable | json }},
+          "deliverEvery": {{ block.settings.label_deliver_every | json }},
+          "onetime": {{ block.settings.label_onetime | json }}
+        },
+        "variants": {
+          {%- for variant in product.variants -%}
+            {%- assign v_disc = nil -%}
+            {%- for allocation in variant.selling_plan_allocations -%}
+              {%- for adj in allocation.selling_plan.price_adjustments -%}
+                {%- if adj.value_type == 'percentage' -%}
+                  {%- assign v_disc = adj.value -%}
+                  {%- break -%}
+                {%- endif -%}
+              {%- endfor -%}
+              {%- if v_disc -%}
+                {%- break -%}
+              {%- endif -%}
+            {%- endfor -%}
+            "{{ variant.id }}": {
+              "onetimePrice": {{ variant.price | money | strip_html | json }},
+              "discountPercent": {% if v_disc %}{{ v_disc | json }}{% else %}null{% endif %},
+              "allocations": [
+                {%- for allocation in variant.selling_plan_allocations -%}
+                  {%- assign plan = allocation.selling_plan -%}
+                  {%- liquid
+                    assign plan_short = plan.name
+                    assign ov_used = false
+                    for opt in plan.options
+                      assign ov = opt.value | downcase
+                      if ov contains 'week' or ov contains 'day' or ov contains 'month'
+                        assign plan_short = opt.value | replace: '-', ' '
+                        assign ov_used = true
+                        break
+                      endif
+                    endfor
+                    unless ov_used
+                      for opt in plan.options
+                        assign opt_n = opt.name | downcase
+                        if opt_n contains 'frequency' or opt_n contains 'delivery' or opt_n contains 'interval' or opt_n contains 'unit'
+                          assign plan_short = opt.value | replace: '-', ' '
+                          break
+                        endif
+                      endfor
+                    endunless
+                    if plan_short == plan.name and plan.name contains 'every '
+                      assign plan_short = plan.name | split: 'every ' | last | strip
+                    endif
+                  -%}
+                  {
+                    "planId": {{ plan.id | json }},
+                    "shortLabel": {{ plan_short | json }},
+                    "price": {{ allocation.price | money | strip_html | json }},
+                    "compareAt": {%- if allocation.compare_at_price and allocation.compare_at_price > allocation.price -%}{{ allocation.compare_at_price | money | strip_html | json }}{%- else -%}""{%- endif -%}
+                  }{%- unless forloop.last -%},{%- endunless -%}
+                {%- endfor -%}
+              ]
+            }{%- unless forloop.last -%},{%- endunless -%}
+          {%- endfor -%}
+        }
+      }
+    </script>
+  </block-selling-plans>
+
+  <script type="module">
+    import 'components/block-selling-plans'
+  </script>
+{%- endif -%}

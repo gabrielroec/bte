@@ -6,10 +6,19 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="theme-color" content="{{ settings.color_button }}">
     <link rel="canonical" href="{{ canonical_url }}">
+    <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MGKCV6L');</script>
+<!-- End Google Tag Manager -->
+    <link rel="preconnect" href="https://fonts.shopifycdn.com" crossorigin>
     <link rel="preconnect" href="https://use.typekit.net" crossorigin>
-    <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
-    <link rel="dns-prefetch" href="https://fonts.shopifycdn.com">
-    <link rel="dns-prefetch" href="https://p.typekit.net">
+    <link rel="preconnect" href="https://p.typekit.net" crossorigin>
+    <link rel="dns-prefetch" href="https://ajax.googleapis.com">
+    <link rel="dns-prefetch" href="https://maps.googleapis.com">
+    <link rel="dns-prefetch" href="https://maps.gstatic.com">
 
     {%- if settings.favicon != blank -%}
       <link rel="shortcut icon" href="{{ settings.favicon | img_url: '32x32' }}" type="image/png">
@@ -24,13 +33,12 @@
     {%- render 'social-meta-tags' -%}
 
     {%- render 'font-face' -%}
-    <link rel="preload" href="https://use.typekit.net/rye8xwk.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://use.typekit.net/rye8xwk.css"></noscript>
+  <link rel="stylesheet" href="https://use.typekit.net/rye8xwk.css">
 
+    
     {{ 'components.css' | asset_url | stylesheet_tag: preload: true }}
     {%- render 'css-variables' -%}
-    <link rel="preload" href="{{ 'overrides.css' | asset_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript>{{ 'overrides.css' | asset_url | stylesheet_tag }}</noscript>
+    {{ 'overrides.css' | asset_url | stylesheet_tag }}
 
     {%- style -%}
       :root {
@@ -70,15 +78,8 @@
 
     {{ content_for_header }}
 
-    <!-- Google Tag Manager (deferred to reduce critical path) -->
-    <script>
-      window.addEventListener('DOMContentLoaded', function() {
-        var d=document,s='script',l='dataLayer',i='GTM-MGKCV6L';
-        window[l]=window[l]||[];window[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
-        var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
-        j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-      });
-    </script>
+    {{ 'okendo-star-overrides.css' | asset_url | stylesheet_tag }}
+    {{ 'product-custom-list.css' | asset_url | stylesheet_tag }}
 
     <script src="{{ 'theme.js' | asset_url }}" defer="defer"></script>
 

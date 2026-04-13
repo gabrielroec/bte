@@ -48,9 +48,21 @@
   assign product_grid_style = product_grid_style | default: settings.product_grid_style | default: 'grey-round'
   assign set_image_breathing_room = set_image_breathing_room | default: settings.set_image_breathing_room, allow_false: true | default: true, allow_false: true
   assign type = type | default: blank
+  assign show_second_image_as_cover = show_second_image_as_cover | default: false, allow_false: true
+  assign show_save_badge = show_save_badge | default: false, allow_false: true
+
+  assign product_variant = product.selected_or_first_available_variant
+  assign compare_at_price = product.compare_at_price
+  assign current_price = product.price
+  if product_variant
+    if product_variant.compare_at_price
+      assign compare_at_price = product_variant.compare_at_price
+    endif
+    assign current_price = product_variant.price
+  endif
 
   assign on_sale = false
-  if product.compare_at_price > product.price
+  if compare_at_price > current_price
     assign on_sale = true
   endif
 
@@ -190,6 +202,11 @@
         endif
 
         assign preview_image = product.featured_media.preview_image
+        if show_second_image_as_cover and product.media.size > 1
+          for media in product.media offset: 1 limit: 1
+            assign preview_image = media.preview_image
+          endfor
+        endif
       -%}
 
       <a href="{{ product.url | within: collection }}" class="grid-item__link">
@@ -209,12 +226,18 @@
                 {% render 't_with_fallback', key: 'info.sold_out', fallback: 'Sold Out' %}
               </div>
             {%- endunless -%}
-            {%- if on_sale and product.available -%}
+            {%- if on_sale and product.available and show_save_badge != true -%}
               <div class="grid-product__tag grid-product__tag--sale">
                 {% render 't_with_fallback', key: 'labels.sale', fallback: 'Sale' %}
               </div>
             {%- endif -%}
           </div>
+
+          {%- if show_save_badge and on_sale and product.available -%}
+            {%- capture saved_amount -%}{{ compare_at_price | minus: current_price | money_without_trailing_zeros }}{%- endcapture -%}
+            <div class="grid-product__sale-badge">SALE</div>
+            <div class="grid-product__save-badge">SAVE {{ saved_amount }}</div>
+          {%- endif -%}
 
           {%- if fixed_aspect_ratio -%}
             <div
@@ -270,22 +293,31 @@
           {%- endif -%}
 
           {%- if product_hover_image and product.media.size > 1 -%}
-            {%- for media in product.media offset: 1 limit: 1 -%}
-              {%- assign second_image = media.preview_image -%}
-            {%- endfor -%}
-            <div class="grid-product__secondary-image small--hide">
-              {%- capture secondary_image_classes -%}
-                image-style--{{ image_style }}
-              {%- endcapture -%}
-              {%- render 'image-element',
-                img: second_image,
-                classes: secondary_image_classes,
-                sizes: sizes,
-                sizeVariable: sizeVariable,
-                fallback: fallback,
-                widths: '200, 300, 400, 540, 720'
-              -%}
-            </div>
+            {%- liquid
+              assign hover_offset = 1
+              if show_second_image_as_cover
+                assign hover_offset = 2
+              endif
+              assign secondary_image = blank
+              for media in product.media offset: hover_offset limit: 1
+                assign secondary_image = media.preview_image
+              endfor
+            -%}
+            {%- if secondary_image != blank -%}
+              <div class="grid-product__secondary-image small--hide">
+                {%- capture secondary_image_classes -%}
+                  image-style--{{ image_style }}
+                {%- endcapture -%}
+                {%- render 'image-element',
+                  img: secondary_image,
+                  classes: secondary_image_classes,
+                  sizes: sizes,
+                  sizeVariable: sizeVariable,
+                  fallback: fallback,
+                  widths: '200, 300, 400, 540, 720'
+                -%}
+              </div>
+            {%- endif -%}
           {%- endif -%}
 
           {%- if enable_swatches -%}

@@ -1,12 +1,10 @@
-{%- comment -%}
-  Performance: WebP CDN images, explicit dimensions (CLS), fetchpriority on LCP img, async decode.
-  SEO: single H1, descriptive lockup alt, semantic section, crawlable CTA links.
+{%- comment -%} 
+    Performance: WebP CDN images, explicit dimensions (CLS), fetchpriority on LCP img, async decode.
+    SEO: single H1, descriptive lockup alt, semantic section, crawlable CTA links. 
 {%- endcomment -%}
 {%- liquid
   assign s = section.settings
-  assign default_bg_desktop = 'banner-test.jpg'
-  assign default_bg_mobile = 'bgmob.jpg'
-  assign default_fg = 'image-a-text.jpg'
+  assign default_fg = 'AgingSkin-RoutineProductShotv2 1.jpg'
   assign fmt = 'webp'
 
   assign bg_desktop_pick = s.background_desktop
@@ -25,22 +23,6 @@
   assign img_is_shopify = false
   if img_shopify != blank
     assign img_is_shopify = true
-  endif
-
-  if desktop_is_shopify
-    assign ar_d_w = bg_desktop_pick.width
-    assign ar_d_h = bg_desktop_pick.height
-  else
-    assign ar_d_w = s.aspect_desktop_w | default: 24
-    assign ar_d_h = s.aspect_desktop_h | default: 9
-  endif
-
-  if img_is_shopify
-    assign ar_m_w = img_shopify.width
-    assign ar_m_h = img_shopify.height
-  else
-    assign ar_m_w = s.aspect_mobile_w | default: 24
-    assign ar_m_h = s.aspect_mobile_h | default: 9
   endif
 
   assign lockup_alt = s.lockup_image_alt | default: 'The Art of Skin — natural skincare routines and products'
@@ -70,12 +52,9 @@
   role="region"
   aria-label="{{ lockup_alt | truncate: 80 | escape }}"
   {% endif %}
-  style="
-    --bh-ar-d: {{ ar_d_w }} / {{ ar_d_h }};
-    --bh-ar-m: {{ ar_m_w }} / {{ ar_m_h }};
-    {% if s.heading_color != blank %}--bh-heading-color: {{ s.heading_color }};{% endif %}
-    {% if s.text_color != blank %}--bh-text-color: {{ s.text_color }};{% endif %}
-  ">
+  {% if s.heading_color != blank or s.text_color != blank %}
+  style="{% if s.heading_color != blank %}--bh-heading-color: {{ s.heading_color }};{% endif %}{% if s.text_color != blank %}--bh-text-color: {{ s.text_color }};{% endif %}"
+  {% endif %}>
   <div class="banner-hero__stage">
     <div class="banner-hero__media">
       <picture>
@@ -91,35 +70,42 @@
               {{ bg_desktop_pick | image_url: width: 2600, format: fmt }} 2600w
             "
             sizes="100vw">
-        {%- else -%}
-          <source media="(min-width: 769px)" srcset="{{ default_bg_desktop | asset_url }}">
         {%- endif -%}
 
         {%- if img_is_shopify -%}
-          <img
-            class="banner-hero__img"
-            src="{{ img_shopify | image_url: width: 1200, format: fmt }}"
+          <source
+            media="(max-width: 768px)"
+            type="image/webp"
             srcset="
               {{ img_shopify | image_url: width: 400, format: fmt }} 400w,
               {{ img_shopify | image_url: width: 600, format: fmt }} 600w,
-              {{ img_shopify | image_url: width: 900, format: fmt }} 900w,
-              {{ img_shopify | image_url: width: 1200, format: fmt }} 1200w,
-              {{ img_shopify | image_url: width: 1500, format: fmt }} 1500w
+              {{ img_shopify | image_url: width: 800, format: fmt }} 800w,
+              {{ img_shopify | image_url: width: 1200, format: fmt }} 1200w
             "
-            sizes="100vw"
+            sizes="100vw">
+          <img
+            class="banner-hero__img"
+            src="{{ img_shopify | image_url: width: 1200, format: fmt }}"
             alt=""
             width="{{ img_shopify.width }}"
             height="{{ img_shopify.height }}"
             loading="eager"
             fetchpriority="high"
             decoding="async">
-        {%- else -%}
+        {%- elsif desktop_is_shopify -%}
           <img
             class="banner-hero__img"
-            src="{{ default_bg_mobile | asset_url }}"
+            src="{{ bg_desktop_pick | image_url: width: 1600, format: fmt }}"
+            srcset="
+              {{ bg_desktop_pick | image_url: width: 800, format: fmt }} 800w,
+              {{ bg_desktop_pick | image_url: width: 1200, format: fmt }} 1200w,
+              {{ bg_desktop_pick | image_url: width: 1600, format: fmt }} 1600w,
+              {{ bg_desktop_pick | image_url: width: 2000, format: fmt }} 2000w
+            "
+            sizes="(max-width: 768px) 100vw, min(100vw, 1240px)"
             alt=""
-            width="1024"
-            height="768"
+            width="{{ bg_desktop_pick.width }}"
+            height="{{ bg_desktop_pick.height }}"
             loading="eager"
             fetchpriority="high"
             decoding="async">
@@ -163,8 +149,7 @@
           {%- if s.foreground_image != blank -%}
             {%- assign fg = s.foreground_image -%}
             {%- assign fg_alt = fg.alt | default: lockup_alt -%}
-            {{
-              fg | image_url: width: 560, format: fmt | image_tag: loading: 'lazy', decoding: 'async', class: 'banner-hero__foreground', alt: fg_alt, widths: '200, 360, 480, 560', sizes: '(max-width: 749px) 92vw, 576px'
+            {{ fg | image_url: width: 560, format: fmt | image_tag: loading: 'lazy', decoding: 'async', class: 'banner-hero__foreground', alt: fg_alt, widths: '200, 360, 480, 560', sizes: '(max-width: 749px) 92vw, 576px'
             }}
           {%- else -%}
             <img
@@ -177,6 +162,8 @@
               decoding="async">
           {%- endif -%}
         </div>
+
+        <p class="banner-hero__eyebrow">THE ART OF SKIN</p>
 
         {%- if s.heading != blank -%}
           <h1 class="banner-hero__title" id="banner-hero-heading-{{ section.id }}">{{ s.heading | escape }}</h1>
@@ -201,26 +188,26 @@
             class="banner-hero__actions"
             role="group"
             aria-label="Call to action">
-            {%- if show_b1 -%}
-              <a
-                href="{{ b1 }}"
-                class="btn banner-hero__btn"
-                {% if b1_ext %}
-                rel="noopener noreferrer"
-                target="_blank"
-                {% endif %}>
-                {{- s.button_1_label | escape -}}
-              </a>
-            {%- endif -%}
             {%- if show_b2 -%}
               <a
                 href="{{ b2 }}"
-                class="btn btn--secondary banner-hero__btn"
+                class="btn banner-hero__btn banner-hero__btn--shop-all"
                 {% if b2_ext %}
                 rel="noopener noreferrer"
                 target="_blank"
                 {% endif %}>
                 {{- s.button_2_label | escape -}}
+              </a>
+            {%- endif -%}
+            {%- if show_b1 -%}
+              <a
+                href="{{ b1 }}"
+                class="btn banner-hero__btn banner-hero__btn--routine"
+                {% if b1_ext %}
+                rel="noopener noreferrer"
+                target="_blank"
+                {% endif %}>
+                {{- s.button_1_label | escape -}}
               </a>
             {%- endif -%}
           </div>

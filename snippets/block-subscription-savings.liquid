@@ -1,0 +1,80 @@
+{{ 'block-subscription-savings.css' | asset_url | stylesheet_tag }}
+{%- liquid
+  assign product = section.settings.product | default: product
+  assign sp_mode_name = 'purchase_mode_' | append: section.id
+  assign sp_pill_name = 'selling_plan_pill_' | append: section.id
+  assign has_sp_alloc = false
+  for v in product.variants
+    if v.selling_plan_allocations.size > 0
+      assign has_sp_alloc = true
+      break
+    endif
+  endfor
+-%}
+{%- if product == blank or has_sp_alloc == false -%}
+{%- else -%}
+  <block-subscription-savings
+    class="product-block subscription-savings"
+    data-section-id="{{ section.id }}"
+    data-product-id="{{ product.id }}"
+    {{ block.shopify_attributes }}
+  >
+    <div class="subscription-savings__inner">
+      <p class="subscription-savings__line" data-line-order></p>
+      <p class="subscription-savings__line" data-line-year></p>
+    </div>
+    <script type="application/json" data-subscription-savings-config>
+      {
+        "moneyFormat": {{ shop.money_format | json }},
+        "modeName": {{ sp_mode_name | json }},
+        "pillName": {{ sp_pill_name | json }},
+        "lineOrder": {{ block.settings.line_order | json }},
+        "lineYear": {{ block.settings.line_year | json }},
+        "variants": {
+          {%- for variant in product.variants -%}
+            "{{ variant.id }}": {
+              "onetimeCents": {{ variant.price | json }},
+              "allocations": [
+                {%- for allocation in variant.selling_plan_allocations -%}
+                  {%- assign plan = allocation.selling_plan -%}
+                  {%- liquid
+                    assign plan_short = plan.name
+                    assign ov_used = false
+                    for opt in plan.options
+                      assign ov = opt.value | downcase
+                      if ov contains 'week' or ov contains 'day' or ov contains 'month'
+                        assign plan_short = opt.value | replace: '-', ' '
+                        assign ov_used = true
+                        break
+                      endif
+                    endfor
+                    unless ov_used
+                      for opt in plan.options
+                        assign opt_n = opt.name | downcase
+                        if opt_n contains 'frequency' or opt_n contains 'delivery' or opt_n contains 'interval' or opt_n contains 'unit'
+                          assign plan_short = opt.value | replace: '-', ' '
+                          break
+                        endif
+                      endfor
+                    endunless
+                    if plan_short == plan.name and plan.name contains 'every '
+                      assign plan_short = plan.name | split: 'every ' | last | strip
+                    endif
+                  -%}
+                  {
+                    "planId": {{ plan.id | json }},
+                    "shortLabel": {{ plan_short | json }},
+                    "priceCents": {{ allocation.price | json }}
+                  }{%- unless forloop.last -%},{%- endunless -%}
+                {%- endfor -%}
+              ]
+            }{%- unless forloop.last -%},{%- endunless -%}
+          {%- endfor -%}
+        }
+      }
+    </script>
+  </block-subscription-savings>
+  <script type="module">
+    import 'components/block-subscription-savings'
+  </script>
+{%- endif -%}

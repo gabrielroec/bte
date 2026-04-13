@@ -42,7 +42,7 @@
         "custom_eYcXWC": {
           "type": "custom",
           "settings": {
-            "code": "<b>The 7 Step Routine</b>\n<ul>\n<li>- GLOW™ Foaming Facial Cleanser</li>\n<li>- GLOW™ Exfoliating Scrub</li>\n<li>- GLOW™ Facial Mask</li>\n<li>- GLOW™ Facial Mist</li>\n<li>- GLOW™ Facial Serum</li>\n<li>- GLOW™ Eye Cream</li>\n<li>- GLOW™ Daily Moisturizer</li>\n</ul"
+            "code": "<b>The 7 Step Routine</b>\n<ul class=\"product-custom-list\">\n<li>GLOW™ Foaming Facial Cleanser</li>\n<li>GLOW™ Exfoliating Scrub</li>\n<li>GLOW™ Facial Mask</li>\n<li>GLOW™ Facial Mist</li>\n<li>GLOW™ Facial Serum</li>\n<li>GLOW™ Eye Cream</li>\n<li>GLOW™ Daily Moisturizer</li>\n</ul>"
           }
         },
         "separator_GqYgcP": {
@@ -63,7 +63,11 @@
           "settings": {
             "show_dynamic_checkout": false,
             "surface_pickup_enable": true,
-            "show_gift_card_recipient": false
+            "show_gift_card_recipient": false,
+            "show_qty_total_row": true,
+            "label_qty": "Qty",
+            "label_total_prefix": "Total:",
+            "color_accent_qty": "#99bccc"
           }
         },
         "trynow_try_before_you_buy_trynow_cta_button_wmr8MG": {
@@ -75,15 +79,12 @@
             "button_margin": "0px 0px 5px 0px",
             "description": "Try routine at home for 14 days",
             "description_font_size": 12,
+            "description_color": "#000000",
             "view_collection_text": "",
             "collection": "",
             "add_to_cart_container_selector": "",
             "gated_toggle_font_size": 12,
             "gated_toggle_size": 0.7,
-            "logo_color": "black",
-            "logo_vertical_alignment": 1,
-            "logo_horizontal_alignment": 0,
-            "logo_width": 46,
             "autoposition": false
           }
         }
@@ -100,10 +101,7 @@
         "buy_buttons_abEdCr",
         "trynow_try_before_you_buy_trynow_cta_button_wmr8MG"
       ],
-      "custom_css": [
-        ".product-block .variant__label {display: none;}",
-        "video-media,video {--default-aspect-ratio: 1/1 !important;}"
-      ],
+      "custom_css": [".product-block .variant__label {display: none;}", "video-media,video {--default-aspect-ratio: 1/1 !important;}"],
       "settings": {
         "image_position": "left",
         "image_container_size": "large",
@@ -112,7 +110,8 @@
         "thumbnail_position": "beside",
         "thumbnail_height": "flexible",
         "thumbnail_arrows": false,
-        "mobile_layout": "full",
+        "show_second_image_as_cover": false,
+        "mobile_layout": "partial",
         "enable_video_looping": true,
         "product_video_style": "muted"
       }
@@ -214,9 +213,7 @@
         "text_block_94NGRt",
         "text_block_EJhTei"
       ],
-      "custom_css": [
-        "div {padding-top: 30px;}"
-      ],
+      "custom_css": ["div {padding-top: 30px;}"],
       "name": "Advanced accordion",
       "settings": {
         "title": "100% Natural Ingredients",
@@ -244,10 +241,7 @@
           }
         }
       },
-      "block_order": [
-        "heading_xUQgwE",
-        "text_YYJzXb"
-      ],
+      "block_order": ["heading_xUQgwE", "text_YYJzXb"],
       "custom_css": [
         "{margin-top: 40px; margin-bottom: 0px;}",
         "h2 {font-family: ofelia-text, sans-serif; font-weight: 600; font-size: 25px;}"
@@ -270,12 +264,8 @@
           }
         }
       },
-      "block_order": [
-        "heading_gBKeFT"
-      ],
-      "custom_css": [
-        "div {padding-bottom: 0px; margin-bottom: 0px;}"
-      ],
+      "block_order": ["heading_gBKeFT"],
+      "custom_css": ["div {padding-bottom: 0px; margin-bottom: 0px;}"],
       "name": "t:labels.rich_text",
       "settings": {
         "align_text": "left",
@@ -422,9 +412,7 @@
           }
         }
       },
-      "block_order": [
-        "hero_c6qjWm"
-      ],
+      "block_order": ["hero_c6qjWm"],
       "custom_css": [
         "h2 {font-family: ofelia-text, sans-serif; font-weight: 600; font-size: 25px;}",
         "h1 {font-family: ofelia-text, sans-serif; font-weight: 600; font-size: 35px;}"
@@ -441,10 +429,7 @@
     },
     "text_and_image_rHLmeH": {
       "type": "text-and-image",
-      "custom_css": [
-        "h2 {font-family: ofelia-text, sans-serif; font-weight: 600; font-size: 35px;}",
-        "p {padding-bottom: 20px;}"
-      ],
+      "custom_css": ["h2 {font-family: ofelia-text, sans-serif; font-weight: 600; font-size: 35px;}", "p {padding-bottom: 20px;}"],
       "settings": {
         "image": "shopify://shop_images/GLOW_Foaming_Cleanser_Lifestyle_2.jpg",
         "image_mask": "none",
@@ -467,9 +452,7 @@
     },
     "text_and_image_tNiqhc": {
       "type": "text-and-image",
-      "custom_css": [
-        "h2 {font-family: ofelia-text, sans-serif; font-weight: 600; font-size: 35px;}"
-      ],
+      "custom_css": ["h2 {font-family: ofelia-text, sans-serif; font-weight: 600; font-size: 35px;}"],
       "settings": {
         "image": "shopify://shop_images/Back_To_Earth_Clarify.jpg",
         "image_mask": "square",
@@ -492,10 +475,7 @@
     },
     "text_and_image_eyG97U": {
       "type": "text-and-image",
-      "custom_css": [
-        "h2 {font-family: ofelia-text, sans-serif; font-weight: 600; font-size: 35px;}",
-        "p {padding-bottom: 20px;}"
-      ],
+      "custom_css": ["h2 {font-family: ofelia-text, sans-serif; font-weight: 600; font-size: 35px;}", "p {padding-bottom: 20px;}"],
       "name": "t:labels.image_with_text",
       "settings": {
         "image": "shopify://shop_images/Back_To_Earth_Moisturize.jpg",
@@ -552,11 +532,7 @@
           }
         }
       },
-      "block_order": [
-        "image_AGJAd6",
-        "image_NBkhNm",
-        "image_UktjLX"
-      ],
+      "block_order": ["image_AGJAd6", "image_NBkhNm", "image_UktjLX"],
       "custom_css": [],
       "settings": {
         "full_width": true,
@@ -635,9 +611,7 @@
         "question_qWJwCW",
         "question_LMCqiE"
       ],
-      "custom_css": [
-        "{margin-top: 0px; background: #f7f7f7; padding-bottom: 50px;}"
-      ],
+      "custom_css": ["{margin-top: 0px; background: #f7f7f7; padding-bottom: 50px;}"],
       "settings": {
         "title": "{{ product.title }} FAQs",
         "heading_size": "h2",
@@ -646,17 +620,17 @@
     },
     "featured_collection_yCFwUr": {
       "type": "featured-collection",
-      "custom_css": [
-        "h2 {font-family: ofelia-text, sans-serif; font-weight: 600;}"
-      ],
+      "custom_css": ["h2 {font-family: ofelia-text, sans-serif; font-weight: 600;}"],
       "settings": {
         "title": "You May Also Like",
-        "heading_size": "h2",
+        "heading_size": "h1",
         "heading_position": "left",
-        "home_featured_products": "best-sellers",
+        "home_featured_products": "the-art-of-skin",
         "count": 5,
         "products_per_row": 5,
         "mobile_scrollable": true,
+        "show_second_image_as_cover": true,
+        "show_discount_badges": true,
         "view_all": true,
         "divider": false
       }
@@ -672,9 +646,7 @@
           }
         }
       },
-      "block_order": [
-        "okendo_reviews_widget_BrbN8J"
-      ],
+      "block_order": ["okendo_reviews_widget_BrbN8J"],
       "settings": {
         "full_width": false,
         "space_around": true

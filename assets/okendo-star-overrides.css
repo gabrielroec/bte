@@ -1,0 +1,35 @@
+/*
+ * Okendo Star Rating — carregar DEPOIS do content_for_header no theme.liquid
+ * para ganhar da folha injetada pela app. Cor: #FFC815
+ */
+[data-oke-star-rating] {
+  display: block;
+  margin-bottom: 20px;
+}
+
+/* Variáveis que o runtime da Okendo (Widget Plus) usa para pintar SVG */
+[data-oke-star-rating],
+[data-oke-star-rating] .okeReviews,
+[data-oke-star-rating] [data-oke-container] {
+  --oke-stars-foregroundColor: #ffc815;
+  --oke-stars-backgroundColor: rgba(255, 200, 21, 0.38);
+  --oke-starRating-foregroundColor: #ffc815;
+  --oke-starRating-backgroundColor: rgba(255, 200, 21, 0.38);
+}
+
+/* Preenchidas (foreground) — força sobre símbolos #oke-star-filled */
+[data-oke-star-rating] .oke-stars-foreground svg,
+[data-oke-star-rating] .oke-stars-foreground svg use,
+[data-oke-star-rating] .oke-stars-foreground use {
+  fill: #ffc815 !important;
+  stroke: none !important;
+  color: #ffc815 !important;
+}
+
+/* Trilho vazio (background) — #oke-star-empty */
+[data-oke-star-rating] .oke-stars-background svg,
+[data-oke-star-rating] .oke-stars-background svg use,
+[data-oke-star-rating] .oke-stars-background use {
+  fill: rgba(255, 200, 21, 0.38) !important;
+  color: rgba(255, 200, 21, 0.38) !important;
+}

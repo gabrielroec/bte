@@ -64,8 +64,16 @@
           }
         }
       },
-      "block_order": ["image_rVWpXF", "footer-0", "menu_paXx96", "menu_HW4zzt", "footer-1"],
-      "custom_css": ["{border-top: 0px;}"],
+      "block_order": [
+        "image_rVWpXF",
+        "footer-0",
+        "menu_paXx96",
+        "menu_HW4zzt",
+        "footer-1"
+      ],
+      "custom_css": [
+        "{border-top: 0px;}"
+      ],
       "settings": {
         "show_newsletter": true,
         "newsletter_richtext": "<p>Save 15% When You Become A VIP</p>",
@@ -76,5 +84,8 @@
       }
     }
   },
-  "order": ["footer-promotions", "footer"]
+  "order": [
+    "footer-promotions",
+    "footer"
+  ]
 }

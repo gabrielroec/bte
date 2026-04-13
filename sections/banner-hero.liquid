@@ -4,8 +4,6 @@
     {%- liquid
       assign sd = section.settings.background_desktop
       assign sm = section.settings.background_mobile
-      assign def_bg_desktop = 'banner-test.jpg'
-      assign def_bg_mobile = 'bgmob.jpg'
     -%}
     {%- if sm != blank and sd != blank and sm != sd -%}
       <link
@@ -38,29 +36,10 @@
         rel="preload"
         as="image"
         fetchpriority="high"
-        media="(max-width: 768px)"
-        href="{{ def_bg_mobile | asset_url }}">
-      <link
-        rel="preload"
-        as="image"
-        fetchpriority="high"
         media="(min-width: 769px)"
         href="{{ sd | image_url: width: 1600, format: 'webp' }}"
         imagesrcset="{{ sd | image_url: width: 800, format: 'webp' }} 800w, {{ sd | image_url: width: 1200, format: 'webp' }} 1200w, {{ sd | image_url: width: 1600, format: 'webp' }} 1600w, {{ sd | image_url: width: 2200, format: 'webp' }} 2200w"
         imagesizes="100vw">
-    {%- else -%}
-      <link
-        rel="preload"
-        as="image"
-        fetchpriority="high"
-        media="(max-width: 768px)"
-        href="{{ def_bg_mobile | asset_url }}">
-      <link
-        rel="preload"
-        as="image"
-        fetchpriority="high"
-        media="(min-width: 769px)"
-        href="{{ def_bg_desktop | asset_url }}">
     {%- endif -%}
   {%- endif -%}
 {%- endunless -%}
@@ -93,45 +72,6 @@
         "id": "background_mobile",
         "label": "t:labels.background_image_mobile",
         "info": "t:info.banner_hero_mobile_fallback"
-      }, {
-        "type": "paragraph",
-        "content": "t:info.banner_hero_aspect_fallback"
-      }, {
-        "type": "range",
-        "id": "aspect_desktop_w",
-        "min": 8,
-        "max": 32,
-        "step": 1,
-        "label": "t:labels.banner_hero_aspect_desktop_w",
-        "default": 24,
-        "info": "t:info.banner_hero_aspect_w"
-      }, {
-        "type": "range",
-        "id": "aspect_desktop_h",
-        "min": 4,
-        "max": 20,
-        "step": 1,
-        "label": "t:labels.banner_hero_aspect_desktop_h",
-        "default": 9,
-        "info": "t:info.banner_hero_aspect_h"
-      }, {
-        "type": "range",
-        "id": "aspect_mobile_w",
-        "min": 6,
-        "max": 24,
-        "step": 1,
-        "label": "t:labels.banner_hero_aspect_mobile_w",
-        "default": 24,
-        "info": "t:info.banner_hero_aspect_w"
-      }, {
-        "type": "range",
-        "id": "aspect_mobile_h",
-        "min": 4,
-        "max": 24,
-        "step": 1,
-        "label": "t:labels.banner_hero_aspect_mobile_h",
-        "default": 11,
-        "info": "t:info.banner_hero_aspect_h"
       }, {
         "type": "header",
         "content": "t:labels.content"

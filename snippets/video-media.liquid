@@ -27,6 +27,7 @@
   assign background = background | default: section.settings.background, allow_false: true | default: false, allow_false: true
   assign media_crop = media_crop | default: section.settings.media_crop | default: '16-9'
   assign hydration = hydration | default: 'on:visible'
+  assign preload_mode = 'metadata'
 
   if external_video != blank
     assign external_video_host = external_video.host | default: external_video.type
@@ -60,7 +61,7 @@
             loop: autoplay,
             muted: autoplay,
             image_size: '500x',
-            preload: 'metadata'
+            preload: preload_mode
         }}
       </video-media>
     {%- elsif external_video != blank -%}

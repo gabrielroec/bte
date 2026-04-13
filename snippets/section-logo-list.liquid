@@ -1,4 +1,4 @@
-{% # components v3.0.1 | Copyright © 2024 Archetype Themes Limited Partnership  | "Shopify Theme Store (https://www.shopify.com/legal/terms#9-additional-services)" License %}
+{% # components v3.0.1 | Copyright © 2024 Archetype Themes Limited Partnership  | "Shopify Theme Store (https://www.shopify.com/legal/terms#9-additional-services)" License  %}
 {%- comment -%}
   Renders a section with a list of logos.
 
@@ -52,37 +52,39 @@
         class="new-grid product-grid"
         style="--move-speed: {{ speed }}s;"
         {% unless per_row %}
-        data-view="6-2"
-        {% endunless %}>
+          data-view="6-2"
+        {% endunless %}
+      >
         {%- for _ in (1..upper_limit) -%}
           {%- for block in section.blocks -%}
-            <div class="
+            <div
+              class="
                 grid-item grid-product
                 {% if per_row %}
                   {% render 'grid-view-type', products_per_row: per_row, type: false, style: 'fractions' %}
                 {% endif %}
-              " {{ block.shopify_attributes }}>
+              "
+              {{ block.shopify_attributes }}
+            >
               <div class="logo-bar__item{% if block.settings.image == blank %} logo-bar__item-svg{% endif %}">
                 {%- if block.settings.link != blank -%}
                   <a
                     href="{{ block.settings.link }}"
                     class="logo-bar__link"
-                    aria-label="{{ block.settings.image.alt }}">
+                    aria-label="{{ block.settings.image.alt }}"
+                  >
                 {%- endif -%}
 
                 {%- if block.settings.image != blank -%}
-                  {%- render 'image-element'
-                    , img: block.settings.image
-                    , sizeVariable: '6'
-                    , fallback: '50vw'
-                    , widths: '180, 360, 540, 720'
-                    , classes: 'logo-bar__image'
-                    , loading: true
+                  {%- render 'image-element',
+                    img: block.settings.image,
+                    sizeVariable: '6',
+                    fallback: '50vw',
+                    widths: '360, 540, 720, 1020',
+                    classes: 'logo-bar__image'
                   -%}
                 {%- else -%}
-                  {%- render 'placeholder-svg'
-                    , name: 'logo'
-                    , no_padding: true -%}
+                  {%- render 'placeholder-svg', name: 'logo', no_padding: true -%}
                 {%- endif -%}
 
                 {%- if block.settings.link != blank -%}

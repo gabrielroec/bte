@@ -53,17 +53,8 @@
           }
         }
       },
-      "block_order": [
-        "okendo_star_rating_BbErh8",
-        "title",
-        "variant_picker",
-        "price",
-        "buy_buttons",
-        "custom_jKJzQV"
-      ],
-      "custom_css": [
-        ".product-block .variant__label {display: none;}"
-      ],
+      "block_order": ["okendo_star_rating_BbErh8", "title", "variant_picker", "price", "buy_buttons", "custom_jKJzQV"],
+      "custom_css": [".product-block .variant__label {display: none;}"],
       "settings": {
         "image_position": "left",
         "image_container_size": "medium",
@@ -93,12 +84,8 @@
           }
         }
       },
-      "block_order": [
-        "text_block_HcMVap"
-      ],
-      "custom_css": [
-        "{margin-top: 50px;}"
-      ],
+      "block_order": ["text_block_HcMVap"],
+      "custom_css": ["{margin-top: 50px;}"],
       "settings": {
         "title": "Description",
         "per_row": 1,
@@ -123,9 +110,7 @@
           }
         }
       },
-      "block_order": [
-        "text_block_9qpHhQ"
-      ],
+      "block_order": ["text_block_9qpHhQ"],
       "settings": {
         "title": "Ingredients",
         "per_row": 1,
@@ -150,9 +135,7 @@
           }
         }
       },
-      "block_order": [
-        "text_block_eKTmfw"
-      ],
+      "block_order": ["text_block_eKTmfw"],
       "settings": {
         "title": "How To Apply",
         "per_row": 1,
@@ -177,9 +160,7 @@
           }
         }
       },
-      "block_order": [
-        "text_block_AjK8Cj"
-      ],
+      "block_order": ["text_block_AjK8Cj"],
       "settings": {
         "title": "Packaging",
         "per_row": 1,
@@ -213,11 +194,7 @@
           }
         }
       },
-      "block_order": [
-        "description",
-        "tab",
-        "contact"
-      ],
+      "block_order": ["description", "tab", "contact"],
       "disabled": true,
       "settings": {
         "max_width": true
@@ -270,9 +247,7 @@
           }
         }
       },
-      "block_order": [
-        "okendo_reviews_widget_bf4jhh"
-      ],
+      "block_order": ["okendo_reviews_widget_bf4jhh"],
       "settings": {
         "full_width": false,
         "space_around": true

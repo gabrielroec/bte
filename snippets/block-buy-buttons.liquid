@@ -37,6 +37,15 @@
   if block.settings.show_gift_card_recipient and product.gift_card?
     assign gift_card_recipient_feature_active = true
   endif
+
+  assign show_qty_total_row = false
+  if block.settings.show_qty_total_row
+    assign show_qty_total_row = true
+  endif
+
+  assign qr = product.selected_or_first_available_variant.quantity_rule
+  assign qty_sel_min = qr.min | default: 1
+  assign qty_sel_max = qr.max
 -%}
 
 {% if product %}
@@ -53,7 +62,7 @@
   >
     {%- form 'product', product, id: form_id, novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
       {%- if cart.taxes_included or shop.shipping_policy.body != blank -%}
-        <div class="product__policies rte">
+        {% comment %} <div class="product__policies rte">
           {%- if cart.taxes_included -%}
             {% render 't_with_fallback', key: 'info.tax_included', fallback: 'Tax included.' %}
           {%- endif -%}
@@ -65,7 +74,7 @@
             {%- endcapture -%}
             {% render 't_with_fallback', t: info_shipping_policy_html, fallback: fallback_info_shipping_policy_html %}
           {%- endif -%}
-        </div>
+        </div> {% endcomment %}
       {%- endif -%}
 
       {%- if gift_card_recipient_feature_active -%}
@@ -80,6 +89,70 @@
           disabled
         {% endif %}
       >
+
+      {%- if show_qty_total_row -%}
+        {{ 'pdp-qty-total.css' | asset_url | stylesheet_tag }}
+        <div
+          class="product-qty-total-row"
+          data-pdp-qty-total
+          {% if block.settings.color_accent_qty != blank %}
+            style="--pdp-qty-accent: {{ block.settings.color_accent_qty }};"
+          {% endif %}
+        >
+          <span class="product-qty-total-row__label">{{ block.settings.label_qty | escape }}</span>
+          <div class="product-qty-total-row__stepper">
+            {%- assign qty_id = 'Quantity-atc-' | append: section.id | append: '-' | append: product.id -%}
+            {%- if qty_sel_max != blank -%}
+              {%- render 'quantity-selector',
+                id: qty_id,
+                form_id: form_id,
+                min: qty_sel_min,
+                max: qty_sel_max,
+                value: qty_sel_min
+              -%}
+            {%- else -%}
+              {%- render 'quantity-selector', id: qty_id, form_id: form_id, min: qty_sel_min, value: qty_sel_min -%}
+            {%- endif -%}
+          </div>
+          <div class="product-qty-total-row__total">
+            <span class="product-qty-total-row__total-label">{{ block.settings.label_total_prefix | escape }}</span>
+            <span class="product-qty-total-row__total-amount" data-line-total>—</span>
+          </div>
+        </div>
+
+        <script type="application/json" data-pdp-unit-pricing>
+          {
+            "moneyFormat": {{ shop.money_format | json }},
+            "variants": {
+              {%- assign v_first = true -%}
+              {%- for variant in product.variants -%}
+                {%- if v_first -%}
+                  {%- assign v_first = false -%}
+                {%- else -%}
+                  ,
+                {%- endif -%}
+                "{{ variant.id }}": {
+                  "oneTime": {{ variant.price | json }},
+                  "qtyMin": {{ variant.quantity_rule.min | default: 1 | json }},
+                  "qtyMax": {% if variant.quantity_rule.max != nil %}{{ variant.quantity_rule.max | json }}{% else %}null{% endif %},
+                  "plans": {
+                    {%- assign ap_first = true -%}
+                    {%- for allocation in variant.selling_plan_allocations -%}
+                      {%- if ap_first -%}
+                        {%- assign ap_first = false -%}
+                      {%- else -%}
+                        ,
+                      {%- endif -%}
+                      "{{ allocation.selling_plan.id }}": {{ allocation.price | json }}
+                    {%- endfor -%}
+                  }
+                }
+              {%- endfor -%}
+            }
+          }
+        </script>
+      {%- endif -%}
+
       <div>
         <button
           id="ProductSubmitButton-{{ section.id }}"
@@ -123,7 +196,7 @@
       <div class="shopify-payment-terms product__policies">{{ form | payment_terms }}</div>
     {%- endform -%}
 
-    <script type="application/json">
+    <script type="application/json" data-buy-buttons-locales>
       {
         "addToCart": "{{ 'actions.add_to_cart' | t }}",
         "soldOut": "{{ 'info.sold_out' | t }}",

@@ -10,6 +10,10 @@
           render 'block-description', block: block
         when 'variant_picker'
           render 'block-variant-picker', block: block, forloop: forloop, update_url: false
+        when 'selling_plans'
+          render 'block-selling-plans', block: block
+        when 'subscription_savings'
+          render 'block-subscription-savings', block: block
         when 'buy_buttons'
           render 'block-buy-buttons', block: block
         when 'price'
@@ -157,10 +161,18 @@
       "label": "t:actions.show_thumbnail_arrows"
     },
     {
+      "type": "checkbox",
+      "id": "show_second_image_as_cover",
+      "label": "Show second image as cover",
+      "default": false,
+      "info": "When enabled, the second product image is shown first in the gallery and thumbnails (same idea as featured collection cards)."
+    },
+    {
       "type": "select",
       "id": "mobile_layout",
       "label": "t:labels.mobile_layout",
       "default": "partial",
+      "info": "Partial: main slide ~75% width with next slide peek (carousel). Thumbnails show below the gallery on mobile. Full: single slide edge-to-edge.",
       "options": [
         {
           "value": "partial",
@@ -352,6 +364,105 @@
       ]
     },
     {
+      "type": "selling_plans",
+      "name": "Selling plans",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "paragraph",
+          "content": "Uses Shopify Purchase options (Recharge syncs here). Remove the Recharge Subscription Widget app block when using this block. Optional metafield: custom.subscription_perks_line (text) overrides the perks suffix."
+        },
+        {
+          "type": "text",
+          "id": "heading_subscribe",
+          "label": "Subscribe heading",
+          "default": "Subscribe & Save"
+        },
+        {
+          "type": "checkbox",
+          "id": "badge_enable",
+          "label": "Show “Most popular” badge",
+          "default": true
+        },
+        {
+          "type": "text",
+          "id": "badge_text",
+          "label": "Badge text",
+          "default": "MOST POPULAR"
+        },
+        {
+          "type": "text",
+          "id": "label_deliver_every",
+          "label": "Delivery frequency label",
+          "default": "DELIVER EVERY"
+        },
+        {
+          "type": "textarea",
+          "id": "perks_suffix",
+          "label": "Perks line (after Save X%)",
+          "default": "Free shipping · Skip or cancel anytime",
+          "info": "Shown after the dynamic “Save X%” when the plan defines a percentage discount in Shopify."
+        },
+        {
+          "type": "text",
+          "id": "label_onetime",
+          "label": "One-time purchase label",
+          "default": "One-time purchase"
+        },
+        {
+          "type": "header",
+          "content": "Colors"
+        },
+        {
+          "type": "color",
+          "id": "color_primary",
+          "label": "Cor principal",
+          "default": "#99bccc"
+        },
+        {
+          "type": "color",
+          "id": "color_mint",
+          "label": "Fundo subscribe",
+          "default": "#eef5f8"
+        },
+        {
+          "type": "color",
+          "id": "color_beige",
+          "label": "Bordas / rádio inativo",
+          "default": "#c9dde8"
+        }
+      ]
+    },
+    {
+      "type": "subscription_savings",
+      "name": "Subscription savings",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "paragraph",
+          "content": "Place below Selling plans. Use [[amount]] where the money value should appear (Shopify JSON cannot use {{ }} in settings)."
+        },
+        {
+          "type": "textarea",
+          "id": "line_order",
+          "label": "First line",
+          "default": "You save [[amount]] on this order!"
+        },
+        {
+          "type": "textarea",
+          "id": "line_year",
+          "label": "Second line",
+          "default": "~[[amount]] saved per year at this cadence"
+        },
+        {
+          "type": "color",
+          "id": "color_accent",
+          "label": "Accent color",
+          "default": "#99bccc"
+        }
+      ]
+    },
+    {
       "type": "description",
       "name": "t:labels.description",
       "limit": 1,
@@ -388,6 +499,31 @@
           "default": false,
           "label": "t:actions.show_recipient_information",
           "info": "t:info.gift_card_products"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_qty_total_row",
+          "label": "Show quantity & line total above Add to cart",
+          "default": true,
+          "info": "Turn off the separate “Quantity selector” block when using this to avoid duplicate quantity fields."
+        },
+        {
+          "type": "text",
+          "id": "label_qty",
+          "label": "Quantity label",
+          "default": "Qty"
+        },
+        {
+          "type": "text",
+          "id": "label_total_prefix",
+          "label": "Total label",
+          "default": "Total:"
+        },
+        {
+          "type": "color",
+          "id": "color_accent_qty",
+          "label": "Qty row accent",
+          "default": "#99bccc"
         }
       ]
     },

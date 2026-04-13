@@ -1,0 +1,44 @@
+.product-single__meta block-subscription-savings.subscription-savings[hidden],
+block-subscription-savings.subscription-savings[hidden] {
+  display: none !important;
+  margin-bottom: 0 !important;
+}
+
+.subscription-savings {
+  display: flex;
+  flex-direction: column;
+  align-self: stretch;
+  width: 100%;
+}
+
+.subscription-savings__inner {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  align-self: stretch;
+  width: 100%;
+  padding: 8px 16px;
+  border-radius: 6px;
+  border: 1px solid #5cb71f;
+  background: #d2ebc1;
+}
+
+.subscription-savings__line {
+  margin: 0;
+  color: var(--Grayscale-900, #18181b);
+  font-family: Poppins, sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: 0.48px;
+  text-align: center;
+}
+
+.subscription-savings__line[data-line-year] {
+  display: none;
+}

@@ -47,12 +47,12 @@
         "title": "Featured collection",
         "heading_size": "h2",
         "heading_position": "left",
-        "home_featured_products": "the-art-of-skin",
+        "home_featured_products": "moisturizer",
         "count": 6,
         "products_per_row": 3,
         "mobile_scrollable": true,
-        "show_second_image_as_cover": true,
-        "show_discount_badges": true,
+        "show_second_image_as_cover": false,
+        "show_discount_badges": false,
         "view_all": true,
         "divider": false
       }

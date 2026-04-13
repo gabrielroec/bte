@@ -12,6 +12,8 @@
   - mobile_layout {string} - Layout for mobile
   - image_size {string} - Size of the image
   - animation {string} - Animation for the image
+  - force_starting_slide {boolean} - Marks this slide as the main starting slide (e.g. reordered gallery)
+  - suppress_featured_starting {boolean} - Do not use featured_media to pick starting slide
 
   Usage:
   {% render 'media' %}
@@ -32,9 +34,19 @@
     assign autoplay = false
   endif
 
+  assign force_starting_slide = force_starting_slide | default: false, allow_false: true
+  assign suppress_featured_starting = suppress_featured_starting | default: false, allow_false: true
+
   assign is_featured = false
   if featured_media == media
     assign is_featured = true
+  endif
+
+  assign is_starting_slide = false
+  if force_starting_slide
+    assign is_starting_slide = true
+  elsif suppress_featured_starting != true and is_featured
+    assign is_starting_slide = true
   endif
 
   assign has_video = false
@@ -81,7 +93,7 @@
 -%}
 
 <div
-  class="product-main-slide {% if is_featured %}starting-slide{% else %}secondary-slide{% endif %}"
+  class="product-main-slide {% if is_starting_slide %}starting-slide{% else %}secondary-slide{% endif %}"
   data-index="{{ loopIndex0 }}"
   data-media-id="{{ media.id }}"
   {% if image_set %}
@@ -155,7 +167,7 @@
           type: 'photoswipe',
           classes: image_classes,
           alt: media.alt | escape | split: '#' | first,
-          widths: '360, 540, 720, 900',
+          widths: '360, 540, 720, 900, 1080',
           product_zoom_size: product_zoom_size,
           loopIndex: loopIndex,
           media: media,

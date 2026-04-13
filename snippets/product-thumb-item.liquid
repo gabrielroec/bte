@@ -1,0 +1,60 @@
+{% comment %}
+  Single product gallery thumbnail (main / featured product sections).
+
+  Accepts:
+  - media {media}
+  - thumb_index {number} - 0-based index matching slideshow data-index
+  - product_zoom_size {string}
+{% endcomment %}
+{%- liquid
+  assign image_set = false
+  assign image_set_group = ''
+  if media.alt contains '#'
+    assign image_set_full = media.alt | split: '#' | last
+    if image_set_full contains '_'
+      assign image_set = true
+      assign image_set_group = image_set_full | split: '_' | first
+    endif
+  endif
+-%}
+<div
+  class="product__thumb-item"
+  data-index="{{ thumb_index }}"
+  {% if image_set %}
+    data-set-name="{{ image_set_group }}"
+    data-group="{{ image_set_full }}"
+  {% endif %}
+>
+  <a
+    href="{{ media.preview_image | image_url: width: product_zoom_size }}"
+    data-product-thumb
+    class="product__thumb js-no-transition"
+    data-index="{{ thumb_index }}"
+    data-id="{{ media.id }}"
+  >
+    <div
+      class="image-wrap image-wrap__thumbnail"
+      style="height: 0; padding-bottom: {{ 100 | divided_by: media.preview_image.aspect_ratio }}%;"
+    >
+      {%- if media.media_type == 'video' or media.media_type == 'external_video' -%}
+        <span class="product__thumb-icon">
+          {% render 'icon', name: 'play' %}
+        </span>
+      {%- endif -%}
+      {%- if media.media_type == 'model' -%}
+        <span class="product__thumb-icon">
+          {% render 'icon', name: '3d' %}
+        </span>
+      {%- endif -%}
+
+      {%-
+        render 'image-element',
+        img: media.preview_image,
+        alt: media.alt | escape | split: '#' | first,
+        widths: '120, 360, 540, 720',
+        sizeVariable: '80px',
+        loading: 'eager',
+      -%}
+    </div>
+  </a>
+</div>

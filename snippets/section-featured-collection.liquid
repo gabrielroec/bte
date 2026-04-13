@@ -27,6 +27,8 @@
   assign count = count | default: section.settings.count | default: 6
   assign products_per_row = products_per_row | default: section.settings.products_per_row | default: 3 | times: 1
   assign mobile_scrollable = mobile_scrollable | default: section.settings.mobile_scrollable, allow_false: true | default: true, allow_false: true
+  assign show_second_image_as_cover = show_second_image_as_cover | default: section.settings.show_second_image_as_cover, allow_false: true | default: false, allow_false: true
+  assign show_discount_badges = show_discount_badges | default: section.settings.show_discount_badges, allow_false: true | default: false, allow_false: true
   assign view_all = view_all | default: section.settings.view_all, allow_false: true | default: true, allow_false: true
   assign hydration = hydration | default: 'on:visible'
 
@@ -196,7 +198,9 @@
                   product: product,
                   collection: collection,
                   sizeVariable: products_per_row,
-                  fallback: fallback
+                  fallback: fallback,
+                  show_second_image_as_cover: show_second_image_as_cover,
+                  show_save_badge: show_discount_badges
                 %}
               {% endfor %}
             {% else %}
@@ -246,7 +250,7 @@
                   endif
                 endunless
 
-                render 'product-grid-item', product: product, collection: collection, classes: item_classes, sizeVariable: products_per_row, fallback: fallback
+                render 'product-grid-item', product: product, collection: collection, classes: item_classes, sizeVariable: products_per_row, fallback: fallback, show_second_image_as_cover: show_second_image_as_cover, show_save_badge: show_discount_badges
               endfor
             -%}
           {%- endif -%}

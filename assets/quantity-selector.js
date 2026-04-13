@@ -1,92 +1,106 @@
 const selectors = {
-  input: '.js-qty__num',
-  plus: '.js-qty__adjust--plus',
-  minus: '.js-qty__adjust--minus'
-}
+  input: ".js-qty__num",
+  plus: ".js-qty__adjust--plus",
+  minus: ".js-qty__adjust--minus",
+};
 
 class QuantitySelector extends HTMLElement {
   connectedCallback() {
-    this.abortController = new AbortController()
+    this.abortController = new AbortController();
 
-    this.plus = this.querySelector(selectors.plus)
-    this.minus = this.querySelector(selectors.minus)
-    this.input = this.querySelector(selectors.input)
-    this.minValue = this.input.getAttribute('min') || 1
-    this.maxValue = this.input.getAttribute('max')
+    this.plus = this.querySelector(selectors.plus);
+    this.minus = this.querySelector(selectors.minus);
+    this.input = this.querySelector(selectors.input);
 
     this.plus.addEventListener(
-      'click',
+      "click",
       function () {
-        let qty = this._getQty()
-        this._change(qty + 1)
+        let qty = this._getQty();
+        this._change(qty + 1);
       }.bind(this),
       { signal: this.abortController.signal }
-    )
+    );
 
     this.minus.addEventListener(
-      'click',
+      "click",
       function () {
-        let qty = this._getQty()
-        this._change(qty - 1)
+        let qty = this._getQty();
+        this._change(qty - 1);
       }.bind(this),
       { signal: this.abortController.signal }
-    )
+    );
 
     this.input.addEventListener(
-      'change',
+      "change",
       function (evt) {
-        this._change(this._getQty())
+        this._change(this._getQty());
       }.bind(this),
       { signal: this.abortController.signal }
-    )
+    );
   }
 
   disconnectedCallback() {
-    this.abortController.abort()
+    this.abortController.abort();
   }
 
   _getQty() {
-    let qty = this.input.value
+    let qty = this.input.value;
     if (parseFloat(qty) == parseInt(qty) && !isNaN(qty)) {
       // We have a valid number!
     } else {
       // Not a number. Default to 1.
-      qty = 1
+      qty = 1;
     }
-    return parseInt(qty)
+    return parseInt(qty);
+  }
+
+  _minValue() {
+    const m = this.input.getAttribute("min");
+    const n = parseInt(m, 10);
+    return Number.isFinite(n) ? n : 1;
+  }
+
+  _maxValue() {
+    const m = this.input.getAttribute("max");
+    if (m == null || m === "") return null;
+    const n = parseInt(m, 10);
+    return Number.isFinite(n) ? n : null;
   }
 
   _change(qty) {
-    if (qty <= this.minValue) {
-      qty = this.minValue
+    const minValue = this._minValue();
+    const maxValue = this._maxValue();
+
+    if (qty <= minValue) {
+      qty = minValue;
     }
 
-    if (this.maxValue && qty > this.maxValue) {
-      qty = this.maxValue
+    if (maxValue != null && qty > maxValue) {
+      qty = maxValue;
     }
 
-    this.input.value = qty
+    this.input.value = qty;
 
-    if (this.key !== '') {
+    if (this.key !== "") {
       this.dispatchEvent(
-        new CustomEvent('cart:quantity', {
+        new CustomEvent("cart:quantity", {
           bubbles: true,
-          detail: [this.key, qty, this]
+          detail: [this.key, qty, this],
         })
-      )
+      );
     } else {
       this.dispatchEvent(
-        new CustomEvent('quantity:change', {
+        new CustomEvent("quantity:change", {
           detail: {
-            qty: qty
-          }
+            qty: qty,
+          },
         })
-      )
+      );
     }
   }
   get key() {
-    return this.getAttribute('key')
+    return this.getAttribute("key");
   }
 }
 
-customElements.define('quantity-selector', QuantitySelector)
+customElements.define("quantity-selector", QuantitySelector);

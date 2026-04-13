@@ -35,6 +35,12 @@
   assign featured_media = product.selected_or_first_available_variant.featured_media | default: product.featured_media
   assign first_3d_model = product.media | where: 'media_type', 'model' | first
   assign thumbnail_position = section.settings.thumbnail_position
+  assign mobile_layout = section.settings.mobile_layout | default: 'partial'
+  assign show_second_cover = section.settings.show_second_image_as_cover | default: false, allow_false: true
+  assign reorder_second_first = false
+  if show_second_cover and product.media.size >= 2
+    assign reorder_second_first = true
+  endif
 
   unless thumbnail_position
     if media_gallery_layout == 'stacked'
@@ -51,9 +57,10 @@
     data-zoom="{{ product_zoom_enable }}"
     data-has-slideshow="{% if product.media.size > 1 %}true{% else %}false{% endif %}"
     data-media-gallery-layout="{{ media_gallery_layout }}"
-    data-modal="{{ isModal }}"
+    data-modal="{% if isModal %}true{% else %}false{% endif %}"
     data-product-id="{{ product.id }}"
     data-section-id="{{ section.id }}"
+    data-mobile-layout="{{ mobile_layout }}"
   >
     <div class="product__photos product__photos-{{ section_id }} product__photos--{{ thumbnail_position }}{% if product.media.size == 0 %} hide{% endif %}">
       <div class="product__main-photos" data-product-single-media-group>
@@ -63,31 +70,95 @@
           class="product-slideshow"
           id="ProductPhotos-{{ section_id }}"
         >
-          {%- for media in product.media -%}
-            {% liquid
-              if context == 'main-product' and forloop.index == 1
-                assign loading = false
-                assign animation = 'none'
-              elsif forloop.index <= 2
+          {%- if reorder_second_first -%}
+            {%- comment -%} Same order as vitrine: 2nd image first, then 1st, then the rest {%- endcomment -%}
+            {%- for media in product.media offset: 1 limit: 1 -%}
+              {% liquid
                 assign loading = 'eager'
                 assign animation = 'image-fade-in'
-              else
-                assign loading = 'lazy'
+                if context == 'main-product'
+                  assign loading = false
+                  assign animation = 'none'
+                endif
+              %}
+              {%- render 'media',
+                media: media,
+                featured_media: featured_media,
+                loopIndex0: 0,
+                loopIndex: 1,
+                force_starting_slide: true,
+                suppress_featured_starting: true,
+                sizes: sizes,
+                sizeVariable: sizeVariable,
+                fallback: fallback,
+                loading: loading,
+                animation: animation
+              -%}
+            {%- endfor -%}
+            {%- for media in product.media offset: 0 limit: 1 -%}
+              {% liquid
+                assign loading = 'eager'
                 assign animation = 'image-fade-in'
-              endif
-            %}
-            {%- render 'media',
-              media: media,
-              featured_media: featured_media,
-              loopIndex0: forloop.index0,
-              loopIndex: forloop.index,
-              sizes: sizes,
-              sizeVariable: sizeVariable,
-              fallback: fallback,
-              loading: loading,
-              animation: animation
-            -%}
-          {%- endfor -%}
+              %}
+              {%- render 'media',
+                media: media,
+                featured_media: featured_media,
+                loopIndex0: 1,
+                loopIndex: 2,
+                force_starting_slide: false,
+                suppress_featured_starting: true,
+                sizes: sizes,
+                sizeVariable: sizeVariable,
+                fallback: fallback,
+                loading: loading,
+                animation: animation
+              -%}
+            {%- endfor -%}
+            {%- for media in product.media offset: 2 -%}
+              {% liquid
+                assign loading = 'eager'
+                assign animation = 'image-fade-in'
+                assign slide_index0 = forloop.index0 | plus: 2
+                assign slide_index1 = forloop.index0 | plus: 3
+              %}
+              {%- render 'media',
+                media: media,
+                featured_media: featured_media,
+                loopIndex0: slide_index0,
+                loopIndex: slide_index1,
+                force_starting_slide: false,
+                suppress_featured_starting: true,
+                sizes: sizes,
+                sizeVariable: sizeVariable,
+                fallback: fallback,
+                loading: loading,
+                animation: animation
+              -%}
+            {%- endfor -%}
+          {%- else -%}
+            {%- for media in product.media -%}
+              {% liquid
+                assign loading = 'eager'
+                assign animation = 'image-fade-in'
+                if context == 'main-product' and forloop.index == 1
+                  # LCP image is loaded immediately
+                  assign loading = false
+                  assign animation = 'none'
+                endif
+              %}
+              {%- render 'media',
+                media: media,
+                featured_media: featured_media,
+                loopIndex0: forloop.index0,
+                loopIndex: forloop.index,
+                sizes: sizes,
+                sizeVariable: sizeVariable,
+                fallback: fallback,
+                loading: loading,
+                animation: animation
+              -%}
+            {%- endfor -%}
+          {%- endif -%}
         </div>
 
         {%- if first_3d_model -%}
@@ -110,7 +181,7 @@
       {% if media_gallery_layout != 'stacked' %}
         <div
           data-product-thumbs
-          class="product__thumbs product__thumbs--{{ thumbnail_position }} product__thumbs-placement--{{ image_position }}{% if product.media.size == 1 %} medium-up--hide{% endif %} small--hide"
+          class="product__thumbs product__thumbs--{{ thumbnail_position }} product__thumbs-placement--{{ image_position }}{% if product.media.size == 1 %} medium-up--hide{% endif %}"
           data-position="{{ thumbnail_position }}"
           data-arrows="{{ thumbnail_arrows }}"
         >
@@ -126,65 +197,28 @@
 
           <div class="product__thumbs--scroller">
             {%- if product.media.size > 1 -%}
-              {%- for media in product.media -%}
-                {%- liquid
-                  assign image_set = false
-                  assign image_set_group = ''
-                  if media.alt contains '#'
-                    assign image_set_full = media.alt | split: '#' | last
-                    if image_set_full contains '_'
-                      assign image_set = true
-                      assign image_set_group = image_set_full | split: '_' | first
-                    endif
-                  endif
-                -%}
-                <div
-                  class="product__thumb-item"
-                  data-index="{{ forloop.index0 }}"
-                  {% if image_set %}
-                    data-set-name="{{ image_set_group }}"
-                    data-group="{{ image_set_full }}"
-                  {% endif %}
-                >
-                  <a
-                    href="{{ media.preview_image | image_url: width: product_zoom_size }}"
-                    data-product-thumb
-                    class="product__thumb js-no-transition"
-                    data-index="{{ forloop.index0 }}"
-                    data-id="{{ media.id }}"
-                  >
-                    <div
-                      class="image-wrap image-wrap__thumbnail"
-                      style="height: 0; padding-bottom: {{ 100 | divided_by: media.preview_image.aspect_ratio }}%;"
-                    >
-                      {%- if media.media_type == 'video' or media.media_type == 'external_video' -%}
-                        <span class="product__thumb-icon">
-                          {% render 'icon', name: 'play' %}
-                        </span>
-                      {%- endif -%}
-                      {%- if media.media_type == 'model' -%}
-                        <span class="product__thumb-icon">
-                          {% render 'icon', name: '3d' %}
-                        </span>
-                      {%- endif -%}
-
-                      {%- if forloop.index <= 4 -%}
-                        {%- assign thumb_loading = 'eager' -%}
-                      {%- else -%}
-                        {%- assign thumb_loading = 'lazy' -%}
-                      {%- endif -%}
-                      {%-
-                        render 'image-element',
-                        img: media.preview_image,
-                        alt: media.alt | escape | split: '#' | first,
-                        widths: '80, 120, 160, 240',
-                        sizeVariable: '80px',
-                        loading: thumb_loading,
-                      -%}
-                    </div>
-                  </a>
-                </div>
-              {%- endfor -%}
+              {%- if reorder_second_first -%}
+                {%- for media in product.media offset: 1 limit: 1 -%}
+                  {% render 'product-thumb-item', media: media, thumb_index: 0, product_zoom_size: product_zoom_size %}
+                {%- endfor -%}
+                {%- for media in product.media offset: 0 limit: 1 -%}
+                  {% render 'product-thumb-item', media: media, thumb_index: 1, product_zoom_size: product_zoom_size %}
+                {%- endfor -%}
+                {%- for media in product.media offset: 2 -%}
+                  {% liquid
+                    assign thumb_i = forloop.index0 | plus: 2
+                  %}
+                  {% render 'product-thumb-item', media: media, thumb_index: thumb_i, product_zoom_size: product_zoom_size %}
+                {%- endfor -%}
+              {%- else -%}
+                {%- for media in product.media -%}
+                  {% render 'product-thumb-item',
+                    media: media,
+                    thumb_index: forloop.index0,
+                    product_zoom_size: product_zoom_size
+                  %}
+                {%- endfor -%}
+              {%- endif -%}
             {%- endif -%}
           </div>
 

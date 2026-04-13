@@ -42,7 +42,7 @@
         "custom_eYcXWC": {
           "type": "custom",
           "settings": {
-            "code": "<ul>\n<li>- Helps Unclogs Pores Preventing Breakouts</li>\n<li>- Balances Oil To Fight Unwanted Shine</li>\n<li>- Restores The Skin's Natural Balance</li>\n</ul"
+            "code": "<ul class=\"product-custom-list\">\n<li>Helps Unclogs Pores Preventing Breakouts</li>\n<li>Balances Oil To Fight Unwanted Shine</li>\n<li>Restores The Skin's Natural Balance</li>\n</ul>"
           }
         },
         "separator_GqYgcP": {
@@ -92,10 +92,7 @@
         "buy_buttons",
         "custom_QahbLh"
       ],
-      "custom_css": [
-        ".product-block .variant__label {display: none;}",
-        "video-media,video {--default-aspect-ratio: 1/1 !important;}"
-      ],
+      "custom_css": [".product-block .variant__label {display: none;}", "video-media,video {--default-aspect-ratio: 1/1 !important;}"],
       "settings": {
         "image_position": "left",
         "image_container_size": "large",
@@ -104,7 +101,7 @@
         "thumbnail_position": "beside",
         "thumbnail_height": "flexible",
         "thumbnail_arrows": false,
-        "mobile_layout": "full",
+        "mobile_layout": "partial",
         "enable_video_looping": true,
         "product_video_style": "muted"
       }
@@ -125,13 +122,8 @@
           }
         }
       },
-      "block_order": [
-        "text_block_fxTdmN"
-      ],
-      "custom_css": [
-        "{margin-top: 60px;}",
-        "h2 {font-family: ofelia-text, sans-serif; font-weight: 600; font-size: 18px;}"
-      ],
+      "block_order": ["text_block_fxTdmN"],
+      "custom_css": ["{margin-top: 60px;}", "h2 {font-family: ofelia-text, sans-serif; font-weight: 600; font-size: 18px;}"],
       "settings": {
         "title": "About The Product",
         "per_row": 1,
@@ -412,9 +404,7 @@
         "text_block_nqi8zy",
         "text_block_cPQqPC"
       ],
-      "custom_css": [
-        "h2 {font-family: ofelia-text, sans-serif; font-weight: 600; font-size: 18px;}"
-      ],
+      "custom_css": ["h2 {font-family: ofelia-text, sans-serif; font-weight: 600; font-size: 18px;}"],
       "settings": {
         "title": "All 20 Natural Ingredients",
         "per_row": 4,
@@ -452,13 +442,8 @@
           }
         }
       },
-      "block_order": [
-        "text_block_MdMUUa",
-        "text_block_Li43w9"
-      ],
-      "custom_css": [
-        "h2 {font-family: ofelia-text, sans-serif; font-weight: 600; font-size: 18px;}"
-      ],
+      "block_order": ["text_block_MdMUUa", "text_block_Li43w9"],
+      "custom_css": ["h2 {font-family: ofelia-text, sans-serif; font-weight: 600; font-size: 18px;}"],
       "settings": {
         "title": "How To Apply",
         "per_row": 2,
@@ -496,13 +481,8 @@
           }
         }
       },
-      "block_order": [
-        "text_block_raE9Mr",
-        "text_block_gWmNcT"
-      ],
-      "custom_css": [
-        "h2 {font-family: ofelia-text, sans-serif; font-weight: 600; font-size: 18px;}"
-      ],
+      "block_order": ["text_block_raE9Mr", "text_block_gWmNcT"],
+      "custom_css": ["h2 {font-family: ofelia-text, sans-serif; font-weight: 600; font-size: 18px;}"],
       "settings": {
         "title": "Eco-Friendly Packaging",
         "per_row": 2,
@@ -529,10 +509,7 @@
           }
         }
       },
-      "block_order": [
-        "heading_xUQgwE",
-        "text_YYJzXb"
-      ],
+      "block_order": ["heading_xUQgwE", "text_YYJzXb"],
       "custom_css": [
         "{margin-top: 40px; margin-bottom: 0px;}",
         "h2 {font-family: ofelia-text, sans-serif; font-weight: 600; font-size: 25px;}"
@@ -546,10 +523,7 @@
     },
     "text_and_image_rHLmeH": {
       "type": "text-and-image",
-      "custom_css": [
-        "h2 {font-family: ofelia-text, sans-serif; font-weight: 600; font-size: 25px;}",
-        "p {padding-bottom: 20px;}"
-      ],
+      "custom_css": ["h2 {font-family: ofelia-text, sans-serif; font-weight: 600; font-size: 25px;}", "p {padding-bottom: 20px;}"],
       "settings": {
         "image": "shopify://shop_images/1.jpg",
         "image_mask": "none",
@@ -557,7 +531,7 @@
         "subtitle": "",
         "title": "Your glow, unlocked.",
         "heading_size": "h2",
-        "text": "<p>Packed with skin-loving ingredients, this mask works to brighten, hydrate, and detoxify. It’s your ultimate tool for achieving that coveted natural glow.</p>",
+        "text": "<p>Packed with skin-loving ingredients, this mask works to brighten, hydrate, and detoxify. It’s your ultimate tool for achieving that coveted natural glow.</p><h3></h3>",
         "button_label": "",
         "button_link": "",
         "button_style": "primary",
@@ -572,9 +546,7 @@
     },
     "text_and_image_tNiqhc": {
       "type": "text-and-image",
-      "custom_css": [
-        "h2 {font-family: ofelia-text, sans-serif; font-weight: 600; font-size: 25px;}"
-      ],
+      "custom_css": ["h2 {font-family: ofelia-text, sans-serif; font-weight: 600; font-size: 25px;}"],
       "settings": {
         "image": "shopify://shop_images/Untitled_design_74.jpg",
         "image_mask": "square",
@@ -630,11 +602,7 @@
           }
         }
       },
-      "block_order": [
-        "image_AGJAd6",
-        "image_NBkhNm",
-        "image_UktjLX"
-      ],
+      "block_order": ["image_AGJAd6", "image_NBkhNm", "image_UktjLX"],
       "custom_css": [],
       "settings": {
         "full_width": true,
@@ -705,9 +673,7 @@
         "question_PpqiMW",
         "question_LMCqiE"
       ],
-      "custom_css": [
-        "{margin-top: 0px; background: #f7f7f7; padding-bottom: 50px;}"
-      ],
+      "custom_css": ["{margin-top: 0px; background: #f7f7f7; padding-bottom: 50px;}"],
       "settings": {
         "title": "{{ product.title }} FAQs",
         "heading_size": "h2",
@@ -716,12 +682,10 @@
     },
     "featured_collection_yCFwUr": {
       "type": "featured-collection",
-      "custom_css": [
-        "h2 {font-family: ofelia-text, sans-serif; font-weight: 600;}"
-      ],
+      "custom_css": ["h2 {font-family: ofelia-text, sans-serif; font-weight: 600;}"],
       "settings": {
         "title": "You May Also Like",
-        "heading_size": "h2",
+        "heading_size": "h1",
         "heading_position": "left",
         "home_featured_products": "best-sellers",
         "count": 5,
@@ -742,9 +706,7 @@
           }
         }
       },
-      "block_order": [
-        "okendo_reviews_widget_BrbN8J"
-      ],
+      "block_order": ["okendo_reviews_widget_BrbN8J"],
       "settings": {
         "full_width": false,
         "space_around": true

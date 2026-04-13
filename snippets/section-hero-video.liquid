@@ -40,11 +40,7 @@
   assign height_mobile = height_mobile | default: section.settings.height_mobile | default: 300
   assign hydration = hydration | default: blank
   if hydration == blank
-    if section.index == 1
-      assign hydration = 'on:visible'
-    else
-      assign hydration = 'on:idle'
-    endif
+    assign hydration = 'on:visible'
   endif
 -%}
 
