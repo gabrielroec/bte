@@ -25,7 +25,7 @@
   assign vendor_url = collection_for_vendor.url | default: vendor_url_default
 -%}
 
-<div class="product-block" data-section-id="{{ section.id }}" {{ block.shopify_attributes }}>
+<div class="product-block product-block--title" data-section-id="{{ section.id }}" {{ block.shopify_attributes }}>
   <h1 class="h2 product-single__title">
     {{- title -}}
   </h1>

@@ -1,0 +1,267 @@
+/* Purchase options widget — paleta base #99bccc */
+.product-single__meta .selling-plans-widget {
+  /* Cor de marca */
+  --sp-primary: #99bccc;
+  --sp-primary-contrast: #fff;
+  /* Fundo subscribe (tint muito claro do base) */
+  --sp-mint: #eef5f8;
+  /* Bordas / rádio inativo / pills outline */
+  --sp-beige: #c9dde8;
+  /* Texto (mesma família cromática, mais escuro para leitura) */
+  --sp-text: #3a5563;
+  --sp-text-muted: #6a8a9a;
+  /* Badge */
+  --sp-badge-bg: #e3eef4;
+  --sp-badge-border: #99bccc;
+  --sp-radius: 18px;
+  --sp-radius-pill: 999px;
+
+  border: 2px solid var(--sp-primary);
+  border-radius: var(--sp-radius);
+  overflow: hidden;
+  color: var(--sp-text);
+}
+
+.product-single__meta .selling-plans-widget__panel {
+  position: relative;
+  transition: background-color 0.2s ease;
+}
+
+.product-single__meta .selling-plans-widget__panel--subscribe {
+  border-bottom: 1px solid var(--sp-beige);
+}
+
+.product-single__meta .selling-plans-widget__panel--subscribe.selling-plans-widget__panel--active {
+  background: var(--sp-mint);
+}
+
+.product-single__meta .selling-plans-widget__panel--subscribe:not(.selling-plans-widget__panel--active) {
+  background: #fff;
+}
+
+.product-single__meta .selling-plans-widget__panel--onetime.selling-plans-widget__panel--active {
+  background: #fafafa;
+}
+
+.product-single__meta .selling-plans-widget__panel--onetime:not(.selling-plans-widget__panel--active) {
+  background: #fff;
+}
+
+.product-single__meta .selling-plans-widget__row {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 16px 18px;
+}
+
+.product-single__meta .selling-plans-widget__row-main {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.product-single__meta .selling-plans-widget__row-left {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  flex: 1;
+  min-width: 0;
+}
+
+.product-single__meta .selling-plans-widget__prices {
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.product-single__meta .selling-plans-widget__price-current {
+  display: block;
+  font-family: var(--type-header-primary), Georgia, "Times New Roman", serif;
+  font-size: clamp(1.35rem, 3vw, 1.65rem);
+  font-weight: 700;
+  color: var(--sp-primary);
+  line-height: 1.15;
+}
+
+.product-single__meta .selling-plans-widget__panel--onetime.selling-plans-widget__panel--active .selling-plans-widget__price-current {
+  color: var(--sp-text);
+}
+
+.product-single__meta .selling-plans-widget__price-compare {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--sp-text-muted);
+  text-decoration: line-through;
+  margin-top: 2px;
+}
+
+.product-single__meta .selling-plans-widget__price-compare:empty,
+.product-single__meta .selling-plans-widget__price-compare--hidden {
+  display: none;
+}
+
+/* Radios */
+.product-single__meta .selling-plans-widget__mode-input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.product-single__meta .selling-plans-widget__radio-ui {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid var(--sp-beige);
+  flex-shrink: 0;
+  margin-top: 2px;
+  background: #fff;
+  position: relative;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+
+.product-single__meta .selling-plans-widget__mode-input:checked + .selling-plans-widget__radio-ui {
+  border-color: var(--sp-primary);
+  background: var(--sp-primary);
+  box-shadow: inset 0 0 0 3px #fff;
+}
+
+.product-single__meta .selling-plans-widget__mode-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  cursor: pointer;
+  margin: 0;
+  width: 100%;
+}
+
+/* Title + badge */
+.product-single__meta .selling-plans-widget__title-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 10px;
+  margin-bottom: 6px;
+}
+
+.product-single__meta .selling-plans-widget__heading {
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: -0.01em;
+}
+
+.product-single__meta .selling-plans-widget__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 4px 8px;
+  border-radius: 6px;
+  background: var(--sp-badge-bg);
+  border: 1px solid var(--sp-badge-border);
+  color: var(--sp-primary);
+}
+
+.product-single__meta .selling-plans-widget__badge svg {
+  width: 11px;
+  height: 11px;
+  flex-shrink: 0;
+}
+
+.product-single__meta .selling-plans-widget__perks {
+  margin: 0;
+  font-size: 0.8125rem;
+  line-height: 1.45;
+  color: var(--sp-text-muted);
+}
+
+/* Dashed divider + frequency */
+.product-single__meta .selling-plans-widget__frequency-block {
+  padding: 16px;
+  border-top: 1px dashed var(--sp-badge-border);
+  margin-top: 0;
+}
+
+.product-single__meta .selling-plans-widget__frequency-block[hidden] {
+  display: none !important;
+}
+
+.product-single__meta .selling-plans-widget__deliver-label {
+  display: block;
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--sp-text-muted);
+  margin-bottom: 10px;
+}
+
+.product-single__meta .selling-plans-widget__pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.product-single__meta .selling-plans-widget__pill {
+  margin: 0;
+  cursor: pointer;
+}
+
+.product-single__meta .selling-plans-widget__pill-input {
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+}
+
+.product-single__meta .selling-plans-widget__pill-text {
+  display: inline-block;
+  padding: 8px 14px;
+  border-radius: var(--sp-radius-pill);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  border: 1px solid var(--sp-beige);
+  background: #fff;
+  color: var(--sp-text);
+  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+.product-single__meta .selling-plans-widget__pill-input:checked + .selling-plans-widget__pill-text {
+  background: var(--sp-primary);
+  border-color: var(--sp-primary);
+  color: var(--sp-primary-contrast);
+}
+
+.product-single__meta .selling-plans-widget__pill-input:focus-visible + .selling-plans-widget__pill-text {
+  outline: 2px solid var(--sp-primary);
+  outline-offset: 2px;
+}
+
+/* One-time row simpler */
+.product-single__meta .selling-plans-widget__onetime-prices .selling-plans-widget__price-current {
+  color: var(--sp-text);
+}
+
+.product-single__meta .selling-plans-widget__onetime-prices .selling-plans-widget__price-compare {
+  display: none;
+}
+
+@media only screen and (max-width: 400px) {
+  .product-single__meta .selling-plans-widget__row-main {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .product-single__meta .selling-plans-widget__prices {
+    text-align: left;
+    width: 100%;
+  }
+}

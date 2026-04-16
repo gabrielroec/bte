@@ -7,7 +7,6 @@
   --pdp-qty-stepper-divider: rgba(44, 44, 44, 0.12);
 
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
   gap: 14px 20px;
   margin-bottom: 16px;

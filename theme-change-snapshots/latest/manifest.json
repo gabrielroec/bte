@@ -1,6 +1,6 @@
 {
-  "createdAt": "2026-04-16T13:26:36.726Z",
-  "baseGitHead": "f44e3c510ddb5659ede69b0c8e82c35faebaa61f",
+  "createdAt": "2026-04-16T13:48:35.487Z",
+  "baseGitHead": "fe7c7774b5590eeb7e8c7bbcdc974acbc8e6b40b",
   "mode": "include_list",
   "includeListPath": "theme-change-snapshots/include.txt",
   "modified": [],
@@ -9,6 +9,11 @@
       "path": "assets/block-buy-buttons.js",
       "bytes": 10166,
       "sha256": "ba5aeef6b1ba4a9e95f1c88ff1d81574bec0705812938e3d795287455b8c5e52"
+    },
+    {
+      "path": "assets/block-selling-plans.js",
+      "bytes": 8883,
+      "sha256": "a980b8eded9329063ebea7173a2ed2e80d2b3c0c011d197294d5f344f47515eb"
     },
     {
       "path": "assets/components.css",
@@ -24,6 +29,11 @@
       "path": "assets/section-product-why-we-love.css",
       "bytes": 1059,
       "sha256": "86f25037cdcc8d68b09a78c44f78198dc93a011ea8466d19e64ed67f51f190d9"
+    },
+    {
+      "path": "assets/selling-plans-widget.css",
+      "bytes": 6920,
+      "sha256": "a3e58272705f301ee4b334c58e9d65097fc23c59b5e84447bcace66ff2c2de7a"
     },
     {
       "path": "sections/featured-product.liquid",
@@ -44,6 +54,11 @@
       "path": "snippets/block-buy-buttons.liquid",
       "bytes": 8656,
       "sha256": "f399ff73cdcc964cefd0af559046c6fe269b70f80436ac699cee19a694077570"
+    },
+    {
+      "path": "snippets/block-selling-plans.liquid",
+      "bytes": 13389,
+      "sha256": "e0b50302e53cd85a168fbc23b068db02530727da51ea8e28c52b439009539691"
     },
     {
       "path": "snippets/import-map.liquid",
@@ -151,6 +166,11 @@
       "sha256": "fbe1e2cd90e4951ceacaa0fc5db04bbf74f5cba1fa5ca1e4ee70d62e3a12dddb"
     },
     {
+      "path": "templates/product.glow-daily-moisturizer.context.canada.json",
+      "bytes": 915,
+      "sha256": "a904357ce03ab01243d40cb9b19168364e28af0f2aa5b7bb581ea9f311852ef7"
+    },
+    {
       "path": "templates/product.glow-exfoliating-scrub.json",
       "bytes": 26049,
       "sha256": "579d3bfe45d668ed96de16938bdd32f8a19cc14dcb00eb8fc62e341eb8bcb6db"
@@ -190,7 +210,7 @@
   "skipped": [],
   "totals": {
     "modified": 0,
-    "added": 36,
+    "added": 40,
     "deleted": 0,
     "skipped": 0
   }

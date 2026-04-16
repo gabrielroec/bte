@@ -4,15 +4,20 @@
 # Nota: esta lista foi baseada nas mudanças feitas nas PDPs/LPs durante este trabalho.
 
 assets/block-buy-buttons.js
+assets/block-selling-plans.js
 assets/components.css
 assets/pdp-qty-total.css
 assets/section-product-why-we-love.css
+assets/selling-plans-widget.css
+
+layout/theme.liquid
 
 sections/featured-product.liquid
 sections/main-product.liquid
 sections/product-why-we-love.liquid
 
 snippets/block-buy-buttons.liquid
+snippets/block-selling-plans.liquid
 snippets/import-map.liquid
 
 templates/product.json
@@ -37,6 +42,7 @@ templates/product.sensitive-skin-routine.json
 templates/product.sensitive-skin-routine-2.json
 
 templates/product.glow-daily-moisturizer.json
+templates/product.glow-daily-moisturizer.context.canada.json
 templates/product.glow-exfoliating-scrub.json
 templates/product.glow-eye-cream.json
 templates/product.glow-face-mask.json

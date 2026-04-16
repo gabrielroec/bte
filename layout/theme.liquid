@@ -78,6 +78,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     {{ content_for_header }}
 
+    {{ 'okendo-star-overrides.css' | asset_url | stylesheet_tag }}
+    {{ 'product-custom-list.css' | asset_url | stylesheet_tag }}
+
     <script src="{{ 'theme.js' | asset_url }}" defer="defer"></script>
 
     {%- if request.page_type contains 'customers/' -%}

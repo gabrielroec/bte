@@ -15,12 +15,7 @@
   "sections": {
     "main": {
       "settings": {},
-      "blocks": {
-        "trynow_try_before_you_buy_trynow_cta_button_fxpB8x": {
-          "disabled": true,
-          "settings": {}
-        }
-      }
+      "blocks": {}
     }
   }
 }

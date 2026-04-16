@@ -12,8 +12,6 @@
           render 'block-variant-picker', block: block, forloop: forloop, update_url: false
         when 'selling_plans'
           render 'block-selling-plans', block: block
-        when 'subscription_savings'
-          render 'block-subscription-savings', block: block
         when 'buy_buttons'
           render 'block-buy-buttons', block: block
         when 'price'
@@ -172,6 +170,7 @@
       "id": "mobile_layout",
       "label": "t:labels.mobile_layout",
       "default": "partial",
+      "info": "Partial: main slide ~75% width with next slide peek (carousel). Thumbnails show below the gallery on mobile. Full: single slide edge-to-edge.",
       "options": [
         {
           "value": "partial",
@@ -429,35 +428,6 @@
           "id": "color_beige",
           "label": "Bordas / rádio inativo",
           "default": "#c9dde8"
-        }
-      ]
-    },
-    {
-      "type": "subscription_savings",
-      "name": "Subscription savings",
-      "limit": 1,
-      "settings": [
-        {
-          "type": "paragraph",
-          "content": "Place below Selling plans. Use [[amount]] where the money value should appear (Shopify JSON cannot use {{ }} in settings)."
-        },
-        {
-          "type": "textarea",
-          "id": "line_order",
-          "label": "First line",
-          "default": "You save [[amount]] this order"
-        },
-        {
-          "type": "textarea",
-          "id": "line_year",
-          "label": "Second line",
-          "default": "~[[amount]] saved per year at this cadence"
-        },
-        {
-          "type": "color",
-          "id": "color_accent",
-          "label": "Accent color",
-          "default": "#99bccc"
         }
       ]
     },
