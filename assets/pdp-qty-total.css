@@ -7,6 +7,7 @@
   --pdp-qty-stepper-divider: rgba(44, 44, 44, 0.12);
 
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 14px 20px;
   margin-bottom: 16px;
@@ -127,7 +128,11 @@
 }
 
 .product-single__meta .product-qty-total-row__total {
-  display: none;
+  margin-left: auto;
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  flex-shrink: 0;
 }
 
 .product-single__meta .product-qty-total-row__total-label {
@@ -142,3 +147,10 @@
   color: var(--pdp-qty-text);
 }
 
+@media only screen and (max-width: 400px) {
+  .product-single__meta .product-qty-total-row__total {
+    margin-left: 0;
+    width: 100%;
+    justify-content: flex-start;
+  }
+}

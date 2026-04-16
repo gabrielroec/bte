@@ -1,0 +1,357 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "okendo_star_rating_qHXQA9": {
+          "type": "shopify://apps/okendo/blocks/star-rating/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
+          "settings": {
+            "product": "{{product}}"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+            "vendor_enable": false,
+            "sku_enable": false
+          }
+        },
+        "text_WgiafR": {
+          "type": "text",
+          "settings": {
+            "text": "Discover premium skincare—details and how to use are in the sections below."
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "separator_zdkt98": {
+          "type": "separator",
+          "settings": {}
+        },
+        "custom_eYcXWC": {
+          "type": "custom",
+          "settings": {
+            "code": "<ul class=\"product-custom-list\">\n<li>Premium formulas designed for visible results</li>\n<li>See ingredients, how to apply, and more below</li>\n<li>Free shipping on qualifying orders</li>\n</ul>"
+          }
+        },
+        "separator_GqYgcP": {
+          "type": "separator",
+          "settings": {}
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "variant_labels": true,
+            "picker_type": "button",
+            "product_dynamic_variants_enable": true,
+            "color_swatches": false
+          }
+        },
+        "selling_plans_native": {
+          "type": "selling_plans",
+          "settings": {
+            "heading_subscribe": "Subscribe & Save",
+            "badge_enable": true,
+            "badge_text": "MOST POPULAR",
+            "label_deliver_every": "DELIVER EVERY",
+            "perks_suffix": "Free shipping · Skip or cancel anytime",
+            "label_onetime": "One-time purchase",
+            "color_primary": "#99bccc",
+            "color_mint": "#eef5f8",
+            "color_beige": "#c9dde8"
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "surface_pickup_enable": true,
+            "show_gift_card_recipient": false,
+            "show_qty_total_row": true,
+            "label_qty": "Qty",
+            "label_total_prefix": "Total:",
+            "color_accent_qty": "#99bccc"
+          }
+        },
+        "custom_QahbLh": {
+          "type": "custom",
+          "settings": {
+            "code": "<p style=\"text-align:center; font-weight:600;\">FREE SHIPPING $75+ | 90-DAY LOVE-IT GUARANTEE</p>"
+          }
+        },
+        "tolstoy_shoppable_video_quiz_stories_block_gCBCEb": {
+          "type": "shopify://apps/tolstoy-shoppable-video-quiz/blocks/stories-block/06fa8282-42ff-403e-b67c-1936776aed11",
+          "settings": {
+            "publishId": "5ih35q7phtuba"
+          }
+        }
+      },
+      "block_order": [
+        "okendo_star_rating_qHXQA9",
+        "title",
+        "text_WgiafR",
+        "price",
+        "separator_zdkt98",
+        "custom_eYcXWC",
+        "separator_GqYgcP",
+        "variant_picker",
+        "selling_plans_native",
+        "buy_buttons",
+        "custom_QahbLh",
+        "tolstoy_shoppable_video_quiz_stories_block_gCBCEb"
+      ],
+      "custom_css": [
+        ".product-block .variant__label {display: none;}",
+        "video-media,video {--default-aspect-ratio: 1/1 !important;}"
+      ],
+      "settings": {
+        "image_position": "left",
+        "image_container_size": "large",
+        "product_image_size": "square",
+        "product_zoom_enable": true,
+        "thumbnail_position": "beside",
+        "thumbnail_height": "flexible",
+        "thumbnail_arrows": false,
+        "show_second_image_as_cover": false,
+        "mobile_layout": "partial",
+        "enable_video_looping": true,
+        "product_video_style": "muted"
+      }
+    },
+    "advanced_accordion_xnyGkd": {
+      "type": "advanced-accordion",
+      "blocks": {
+        "text_block_HcMVap": {
+          "type": "text_block",
+          "settings": {
+            "image_width": 100,
+            "image_mask": "none",
+            "align_text": "left",
+            "title": "",
+            "text": "{{ product.description }}",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_block_HcMVap"
+      ],
+      "custom_css": [
+        "{margin-top: 50px;}"
+      ],
+      "settings": {
+        "title": "Description",
+        "per_row": 1,
+        "two_per_row_mobile": false,
+        "opened": false,
+        "disabled": false
+      }
+    },
+    "advanced_accordion_8KaJYJ": {
+      "type": "advanced-accordion",
+      "blocks": {
+        "text_block_9qpHhQ": {
+          "type": "text_block",
+          "settings": {
+            "image_width": 100,
+            "image_mask": "none",
+            "align_text": "left",
+            "title": "",
+            "text": "{{ product.metafields.custom.product_ingredients | metafield_tag }}",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_block_9qpHhQ"
+      ],
+      "settings": {
+        "title": "Ingredients",
+        "per_row": 1,
+        "two_per_row_mobile": false,
+        "opened": false,
+        "disabled": false
+      }
+    },
+    "advanced_accordion_9Q4PVY": {
+      "type": "advanced-accordion",
+      "blocks": {
+        "text_block_eKTmfw": {
+          "type": "text_block",
+          "settings": {
+            "image_width": 100,
+            "image_mask": "none",
+            "align_text": "left",
+            "title": "Example title",
+            "text": "<p>{{ product.metafields.custom.how_to_apply_content | metafield_tag }}</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_block_eKTmfw"
+      ],
+      "settings": {
+        "title": "How To Apply",
+        "per_row": 1,
+        "two_per_row_mobile": false,
+        "opened": false,
+        "disabled": false
+      }
+    },
+    "advanced_accordion_zPQf4f": {
+      "type": "advanced-accordion",
+      "blocks": {
+        "text_block_AjK8Cj": {
+          "type": "text_block",
+          "settings": {
+            "image_width": 100,
+            "image_mask": "none",
+            "align_text": "left",
+            "title": "",
+            "text": "<p>{{ product.metafields.custom.product_packaging_text | metafield_tag }}</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_block_AjK8Cj"
+      ],
+      "settings": {
+        "title": "Packaging",
+        "per_row": 1,
+        "two_per_row_mobile": false,
+        "opened": false,
+        "disabled": false
+      }
+    },
+    "sub": {
+      "type": "product-full-width",
+      "blocks": {
+        "description": {
+          "type": "description",
+          "settings": {
+            "is_tab": true
+          }
+        },
+        "tab": {
+          "type": "tab",
+          "settings": {
+            "title": "Shipping information",
+            "content": "<p>Use collapsible tabs for more detailed information that will help customers make a purchasing decision.</p><p>Ex: Shipping and return policies, size guides, and other common questions.</p>",
+            "page": ""
+          }
+        },
+        "contact": {
+          "type": "contact",
+          "settings": {
+            "title": "Ask a question",
+            "phone": false
+          }
+        }
+      },
+      "block_order": [
+        "description",
+        "tab",
+        "contact"
+      ],
+      "disabled": true,
+      "settings": {
+        "max_width": true
+      }
+    },
+    "recommendations": {
+      "type": "product-recommendations",
+      "settings": {
+        "product_recommendations_heading": "You may also like",
+        "related_count": 3,
+        "products_per_row": 3
+      }
+    },
+    "more-products-vendor": {
+      "type": "more-products-vendor",
+      "disabled": true,
+      "settings": {
+        "products_per_row": 3,
+        "max_products": 5
+      }
+    },
+    "more-products-collection": {
+      "type": "more-products-collection",
+      "disabled": true,
+      "settings": {
+        "products_per_row": 3,
+        "max_products": 5
+      }
+    },
+    "recently-viewed": {
+      "type": "recently-viewed",
+      "disabled": true,
+      "settings": {}
+    },
+    "collection-return": {
+      "type": "collection-return",
+      "disabled": true,
+      "settings": {
+        "color_scheme": "2"
+      }
+    },
+    "173820676161b0e7b6": {
+      "type": "apps",
+      "blocks": {
+        "okendo_reviews_widget_bf4jhh": {
+          "type": "shopify://apps/okendo/blocks/reviews-widget/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
+          "settings": {
+            "product": "{{product}}",
+            "widget_type": "reviews_widget"
+          }
+        }
+      },
+      "block_order": [
+        "okendo_reviews_widget_bf4jhh"
+      ],
+      "settings": {
+        "full_width": false,
+        "space_around": true
+      }
+    },
+    "why_we_love": {
+      "type": "product-why-we-love",
+      "settings": {
+        "heading": "Why We Love It",
+        "text": "<p>We're obsessed with how effortlessly it absorbs, leaving your skin feeling silky without any heavy residue—just a perfectly hydrated glow.</p>"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "advanced_accordion_xnyGkd",
+    "advanced_accordion_8KaJYJ",
+    "advanced_accordion_9Q4PVY",
+    "advanced_accordion_zPQf4f",
+    "why_we_love",
+    "sub",
+    "recommendations",
+    "more-products-vendor",
+    "more-products-collection",
+    "recently-viewed",
+    "collection-return",
+    "173820676161b0e7b6"
+  ]
+}

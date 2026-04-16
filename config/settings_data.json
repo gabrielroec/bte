@@ -1017,9 +1017,19 @@
           "quiz_id": ""
         }
       },
+      "855628211100114053": {
+        "type": "shopify://apps/klaviyo-email-marketing-sms/blocks/klaviyo-onsite-embed/2632fe16-c075-4321-a88b-50b567f42507",
+        "disabled": false,
+        "settings": {}
+      },
+      "16798170927650018749": {
+        "type": "shopify://apps/recharge-subscriptions/blocks/storefront-experiences/371eed76-0b44-4869-9813-730372ea378e",
+        "disabled": false,
+        "settings": {}
+      },
       "5537102726230261467": {
         "type": "shopify://apps/revenuehunt-recommender-quiz/blocks/v2-link-quiz/672f3d48-fd3b-4227-8778-c6e58c4f8a98",
-        "disabled": false,
+        "disabled": true,
         "settings": {
           "quiz_width": "50",
           "quiz_height": "70",
@@ -1029,14 +1039,9 @@
           "quiz_id": "uI6wXc"
         }
       },
-      "855628211100114053": {
-        "type": "shopify://apps/klaviyo-email-marketing-sms/blocks/klaviyo-onsite-embed/2632fe16-c075-4321-a88b-50b567f42507",
-        "disabled": false,
-        "settings": {}
-      },
       "17848331911275895266": {
         "type": "shopify://apps/revenuehunt-recommender-quiz/blocks/v2-automatic-popup/672f3d48-fd3b-4227-8778-c6e58c4f8a98",
-        "disabled": false,
+        "disabled": true,
         "settings": {
           "popup_timeout": 20,
           "quiz_width": "100",
@@ -1046,11 +1051,6 @@
           "quiz_exit_intent": true,
           "quiz_id": "uI6wXc"
         }
-      },
-      "16798170927650018749": {
-        "type": "shopify://apps/recharge-subscriptions/blocks/storefront-experiences/371eed76-0b44-4869-9813-730372ea378e",
-        "disabled": false,
-        "settings": {}
       }
     }
   },

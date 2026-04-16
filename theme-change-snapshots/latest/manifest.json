@@ -1,0 +1,197 @@
+{
+  "createdAt": "2026-04-16T13:26:36.726Z",
+  "baseGitHead": "f44e3c510ddb5659ede69b0c8e82c35faebaa61f",
+  "mode": "include_list",
+  "includeListPath": "theme-change-snapshots/include.txt",
+  "modified": [],
+  "added": [
+    {
+      "path": "assets/block-buy-buttons.js",
+      "bytes": 10166,
+      "sha256": "ba5aeef6b1ba4a9e95f1c88ff1d81574bec0705812938e3d795287455b8c5e52"
+    },
+    {
+      "path": "assets/components.css",
+      "bytes": 326276,
+      "sha256": "8cb6a92fcd2a7dd50391ab8d6e2d9d80b0dfa6da32286f393ab5955cd8ff869e"
+    },
+    {
+      "path": "assets/pdp-qty-total.css",
+      "bytes": 3590,
+      "sha256": "ccd1936d0fbad85653c92f939c4fda06b2ba4884439d90fe25c9948b4c6d5ec7"
+    },
+    {
+      "path": "assets/section-product-why-we-love.css",
+      "bytes": 1059,
+      "sha256": "86f25037cdcc8d68b09a78c44f78198dc93a011ea8466d19e64ed67f51f190d9"
+    },
+    {
+      "path": "sections/featured-product.liquid",
+      "bytes": 18084,
+      "sha256": "47989dd09dc5f2b811b870165530ad08a3f8a533166357fbafa932fc54cf7965"
+    },
+    {
+      "path": "sections/main-product.liquid",
+      "bytes": 17701,
+      "sha256": "780bb8627030e65b49c9248520bc1f3d72c93cbbf23adc5960baebbe866e596a"
+    },
+    {
+      "path": "sections/product-why-we-love.liquid",
+      "bytes": 1147,
+      "sha256": "8698c474043ee6efb0ab5de5ac8cbe32a905cc2c7f8008ba4282b4721d01951b"
+    },
+    {
+      "path": "snippets/block-buy-buttons.liquid",
+      "bytes": 8656,
+      "sha256": "f399ff73cdcc964cefd0af559046c6fe269b70f80436ac699cee19a694077570"
+    },
+    {
+      "path": "snippets/import-map.liquid",
+      "bytes": 6720,
+      "sha256": "c1d5c2ba13d76fd1914fd5a085d5f07fc80bd4a73cdbbb50e02cf107e9cdb404"
+    },
+    {
+      "path": "templates/product.json",
+      "bytes": 10199,
+      "sha256": "38330a4c85da0283e6ecff523ac77aeb25c91068dbe614bbc9eec017d0fd4165"
+    },
+    {
+      "path": "templates/product.preorder.json",
+      "bytes": 5772,
+      "sha256": "56a4433fa6a57ced9ecfdb1839ffa7b12365bf9be5e1e0b53a279e0630c3514e"
+    },
+    {
+      "path": "templates/product.cross-selling.json",
+      "bytes": 5772,
+      "sha256": "56a4433fa6a57ced9ecfdb1839ffa7b12365bf9be5e1e0b53a279e0630c3514e"
+    },
+    {
+      "path": "templates/product.product-landing.json",
+      "bytes": 6957,
+      "sha256": "d20d5fcecd34a2bd38340ea51feb80ec6e84ad6e0be93874a5f3327ebd959468"
+    },
+    {
+      "path": "templates/product.brand-story.json",
+      "bytes": 6252,
+      "sha256": "d6c6f903ecfe267798bab0921ce028c5fdf171b656bbba52bfc13dea403126bf"
+    },
+    {
+      "path": "templates/product.mtn-template.json",
+      "bytes": 6471,
+      "sha256": "c2d1e3c4c2c22b2b361fe1169e4da724dd5a13cc2ae1a13beffd1814196a9eb4"
+    },
+    {
+      "path": "templates/product.mtn-template-2.json",
+      "bytes": 27951,
+      "sha256": "d783a63e561ab46d88daa6448a06508dddb9334fd901768310c12f274e2827d4"
+    },
+    {
+      "path": "templates/product.aging-skin-routine.json",
+      "bytes": 32771,
+      "sha256": "623226719854248bfcd4bb3e8fbc3b2ff8b93c66299e774d59ed9846c580524b"
+    },
+    {
+      "path": "templates/product.aging-skin-routine-2.json",
+      "bytes": 31130,
+      "sha256": "9debe99afbc700e185382a21298cfc1003c5e1dd602694b00fd13ded73a9c00a"
+    },
+    {
+      "path": "templates/product.dry-skin-routine.json",
+      "bytes": 30832,
+      "sha256": "0e56c90372146732b98dd334870d80dc3dea0b7fe24d4fb0aca6bf8acd204256"
+    },
+    {
+      "path": "templates/product.dry-skin-routine-2.json",
+      "bytes": 29191,
+      "sha256": "9c6594f9a5f16f9f0f55430a3febc7542040b79a3ab7985d3fb9079ea5337161"
+    },
+    {
+      "path": "templates/product.dull-uneven-skin-routine.json",
+      "bytes": 30804,
+      "sha256": "fa0d5448777514ad7ebf69ae51c141481c46cd51a743ae12eedca9d90ae605f5"
+    },
+    {
+      "path": "templates/product.dull-skin-routine-2.json",
+      "bytes": 29163,
+      "sha256": "e6634386c8dbc2e6f6edc381a90cc6700e59a0cfac6a30bfc2a3271f29d9c0a7"
+    },
+    {
+      "path": "templates/product.irritated-skin-routine.json",
+      "bytes": 28959,
+      "sha256": "369270b6492e56f6bfdfe9cb5566aed6e6dc34ba6927274429c45aec6c4bf005"
+    },
+    {
+      "path": "templates/product.irritated-skin-routine-2.json",
+      "bytes": 27318,
+      "sha256": "0502206b182d51a886cb5fd5b3f9d5244f68917b98e3f317060097219bc0a61b"
+    },
+    {
+      "path": "templates/product.oily-skin-routine.json",
+      "bytes": 29235,
+      "sha256": "47ba710da439df3a0b0cbbeea11137999aadec43669460f375346659ab0dd3fb"
+    },
+    {
+      "path": "templates/product.oily-skin-routine-2.json",
+      "bytes": 27586,
+      "sha256": "e8600693b1bd0d625120ddd74cd0207136cc19709f32e0e79fe9919a34ebbad8"
+    },
+    {
+      "path": "templates/product.sensitive-skin-routine.json",
+      "bytes": 29023,
+      "sha256": "e490fc74b42fcd65ee73c54d0ff0cd89f86a6c9dfcb01b857987653f19ccbb2a"
+    },
+    {
+      "path": "templates/product.sensitive-skin-routine-2.json",
+      "bytes": 27382,
+      "sha256": "4d27ea9923e4da2d47e11f4a7c621a452a7a09da7602b7f18f2c8c769cf65631"
+    },
+    {
+      "path": "templates/product.glow-daily-moisturizer.json",
+      "bytes": 28675,
+      "sha256": "fbe1e2cd90e4951ceacaa0fc5db04bbf74f5cba1fa5ca1e4ee70d62e3a12dddb"
+    },
+    {
+      "path": "templates/product.glow-exfoliating-scrub.json",
+      "bytes": 26049,
+      "sha256": "579d3bfe45d668ed96de16938bdd32f8a19cc14dcb00eb8fc62e341eb8bcb6db"
+    },
+    {
+      "path": "templates/product.glow-eye-cream.json",
+      "bytes": 30527,
+      "sha256": "11f13c2bfc3877fc389ac20c02330d3241151e9486000a4be4625d68b8ee5112"
+    },
+    {
+      "path": "templates/product.glow-face-mask.json",
+      "bytes": 28061,
+      "sha256": "1085a337a0937b8beb11245fe55b96e3d5bb66d46ee9d666e4c5432647148d91"
+    },
+    {
+      "path": "templates/product.glow-facial-mist.json",
+      "bytes": 23308,
+      "sha256": "50cfaef50131e7298fe223c8173ef08421b5202f5912e817aa888fbf047cc3c9"
+    },
+    {
+      "path": "templates/product.glow-facial-serum.json",
+      "bytes": 22965,
+      "sha256": "ecffebb7c4080cf637bbb350b51476ccbb8b3a3e539c962d4db4740a28003784"
+    },
+    {
+      "path": "templates/product.glow-foaming-cleanser.json",
+      "bytes": 25840,
+      "sha256": "83170480d9b1e92681e5cf72b302168e24ee699506ea63a392faf7c15b24c1dd"
+    },
+    {
+      "path": "templates/product.glow-makeup-remover.json",
+      "bytes": 24035,
+      "sha256": "e4a0f62571cdcdf72493e113c000f9060d8f9706a2d08eafce0cdd079e0b5643"
+    }
+  ],
+  "deleted": [],
+  "skipped": [],
+  "totals": {
+    "modified": 0,
+    "added": 36,
+    "deleted": 0,
+    "skipped": 0
+  }
+}

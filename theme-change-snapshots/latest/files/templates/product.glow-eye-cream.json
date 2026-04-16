@@ -1,0 +1,850 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "okendo_star_rating_qHXQA9": {
+          "type": "shopify://apps/okendo/blocks/star-rating/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
+          "settings": {
+            "product": "{{product}}"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+            "vendor_enable": false,
+            "sku_enable": false
+          }
+        },
+        "text_WgiafR": {
+          "type": "text",
+          "settings": {
+            "text": "Brighten, hydrate, and refresh tired eyes."
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "separator_zdkt98": {
+          "type": "separator",
+          "settings": {}
+        },
+        "custom_eYcXWC": {
+          "type": "custom",
+          "settings": {
+            "code": "<ul class=\"product-custom-list\">\n<li>Hydrates and nourishes the delicate eye area</li>\n<li>Helps minimize dark circles for a brighter look</li>\n<li>Feels lightweight and absorbs quickly without residue</li>\n</ul>"
+          }
+        },
+        "separator_GqYgcP": {
+          "type": "separator",
+          "settings": {}
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "variant_labels": true,
+            "picker_type": "button",
+            "product_dynamic_variants_enable": true,
+            "color_swatches": false
+          }
+        },
+        "selling_plans_native": {
+          "type": "selling_plans",
+          "settings": {
+            "heading_subscribe": "Subscribe & Save",
+            "badge_enable": true,
+            "badge_text": "MOST POPULAR",
+            "label_deliver_every": "DELIVER EVERY",
+            "perks_suffix": "Free shipping · Skip or cancel anytime",
+            "label_onetime": "One-time purchase",
+            "color_primary": "#99bccc",
+            "color_mint": "#eef5f8",
+            "color_beige": "#c9dde8"
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "surface_pickup_enable": true,
+            "show_gift_card_recipient": false,
+            "show_qty_total_row": true,
+            "label_qty": "Qty",
+            "label_total_prefix": "Total:",
+            "color_accent_qty": "#99bccc"
+          }
+        },
+        "custom_QahbLh": {
+          "type": "custom",
+          "settings": {
+            "code": "<p style=\"text-align:center; font-weight:600;\">FREE SHIPPING $75+ | 90-DAY LOVE-IT GUARANTEE</p>"
+          }
+        },
+        "tolstoy_shoppable_video_quiz_stories_block_gCBCEb": {
+          "type": "shopify://apps/tolstoy-shoppable-video-quiz/blocks/stories-block/06fa8282-42ff-403e-b67c-1936776aed11",
+          "settings": {
+            "publishId": "5ih35q7phtuba"
+          }
+        }
+      },
+      "block_order": [
+        "okendo_star_rating_qHXQA9",
+        "title",
+        "text_WgiafR",
+        "price",
+        "separator_zdkt98",
+        "custom_eYcXWC",
+        "separator_GqYgcP",
+        "variant_picker",
+        "selling_plans_native",
+        "buy_buttons",
+        "custom_QahbLh",
+        "tolstoy_shoppable_video_quiz_stories_block_gCBCEb"
+      ],
+      "custom_css": [
+        ".product-block .variant__label {display: none;}",
+        "video-media,video {--default-aspect-ratio: 1/1 !important;}"
+      ],
+      "settings": {
+        "image_position": "left",
+        "image_container_size": "large",
+        "product_image_size": "square",
+        "product_zoom_enable": true,
+        "thumbnail_position": "beside",
+        "thumbnail_height": "flexible",
+        "thumbnail_arrows": false,
+        "show_second_image_as_cover": false,
+        "mobile_layout": "partial",
+        "enable_video_looping": true,
+        "product_video_style": "muted"
+      }
+    },
+    "advanced_accordion_jJyYDX": {
+      "type": "advanced-accordion",
+      "blocks": {
+        "text_block_fxTdmN": {
+          "type": "text_block",
+          "settings": {
+            "image_width": 100,
+            "image_mask": "none",
+            "align_text": "left",
+            "title": "",
+            "text": "{{ product.description }}",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_block_fxTdmN"
+      ],
+      "custom_css": [
+        "{margin-top: 60px;}",
+        "h2 {font-family: ofelia-text, sans-serif; font-weight: 600; font-size: 18px;}"
+      ],
+      "settings": {
+        "title": "About The Product",
+        "per_row": 1,
+        "two_per_row_mobile": false,
+        "opened": false,
+        "disabled": false
+      }
+    },
+    "advanced_accordion_MNDaAU": {
+      "type": "advanced-accordion",
+      "blocks": {
+        "text_block_g77UqG": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/2_0199d2b3-73b7-491a-8956-084df13ac4c3.jpg",
+            "image_width": 25,
+            "image_mask": "none",
+            "align_text": "left",
+            "title": "Aqua",
+            "text": "<p>Water, the universal solvent used in skincare to help skin feel hydrated and nourished. </p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_3MWCkr": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/1_f8ec36f7-67ee-49c9-aa1b-3ee689dcbec9.jpg",
+            "image_width": 25,
+            "image_mask": "none",
+            "align_text": "left",
+            "title": "Aloe Barbadensis Leaf Juice",
+            "text": "<p>Commonly referred to as Aloe Leaf juice, it is known for its anti-inflammatory and moisturizing properties to help calm and hydrate the skin.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_QCJYeA": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/Caffeine_Coffea_Arabica_Coffe_Seed_Extract_Lecithin_Green_Coffee_Extract.jpg",
+            "image_width": 25,
+            "image_mask": "none",
+            "align_text": "left",
+            "title": "Caffeine/Coffea Arabica (Coffe) Seed Extract/Lecithin",
+            "text": "<p>EcoslimTM: patented coffee extract and vegetable caffeine known to help reduce dark circles.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_qY7NPt": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/Calendula_Officinalis_Flower_Extract_Calendula_Flower_Extract.jpg",
+            "image_width": 25,
+            "image_mask": "none",
+            "align_text": "left",
+            "title": "Calendula Officinalis Flower Extract",
+            "text": "<p>Commonly known as Calendula flower extract, it is known for its antifungal, anti-inflammatory and antibacterial properties to calm, soothe and recovery of the skin.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_KWHkJC": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/Camellia_Oleifera_Seed_Oil__Camellia_Seed_Oil.jpg",
+            "image_width": 25,
+            "image_mask": "none",
+            "align_text": "left",
+            "title": "Camellia Oleifera Seed Oil",
+            "text": "<p>Commonly referred to as Camellia seed oil, it is known to help replenish skin and fight signs of aging.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_ABjWNX": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/Carotenoids___Helianthus_Annuus_Sunflower_Seed_Oil___Tocopherol___Ascorbyl_Palmitate_Carrot_Tissue_Oil.jpg",
+            "image_width": 25,
+            "image_mask": "none",
+            "align_text": "left",
+            "title": "Carotenoids / Helianthus Annuus (Sunflower) Seed Oil / Tocopherol / Ascorbyl Palmitate",
+            "text": "<p>Commonly referred to as Carrot Tissue oil, it is known to be rich in vitamins to help provide radiant complexion.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_m9EyDQ": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/Centaurea_Cyanus_Flower_Extract_Cornflower_Extract.jpg",
+            "image_width": 25,
+            "image_mask": "none",
+            "align_text": "left",
+            "title": "Centaurea Cyanus Flower Extract",
+            "text": "<p>Commonly referred to as Cornflower extract, it is known to help tone and brighten skin complexion.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_A8td39": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/Cetearyl_Olivate_and_Sorbitan_Olivate_Olive_Oil.jpg",
+            "image_width": 25,
+            "image_mask": "none",
+            "align_text": "left",
+            "title": "Cetearyl Olivate and Sorbitan Olivate",
+            "text": "<p>Olivem® 1000: a patented natural, biodegradable and COSMOS certified emulsifier from olive oil.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_gRGCQe": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/Cetyl_Alcohol.jpg",
+            "image_width": 25,
+            "image_mask": "none",
+            "align_text": "left",
+            "title": "Cetyl Alcohol",
+            "text": "<p>Commonly known as Matricaria extract, it is known to help promote skin recovery and protect the skin.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_ckaAb8": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/Clay_MMC.jpg",
+            "image_width": 20,
+            "image_mask": "none",
+            "align_text": "left",
+            "title": "Clay",
+            "text": "<p>Proprietary Mineral Microbiome ClayTM, known for its unique rich mineral composition to help promote skin health.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_ejFeJk": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/DL_Bio_Enzyme-Substrate.jpg",
+            "image_width": 25,
+            "image_mask": "none",
+            "align_text": "left",
+            "title": "DL Bio Enzyme-Substrate",
+            "text": "<p>A plant-based humectant to help bind moisture to skin.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_UhkJyk": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/Hyaluronic_Acid.jpg",
+            "image_width": 25,
+            "image_mask": "none",
+            "align_text": "left",
+            "title": "Hyaluronic Acid",
+            "text": "<p>Known to help increase moisture and help reduce fine lines.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_aehhHh": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/Lactoperoxidase___Glucose_Oxidase.jpg",
+            "image_width": 25,
+            "image_mask": "none",
+            "align_text": "left",
+            "title": "Aromatic oil from plants.",
+            "text": "<p>Commonly referred to as Geranium oil, it is known for its anti-inflammatory properties to help soothe the skin.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_76JqnM": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/Magnesium_Aluminum_Silicate_Bentonite_Clay.jpg",
+            "image_width": 25,
+            "image_mask": "none",
+            "align_text": "left",
+            "title": "Magnesium Aluminum Silicate",
+            "text": "<p>Commonly referred to as Bentonite clay, it is known to help cleanse impurities from the skin.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_i7xa8H": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/15.jpg",
+            "image_width": 25,
+            "image_mask": "none",
+            "align_text": "left",
+            "title": "Myristyl Myristate",
+            "text": "<p>A plant-based emollient from coconut oil.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_wman8g": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/Oenothera_Biennis_Oil_Evening_Primrose_Oil.jpg",
+            "image_width": 25,
+            "image_mask": "none",
+            "align_text": "left",
+            "title": "Oenothera Biennis Oil",
+            "text": "<p>Commonly referred to as Evening Primrose oil, it is known to help reduce skin inflammation and improve overall skin health by improving moisture, elasticity and firmness.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_R8N6e6": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/Prunus_Amygdalus_Dulcis_Oil_Sweet_Almond_Oil.jpg",
+            "image_width": 25,
+            "image_mask": "none",
+            "align_text": "left",
+            "title": "Prunus Amygdalus Dulcis Oil",
+            "text": "<p>Commonly referred to as Sweet Almond oil, it is known to be rich in Vitamin A, E, Omega-3 Fatty Acids and zinc to help reduce puffiness, improve skin tone, and smooth the skin.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_nqi8zy": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/Rosa_Canina_Fruit_Oil_Rosehip_Oil.jpg",
+            "image_width": 25,
+            "image_mask": "none",
+            "align_text": "left",
+            "title": "Rosa Canina Fruit Oil",
+            "text": "<p>Commonly referred to as Rosehip oil, it is known to help support collagen production, reduction of wrinkles and prevent dry skin.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_cPQqPC": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/Tocopherol__Vitamin_E.jpg",
+            "image_width": 25,
+            "image_mask": "none",
+            "align_text": "left",
+            "title": "Tocopherol",
+            "text": "<p>Commonly known as Vitamin E. Natural vitamin E from vegetables is known for its antioxidant properties to help nourish and protect the skin.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_wLHenD": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/Triticum_Vulgare_Germ_Oil_Wheat_Germ_Oil.jpg",
+            "image_width": 25,
+            "image_mask": "none",
+            "align_text": "left",
+            "title": "Triticum Vulgare Germ Oil",
+            "text": "<p>Commonly referred to as Wheat Germ oil, it is known to help protect and add moisture to the skin.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_EDGDPY": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/Vegetable_Glycerin.jpg",
+            "image_width": 25,
+            "image_mask": "none",
+            "align_text": "left",
+            "title": "Vegetable Glycerin",
+            "text": "<p>Vegetable fats to help provide moisture and hydration to skin.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_kDJFpT": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/Vitamin_B3_Niacinamide.jpg",
+            "image_width": 25,
+            "image_mask": "none",
+            "align_text": "left",
+            "title": "Vitamin B3 Niacinamide",
+            "text": "<p>Commonly referred to as Niacinamide, it is known to help build cells in the skin and protect from external stressors.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_block_g77UqG",
+        "text_block_3MWCkr",
+        "text_block_QCJYeA",
+        "text_block_qY7NPt",
+        "text_block_KWHkJC",
+        "text_block_ABjWNX",
+        "text_block_m9EyDQ",
+        "text_block_A8td39",
+        "text_block_gRGCQe",
+        "text_block_ckaAb8",
+        "text_block_ejFeJk",
+        "text_block_UhkJyk",
+        "text_block_aehhHh",
+        "text_block_76JqnM",
+        "text_block_i7xa8H",
+        "text_block_wman8g",
+        "text_block_R8N6e6",
+        "text_block_nqi8zy",
+        "text_block_cPQqPC",
+        "text_block_wLHenD",
+        "text_block_EDGDPY",
+        "text_block_kDJFpT"
+      ],
+      "custom_css": [
+        "h2 {font-family: ofelia-text, sans-serif; font-weight: 600; font-size: 18px;}"
+      ],
+      "settings": {
+        "title": "All 28 Natural Ingredients",
+        "per_row": 4,
+        "two_per_row_mobile": false,
+        "opened": false,
+        "disabled": false
+      }
+    },
+    "advanced_accordion_AYThFw": {
+      "type": "advanced-accordion",
+      "blocks": {
+        "text_block_MdMUUa": {
+          "type": "text_block",
+          "settings": {
+            "image_width": 100,
+            "image_mask": "none",
+            "align_text": "left",
+            "title": "",
+            "text": "<p>1. Apply onto cleansed skin. Place small dots of cream on upper lid just under the eyebrow and well below your lower lash line.<br/><br/>2. Use your finger to gently pat the cream until it is thoroughly absorbed.<br/><br/>3. Use eye cream once in the AM and again in the PM for best results.<br/><br/>WARNINGS: Avoid direct contact with eyes. If contact occurs, rinse with water. For topical use only.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_Li43w9": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/Glow_Eye_Cream.webp",
+            "image_width": 55,
+            "image_mask": "none",
+            "align_text": "left",
+            "title": "",
+            "text": "",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_block_MdMUUa",
+        "text_block_Li43w9"
+      ],
+      "custom_css": [
+        "h2 {font-family: ofelia-text, sans-serif; font-weight: 600; font-size: 18px;}"
+      ],
+      "settings": {
+        "title": "How To Apply",
+        "per_row": 2,
+        "two_per_row_mobile": false,
+        "opened": false,
+        "disabled": false
+      }
+    },
+    "advanced_accordion_xWwj3X": {
+      "type": "advanced-accordion",
+      "blocks": {
+        "text_block_raE9Mr": {
+          "type": "text_block",
+          "settings": {
+            "image_width": 100,
+            "image_mask": "none",
+            "align_text": "left",
+            "title": "Suistainable. Minimized environmental impact.",
+            "text": "<p>We make every effort to minimize our environmental footprint. Our recyclable jars are made from glass and we skip the excess by using only primary packaging (the jar) and printing our product information directly onto the jar to reduce packaging and labelling waste. Finally, to reduce wasted space during storage and shipping, we use uniquely shaped jars that stack neatly and limit gaps. This economical use of space reduces our environmental impact (think packing materials used and transportation emissions per shipment) by 25 to 30%.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_gWmNcT": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/Resized_image_package.webp",
+            "image_width": 100,
+            "image_mask": "none",
+            "align_text": "left",
+            "title": "",
+            "text": "",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_block_raE9Mr",
+        "text_block_gWmNcT"
+      ],
+      "custom_css": [
+        "h2 {font-family: ofelia-text, sans-serif; font-weight: 600; font-size: 18px;}"
+      ],
+      "settings": {
+        "title": "Eco-Friendly Packaging",
+        "per_row": 2,
+        "two_per_row_mobile": false,
+        "opened": false,
+        "disabled": false
+      }
+    },
+    "text_and_image_rHLmeH": {
+      "type": "text-and-image",
+      "custom_css": [
+        "h2 {font-family: ofelia-text, sans-serif; font-weight: 600; font-size: 35px;}",
+        "p {padding-bottom: 20px;}"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/GLOW_Eye_Cream_Lifestyle_1.jpg",
+        "image_mask": "none",
+        "image2_mask": "none",
+        "subtitle": "",
+        "title": "Say Goodbye to Tired Eyes",
+        "heading_size": "h2",
+        "text": "<p>Say goodbye to dark circles and tired-looking eyes with our GLOW™ Eye Cream. This gentle yet mighty formula helps to fade discoloration and refresh your eyes, so you always look well-rested.</p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "left",
+        "image_width": "50",
+        "layout": "right",
+        "color_scheme": "none",
+        "divider": false,
+        "top_padding": true,
+        "bottom_padding": true
+      }
+    },
+    "text_and_image_tNiqhc": {
+      "type": "text-and-image",
+      "custom_css": [
+        "h2 {font-family: ofelia-text, sans-serif; font-weight: 600; font-size: 35px;}"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/GLOW_Eye_Cream_Lifestyle_2.jpg",
+        "image_mask": "square",
+        "image2_mask": "none",
+        "subtitle": "",
+        "title": "Banish the bags, keep the sparkle",
+        "heading_size": "h2",
+        "text": "<p>Give your eyes the attention they deserve with our GLOW™ Eye Cream. Packed with 100% natural ingredients, it works to soothe and revitalize the delicate under-eye area while helping reduce puffiness and wrinkles.</p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "left",
+        "image_width": "50",
+        "layout": "left",
+        "color_scheme": "none",
+        "divider": false,
+        "top_padding": true,
+        "bottom_padding": false
+      }
+    },
+    "sub": {
+      "type": "product-full-width",
+      "disabled": true,
+      "settings": {
+        "max_width": true
+      }
+    },
+    "promo_grid_7UkVC9": {
+      "type": "promo-grid",
+      "blocks": {
+        "image_AGJAd6": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/GLOW_Eye_Cream_UGC_1.jpg",
+            "link": "",
+            "width": "33"
+          }
+        },
+        "image_NBkhNm": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/GLOW_Eye_Cream_UGC_2.jpg",
+            "link": "",
+            "width": "33"
+          }
+        },
+        "image_UktjLX": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/GLOW_Eye_Cream_UGC_3.jpg",
+            "link": "",
+            "width": "33"
+          }
+        }
+      },
+      "block_order": [
+        "image_AGJAd6",
+        "image_NBkhNm",
+        "image_UktjLX"
+      ],
+      "custom_css": [],
+      "settings": {
+        "full_width": true,
+        "gutter_size": 20,
+        "space_above": false,
+        "space_below": true
+      }
+    },
+    "faq_XpMHc9": {
+      "type": "faq",
+      "blocks": {
+        "question_LdCzpH": {
+          "type": "question",
+          "settings": {
+            "title": "What is the Glow Eye Cream, and what does it do?",
+            "text": "<p>The Glow Eye Cream is a lightweight, hydrating formula designed to reduce puffiness, brighten dark circles, and smooth fine lines around your eyes.<br/></p>"
+          }
+        },
+        "question_V4wNRq": {
+          "type": "question",
+          "settings": {
+            "title": "Can the Glow Eye Cream help with dark circles?",
+            "text": "<p>Yes! It’s packed with brightening ingredients to help reduce the appearance of dark circles and give your eyes a more awake, youthful look.<br/></p>"
+          }
+        },
+        "question_EE96i6": {
+          "type": "question",
+          "settings": {
+            "title": "Does the Glow Eye Cream help with puffiness?",
+            "text": "<p>Absolutely! Its soothing and anti-inflammatory ingredients help reduce puffiness and tired-looking eyes.<br/></p>"
+          }
+        },
+        "question_VRhWay": {
+          "type": "question",
+          "settings": {
+            "title": "Will this cream help with fine lines and wrinkles?",
+            "text": "<p>Yes! Its hydrating and antioxidant-rich formula helps smooth fine lines and improve the elasticity of the delicate eye area.<br/></p>"
+          }
+        },
+        "question_wMBU9q": {
+          "type": "question",
+          "settings": {
+            "title": "Does it have a fragrance?",
+            "text": "<p>The Glow Eye Cream has a light, natural scent from its botanical ingredients—no artificial fragrances included.<br/></p>"
+          }
+        },
+        "question_PpqiMW": {
+          "type": "question",
+          "settings": {
+            "title": "Why should I choose Glow Eye Cream over other eye creams?",
+            "text": "<p>It’s 100% natural, free of toxins, and combines hydrating, brightening, and soothing benefits in one product, making it your go-to for radiant, youthful-looking eyes.<br/></p>"
+          }
+        },
+        "question_LMCqiE": {
+          "type": "question",
+          "settings": {
+            "title": "What is the Mineral Microbiome Clay Complex™, and what does it do?",
+            "text": "<p>This proprietary blend is rich in essential minerals that nourish your skin, helps support its microbiome, and enhance its natural radiance.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "question_LdCzpH",
+        "question_V4wNRq",
+        "question_EE96i6",
+        "question_VRhWay",
+        "question_wMBU9q",
+        "question_PpqiMW",
+        "question_LMCqiE"
+      ],
+      "custom_css": [
+        "{margin-top: 0px; background: #f7f7f7; padding-bottom: 50px;}"
+      ],
+      "settings": {
+        "title": "{{ product.title }} FAQs",
+        "heading_size": "h2",
+        "heading_position": "left"
+      }
+    },
+    "featured_collection_yCFwUr": {
+      "type": "featured-collection",
+      "custom_css": [
+        "h2 {font-family: ofelia-text, sans-serif; font-weight: 600;}"
+      ],
+      "settings": {
+        "title": "You May Also Like",
+        "heading_size": "h1",
+        "heading_position": "left",
+        "home_featured_products": "the-art-of-skin",
+        "count": 5,
+        "products_per_row": 5,
+        "mobile_scrollable": true,
+        "show_second_image_as_cover": true,
+        "show_discount_badges": true,
+        "view_all": true,
+        "divider": false
+      }
+    },
+    "1736732638a24ea9f0": {
+      "type": "apps",
+      "blocks": {
+        "okendo_reviews_widget_BrbN8J": {
+          "type": "shopify://apps/okendo/blocks/reviews-widget/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
+          "settings": {
+            "product": "{{product}}",
+            "widget_type": "reviews_widget"
+          }
+        }
+      },
+      "block_order": [
+        "okendo_reviews_widget_BrbN8J"
+      ],
+      "settings": {
+        "full_width": false,
+        "space_around": true
+      }
+    },
+    "recently-viewed": {
+      "type": "recently-viewed",
+      "disabled": true,
+      "settings": {}
+    },
+    "collection-return": {
+      "type": "collection-return",
+      "disabled": true,
+      "settings": {
+        "color_scheme": "2"
+      }
+    },
+    "more-products-collection": {
+      "type": "more-products-collection",
+      "disabled": true,
+      "settings": {
+        "products_per_row": 3,
+        "max_products": 5
+      }
+    },
+    "more-products-vendor": {
+      "type": "more-products-vendor",
+      "disabled": true,
+      "settings": {
+        "products_per_row": 3,
+        "max_products": 5
+      }
+    },
+    "recommendations": {
+      "type": "product-recommendations",
+      "disabled": true,
+      "settings": {
+        "product_recommendations_heading": "You may also like",
+        "related_count": 6,
+        "products_per_row": 3
+      }
+    },
+    "why_we_love": {
+      "type": "product-why-we-love",
+      "settings": {
+        "heading": "Why We Love It",
+        "text": "<p>This hydrating cream fights puffiness and dark circles, leaving you looking refreshed and ready to take on the day.</p>"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "advanced_accordion_jJyYDX",
+    "advanced_accordion_MNDaAU",
+    "advanced_accordion_AYThFw",
+    "advanced_accordion_xWwj3X",
+    "why_we_love",
+    "text_and_image_rHLmeH",
+    "text_and_image_tNiqhc",
+    "sub",
+    "promo_grid_7UkVC9",
+    "faq_XpMHc9",
+    "featured_collection_yCFwUr",
+    "1736732638a24ea9f0",
+    "recently-viewed",
+    "collection-return",
+    "more-products-collection",
+    "more-products-vendor",
+    "recommendations"
+  ]
+}

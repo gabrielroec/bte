@@ -83,24 +83,17 @@ class BlockBuyButtons extends HTMLElement {
         const plans = v.plans;
         if (plans && pid != null && pid !== "") {
           if (Object.prototype.hasOwnProperty.call(plans, pid)) {
-            return this._planPriceCents(plans[pid]);
+            return plans[pid];
           }
           const pidStr = String(pid);
           if (Object.prototype.hasOwnProperty.call(plans, pidStr)) {
-            return this._planPriceCents(plans[pidStr]);
+            return plans[pidStr];
           }
         }
       }
     }
 
     return v.oneTime;
-  }
-
-  _planPriceCents(entry) {
-    if (entry == null) return 0;
-    if (typeof entry === "number") return entry;
-    if (typeof entry === "object" && typeof entry.price === "number") return entry.price;
-    return 0;
   }
 
   recalcLineTotal() {
@@ -204,12 +197,10 @@ class BlockBuyButtons extends HTMLElement {
 
     if (disable) {
       addButton.setAttribute("disabled", "disabled");
-      if (text && addButtonText) addButtonText.textContent = text;
+      if (text) addButtonText.textContent = text;
     } else {
       addButton.removeAttribute("disabled");
-      if (addButtonText) {
-        addButtonText.textContent = this.dataset.template !== "preorder" ? this.getLocales().addToCart : this.getLocales().preOrder;
-      }
+      addButtonText.textContent = this.dataset.template !== "preorder" ? this.getLocales().addToCart : this.getLocales().preOrder;
     }
   }
 

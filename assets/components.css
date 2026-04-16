@@ -2742,10 +2742,10 @@ html[dir="rtl"] .grid-item__content {
     width: 20%;
   }
   .medium-up--two-fifths {
-    width: 45%;
+    width: 40%;
   }
   .medium-up--three-fifths {
-    width: 55%;
+    width: 60%;
   }
   .medium-up--four-fifths {
     width: 80%;
@@ -3965,9 +3965,7 @@ th,
   background: #fafafa;
   border-radius: 4px;
   border: 1px solid #d3d3d3;
-  box-shadow:
-    inset 0 1px 1px #f0f0f0,
-    0 3px 6px -5px #bbb;
+  box-shadow: inset 0 1px 1px #f0f0f0, 0 3px 6px -5px #bbb;
 }
 
 .noUi-connects {
@@ -3994,17 +3992,11 @@ th,
   border-radius: 3px;
   background: #fff;
   cursor: default;
-  box-shadow:
-    inset 0 0 1px #fff,
-    inset 0 1px 7px #ebebeb,
-    0 3px 6px -3px #bbb;
+  box-shadow: inset 0 0 1px #fff, inset 0 1px 7px #ebebeb, 0 3px 6px -3px #bbb;
 }
 
 .noUi-active {
-  box-shadow:
-    inset 0 0 1px #fff,
-    inset 0 1px 7px #ddd,
-    0 3px 6px -3px #bbb;
+  box-shadow: inset 0 0 1px #fff, inset 0 1px 7px #ddd, 0 3px 6px -3px #bbb;
 }
 
 /* Handle stripes;
@@ -5205,9 +5197,7 @@ Only medium-up because iOS jumps to top otherwise*/
 .hero.loaded .slideshow__slide.is-selected .hero__animation-contents {
   opacity: 1;
   transform: translateY(0px);
-  transition:
-    opacity 0.4s ease,
-    transform 0.6s cubic-bezier(0.26, 0.54, 0.32, 1);
+  transition: opacity 0.4s ease, transform 0.6s cubic-bezier(0.26, 0.54, 0.32, 1);
 }
 
 .hero.loaded .slideshow__slide.is-selected .hero__link .btn {
@@ -5246,9 +5236,7 @@ Only medium-up because iOS jumps to top otherwise*/
 .hero.loaded .slideshow__slide.is-selected .hero__image-wrapper {
   opacity: 1;
   transform: scale(1);
-  transition:
-    transform 1s cubic-bezier(0.18, 0.63, 0.25, 1),
-    opacity 0.7s ease;
+  transition: transform 1s cubic-bezier(0.18, 0.63, 0.25, 1), opacity 0.7s ease;
 }
 
 .hero.loaded .slideshow__slide.is-selected .hero__sidebyside {
@@ -5273,9 +5261,7 @@ Only medium-up because iOS jumps to top otherwise*/
 .hero .slideshow__slide.animate-out .hero__image-wrapper {
   opacity: 0;
   transform: scale(1);
-  transition:
-    transform var(--slideshow-image-animation-speed) ease-in 0.05s,
-    opacity var(--slideshow-image-animation-speed) ease-in 0.05s;
+  transition: transform var(--slideshow-image-animation-speed) ease-in 0.05s, opacity var(--slideshow-image-animation-speed) ease-in 0.05s;
 }
 
 :root {
@@ -5485,26 +5471,6 @@ Only medium-up because iOS jumps to top otherwise*/
   display: none;
 }
 
-/* Botão ATC na PDP (main-product) */
-body.template-product block-buy-buttons .add-to-cart {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 90px;
-  padding: 11px 20px;
-  border: 1px solid rgba(0, 0, 0, 0);
-  background: var(--Grayscale-1000, #000);
-  color: #fff;
-}
-
-body.template-product block-buy-buttons .add-to-cart:not([disabled]):hover {
-  filter: brightness(1.08);
-}
-
-body.template-product block-buy-buttons .add-to-cart[disabled] {
-  opacity: 0.55;
-}
-
 .product__policies {
   font-size: 0.85em;
 }
@@ -5519,11 +5485,6 @@ body.template-product block-buy-buttons .add-to-cart[disabled] {
 
 .quick-shop-modal .shopify-payment-terms {
   display: none;
-}
-
-/* PDP: preço já aparece no widget de subscrição / evita duplicação e conflitos com apps (ex. Recharge) */
-body.template-product .product-single__meta block-price.block-price {
-  display: none !important;
 }
 
 [data-on-sale] .block-price__regular {
@@ -5905,10 +5866,7 @@ body.template-product .product-single__meta block-price.block-price {
 }
 
 .collapsible-content {
-  transition:
-    opacity 0.2s ease,
-    height 0.15s ease,
-    transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: opacity 0.2s ease, height 0.15s ease, transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   transform: translateY(-10px);
 }
 
@@ -5916,10 +5874,7 @@ body.template-product .product-single__meta block-price.block-price {
   visibility: visible;
   opacity: 1;
   transform: translateY(0);
-  transition:
-    opacity 0.3s ease,
-    height 0.25s ease,
-    transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: opacity 0.3s ease, height 0.25s ease, transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .collapsible-content--all {
@@ -6448,9 +6403,7 @@ picture img {
   color: inherit;
   padding: 8px 10px;
   transform-origin: 0 0;
-  transition:
-    opacity 0.1s ease-in-out,
-    transform 0.1s ease-in-out;
+  transition: opacity 0.1s ease-in-out, transform 0.1s ease-in-out;
   margin: 0;
 }
 
@@ -6809,9 +6762,7 @@ details[open] .site-nav__dropdown {
 details[open] .site-nav__dropdown-animate {
   opacity: 1;
   transform: translateY(0px);
-  transition:
-    opacity 0.3s ease 0.05s,
-    transform 0.25s cubic-bezier(0.165, 0.84, 0.44, 1) 0.05s;
+  transition: opacity 0.3s ease 0.05s, transform 0.25s cubic-bezier(0.165, 0.84, 0.44, 1) 0.05s;
 }
 
 .site-nav__deep-dropdown {
@@ -6913,9 +6864,7 @@ details[open] .site-nav__dropdown-animate {
 .is-active .site-header__drawer-animate {
   opacity: 1;
   transform: translateY(0px);
-  transition:
-    opacity 0.3s ease 0.15s,
-    transform 0.25s cubic-bezier(0.165, 0.84, 0.44, 1) 0.15s;
+  transition: opacity 0.3s ease 0.15s, transform 0.25s cubic-bezier(0.165, 0.84, 0.44, 1) 0.15s;
 }
 
 .site-nav__close-cart {
@@ -9706,9 +9655,7 @@ we can create larger tap areas with smaller visuals*/
   .grid-product__actions {
     opacity: 0;
     transform: translateY(5px);
-    transition:
-      opacity 0.25s ease,
-      transform 0.25s ease-out;
+    transition: opacity 0.25s ease, transform 0.25s ease-out;
   }
 
   .grid-product:hover .grid-product__actions {
@@ -9731,9 +9678,7 @@ we can create larger tap areas with smaller visuals*/
   .grid-product:focus-within .grid-product__actions {
     opacity: 1;
     transform: translateY(0);
-    transition:
-      opacity 0.25s ease,
-      transform 0.25s ease-out;
+    transition: opacity 0.25s ease, transform 0.25s ease-out;
   }
 }
 
@@ -9756,41 +9701,6 @@ we can create larger tap areas with smaller visuals*/
   width: 100%;
 }
 
-@media only screen and (max-width: 768px) {
-  .product__photos--beside {
-    flex-direction: column;
-  }
-
-  .product__photos--beside .product__main-photos {
-    width: 100%;
-  }
-
-  .product__photos--beside .product__thumbs--beside {
-    flex: 0 0 auto;
-    max-width: none;
-    width: 100%;
-    margin-left: 0;
-    margin-right: 0;
-    margin-top: calc(var(--grid-gutter-small) / 2);
-    height: auto;
-    max-height: none;
-  }
-
-  .product__photos--beside .product__thumbs--beside .product__thumbs--scroller {
-    position: relative;
-    top: auto;
-    bottom: auto;
-    left: auto;
-    right: auto;
-    width: 100%;
-    height: auto;
-  }
-
-  .product__photos--beside .product__thumbs--beside .product__thumb-arrow {
-    display: none;
-  }
-}
-
 .product__photos {
   direction: ltr;
   margin-top: 10px;
@@ -9801,12 +9711,12 @@ we can create larger tap areas with smaller visuals*/
   max-width: 100%;
 }
 
-.product__photos .product__main-photos img {
+.product__photos img {
   display: block;
   margin: 0 auto;
   max-width: 100%;
   width: 100%;
-  opacity: 1;
+  opacity: 0;
 }
 
 @media only screen and (max-width: 768px) {
@@ -9853,7 +9763,7 @@ we can create larger tap areas with smaller visuals*/
   }
 
   .product__main-photos .flickity-page-dots {
-    display: none !important;
+    display: block;
   }
 }
 
@@ -9975,45 +9885,6 @@ we can create larger tap areas with smaller visuals*/
 
 .product__thumbs--below .product__thumb-item:last-child {
   margin-right: 0;
-}
-
-@media only screen and (max-width: 768px) {
-  .product__thumbs .product__thumbs--scroller {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-items: flex-start;
-    gap: 8px;
-    overflow-x: auto;
-    overflow-y: hidden;
-    -webkit-overflow-scrolling: touch;
-    white-space: normal;
-    text-align: left;
-  }
-
-  .product__thumbs--beside .product__thumbs--scroller {
-    position: relative;
-    top: auto;
-    right: auto;
-    bottom: auto;
-    left: auto;
-    width: 100%;
-    height: auto;
-  }
-
-  .product__thumbs .product__thumb-item {
-    display: block;
-    flex: 0 0 52px;
-    width: 52px;
-    max-width: 52px;
-    min-width: 52px;
-    margin-right: 0;
-    margin-bottom: 0;
-  }
-
-  .product__thumbs--below .product__thumb-item {
-    max-width: 52px;
-  }
 }
 
 .product__thumb .image-wrap img {
@@ -11161,9 +11032,7 @@ html[dir="rtl"] .background-media-text__text {
 
 .collection-hero__image {
   transform: scale(1);
-  transition:
-    transform 1s cubic-bezier(0.18, 0.63, 0.25, 1),
-    opacity 0.7s ease;
+  transition: transform 1s cubic-bezier(0.18, 0.63, 0.25, 1), opacity 0.7s ease;
   animation: none;
   object-fit: cover;
 }
@@ -11806,10 +11675,7 @@ html[dir="rtl"] .background-media-text__text {
 }
 
 .collapsible-content {
-  transition:
-    opacity 0.2s ease,
-    height 0.15s ease,
-    transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: opacity 0.2s ease, height 0.15s ease, transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   transform: translateY(-10px);
 }
 
@@ -11817,10 +11683,7 @@ html[dir="rtl"] .background-media-text__text {
   visibility: visible;
   opacity: 1;
   transform: translateY(0);
-  transition:
-    opacity 0.3s ease,
-    height 0.25s ease,
-    transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: opacity 0.3s ease, height 0.25s ease, transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .collapsible-content--all {
@@ -12641,9 +12504,7 @@ header-section {
 .site-header__element--sub {
   padding: 0;
   z-index: var(--z-index-header-bottom-row);
-  transition:
-    transform 0.2s cubic-bezier(0.18, 0.77, 0.58, 1),
-    background-color 0.2s cubic-bezier(0.18, 0.77, 0.58, 1);
+  transition: transform 0.2s cubic-bezier(0.18, 0.77, 0.58, 1), background-color 0.2s cubic-bezier(0.18, 0.77, 0.58, 1);
 }
 
 .header-wrapper--compressed .site-header__element--sub {
@@ -14422,14 +14283,14 @@ section-main-search {
 
 .product-block {
   display: block;
-  margin-bottom: 16px;
+  margin-bottom: 20px;
 }
 
 .product-block hr {
   margin: 0;
 }
 
-/* Recharge app widget — native block uses selling-plans-widget.css */
+/* Recharge app widget (bloco nativo usa selling-plans-widget.css) */
 .product-single__meta .rc-container-wrapper,
 .product-single__meta .rc_container_wrapper {
   display: none !important;
@@ -15761,9 +15622,7 @@ tool-tip[data-tool-tip-open="true"] .tool-tip__inner {
 
 .testimonials-slide .testimonials-slider__text {
   transform: scale(0.95);
-  transition:
-    transform 0.5s ease,
-    box-shadow 0.5s ease;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
 }
 
 .testimonials-slide.is-selected .testimonials-slider__text {
@@ -16405,9 +16264,7 @@ video-media > svg {
   border-radius: inherit;
   width: 100%;
   height: 100%;
-  transition:
-    opacity 0.2s ease-in-out,
-    visibility 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
 }
 
 video-media > img,
@@ -16432,9 +16289,4 @@ video-media[loaded] > svg {
 }
 .product-block ul {
   margin: 0 !important;
-}
-@media only screen and (max-width: 768px) {
-  .product-block--title {
-    margin-bottom: 8px !important;
-  }
 }

@@ -1,0 +1,806 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "okendo_star_rating_qHXQA9": {
+          "type": "shopify://apps/okendo/blocks/star-rating/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
+          "settings": {
+            "product": "{{product}}"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+            "vendor_enable": false,
+            "sku_enable": false
+          }
+        },
+        "text_WgiafR": {
+          "type": "text",
+          "settings": {
+            "text": "Discover premium skincare—details and how to use are in the sections below."
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "separator_zdkt98": {
+          "type": "separator",
+          "settings": {}
+        },
+        "custom_eYcXWC": {
+          "type": "custom",
+          "settings": {
+            "code": "<ul class=\"product-custom-list\">\n<li>Premium formulas designed for visible results</li>\n<li>See ingredients, how to apply, and more below</li>\n<li>Free shipping on qualifying orders</li>\n</ul>"
+          }
+        },
+        "separator_GqYgcP": {
+          "type": "separator",
+          "settings": {}
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "variant_labels": true,
+            "picker_type": "button",
+            "product_dynamic_variants_enable": true,
+            "color_swatches": false
+          }
+        },
+        "selling_plans_native": {
+          "type": "selling_plans",
+          "settings": {
+            "heading_subscribe": "Subscribe & Save",
+            "badge_enable": true,
+            "badge_text": "MOST POPULAR",
+            "label_deliver_every": "DELIVER EVERY",
+            "perks_suffix": "Free shipping · Skip or cancel anytime",
+            "label_onetime": "One-time purchase",
+            "color_primary": "#99bccc",
+            "color_mint": "#eef5f8",
+            "color_beige": "#c9dde8"
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "surface_pickup_enable": true,
+            "show_gift_card_recipient": false,
+            "show_qty_total_row": true,
+            "label_qty": "Qty",
+            "label_total_prefix": "Total:",
+            "color_accent_qty": "#99bccc"
+          }
+        },
+        "custom_QahbLh": {
+          "type": "custom",
+          "settings": {
+            "code": "<p style=\"text-align:center; font-weight:600;\">FREE SHIPPING $75+ | 90-DAY LOVE-IT GUARANTEE</p>"
+          }
+        },
+        "tolstoy_shoppable_video_quiz_stories_block_gCBCEb": {
+          "type": "shopify://apps/tolstoy-shoppable-video-quiz/blocks/stories-block/06fa8282-42ff-403e-b67c-1936776aed11",
+          "settings": {
+            "publishId": "5ih35q7phtuba"
+          }
+        }
+      },
+      "block_order": [
+        "okendo_star_rating_qHXQA9",
+        "title",
+        "text_WgiafR",
+        "price",
+        "separator_zdkt98",
+        "custom_eYcXWC",
+        "separator_GqYgcP",
+        "variant_picker",
+        "selling_plans_native",
+        "buy_buttons",
+        "custom_QahbLh",
+        "tolstoy_shoppable_video_quiz_stories_block_gCBCEb"
+      ],
+      "custom_css": [
+        ".product-block .variant__label {display: none;}",
+        "video-media,video {--default-aspect-ratio: 1/1 !important;}"
+      ],
+      "settings": {
+        "image_position": "left",
+        "image_container_size": "large",
+        "product_image_size": "square",
+        "product_zoom_enable": true,
+        "thumbnail_position": "beside",
+        "thumbnail_height": "flexible",
+        "thumbnail_arrows": false,
+        "show_second_image_as_cover": false,
+        "mobile_layout": "partial",
+        "enable_video_looping": true,
+        "product_video_style": "muted"
+      }
+    },
+    "advanced_accordion_jJyYDX": {
+      "type": "advanced-accordion",
+      "blocks": {
+        "text_block_fxTdmN": {
+          "type": "text_block",
+          "settings": {
+            "image_width": 100,
+            "image_mask": "none",
+            "align_text": "left",
+            "title": "",
+            "text": "{{ product.description }}",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_block_fxTdmN"
+      ],
+      "custom_css": [
+        "{margin-top: 60px;}",
+        "h2 {font-family: ofelia-text, sans-serif; font-weight: 600; font-size: 18px;}"
+      ],
+      "settings": {
+        "title": "About The Product",
+        "per_row": 1,
+        "two_per_row_mobile": false,
+        "opened": false,
+        "disabled": false
+      }
+    },
+    "advanced_accordion_MNDaAU": {
+      "type": "advanced-accordion",
+      "blocks": {
+        "text_block_3MWCkr": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/1_f8ec36f7-67ee-49c9-aa1b-3ee689dcbec9.jpg",
+            "image_width": 25,
+            "image_mask": "none",
+            "align_text": "left",
+            "title": "Aloe Barbadensis Leaf Juice",
+            "text": "<p>Commonly referred to as Aloe Leaf juice, it is known for its anti-inflammatory and moisturizing properties to help calm and hydrate the skin.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_g77UqG": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/2_0199d2b3-73b7-491a-8956-084df13ac4c3.jpg",
+            "image_width": 25,
+            "image_mask": "none",
+            "align_text": "left",
+            "title": "Aqua",
+            "text": "<p>Water, the universal solvent used in skincare to help skin feel hydrated and nourished. </p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_QCJYeA": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/3_ce637572-5428-495e-b8f2-d124f89ef2c4.jpg",
+            "image_width": 25,
+            "image_mask": "none",
+            "align_text": "left",
+            "title": "Camellia Sinensis Leaf Extract",
+            "text": "<p>Commonly referred to as Green Tea extract, it is known for its antioxidant, anti-inflammatory and antimicrobial properties to help fight signs of aging skin.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_qY7NPt": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/4_60ea1144-1a4e-4d40-943d-4c5580e11643.jpg",
+            "image_width": 25,
+            "image_mask": "none",
+            "align_text": "left",
+            "title": "Citrus Nobilis",
+            "text": "<p>Commonly referred to as Mandarin, it is known for its antioxidant properties to help brighten and smooth the skin.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_KWHkJC": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/5.jpg",
+            "image_width": 25,
+            "image_mask": "none",
+            "align_text": "left",
+            "title": "Clay",
+            "text": "<p>Proprietary Mineral Microbiome ClayTM, known for its unique rich mineral composition to help promote skin health.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_ABjWNX": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/6_f464c6f8-c747-41b4-bbcb-6af7a2a02947.jpg",
+            "image_width": 25,
+            "image_mask": "none",
+            "align_text": "left",
+            "title": "Cucumis Sativus Fruit Extract",
+            "text": "<p>Commonly referred to as Cucumber extract, it is known to help calm, hydrate, and soothe the skin.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_m9EyDQ": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/7_908dd6ba-e72f-4417-8dc6-46a052e94ece.jpg",
+            "image_width": 25,
+            "image_mask": "none",
+            "align_text": "left",
+            "title": "Gluconolactone and Sodium Benzoate",
+            "text": "<p>Geogard UltraTM: a patented natural broad-spectrum preservative certified by ECOCERT.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_A8td39": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/8.jpg",
+            "image_width": 25,
+            "image_mask": "none",
+            "align_text": "left",
+            "title": "Helichrysum Halicuna",
+            "text": "<p>Helichrysum is known for its anti-inflammatory and antibacterial properties to help heal the skin.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_gRGCQe": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/9.jpg",
+            "image_width": 25,
+            "image_mask": "none",
+            "align_text": "left",
+            "title": "Lavandula Angustifolia Oil",
+            "text": "<p>Commonly referred to as Lavender oil, it is known to help even skin tone and reduce signs of aging.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_ckaAb8": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/10.jpg",
+            "image_width": 20,
+            "image_mask": "none",
+            "align_text": "left",
+            "title": "Magnesium Aluminum Silicate",
+            "text": "<p>Commonly referred to as Bentonite clay, it is known to help cleanse impurities from the skin.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_ejFeJk": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/11.jpg",
+            "image_width": 25,
+            "image_mask": "none",
+            "align_text": "left",
+            "title": "Mentha Piperita Oil",
+            "text": "<p>Commonly referred to as Peppermint oil, it is known for its use to help soothe and calm the skin.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_UhkJyk": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/12.jpg",
+            "image_width": 25,
+            "image_mask": "none",
+            "align_text": "left",
+            "title": "Ocimum Basilicum Oil",
+            "text": "<p>Commonly referred to as Basil oil, it is known to help moisturize the skin and reduce signs of aging.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_aehhHh": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/13.jpg",
+            "image_width": 25,
+            "image_mask": "none",
+            "align_text": "left",
+            "title": "Pelargonium Graveolins Flower Oil",
+            "text": "<p>Commonly referred to as Geranium oil, it is known for its anti-inflammatory properties to help soothe the skin.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_76JqnM": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/14.jpg",
+            "image_width": 25,
+            "image_mask": "none",
+            "align_text": "left",
+            "title": "Persea Gratissima Oil",
+            "text": "<p>Commonly referred to as Avocado oil, it is known to help calm, replenish, hydrate and protect the skin.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_i7xa8H": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/15.jpg",
+            "image_width": 25,
+            "image_mask": "none",
+            "align_text": "left",
+            "title": "Potassium Sorbate",
+            "text": "<p>A naturally sourced preservative salt of sorbic acid from berries of the mountain ash.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_wman8g": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/16.jpg",
+            "image_width": 25,
+            "image_mask": "none",
+            "align_text": "left",
+            "title": "Prunus Armeniaca Kernel Oil",
+            "text": "<p>Commonly referred as Apricot kernel oil, it is known to help improve skin tone and brighten the skin.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_R8N6e6": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/17.jpg",
+            "image_width": 25,
+            "image_mask": "none",
+            "align_text": "left",
+            "title": "Rosmarinus Officinalis Leaf Oil",
+            "text": "<p>Commonly referred to as Rosemary oil, it is known to help calm inflammation and protect the skin.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_nqi8zy": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/18.jpg",
+            "image_width": 25,
+            "image_mask": "none",
+            "align_text": "left",
+            "title": "Vegetable Glycerin",
+            "text": "<p>Vegetable fats to help provide moisture and hydration to skin.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_cPQqPC": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/19.jpg",
+            "image_width": 25,
+            "image_mask": "none",
+            "align_text": "left",
+            "title": "White Kaolin Clay",
+            "text": "<p>A unique type of clay composition known to help absorb sebum and prevent pores from clogging.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_block_3MWCkr",
+        "text_block_g77UqG",
+        "text_block_QCJYeA",
+        "text_block_qY7NPt",
+        "text_block_KWHkJC",
+        "text_block_ABjWNX",
+        "text_block_m9EyDQ",
+        "text_block_A8td39",
+        "text_block_gRGCQe",
+        "text_block_ckaAb8",
+        "text_block_ejFeJk",
+        "text_block_UhkJyk",
+        "text_block_aehhHh",
+        "text_block_76JqnM",
+        "text_block_i7xa8H",
+        "text_block_wman8g",
+        "text_block_R8N6e6",
+        "text_block_nqi8zy",
+        "text_block_cPQqPC"
+      ],
+      "custom_css": [
+        "h2 {font-family: ofelia-text, sans-serif; font-weight: 600; font-size: 18px;}"
+      ],
+      "settings": {
+        "title": "All 20 Natural Ingredients",
+        "per_row": 4,
+        "two_per_row_mobile": false,
+        "opened": false,
+        "disabled": false
+      }
+    },
+    "advanced_accordion_AYThFw": {
+      "type": "advanced-accordion",
+      "blocks": {
+        "text_block_MdMUUa": {
+          "type": "text_block",
+          "settings": {
+            "image_width": 100,
+            "image_mask": "none",
+            "align_text": "left",
+            "title": "",
+            "text": "<p>1. Apply an even layer onto clean skin with fingertips. Avoid the eye area. Pro tip: enhance the application by using a brush.<br/><br/>2. Enjoy the tingling sensation and leave on for 10-15 minutes.<br/><br/>3. Rinse off in circular motions with lukewarm water and pat dry.<br/><br/>WARNINGS: Avoid direct contact with eyes. If contact occurs, rinse with water. For topical use only.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_Li43w9": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/Glow_Facial_Mask.webp",
+            "image_width": 55,
+            "image_mask": "none",
+            "align_text": "left",
+            "title": "",
+            "text": "",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_block_MdMUUa",
+        "text_block_Li43w9"
+      ],
+      "custom_css": [
+        "h2 {font-family: ofelia-text, sans-serif; font-weight: 600; font-size: 18px;}"
+      ],
+      "settings": {
+        "title": "How To Apply",
+        "per_row": 2,
+        "two_per_row_mobile": false,
+        "opened": false,
+        "disabled": false
+      }
+    },
+    "advanced_accordion_xWwj3X": {
+      "type": "advanced-accordion",
+      "blocks": {
+        "text_block_raE9Mr": {
+          "type": "text_block",
+          "settings": {
+            "image_width": 100,
+            "image_mask": "none",
+            "align_text": "left",
+            "title": "Suistainable. Minimized environmental impact.",
+            "text": "<p>We make every effort to minimize our environmental footprint. Our recyclable jars are made from glass and we skip the excess by using only primary packaging (the jar) and printing our product information directly onto the jar to reduce packaging and labelling waste. Finally, to reduce wasted space during storage and shipping, we use uniquely shaped jars that stack neatly and limit gaps. This economical use of space reduces our environmental impact (think packing materials used and transportation emissions per shipment) by 25 to 30%.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_gWmNcT": {
+          "type": "text_block",
+          "settings": {
+            "image": "shopify://shop_images/Resized_image_package.webp",
+            "image_width": 100,
+            "image_mask": "none",
+            "align_text": "left",
+            "title": "",
+            "text": "",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_block_raE9Mr",
+        "text_block_gWmNcT"
+      ],
+      "custom_css": [
+        "h2 {font-family: ofelia-text, sans-serif; font-weight: 600; font-size: 18px;}"
+      ],
+      "settings": {
+        "title": "Eco-Friendly Packaging",
+        "per_row": 2,
+        "two_per_row_mobile": false,
+        "opened": false,
+        "disabled": false
+      }
+    },
+    "text_and_image_rHLmeH": {
+      "type": "text-and-image",
+      "custom_css": [
+        "h2 {font-family: ofelia-text, sans-serif; font-weight: 600; font-size: 25px;}",
+        "p {padding-bottom: 20px;}"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/1.jpg",
+        "image_mask": "none",
+        "image2_mask": "none",
+        "subtitle": "",
+        "title": "Your glow, unlocked.",
+        "heading_size": "h2",
+        "text": "<p>Packed with skin-loving ingredients, this mask works to brighten, hydrate, and detoxify. It’s your ultimate tool for achieving that coveted natural glow.</p><h3></h3>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "left",
+        "image_width": "50",
+        "layout": "right",
+        "color_scheme": "none",
+        "divider": false,
+        "top_padding": true,
+        "bottom_padding": true
+      }
+    },
+    "text_and_image_tNiqhc": {
+      "type": "text-and-image",
+      "custom_css": [
+        "h2 {font-family: ofelia-text, sans-serif; font-weight: 600; font-size: 25px;}"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Untitled_design_74.jpg",
+        "image_mask": "square",
+        "image2_mask": "none",
+        "subtitle": "",
+        "title": "Pure ingredients, real results.",
+        "heading_size": "h2",
+        "text": "<p>No harsh chemicals, no synthetic fillers—just natural, effective ingredients that work. This mask brings out your best skin with nature’s power.</p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "left",
+        "image_width": "50",
+        "layout": "left",
+        "color_scheme": "none",
+        "divider": false,
+        "top_padding": true,
+        "bottom_padding": false
+      }
+    },
+    "sub": {
+      "type": "product-full-width",
+      "disabled": true,
+      "settings": {
+        "max_width": true
+      }
+    },
+    "promo_grid_7UkVC9": {
+      "type": "promo-grid",
+      "blocks": {
+        "image_AGJAd6": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Untitled_design_75.jpg",
+            "link": "",
+            "width": "33"
+          }
+        },
+        "image_NBkhNm": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Untitled_design_76.jpg",
+            "link": "",
+            "width": "33"
+          }
+        },
+        "image_UktjLX": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/2.jpg",
+            "link": "",
+            "width": "33"
+          }
+        }
+      },
+      "block_order": [
+        "image_AGJAd6",
+        "image_NBkhNm",
+        "image_UktjLX"
+      ],
+      "custom_css": [],
+      "settings": {
+        "full_width": true,
+        "gutter_size": 20,
+        "space_above": false,
+        "space_below": true
+      }
+    },
+    "faq_XpMHc9": {
+      "type": "faq",
+      "blocks": {
+        "question_LdCzpH": {
+          "type": "question",
+          "settings": {
+            "title": "What does the GLOW Facial Mask do.",
+            "text": "<p>The GLOW Facial Mask is a natural, triple-clay formula that detoxifies, nourishes, and hydrates your skin, leaving it smooth, refreshed, and radiant.</p>"
+          }
+        },
+        "question_V4wNRq": {
+          "type": "question",
+          "settings": {
+            "title": "What skin types is the mask suitable for?",
+            "text": "<p>This mask is suitable for all skin types, including oily, dry, combination, and sensitive skin.<br/><br/></p>"
+          }
+        },
+        "question_EE96i6": {
+          "type": "question",
+          "settings": {
+            "title": "How does the triple clay blend work on the skin?",
+            "text": "<p>The triple clays work together to draw out impurities, absorb excess oil, and gently exfoliate, leaving your skin clean, clear, and balanced.</p>"
+          }
+        },
+        "question_VRhWay": {
+          "type": "question",
+          "settings": {
+            "title": "Does the mask help with acne-prone skin?",
+            "text": "<p>Yes, the mask’s detoxifying properties help unclog pores, reduce excess oil, and soothe inflammation, making it great for acne-prone skin.</p>"
+          }
+        },
+        "question_wMBU9q": {
+          "type": "question",
+          "settings": {
+            "title": "Does it dry out the skin, or is it hydrating?",
+            "text": "<p>Unlike traditional clay masks, the GLOW Facial Mask hydrates while it detoxifies, leaving your skin balanced and refreshed.</p>"
+          }
+        },
+        "question_PpqiMW": {
+          "type": "question",
+          "settings": {
+            "title": "Can I use it in combination with other skincare products?",
+            "text": "<p>Yes! Use the mask as a detox step in your routine, followed by a serum and moisturizer to lock in hydration.</p>"
+          }
+        },
+        "question_LMCqiE": {
+          "type": "question",
+          "settings": {
+            "title": "What is the Mineral Microbiome Clay Complex™, and what does it do?",
+            "text": "<p>This proprietary blend is rich in essential minerals that nourish your skin, support its microbiome, and enhance its natural radiance.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "question_LdCzpH",
+        "question_V4wNRq",
+        "question_EE96i6",
+        "question_VRhWay",
+        "question_wMBU9q",
+        "question_PpqiMW",
+        "question_LMCqiE"
+      ],
+      "custom_css": [
+        "{margin-top: 0px; background: #f7f7f7; padding-bottom: 50px;}"
+      ],
+      "settings": {
+        "title": "{{ product.title }} FAQs",
+        "heading_size": "h2",
+        "heading_position": "left"
+      }
+    },
+    "featured_collection_yCFwUr": {
+      "type": "featured-collection",
+      "custom_css": [
+        "h2 {font-family: ofelia-text, sans-serif; font-weight: 600;}"
+      ],
+      "settings": {
+        "title": "You May Also Like",
+        "heading_size": "h1",
+        "heading_position": "left",
+        "home_featured_products": "best-sellers",
+        "count": 5,
+        "products_per_row": 5,
+        "mobile_scrollable": true,
+        "view_all": true,
+        "divider": false
+      }
+    },
+    "1736732638a24ea9f0": {
+      "type": "apps",
+      "blocks": {
+        "okendo_reviews_widget_BrbN8J": {
+          "type": "shopify://apps/okendo/blocks/reviews-widget/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
+          "settings": {
+            "product": "{{product}}",
+            "widget_type": "reviews_widget"
+          }
+        }
+      },
+      "block_order": [
+        "okendo_reviews_widget_BrbN8J"
+      ],
+      "settings": {
+        "full_width": false,
+        "space_around": true
+      }
+    },
+    "recently-viewed": {
+      "type": "recently-viewed",
+      "disabled": true,
+      "settings": {}
+    },
+    "collection-return": {
+      "type": "collection-return",
+      "disabled": true,
+      "settings": {
+        "color_scheme": "2"
+      }
+    },
+    "more-products-collection": {
+      "type": "more-products-collection",
+      "disabled": true,
+      "settings": {
+        "products_per_row": 3,
+        "max_products": 5
+      }
+    },
+    "more-products-vendor": {
+      "type": "more-products-vendor",
+      "disabled": true,
+      "settings": {
+        "products_per_row": 3,
+        "max_products": 5
+      }
+    },
+    "recommendations": {
+      "type": "product-recommendations",
+      "disabled": true,
+      "settings": {
+        "product_recommendations_heading": "You may also like",
+        "related_count": 6,
+        "products_per_row": 3
+      }
+    },
+    "why_we_love": {
+      "type": "product-why-we-love",
+      "settings": {
+        "heading": "Why We Love It",
+        "text": "<p>It’s the ultimate refresh for your skin. The triple-clay blend deeply detoxifies while the Mineral Microbiome Clay Complex™ nourishes, leaving your skin balanced, hydrated, and glowing after every use.</p>"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "advanced_accordion_jJyYDX",
+    "advanced_accordion_MNDaAU",
+    "advanced_accordion_AYThFw",
+    "advanced_accordion_xWwj3X",
+    "why_we_love",
+    "text_and_image_rHLmeH",
+    "text_and_image_tNiqhc",
+    "sub",
+    "promo_grid_7UkVC9",
+    "faq_XpMHc9",
+    "featured_collection_yCFwUr",
+    "1736732638a24ea9f0",
+    "recently-viewed",
+    "collection-return",
+    "more-products-collection",
+    "more-products-vendor",
+    "recommendations"
+  ]
+}

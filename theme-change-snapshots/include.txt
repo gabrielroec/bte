@@ -1,0 +1,50 @@
+# Lista de ficheiros para snapshot/restore após `shopify theme pull`.
+# Um caminho por linha, relativo à raiz do repo.
+#
+# Nota: esta lista foi baseada nas mudanças feitas nas PDPs/LPs durante este trabalho.
+
+assets/block-buy-buttons.js
+assets/components.css
+assets/pdp-qty-total.css
+assets/section-product-why-we-love.css
+
+sections/featured-product.liquid
+sections/main-product.liquid
+sections/product-why-we-love.liquid
+
+snippets/block-buy-buttons.liquid
+snippets/import-map.liquid
+
+templates/product.json
+templates/product.preorder.json
+templates/product.cross-selling.json
+templates/product.product-landing.json
+templates/product.brand-story.json
+templates/product.mtn-template.json
+templates/product.mtn-template-2.json
+
+templates/product.aging-skin-routine.json
+templates/product.aging-skin-routine-2.json
+templates/product.dry-skin-routine.json
+templates/product.dry-skin-routine-2.json
+templates/product.dull-uneven-skin-routine.json
+templates/product.dull-skin-routine-2.json
+templates/product.irritated-skin-routine.json
+templates/product.irritated-skin-routine-2.json
+templates/product.oily-skin-routine.json
+templates/product.oily-skin-routine-2.json
+templates/product.sensitive-skin-routine.json
+templates/product.sensitive-skin-routine-2.json
+
+templates/product.glow-daily-moisturizer.json
+templates/product.glow-exfoliating-scrub.json
+templates/product.glow-eye-cream.json
+templates/product.glow-face-mask.json
+templates/product.glow-facial-mist.json
+templates/product.glow-facial-serum.json
+templates/product.glow-foaming-cleanser.json
+templates/product.glow-makeup-remover.json
+
+# Se um dia você voltar a editar settings_data.json, descomente:
+# config/settings_data.json
+

@@ -46,7 +46,6 @@
   assign qr = product.selected_or_first_available_variant.quantity_rule
   assign qty_sel_min = qr.min | default: 1
   assign qty_sel_max = qr.max
-
 -%}
 
 {% if product %}
@@ -63,7 +62,7 @@
   >
     {%- form 'product', product, id: form_id, novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
       {%- if cart.taxes_included or shop.shipping_policy.body != blank -%}
-        {% comment %} <div class="product__policies rte">
+        <div class="product__policies rte">
           {%- if cart.taxes_included -%}
             {% render 't_with_fallback', key: 'info.tax_included', fallback: 'Tax included.' %}
           {%- endif -%}
@@ -75,7 +74,7 @@
             {%- endcapture -%}
             {% render 't_with_fallback', t: info_shipping_policy_html, fallback: fallback_info_shipping_policy_html %}
           {%- endif -%}
-        </div> {% endcomment %}
+        </div>
       {%- endif -%}
 
       {%- if gift_card_recipient_feature_active -%}
@@ -144,10 +143,7 @@
                       {%- else -%}
                         ,
                       {%- endif -%}
-                      "{{ allocation.selling_plan.id }}": {
-                        "price": {{ allocation.price | json }},
-                        "compare": {% if allocation.compare_at_price and allocation.compare_at_price > allocation.price %}{{ allocation.compare_at_price | json }}{% else %}null{% endif %}
-                      }
+                      "{{ allocation.selling_plan.id }}": {{ allocation.price | json }}
                     {%- endfor -%}
                   }
                 }
@@ -202,12 +198,10 @@
 
     <script type="application/json" data-buy-buttons-locales>
       {
-        "addToCart": {{ 'actions.add_to_cart' | t | json }},
-        "soldOut": {{ 'info.sold_out' | t | json }},
-        "unavailable": {{ 'info.unavailable' | t | json }},
-        "preOrder": {{ 'actions.preorder' | t | json }},
-        "subscribeMode": {{ 'actions.subscribe' | t | json }},
-        "oneTimeMode": {{ 'One time purchase' | json }}
+        "addToCart": "{{ 'actions.add_to_cart' | t }}",
+        "soldOut": "{{ 'info.sold_out' | t }}",
+        "unavailable": "{{ 'info.unavailable' | t }}",
+        "preOrder": "{{ 'actions.preorder' | t }}"
       }
     </script>
   </block-buy-buttons>
