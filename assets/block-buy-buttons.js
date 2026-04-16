@@ -21,29 +21,6 @@ class BlockBuyButtons extends HTMLElement {
 
     this.cartType = this.dataset.cartType;
 
-    const atcPricingEl = this.querySelector("[data-atc-pricing]");
-    if (atcPricingEl) {
-      try {
-        this.atcPricing = JSON.parse(atcPricingEl.textContent);
-        this.atcMoneyFormat = this.atcPricing.moneyFormat || "${{amount}}";
-      } catch (e) {
-        this.atcPricing = null;
-        this.atcMoneyFormat = "${{amount}}";
-      }
-      const onSellingPlansChange = (e) => {
-        const d = e.detail;
-        if (!d) return;
-        if (String(d.sectionId) !== String(this.dataset.sectionId)) return;
-        if (String(d.productId) !== String(this.dataset.productId)) return;
-        this.updateSubscriptionAtcLabel();
-      };
-      document.addEventListener("selling-plans:change", onSellingPlansChange, { signal: this.abortController.signal });
-      queueMicrotask(() => {
-        this.updateSubscriptionAtcLabel();
-        requestAnimationFrame(() => this.updateSubscriptionAtcLabel());
-      });
-    }
-
     const pricingScript = this.querySelector("[data-pdp-unit-pricing]");
     const qtyRow = this.querySelector("[data-pdp-qty-total]");
     if (pricingScript && qtyRow) {
@@ -106,24 +83,17 @@ class BlockBuyButtons extends HTMLElement {
         const plans = v.plans;
         if (plans && pid != null && pid !== "") {
           if (Object.prototype.hasOwnProperty.call(plans, pid)) {
-            return this._planPriceCents(plans[pid]);
+            return plans[pid];
           }
           const pidStr = String(pid);
           if (Object.prototype.hasOwnProperty.call(plans, pidStr)) {
-            return this._planPriceCents(plans[pidStr]);
+            return plans[pidStr];
           }
         }
       }
     }
 
     return v.oneTime;
-  }
-
-  _planPriceCents(entry) {
-    if (entry == null) return 0;
-    if (typeof entry === "number") return entry;
-    if (typeof entry === "object" && typeof entry.price === "number") return entry.price;
-    return 0;
   }
 
   recalcLineTotal() {
@@ -197,8 +167,6 @@ class BlockBuyButtons extends HTMLElement {
       this.syncQtyConstraints(variant);
       this.recalcLineTotal();
     }
-
-    this.updateSubscriptionAtcLabel();
   }
 
   renderProductInfo(html) {
@@ -229,96 +197,11 @@ class BlockBuyButtons extends HTMLElement {
 
     if (disable) {
       addButton.setAttribute("disabled", "disabled");
-      if (text && addButtonText) addButtonText.textContent = text;
+      if (text) addButtonText.textContent = text;
     } else {
       addButton.removeAttribute("disabled");
-      if (this.atcPricing && addButtonText?.hasAttribute("data-atc-label") && this.dataset.template !== "preorder") {
-        this.updateSubscriptionAtcLabel();
-      } else if (addButtonText) {
-        addButtonText.textContent = this.dataset.template !== "preorder" ? this.getLocales().addToCart : this.getLocales().preOrder;
-      }
+      addButtonText.textContent = this.dataset.template !== "preorder" ? this.getLocales().addToCart : this.getLocales().preOrder;
     }
-  }
-
-  updateSubscriptionAtcLabel() {
-    if (!this.atcPricing?.variants || this.dataset.template === "preorder") return;
-
-    const productForm = this.querySelector(`#product-form-${this.dataset.sectionId}`);
-    const addButton = productForm?.querySelector('[name="add"]');
-    const labelEl = addButton?.querySelector("[data-atc-label]");
-    if (!addButton || !labelEl) return;
-
-    if (addButton.hasAttribute("disabled")) return;
-
-    const locales = this.getLocales();
-    const vid = String(
-      this.currentVariantId || productForm.querySelector('input[name="id"]')?.value || ""
-    );
-    const v = this.atcPricing.variants[vid];
-    if (!v) return;
-
-    let subscribe = false;
-    let planId = null;
-    for (const el of document.querySelectorAll("block-selling-plans")) {
-      if (el.dataset.sectionId === this.dataset.sectionId && String(el.dataset.productId) === String(this.dataset.productId)) {
-        const root = el.querySelector("[data-selling-plans-root]");
-        const mode = root?.querySelector('input[type="radio"][name^="purchase_mode_"]:checked');
-        subscribe = mode?.value === "subscribe";
-        if (subscribe) {
-          const pill = root?.querySelector('input[type="radio"][name^="selling_plan_pill_"]:checked');
-          planId = pill?.value ?? null;
-        }
-        break;
-      }
-    }
-
-    let modeLabel = locales.oneTimeMode || "One time purchase";
-    let currentCents = v.oneTime;
-    let compareCents = v.oneTimeCompare ?? null;
-
-    if (subscribe) {
-      modeLabel = locales.subscribeMode || "Subscribe";
-      const plans = v.plans || {};
-      const pid = planId != null && planId !== "" ? String(planId) : null;
-      let planEntry = pid && Object.prototype.hasOwnProperty.call(plans, pid) ? plans[pid] : null;
-      if (!planEntry && pid) {
-        const n = Number(pid);
-        if (!Number.isNaN(n) && Object.prototype.hasOwnProperty.call(plans, n)) planEntry = plans[n];
-      }
-      if (!planEntry) {
-        const firstKey = Object.keys(plans)[0];
-        planEntry = firstKey != null ? plans[firstKey] : null;
-      }
-      if (planEntry && typeof planEntry === "object") {
-        currentCents = planEntry.price;
-        compareCents = planEntry.compare ?? null;
-      }
-    }
-
-    let priceStr = "";
-    let compareStr = "";
-    try {
-      priceStr = formatMoney(currentCents, this.atcMoneyFormat, false);
-    } catch (e) {
-      priceStr = "";
-    }
-    if (compareCents != null && compareCents > currentCents) {
-      try {
-        compareStr = formatMoney(compareCents, this.atcMoneyFormat, false);
-      } catch (e) {
-        compareStr = "";
-      }
-    }
-
-    labelEl.replaceChildren();
-    labelEl.append(document.createTextNode(`${modeLabel} • `));
-    if (compareStr) {
-      const s = document.createElement("s");
-      s.textContent = compareStr;
-      labelEl.append(s);
-      labelEl.append(document.createTextNode(" "));
-    }
-    labelEl.append(document.createTextNode(priceStr));
   }
 
   updateVariantInput(variant) {
@@ -356,7 +239,6 @@ class BlockBuyButtons extends HTMLElement {
       this.handleError(error);
     } finally {
       this.enableAddToCartButton();
-      this.updateSubscriptionAtcLabel();
     }
   }
 

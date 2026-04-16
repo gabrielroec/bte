@@ -7,7 +7,6 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
-
 {
   "sections": {
     "main": {
@@ -36,6 +35,12 @@
           "type": "price",
           "settings": {}
         },
+        "custom_GjrdC8": {
+          "type": "custom",
+          "settings": {
+            "code": "<h3 style=\"text-align:center\">90 Day Money Back Guarantee</h3>"
+          }
+        },
         "separator_zdkt98": {
           "type": "separator",
           "settings": {}
@@ -43,7 +48,7 @@
         "custom_eYcXWC": {
           "type": "custom",
           "settings": {
-            "code": "<b>The 5 Step Routine</b>\n<ul class=\"product-custom-list\">\n<li>GLOW™ Foaming Facial Cleanser</li>\n<li>GLOW™ Exfoliating Scrub</li>\n<li>GLOW™ Facial Mask</li>\n<li>GLOW™ Facial Mist</li>\n<li>GLOW™ Daily Moisturizer</li>\n</ul>"
+            "code": "<b>The 5 Step Routine</b>\n<ul>\n<li>- GLOW™ Foaming Facial Cleanser</li>\n<li>- GLOW™ Exfoliating Scrub</li>\n<li>- GLOW™ Facial Mask</li>\n<li>- GLOW™ Facial Mist</li>\n<li>- GLOW™ Daily Moisturizer</li>\n</ul"
           }
         },
         "separator_GqYgcP": {
@@ -73,6 +78,14 @@
             "color_beige": "#c9dde8"
           }
         },
+        "subscription_savings_callout": {
+          "type": "subscription_savings",
+          "settings": {
+            "line_order": "You save [[amount]] this order",
+            "line_year": "~[[amount]] saved per year at this cadence",
+            "color_accent": "#99bccc"
+          }
+        },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
@@ -84,18 +97,6 @@
             "label_total_prefix": "Total:",
             "color_accent_qty": "#99bccc"
           }
-        },
-        "custom_QahbLh": {
-          "type": "custom",
-          "settings": {
-            "code": "<p style=\"text-align:center; font-weight:600;\">FREE SHIPPING $75+ | 90-DAY LOVE-IT GUARANTEE</p>"
-          }
-        },
-        "tolstoy_shoppable_video_quiz_stories_block_gCBCEb": {
-          "type": "shopify://apps/tolstoy-shoppable-video-quiz/blocks/stories-block/06fa8282-42ff-403e-b67c-1936776aed11",
-          "settings": {
-            "publishId": "5ih35q7phtuba"
-          }
         }
       },
       "block_order": [
@@ -103,14 +104,14 @@
         "title",
         "text_WgiafR",
         "price",
+        "custom_GjrdC8",
         "separator_zdkt98",
         "custom_eYcXWC",
         "separator_GqYgcP",
         "variant_picker",
         "selling_plans_native",
-        "buy_buttons",
-        "custom_QahbLh",
-        "tolstoy_shoppable_video_quiz_stories_block_gCBCEb"
+        "subscription_savings_callout",
+        "buy_buttons"
       ],
       "custom_css": [
         ".product-block .variant__label {display: none;}",
@@ -119,13 +120,13 @@
       "settings": {
         "image_position": "left",
         "image_container_size": "large",
-        "product_image_size": "square",
+        "product_image_size": "natural",
         "product_zoom_enable": true,
         "thumbnail_position": "beside",
         "thumbnail_height": "flexible",
         "thumbnail_arrows": false,
-        "show_second_image_as_cover": false,
-        "mobile_layout": "partial",
+        "show_second_image_as_cover": true,
+        "mobile_layout": "full",
         "enable_video_looping": true,
         "product_video_style": "muted"
       }
@@ -211,6 +212,39 @@
         "two_per_row_mobile": false,
         "opened": false,
         "disabled": false
+      }
+    },
+    "rich_text_3NkeD8": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_xUQgwE": {
+          "type": "heading",
+          "settings": {
+            "title": "Why We Love It",
+            "heading_size": "h2"
+          }
+        },
+        "text_YYJzXb": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": true,
+            "text": "<p>We’re obsessed with this routine because it delivers instant, visible results—something oily skin rarely gets without over-drying. After just one use, it cuts oil by over 60% <em>and</em> boosts hydration by nearly 73%. It’s proof that balance is possible, and your skin doesn’t have to choose between clear and nourished.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_xUQgwE",
+        "text_YYJzXb"
+      ],
+      "custom_css": [
+        "{margin-top: 40px; margin-bottom: 0px;}",
+        "h2 {font-family: ofelia-text, sans-serif; font-weight: 600; font-size: 25px;}"
+      ],
+      "settings": {
+        "align_text": "left",
+        "narrow_column": false,
+        "color_scheme": "1",
+        "divider": false
       }
     },
     "rich_text_mcHJmg": {
@@ -636,19 +670,12 @@
         "related_count": 6,
         "products_per_row": 3
       }
-    },
-    "why_we_love": {
-      "type": "product-why-we-love",
-      "settings": {
-        "heading": "Why We Love It",
-        "text": "<p>We’re obsessed with this routine because it delivers instant, visible results—something oily skin rarely gets without over-drying. After just one use, it cuts oil by over 60% <em>and</em> boosts hydration by nearly 73%. It’s proof that balance is possible, and your skin doesn’t have to choose between clear and nourished.</p>"
-      }
     }
   },
   "order": [
     "main",
     "advanced_accordion_QAhBjN",
-    "why_we_love",
+    "rich_text_3NkeD8",
     "rich_text_mcHJmg",
     "text_columns_98PtGy",
     "slideshow_jQhH8q",
