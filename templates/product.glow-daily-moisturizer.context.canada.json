@@ -15,7 +15,14 @@
   "sections": {
     "main": {
       "settings": {},
-      "blocks": {},
+      "blocks": {
+        "recharge_subscriptions_subscription_widget_YCxYUk": {
+          "type": "shopify://apps/recharge-subscriptions/blocks/subscription-widget/371eed76-0b44-4869-9813-730372ea378e",
+          "settings": {
+            "product": "{{product}}"
+          }
+        }
+      },
       "block_order": [
         "okendo_star_rating_qHXQA9",
         "title",
@@ -27,7 +34,8 @@
         "variant_picker",
         "recharge_subscriptions_subscription_widget_YCxYUk",
         "buy_buttons",
-        "custom_QahbLh"
+        "custom_QahbLh",
+        "tolstoy_shoppable_video_quiz_stories_block_gCBCEb"
       ]
     }
   }

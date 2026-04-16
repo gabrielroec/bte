@@ -127,11 +127,7 @@
 }
 
 .product-single__meta .product-qty-total-row__total {
-  margin-left: auto;
-  display: flex;
-  align-items: baseline;
-  gap: 6px;
-  flex-shrink: 0;
+  display: none;
 }
 
 .product-single__meta .product-qty-total-row__total-label {
@@ -146,10 +142,3 @@
   color: var(--pdp-qty-text);
 }
 
-@media only screen and (max-width: 400px) {
-  .product-single__meta .product-qty-total-row__total {
-    margin-left: 0;
-    width: 100%;
-    justify-content: flex-start;
-  }
-}

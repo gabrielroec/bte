@@ -7,6 +7,7 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
+
 {
   "sections": {
     "main": {
@@ -58,10 +59,18 @@
             "color_swatches": false
           }
         },
-        "recharge_subscriptions_subscription_widget_YCxYUk": {
-          "type": "shopify://apps/recharge-subscriptions/blocks/subscription-widget/371eed76-0b44-4869-9813-730372ea378e",
+        "selling_plans_native": {
+          "type": "selling_plans",
           "settings": {
-            "product": "{{product}}"
+            "heading_subscribe": "Subscribe & Save",
+            "badge_enable": true,
+            "badge_text": "MOST POPULAR",
+            "label_deliver_every": "DELIVER EVERY",
+            "perks_suffix": "Free shipping · Skip or cancel anytime",
+            "label_onetime": "One-time purchase",
+            "color_primary": "#99bccc",
+            "color_mint": "#eef5f8",
+            "color_beige": "#c9dde8"
           }
         },
         "buy_buttons": {
@@ -76,22 +85,16 @@
             "color_accent_qty": "#99bccc"
           }
         },
-        "trynow_try_before_you_buy_trynow_cta_button_wBE8d3": {
-          "type": "shopify://apps/trynow-try-before-you-buy/blocks/trynow-cta-button/4c8ee11a-0e2d-4d12-800e-b312601aebc7",
+        "custom_QahbLh": {
+          "type": "custom",
           "settings": {
-            "button_title": "Try It Free For 14 Days",
-            "cta_button_custom_css": "",
-            "button_classes": "",
-            "button_margin": "0px 0px 5px 0px",
-            "description": "Try routine at home for 14 days",
-            "description_font_size": 12,
-            "description_color": "#000000",
-            "view_collection_text": "View TryNow collection",
-            "collection": "",
-            "add_to_cart_container_selector": "",
-            "gated_toggle_font_size": 12,
-            "gated_toggle_size": 0.7,
-            "autoposition": false
+            "code": "<p style=\"text-align:center; font-weight:600;\">FREE SHIPPING $75+ | 90-DAY LOVE-IT GUARANTEE</p>"
+          }
+        },
+        "tolstoy_shoppable_video_quiz_stories_block_gCBCEb": {
+          "type": "shopify://apps/tolstoy-shoppable-video-quiz/blocks/stories-block/06fa8282-42ff-403e-b67c-1936776aed11",
+          "settings": {
+            "publishId": "5ih35q7phtuba"
           }
         }
       },
@@ -104,15 +107,19 @@
         "custom_eYcXWC",
         "separator_GqYgcP",
         "variant_picker",
-        "recharge_subscriptions_subscription_widget_YCxYUk",
+        "selling_plans_native",
         "buy_buttons",
-        "trynow_try_before_you_buy_trynow_cta_button_wBE8d3"
+        "custom_QahbLh",
+        "tolstoy_shoppable_video_quiz_stories_block_gCBCEb"
       ],
-      "custom_css": [".product-block .variant__label {display: none;}", "video-media,video {--default-aspect-ratio: 1/1 !important;}"],
+      "custom_css": [
+        ".product-block .variant__label {display: none;}",
+        "video-media,video {--default-aspect-ratio: 1/1 !important;}"
+      ],
       "settings": {
         "image_position": "left",
         "image_container_size": "large",
-        "product_image_size": "natural",
+        "product_image_size": "square",
         "product_zoom_enable": true,
         "thumbnail_position": "beside",
         "thumbnail_height": "flexible",
@@ -207,7 +214,9 @@
         "text_block_94NGRt",
         "text_block_eGTTqW"
       ],
-      "custom_css": ["div {padding-top: 30px;}"],
+      "custom_css": [
+        "div {padding-top: 30px;}"
+      ],
       "name": "Advanced accordion",
       "settings": {
         "title": "100% Natural Ingredients",
@@ -215,36 +224,6 @@
         "two_per_row_mobile": false,
         "opened": false,
         "disabled": false
-      }
-    },
-    "rich_text_3NkeD8": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_xUQgwE": {
-          "type": "heading",
-          "settings": {
-            "title": "Why We Love It",
-            "heading_size": "h2"
-          }
-        },
-        "text_YYJzXb": {
-          "type": "text",
-          "settings": {
-            "enlarge_text": true,
-            "text": "<p>What makes us love this routine so much is how quickly it brings comfort back to dry, scaly skin. It feels luxurious, but more importantly—it delivers real, soothing results. For anyone who’s ever struggled with roughness or tightness, this is your new daily hero.</p>"
-          }
-        }
-      },
-      "block_order": ["heading_xUQgwE", "text_YYJzXb"],
-      "custom_css": [
-        "{margin-top: 40px; margin-bottom: 0px;}",
-        "h2 {font-family: ofelia-text, sans-serif; font-weight: 600; font-size: 25px;}"
-      ],
-      "settings": {
-        "align_text": "left",
-        "narrow_column": false,
-        "color_scheme": "1",
-        "divider": false
       }
     },
     "rich_text_mcHJmg": {
@@ -258,8 +237,12 @@
           }
         }
       },
-      "block_order": ["heading_gBKeFT"],
-      "custom_css": ["div {padding-bottom: 0px; margin-bottom: 0px;}"],
+      "block_order": [
+        "heading_gBKeFT"
+      ],
+      "custom_css": [
+        "div {padding-bottom: 0px; margin-bottom: 0px;}"
+      ],
       "name": "t:labels.rich_text",
       "settings": {
         "align_text": "left",
@@ -392,7 +375,9 @@
           }
         }
       },
-      "block_order": ["hero_c6qjWm"],
+      "block_order": [
+        "hero_c6qjWm"
+      ],
       "custom_css": [
         "h2 {font-family: ofelia-text, sans-serif; font-weight: 600; font-size: 25px;}",
         "h1 {font-family: ofelia-text, sans-serif; font-weight: 600; font-size: 35px;}"
@@ -409,7 +394,10 @@
     },
     "text_and_image_rHLmeH": {
       "type": "text-and-image",
-      "custom_css": ["h2 {font-family: ofelia-text, sans-serif; font-weight: 600; font-size: 35px;}", "p {padding-bottom: 20px;}"],
+      "custom_css": [
+        "h2 {font-family: ofelia-text, sans-serif; font-weight: 600; font-size: 35px;}",
+        "p {padding-bottom: 20px;}"
+      ],
       "settings": {
         "image": "shopify://shop_images/GLOW_Foaming_Cleanser_Lifestyle_2.jpg",
         "image_mask": "none",
@@ -432,7 +420,9 @@
     },
     "text_and_image_tNiqhc": {
       "type": "text-and-image",
-      "custom_css": ["h2 {font-family: ofelia-text, sans-serif; font-weight: 600; font-size: 35px;}"],
+      "custom_css": [
+        "h2 {font-family: ofelia-text, sans-serif; font-weight: 600; font-size: 35px;}"
+      ],
       "settings": {
         "image": "shopify://shop_images/Back_To_Earth_Clarify.jpg",
         "image_mask": "square",
@@ -455,7 +445,10 @@
     },
     "text_and_image_eyG97U": {
       "type": "text-and-image",
-      "custom_css": ["h2 {font-family: ofelia-text, sans-serif; font-weight: 600; font-size: 35px;}", "p {padding-bottom: 20px;}"],
+      "custom_css": [
+        "h2 {font-family: ofelia-text, sans-serif; font-weight: 600; font-size: 35px;}",
+        "p {padding-bottom: 20px;}"
+      ],
       "name": "t:labels.image_with_text",
       "settings": {
         "image": "shopify://shop_images/Back_To_Earth_Moisturize.jpg",
@@ -512,7 +505,11 @@
           }
         }
       },
-      "block_order": ["image_AGJAd6", "image_NBkhNm", "image_UktjLX"],
+      "block_order": [
+        "image_AGJAd6",
+        "image_NBkhNm",
+        "image_UktjLX"
+      ],
       "custom_css": [],
       "settings": {
         "full_width": true,
@@ -583,7 +580,9 @@
         "question_qWJwCW",
         "question_LMCqiE"
       ],
-      "custom_css": ["{margin-top: 0px; background: #f7f7f7; padding-bottom: 50px;}"],
+      "custom_css": [
+        "{margin-top: 0px; background: #f7f7f7; padding-bottom: 50px;}"
+      ],
       "settings": {
         "title": "{{ product.title }} FAQs",
         "heading_size": "h2",
@@ -592,7 +591,9 @@
     },
     "featured_collection_yCFwUr": {
       "type": "featured-collection",
-      "custom_css": ["h2 {font-family: ofelia-text, sans-serif; font-weight: 600;}"],
+      "custom_css": [
+        "h2 {font-family: ofelia-text, sans-serif; font-weight: 600;}"
+      ],
       "settings": {
         "title": "You May Also Like",
         "heading_size": "h1",
@@ -618,7 +619,9 @@
           }
         }
       },
-      "block_order": ["okendo_reviews_widget_BrbN8J"],
+      "block_order": [
+        "okendo_reviews_widget_BrbN8J"
+      ],
       "settings": {
         "full_width": false,
         "space_around": true
@@ -660,12 +663,19 @@
         "related_count": 6,
         "products_per_row": 3
       }
+    },
+    "why_we_love": {
+      "type": "product-why-we-love",
+      "settings": {
+        "heading": "Why We Love It",
+        "text": "<p>What makes us love this routine so much is how quickly it brings comfort back to dry, scaly skin. It feels luxurious, but more importantly—it delivers real, soothing results. For anyone who’s ever struggled with roughness or tightness, this is your new daily hero.</p>"
+      }
     }
   },
   "order": [
     "main",
     "advanced_accordion_QAhBjN",
-    "rich_text_3NkeD8",
+    "why_we_love",
     "rich_text_mcHJmg",
     "text_columns_98PtGy",
     "slideshow_jQhH8q",

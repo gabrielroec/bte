@@ -72,14 +72,6 @@
             "color_beige": "#c9dde8"
           }
         },
-        "subscription_savings_callout": {
-          "type": "subscription_savings",
-          "settings": {
-            "line_order": "You save [[amount]] this order",
-            "line_year": "~[[amount]] saved per year at this cadence",
-            "color_accent": "#99bccc"
-          }
-        },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
@@ -97,6 +89,12 @@
           "settings": {
             "code": "<p style=\"text-align:center; font-weight:600;\">FREE SHIPPING $75+ | 90-DAY LOVE-IT GUARANTEE</p>"
           }
+        },
+        "tolstoy_shoppable_video_quiz_stories_block_gCBCEb": {
+          "type": "shopify://apps/tolstoy-shoppable-video-quiz/blocks/stories-block/06fa8282-42ff-403e-b67c-1936776aed11",
+          "settings": {
+            "publishId": "5ih35q7phtuba"
+          }
         }
       },
       "block_order": [
@@ -109,11 +107,14 @@
         "separator_GqYgcP",
         "variant_picker",
         "selling_plans_native",
-        "subscription_savings_callout",
         "buy_buttons",
-        "custom_QahbLh"
+        "custom_QahbLh",
+        "tolstoy_shoppable_video_quiz_stories_block_gCBCEb"
       ],
-      "custom_css": [".product-block .variant__label {display: none;}", "video-media,video {--default-aspect-ratio: 1/1 !important;}"],
+      "custom_css": [
+        ".product-block .variant__label {display: none;}",
+        "video-media,video {--default-aspect-ratio: 1/1 !important;}"
+      ],
       "settings": {
         "image_position": "left",
         "image_container_size": "large",
@@ -144,8 +145,13 @@
           }
         }
       },
-      "block_order": ["text_block_fxTdmN"],
-      "custom_css": ["{margin-top: 60px;}", "h2 {font-family: ofelia-text, sans-serif; font-weight: 600; font-size: 18px;}"],
+      "block_order": [
+        "text_block_fxTdmN"
+      ],
+      "custom_css": [
+        "{margin-top: 60px;}",
+        "h2 {font-family: ofelia-text, sans-serif; font-weight: 600; font-size: 18px;}"
+      ],
       "settings": {
         "title": "About The Product",
         "per_row": 1,
@@ -426,7 +432,9 @@
         "text_block_nqi8zy",
         "text_block_cPQqPC"
       ],
-      "custom_css": ["h2 {font-family: ofelia-text, sans-serif; font-weight: 600; font-size: 18px;}"],
+      "custom_css": [
+        "h2 {font-family: ofelia-text, sans-serif; font-weight: 600; font-size: 18px;}"
+      ],
       "settings": {
         "title": "All 20 Natural Ingredients",
         "per_row": 4,
@@ -464,8 +472,13 @@
           }
         }
       },
-      "block_order": ["text_block_MdMUUa", "text_block_Li43w9"],
-      "custom_css": ["h2 {font-family: ofelia-text, sans-serif; font-weight: 600; font-size: 18px;}"],
+      "block_order": [
+        "text_block_MdMUUa",
+        "text_block_Li43w9"
+      ],
+      "custom_css": [
+        "h2 {font-family: ofelia-text, sans-serif; font-weight: 600; font-size: 18px;}"
+      ],
       "settings": {
         "title": "How To Apply",
         "per_row": 2,
@@ -503,8 +516,13 @@
           }
         }
       },
-      "block_order": ["text_block_raE9Mr", "text_block_gWmNcT"],
-      "custom_css": ["h2 {font-family: ofelia-text, sans-serif; font-weight: 600; font-size: 18px;}"],
+      "block_order": [
+        "text_block_raE9Mr",
+        "text_block_gWmNcT"
+      ],
+      "custom_css": [
+        "h2 {font-family: ofelia-text, sans-serif; font-weight: 600; font-size: 18px;}"
+      ],
       "settings": {
         "title": "Eco-Friendly Packaging",
         "per_row": 2,
@@ -513,39 +531,12 @@
         "disabled": false
       }
     },
-    "rich_text_3NkeD8": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_xUQgwE": {
-          "type": "heading",
-          "settings": {
-            "title": "Why We Love It",
-            "heading_size": "h2"
-          }
-        },
-        "text_YYJzXb": {
-          "type": "text",
-          "settings": {
-            "enlarge_text": true,
-            "text": "<p>It’s the ultimate refresh for your skin. The triple-clay blend deeply detoxifies while the Mineral Microbiome Clay Complex™ nourishes, leaving your skin balanced, hydrated, and glowing after every use.</p>"
-          }
-        }
-      },
-      "block_order": ["heading_xUQgwE", "text_YYJzXb"],
-      "custom_css": [
-        "{margin-top: 40px; margin-bottom: 0px;}",
-        "h2 {font-family: ofelia-text, sans-serif; font-weight: 600; font-size: 25px;}"
-      ],
-      "settings": {
-        "align_text": "left",
-        "narrow_column": false,
-        "color_scheme": "1",
-        "divider": false
-      }
-    },
     "text_and_image_rHLmeH": {
       "type": "text-and-image",
-      "custom_css": ["h2 {font-family: ofelia-text, sans-serif; font-weight: 600; font-size: 35px;}", "p {padding-bottom: 20px;}"],
+      "custom_css": [
+        "h2 {font-family: ofelia-text, sans-serif; font-weight: 600; font-size: 35px;}",
+        "p {padding-bottom: 20px;}"
+      ],
       "settings": {
         "image": "shopify://shop_images/1.jpg",
         "image_mask": "none",
@@ -568,7 +559,9 @@
     },
     "text_and_image_tNiqhc": {
       "type": "text-and-image",
-      "custom_css": ["h2 {font-family: ofelia-text, sans-serif; font-weight: 600; font-size: 35px;}"],
+      "custom_css": [
+        "h2 {font-family: ofelia-text, sans-serif; font-weight: 600; font-size: 35px;}"
+      ],
       "settings": {
         "image": "shopify://shop_images/Untitled_design_74.jpg",
         "image_mask": "square",
@@ -624,7 +617,11 @@
           }
         }
       },
-      "block_order": ["image_AGJAd6", "image_NBkhNm", "image_UktjLX"],
+      "block_order": [
+        "image_AGJAd6",
+        "image_NBkhNm",
+        "image_UktjLX"
+      ],
       "custom_css": [],
       "settings": {
         "full_width": true,
@@ -695,7 +692,9 @@
         "question_PpqiMW",
         "question_LMCqiE"
       ],
-      "custom_css": ["{margin-top: 0px; background: #f7f7f7; padding-bottom: 50px;}"],
+      "custom_css": [
+        "{margin-top: 0px; background: #f7f7f7; padding-bottom: 50px;}"
+      ],
       "settings": {
         "title": "{{ product.title }} FAQs",
         "heading_size": "h2",
@@ -704,7 +703,9 @@
     },
     "featured_collection_yCFwUr": {
       "type": "featured-collection",
-      "custom_css": ["h2 {font-family: ofelia-text, sans-serif; font-weight: 600;}"],
+      "custom_css": [
+        "h2 {font-family: ofelia-text, sans-serif; font-weight: 600;}"
+      ],
       "settings": {
         "title": "You May Also Like",
         "heading_size": "h2",
@@ -730,7 +731,9 @@
           }
         }
       },
-      "block_order": ["okendo_reviews_widget_BrbN8J"],
+      "block_order": [
+        "okendo_reviews_widget_BrbN8J"
+      ],
       "settings": {
         "full_width": false,
         "space_around": true
@@ -772,6 +775,13 @@
         "related_count": 6,
         "products_per_row": 3
       }
+    },
+    "why_we_love": {
+      "type": "product-why-we-love",
+      "settings": {
+        "heading": "Why We Love It",
+        "text": "<p>It’s the ultimate refresh for your skin. The triple-clay blend deeply detoxifies while the Mineral Microbiome Clay Complex™ nourishes, leaving your skin balanced, hydrated, and glowing after every use.</p>"
+      }
     }
   },
   "order": [
@@ -780,7 +790,7 @@
     "advanced_accordion_MNDaAU",
     "advanced_accordion_AYThFw",
     "advanced_accordion_xWwj3X",
-    "rich_text_3NkeD8",
+    "why_we_love",
     "text_and_image_rHLmeH",
     "text_and_image_tNiqhc",
     "sub",
