@@ -140,22 +140,10 @@ class BlockSellingPlans extends HTMLElement {
     return el?.value === "subscribe";
   }
 
-  buildPerksText(discountPercent, perksSuffix) {
-    let line = "";
-    if (discountPercent != null && discountPercent !== "") {
-      line = `Save ${discountPercent}%`;
-      if (perksSuffix) line += ` · ${perksSuffix}`;
-    } else if (perksSuffix) {
-      line = perksSuffix;
-    }
-    return line;
-  }
-
   renderVariant(variantId) {
     const data = this.config.variants[variantId];
     if (!data) return;
 
-    const { labels } = this.config;
     const sectionId = this.dataset.sectionId;
     const allocations = data.allocations || [];
 
@@ -181,13 +169,6 @@ class BlockSellingPlans extends HTMLElement {
     }
 
     if (subPanel) subPanel.hidden = false;
-
-    const perksText = this.buildPerksText(data.discountPercent, labels.perksSuffix);
-    const perksEl = this.rootInner.querySelector("[data-perks-line]");
-    if (perksEl) {
-      perksEl.textContent = perksText;
-      perksEl.hidden = !perksText;
-    }
 
     const first = allocations[0];
     const curEl = this.rootInner.querySelector("[data-subscribe-price]");

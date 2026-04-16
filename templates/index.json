@@ -227,7 +227,7 @@
         "count": 6,
         "products_per_row": 3,
         "mobile_scrollable": false,
-        "show_second_image_as_cover": false,
+        "show_second_image_as_cover": true,
         "show_discount_badges": true,
         "view_all": true,
         "divider": false
@@ -434,7 +434,6 @@
       "block_order": [
         "revenuehunt_recommender_quiz_v2_automatic_popup_block_NcEThV"
       ],
-      "disabled": true,
       "settings": {
         "full_width": false,
         "space_around": true

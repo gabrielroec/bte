@@ -7,6 +7,7 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
+
 {
   "sections": {
     "main": {
@@ -42,7 +43,7 @@
         "custom_eYcXWC": {
           "type": "custom",
           "settings": {
-            "code": "<b>The 5 Step Routine</b>\n<ul>\n<li>- GLOW™ Foaming Facial Cleanser</li>\n<li>- GLOW™ Facial Mask</li>\n<li>- GLOW™ Facial Mist</li>\n<li>- GLOW™ Eye Cream</li>\n<li>- GLOW™ Daily Moisturizer</li>\n</ul"
+            "code": "<b>The 5 Step Routine</b>\n<ul class=\"product-custom-list\">\n<li>GLOW™ Foaming Facial Cleanser</li>\n<li>GLOW™ Facial Mask</li>\n<li>GLOW™ Facial Mist</li>\n<li>GLOW™ Eye Cream</li>\n<li>GLOW™ Daily Moisturizer</li>\n</ul>"
           }
         },
         "separator_GqYgcP": {
@@ -58,10 +59,18 @@
             "color_swatches": false
           }
         },
-        "recharge_subscriptions_subscription_widget_YCxYUk": {
-          "type": "shopify://apps/recharge-subscriptions/blocks/subscription-widget/371eed76-0b44-4869-9813-730372ea378e",
+        "selling_plans_native": {
+          "type": "selling_plans",
           "settings": {
-            "product": "{{product}}"
+            "heading_subscribe": "Subscribe & Save",
+            "badge_enable": true,
+            "badge_text": "MOST POPULAR",
+            "label_deliver_every": "DELIVER EVERY",
+            "perks_suffix": "Free shipping · Skip or cancel anytime",
+            "label_onetime": "One-time purchase",
+            "color_primary": "#99bccc",
+            "color_mint": "#eef5f8",
+            "color_beige": "#c9dde8"
           }
         },
         "buy_buttons": {
@@ -76,22 +85,16 @@
             "color_accent_qty": "#99bccc"
           }
         },
-        "trynow_try_before_you_buy_trynow_cta_button_wBE8d3": {
-          "type": "shopify://apps/trynow-try-before-you-buy/blocks/trynow-cta-button/4c8ee11a-0e2d-4d12-800e-b312601aebc7",
+        "custom_QahbLh": {
+          "type": "custom",
           "settings": {
-            "button_title": "Try It Free For 14 Days",
-            "cta_button_custom_css": "",
-            "button_classes": "",
-            "button_margin": "0px 0px 5px 0px",
-            "description": "Try routine at home for 14 days",
-            "description_font_size": 12,
-            "description_color": "#000000",
-            "view_collection_text": "View TryNow collection",
-            "collection": "",
-            "add_to_cart_container_selector": "",
-            "gated_toggle_font_size": 12,
-            "gated_toggle_size": 0.7,
-            "autoposition": false
+            "code": "<p style=\"text-align:center; font-weight:600;\">FREE SHIPPING $75+ | 90-DAY LOVE-IT GUARANTEE</p>"
+          }
+        },
+        "tolstoy_shoppable_video_quiz_stories_block_gCBCEb": {
+          "type": "shopify://apps/tolstoy-shoppable-video-quiz/blocks/stories-block/06fa8282-42ff-403e-b67c-1936776aed11",
+          "settings": {
+            "publishId": "5ih35q7phtuba"
           }
         }
       },
@@ -104,9 +107,10 @@
         "custom_eYcXWC",
         "separator_GqYgcP",
         "variant_picker",
-        "recharge_subscriptions_subscription_widget_YCxYUk",
+        "selling_plans_native",
         "buy_buttons",
-        "trynow_try_before_you_buy_trynow_cta_button_wBE8d3"
+        "custom_QahbLh",
+        "tolstoy_shoppable_video_quiz_stories_block_gCBCEb"
       ],
       "custom_css": [
         ".product-block .variant__label {display: none;}",
@@ -115,13 +119,13 @@
       "settings": {
         "image_position": "left",
         "image_container_size": "large",
-        "product_image_size": "natural",
+        "product_image_size": "square",
         "product_zoom_enable": true,
         "thumbnail_position": "beside",
         "thumbnail_height": "flexible",
         "thumbnail_arrows": false,
         "show_second_image_as_cover": false,
-        "mobile_layout": "full",
+        "mobile_layout": "partial",
         "enable_video_looping": true,
         "product_video_style": "muted"
       }
@@ -207,39 +211,6 @@
         "two_per_row_mobile": false,
         "opened": false,
         "disabled": false
-      }
-    },
-    "rich_text_3NkeD8": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_xUQgwE": {
-          "type": "heading",
-          "settings": {
-            "title": "Why We Love It",
-            "heading_size": "h2"
-          }
-        },
-        "text_YYJzXb": {
-          "type": "text",
-          "settings": {
-            "enlarge_text": true,
-            "text": "<p>We created this routine for the skin types that most brands overlook—the sensitive, the reactive, the inflamed. And it delivers in the most beautiful way: softer texture, calmer tone, and hydration that actually lasts. It’s gentle by design, powerful by nature, and a true labor of love.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "heading_xUQgwE",
-        "text_YYJzXb"
-      ],
-      "custom_css": [
-        "{margin-top: 40px; margin-bottom: 0px;}",
-        "h2 {font-family: ofelia-text, sans-serif; font-weight: 600; font-size: 25px;}"
-      ],
-      "settings": {
-        "align_text": "left",
-        "narrow_column": false,
-        "color_scheme": "1",
-        "divider": false
       }
     },
     "rich_text_mcHJmg": {
@@ -665,12 +636,19 @@
         "related_count": 6,
         "products_per_row": 3
       }
+    },
+    "why_we_love": {
+      "type": "product-why-we-love",
+      "settings": {
+        "heading": "Why We Love It",
+        "text": "<p>We created this routine for the skin types that most brands overlook—the sensitive, the reactive, the inflamed. And it delivers in the most beautiful way: softer texture, calmer tone, and hydration that actually lasts. It’s gentle by design, powerful by nature, and a true labor of love.</p>"
+      }
     }
   },
   "order": [
     "main",
     "advanced_accordion_QAhBjN",
-    "rich_text_3NkeD8",
+    "why_we_love",
     "rich_text_mcHJmg",
     "text_columns_98PtGy",
     "slideshow_jQhH8q",

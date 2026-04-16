@@ -35,6 +35,7 @@
   assign featured_media = product.selected_or_first_available_variant.featured_media | default: product.featured_media
   assign first_3d_model = product.media | where: 'media_type', 'model' | first
   assign thumbnail_position = section.settings.thumbnail_position
+  assign mobile_layout = section.settings.mobile_layout | default: 'partial'
   assign show_second_cover = section.settings.show_second_image_as_cover | default: false, allow_false: true
   assign reorder_second_first = false
   if show_second_cover and product.media.size >= 2
@@ -56,9 +57,10 @@
     data-zoom="{{ product_zoom_enable }}"
     data-has-slideshow="{% if product.media.size > 1 %}true{% else %}false{% endif %}"
     data-media-gallery-layout="{{ media_gallery_layout }}"
-    data-modal="{{ isModal }}"
+    data-modal="{% if isModal %}true{% else %}false{% endif %}"
     data-product-id="{{ product.id }}"
     data-section-id="{{ section.id }}"
+    data-mobile-layout="{{ mobile_layout }}"
   >
     <div class="product__photos product__photos-{{ section_id }} product__photos--{{ thumbnail_position }}{% if product.media.size == 0 %} hide{% endif %}">
       <div class="product__main-photos" data-product-single-media-group>
@@ -179,7 +181,7 @@
       {% if media_gallery_layout != 'stacked' %}
         <div
           data-product-thumbs
-          class="product__thumbs product__thumbs--{{ thumbnail_position }} product__thumbs-placement--{{ image_position }}{% if product.media.size == 1 %} medium-up--hide{% endif %} small--hide"
+          class="product__thumbs product__thumbs--{{ thumbnail_position }} product__thumbs-placement--{{ image_position }}{% if product.media.size == 1 %} medium-up--hide{% endif %}"
           data-position="{{ thumbnail_position }}"
           data-arrows="{{ thumbnail_arrows }}"
         >
